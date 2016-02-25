@@ -35,7 +35,7 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/intro-bg2-darker.jpg) no-repeat center center;
+    background: url(../img/intro-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -117,7 +117,7 @@ h6 {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/banner-bg1.jpg) no-repeat center center;
+    background: url(../img/banner-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -193,6 +193,16 @@ p.copyright {
 }
 
 a {  
+	/* padding: 20px; */ /* Original template large padding */
 	padding: 20px; 
 	color: #04B404;
 }
+
+/* The template is using a large padding for link because it assumes that
+ * all the link will be put into a button. */
+/* Added class with smaller link in order to include them inside a paragraph */
+.smallerlink a{
+		padding: 2.5px; 
+}
+
+

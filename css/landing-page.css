@@ -193,6 +193,7 @@ p.copyright {
 }
 
 a {  
+	/* padding: 20px; */ /* Original template large padding */
 	padding: 20px; 
 	color: #04B404;
 }
@@ -200,16 +201,9 @@ a {
 /* The template is using a large padding for link because it assumes that
  * all the link will be put into a button. */
 /* Added class with smaller link in order to include them inside a paragraph */
-.smallerlink{
+.smallerlink a{
+		padding: 2.5px; 
 }
 
-.smallerlink a:link    {color:green;}
-.smallerlink a:visited {color:maroon;}
-.smallerlink a:hover   {color:red;}
-.smallerlink a:active  {color:yellow;}
 
 
-.smallerlink a {  
-	padding: 2.5px; 
-	color: red;
-}

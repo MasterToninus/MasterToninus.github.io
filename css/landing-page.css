@@ -22,7 +22,7 @@ h6 {
 }
 
 .topnav {
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 .lead {
@@ -108,7 +108,7 @@ h6 {
 }
 
 .section-heading-spacer {
-    float: left;   
+    float: left;
     /*	width: 200px;	*/
     width: 40em;
     border-top: 3px solid #e7e7e7;
@@ -192,9 +192,9 @@ p.copyright {
     /*color: red;*/
 }
 
-a {  
+a {
 	/* padding: 20px; */ /* Original template large padding */
-	padding: 20px; 
+	padding: 20px;
 	color: #04B404;
 }
 
@@ -202,7 +202,10 @@ a {
  * all the link will be put into a button. */
 /* Added class with smaller link in order to include them inside a paragraph */
 .smallerlink a{
-		padding: 2.5px; 
+		padding: 2.5px;
 }
 
-
+p.lastupdate {
+  text-align: center;
+  margin: 20px 5px 5px;
+}

@@ -25,6 +25,11 @@ h6 {
     font-size: 14px;
 }
 
+.updatingtopnav {
+    font-size: 14px;
+    color: #FF0000 !important;
+}
+
 .lead {
     font-size: 18px;
     font-weight: 400;

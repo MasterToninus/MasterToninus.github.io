@@ -306,10 +306,10 @@
           </li>
         </ul>
         <p class="lastupdate text-muted small">
-          <script language="javascript">
+<!--          <script language="javascript">
             document.write("<i><a href=\"https://github.com/MasterToninus/MasterToninus.github.io/commits/master\">Last Edit<\/a> "+document.lastModified+"<\/i>");
           </script>
-        <p class="copyright text-muted small">
+-->        <p class="copyright text-muted small">
           Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
           &emsp; Italsing srl. &emsp;  All Rights Reserved.
         </p>

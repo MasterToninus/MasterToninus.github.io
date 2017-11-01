@@ -71,10 +71,10 @@ How to describe my company? I'm the company!
                     </div>
                 </div>
             </div>
-            
+
         </div>
      </div>
-     
+
      <div class="content-section-a">
         <div class="container">
             <div class="row">
@@ -84,7 +84,39 @@ How to describe my company? I'm the company!
                     <h2 class="section-heading">Curiculum Vitae</h2>
                     <p class="lead">
 			Php generated Resume.
-					</p>
+					          </p>
+
+
+                    <?php
+                      $table = array();
+
+                      if (($handle = fopen("../data/activities.csv", "r")) !== FALSE) {
+
+                        while (($record = fgetcsv($handle, 1000, ";")) !== FALSE) {
+                    	       array_push($table,$record);
+                          }
+                      }
+                      fclose($handle);
+                    }
+                    ?>
+
+                    <?php if (count($table) > 0): ?>
+                    <table>
+                      <thead>
+                        <tr>
+                          <th><?php echo implode('</th><th>', array_keys(current($table))); ?></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                    <?php foreach ($table as $row): array_map('htmlentities', $row); ?>
+                        <tr>
+                          <td><?php echo implode('</td><td>', $row); ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                      </tbody>
+                    </table>
+                    <?php endif; ?>
+
 
                 </div>
                 <div class="col-xs-6 col-md-4 Col-lg-offset-2">
@@ -120,4 +152,3 @@ How to describe my company? I'm the company!
         </div>
       </div>
     </nav>
-

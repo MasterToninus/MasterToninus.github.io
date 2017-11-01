@@ -204,7 +204,7 @@ How to describe my company? I'm the company!
 
           </div>
           <div class="col-lg-5 ml-auto order-lg-1">
-            <img class="img-fluid center-block" src="img/Iamp.png" alt="IAMP logo">
+            <img class="img-fluid center-block" src="img/Iamp.png" alt="IAMP logo" align="middle">
             <a href="img/saggiatore.png">
                 <img class="img-fluid center-block" src="img/saggiatore_Crop.jpg" alt="Typical academic picture">
           </div>
@@ -228,38 +228,17 @@ How to describe my company? I'm the company!
           <div class="col-lg-5 ml-auto">
             <hr class="section-heading-spacer">
             <div class="clearfix"></div>
-            <h2 class="section-heading">My Stuff</h2>
-            <p class="lead">
-              Some of things that I produced in my years of studies.
-            </p>
-            <h4>Mathematical Physics</h4>
-            <div class="smallerlink">
-              <ul>
-                <li> Master's Thesis. <a href="https://www.researchgate.net/profile/Antonio_Michele_Miti/publication/295548746_Algebraic_quantization_of_Jacobi_fields_and_geometric_approach_to_Peierls_brackets/links/56cb4a8f08ae96cdd06fab2c.pdf?origin=publication_detail&ev=pub_int_prw_xdl&msrp=ZrIIVxf31q0LNEnXEaQXzxWaSQk5ZmxceAaNUrnYxhonmlJU3CBdFdEzmd79tSXTz8IplBK9dflf_xbYaPCvIQ.1kLAB9Nma1ob41tXH00H3PIhOSjR7FYhxeqL1dwcJwbBims23-dhnGPMwx-SrXRKPWczu5cW4T5uot_NVq4FZg.mrOqvU32tPTevB0wsejm2IozZJBSZuCVF0QCi41PMJwMPHBAx0fS4gPETlFEP7JqQXAkr7_1ONVO4pzAohMOjg">(Pdf)</a> <a href="https://github.com/MasterToninus/MasterThesis">(LaTex)</a> <a href="https://github.com/MasterToninus/MasterThesis/raw/master/Slides/Presentazione.pdf">(Slides)</a></li>
-                <li> (ITA) Bachelor's Thesis. <a href="https://github.com/MasterToninus/TesiTriennale/raw/master/tesi.pdf">(Pdf)</a> <a href="https://github.com/MasterToninus/TesiTriennale">(LaTex)</a> <a href="https://github.com/MasterToninus/TesiTriennale/raw/master/Presentazione/presentazione.pdf">(Slides)</a></li>
-                <!-- Draft dispensarium -->
-                <li> (WIP) Notes on Fiber Bundle. <a href="https://github.com/MasterToninus/Dispensarium/raw/master/Fiber%20Bundles/FiberBundles.pdf" >(Pdf)</a> <a href="https://github.com/MasterToninus/Dispensarium/blob/master/Fiber%20Bundles/FiberBundles.tex" >(LaTex)</a></li>
-                <li> (WIP) AQFT mathematical preliminaries. <a href="https://github.com/MasterToninus/Dispensarium/raw/master/AQFT%20Mathematical%20Preliminaries/AQFT_Preliminaries.pdf" >(Pdf)</a> <a href="https://github.com/MasterToninus/Dispensarium/blob/master/AQFT%20Mathematical%20Preliminaries/AQFT_Preliminaries.tex" >(LaTex)</a></li>
-                <li> (WIP) Quick notes in abstract algebra. <a href="https://github.com/MasterToninus/Dispensarium/raw/master/Remarks%20in%20Algebra/RemarkAlgebra.pdf" >(Pdf)</a> <a href="https://github.com/MasterToninus/Dispensarium/blob/master/Remarks%20in%20Algebra/RemarkAlgebra.tex" >(LaTex)</a></li>
-              </ul>
-              <h4>Computational Physics</h4>
-              <ul>
-                <li> (COURSE PROJECT) (ITA) Condensation algorithm in CUDA. <a href="https://github.com/MasterToninus/Computational-Physics-Exercise/raw/master/Condensation%20Algorithm%20in%20CUDA/Relazione/RelazioneAntonioMiti.pdf">(Report)</a> <a href="https://github.com/MasterToninus/Computational-Physics-Exercise/tree/master/Condensation%20Algorithm%20in%20CUDA/ProgettoFinale">(Source)</a> <a href="https://github.com/MasterToninus/Computational-Physics-Exercise/raw/master/Condensation%20Algorithm%20in%20CUDA/Presentazione/Presentazione.pdf">(Slides)</a></li>
-                <li> (COURSE PROJECT) (ITA) Ising Simulation. <a href="https://github.com/MasterToninus/Computational-Physics-Exercise/raw/master/Ising%20simulation%20Metropolis%20vs%20Cluster/Report/Ising_v2.pdf">(Report)</a> <a href="https://github.com/MasterToninus/Computational-Physics-Exercise/tree/master/Ising%20simulation%20Metropolis%20vs%20Cluster/Src">(Source)</a></li>
-                <li> (COURSE PROJECT) (ITA) Molecular Dynamics. <a href="https://github.com/MasterToninus/Computational-Physics-Exercise/raw/master/Molecular%20Dynamics/Report/DinamicaMolecolare.pdf">(Report)</a> <a href="https://github.com/MasterToninus/Computational-Physics-Exercise/tree/master/Molecular%20Dynamics/Src">(Source)</a></li>
-                <li> (COURSE PROJECT) (ITA) Numerical Analysis Computer Lab. <a href=" ">(Report+Src)</a></li>
-              </ul>
-              <h4>Others</h4>
-              <ul>
-                <!-- Onenote Notebooks -->
-                <li> (COURSE NOTE) (ITA) Appunti di Fisica delle Proteine. <a href="https://onedrive.live.com/redir?page=view&resid=E27F0FE22493F47E!911&authkey=!AB2UWKYy6DV3fkU">(OneNote)</a> </li>
-                <li> (COURSE NOTE) (ITA) Appunti di Elettrodinamica Classica. <a href="https://onedrive.live.com/redir?page=view&resid=E27F0FE22493F47E!664&authkey=!AKcCwRv71Q-c4kc">(OneNote)</a> </li>
-              </ul>
-          </div>
+            <h2 class="section-heading">Material</h2>
+            <!--
+            <p class="lead">Some of things that I produced in my years of studies.</p>
+            -->
+            <a href="stuff/index.php/#Teaching"><h4>Teaching</h4></a>
+            <a href="stuff/index.php/#Publications"><h4>Publications</h4></a>
+            <a href="stuff/index.php/#PostGrad"><h4>Post graduate material</h4></a>
+            <a href="stuff/index.php/#UnderGrad"><h4>Under graduate material</h4></a>
+
         </div>
           <div class="col-lg-5 mr-auto ">
-            <br>
-            <img class="img-fluid" src="img/ThesisExtract.png" alt="Extract of Master Thesis">
             <br>
             <img class="img-fluid" src="img/clusterbassaT.gif" alt="Ising Cluster Algorithm">
           </div>

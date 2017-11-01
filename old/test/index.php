@@ -1,44 +1,145 @@
-
-
-
-
 <!DOCTYPE html>
 <html>
 <body>
 
 	Prova PHP
 
-<?php
-$row = 1;
-if (($handle = fopen("data.csv", "r")) !== FALSE) {
-    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-        $num = count($data);
-        echo "<p> $num fields in line $row: <br /></p>\n";
-        $row++;
-        for ($c=0; $c < $num; $c++) {
-            echo $data[$c] . "<br />\n";
-        }
-    }
-    fclose($handle);
-}
-?>
+<h1>Versione basic</h1>
 
 <?php
 
-$array = array_map('str_getcsv', file('data.csv'));
+  $today_date = strtotime( date('m/d/y') );
+  $Event_Title = 1;
+  $Type = 2;
+  $Approx_Date = 6;
+  $End_Date = 8;
+  $Organizers = 9;
+  $Url = 10;
 
-$header = array_shift($array);
 
-array_walk($array, '_combine_array', $header);
-
-function _combine_array(&$row, $key, $header) {
-  $row = array_combine($header, $row);
+  if (($handle = fopen("data.csv", "r")) !== FALSE) {
+    
+  while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
+    $num = count($data); //count the number of field
+    $end_date = strtotime($data[$End_Date]);
+      if($end_date > $today_date){
+	echo "<a href=" . $data[$Url] . ">" . $data[$Event_Title] . "</a> ";
+	echo "( " . $data[$Type] . ") ";
+	echo $data[$Approx_Date] . "<br />\n";
+      }
+  }
+  fclose($handle);
 }
-
 ?>
 
 
+<h1>Versione Table</h1>
+<!--
+Credits to 
+https://stackoverflow.com/questions/4746079/how-to-create-a-html-table-from-a-php-array
+-->
 
-</body>
-</html>
+<?php
+  $shop = array();
 
+  if (($handle = fopen("data.csv", "r")) !== FALSE) {
+
+    while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
+      $end_date = strtotime($data[8]);
+      if($end_date > $today_date){
+  	$record = array(
+	  "Event_Title" => $data[1],
+	  "Type" => $data[2],
+	  "Location" => $data[4],
+	  "Approx_Date" => $data[6],
+	  "End_Date" => $data[8],
+	  "Url" => $data[10],
+	);
+	array_push($shop,$record);
+      }
+  }
+  fclose($handle);
+}
+?>
+
+<?php if (count($shop) > 0): ?>
+<table>
+  <thead>
+    <tr>
+      <th><?php echo implode('</th><th>', array_keys(current($shop))); ?></th>
+    </tr>
+  </thead>
+  <tbody>
+<?php foreach ($shop as $row): array_map('htmlentities', $row); ?>
+    <tr>
+      <td><?php echo implode('</td><td>', $row); ?></td>
+    </tr>
+<?php endforeach; ?>
+  </tbody>
+</table>
+<?php endif; ?>
+
+
+
+
+<h1>Versione Table Ricercata</h1>
+
+<?php
+  $table = array();
+
+  if (($handle = fopen("data.csv", "r")) !== FALSE) {
+
+    while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
+      $end_date = strtotime($data[8]);
+      if($end_date > $today_date){
+  	$record = array(
+	  "Event_Title" => $data[1],
+	  "Type" => $data[2],
+	  "Location" => $data[4],
+	  "Approx_Date" => $data[6],
+	  "End_Date" => $data[8],
+	  "Url" => $data[10],
+	);
+	array_push($table,$record);
+      }
+  }
+  fclose($handle);
+}
+?>
+
+<?php if (count($table) > 0): ?>
+<table>
+  <tbody>
+<?php foreach ($table as $row): array_map('htmlentities', $row); ?>
+    <tr>
+      <?php 
+	echo "<td>(" . $row["Type"] . ")</td>";
+	echo "<td><a href=" . $row["Url"] . ">" . $row["Event_Title"] . "</a></td>";
+	echo "<td>" . $row["Location"] . "</td>";
+	echo "<td>" . $row["Approx_Date"] . "</td>";
+      ?>
+    </tr>
+<?php endforeach; ?>
+  </tbody>
+</table>
+<?php else:?>
+ TBA
+<?php endif;?>
+
+
+                <table>
+                  <tr><td valign=top><b>Mail </b>: <td>
+                    Dipartimento di Matematica e Fisica<br>
+                    Universit&agrave; Cattolica del Sacro Cuore<br>
+                    Via Trieste, 17<br>
+                    25121 Brescia, Italy<br>
+		  <tr><td valign=top><b>Room </b>: <td>
+                    "Ufficio dottorandi in Matematica"<br>
+                  <tr><td valign=top><b>Phone </b>: <td>
+                    +39 - 030.2406.715<br>
+		  <tr><td valign=top><b>E-mail </b>: <td>
+                    <A HREF="mailto:am.miti@dmf.unicatt.it">am.miti@dmf.unicatt.i
+t</A><br>
+                  <tr><td><b>Orario di ricevimento </b>: <td>
+                    [...]<br>
+             </table>

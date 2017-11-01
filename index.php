@@ -282,14 +282,58 @@ How to describe my company? I'm the company!
             <div class="clearfix"></div>
             <h2 class="section-heading">Recent and Upcoming Activities</h2>
             <p class="lead">
-              ...
-                Insert Php Script Here
-              ...
-            </p>
+
+	      <?php
+	      $today_date = strtotime( date('m/d/y') );
+	      //Generate a table of recent activities
+	      $table = array();
+              if (($handle = fopen("data/activities.csv", "r")) !== FALSE) {
+
+                while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
+                  $end_date = strtotime($data[8]);
+                  if($end_date > $today_date){
+		    //Create Record
+	            $record = array(
+                      "Event_Title" => $data[1],
+                      "Type" => $data[2],
+                      "Location" => $data[4],
+                      "Approx_Date" => $data[6],
+                      "End_Date" => $data[8],
+                      "Url" => $data[10],
+                    );
+                  array_push($table,$record);
+                  }
+               }
+              fclose($handle);
+            }
+            ?>
+
+	    <?php if (count($table) > 0): ?>
+              <table>
+                <tbody>
+                  <?php foreach ($table as $row): array_map('htmlentities', $row); ?>
+                    <tr>
+                     <?php
+                       echo "<td>(" . $row["Type"] . ")</td>";
+                       echo "<td><a href=" . $row["Url"] . ">" . $row["Event_Title"] . "</a></td>";
+                       echo "<td>" . $row["Location"] . "</td>";
+                       echo "<td>" . $row["Approx_Date"] . "</td>";
+                     ?>
+                    </tr>
+                 <?php endforeach; ?>
+               </tbody>
+             </table>
+          <?php else:?>
+            TBA
+          <?php endif;?>
+
+
+
+          </p>
           </div>
           <div class="col-lg-5 ml-auto order-lg-1">
             <br>
-            <img class="img-fluid" src="img/lego-imperialflaship.png" alt="Adventure!">
+            <img class="img-fluid" src="img/rickandtorty.jpg" alt="Rick and Torty (Credit by Linda)">
           </div>
         </div>
       </div>
@@ -311,38 +355,26 @@ How to describe my company? I'm the company!
             <hr class="section-heading-spacer">
             <div class="clearfix"></div>
             <h2 class="section-heading">Address</h2>
-        	<table>
-		<tr><td valign=top>
-		<font size=-1><b>Indirizzo</b>:</font>
-		<td><font size=-1>
-			Dipartimento di Matematica e Fisica<br>
-			Universit&agrave; Cattolica del Sacro Cuore<br>
-			Via Trieste, 17<br>
-			I 25121 Brescia, Italy
-		</font><br>
-		<tr><td valign=top><font size=-1>
-		<b>
-			Recapito telefonico
-		</b>:</font>
-		<td><font size=-1>
-			+39 - 030.2406.???
-		</font><br>
-		<tr><td valign=top><font size=-1>
-		<b>
-			Indirizzo di Posta Elettronica
-		</b>:</font>
-		<td><font size=-1>
-			<A HREF="mailto:am.miti@dmf.unicatt.it">am.miti@dmf.unicatt.it</A>
-		<br></font>
-		<tr><td><font size=-1>
-		<b>Orario di ricevimento</b>:</font><td><font size=-1>
-			[...]
-		</font><br>
+		<table>
+                  <tr><td valign=top><b>Mail </b>: <td>
+                    Dipartimento di Matematica e Fisica<br>
+                    Universit&agrave; Cattolica del Sacro Cuore<br>
+                    Via Trieste, 17<br>
+                    25121 Brescia, Italy<br>
+                  <tr><td valign=top><b>Room </b>: <td>
+                    "Ufficio dottorandi in Matematica"<br>
+                  <tr><td valign=top><b>Phone </b>: <td>
+                    +39 - 030.2406.715<br>
+                  <tr><td valign=top><b>E-mail </b>: <td>
+                    <A HREF="mailto:am.miti@dmf.unicatt.it">am.miti@dmf.unicatt.i
+t</A><br>
+                  <tr><td><b>Orario di ricevimento </b>: <td>
+                    [...]<br>
 		</table>
 
 	</div>
           <div class="col-lg-5 mr-auto ">
-            <img class="img-fluid" src="img/x.png" alt="Extract of Master Thesis">
+            <img class="img-fluid" src="img/Mentaculus4.jpg" alt="The Mentaculus">
           </div>
         </div>
 
@@ -363,19 +395,22 @@ How to describe my company? I'm the company!
             <div class="clearfix"></div>
             <h2 class="section-heading">Links</h2>
             <p class="lead">
-            
-		gecogedi
-		gnsaga
-		lqp
-		ncat
-		dmf.bs
-		lcm
+            <ul>
+              <li><a href="https://gecogedi.dimai.unifi.it/">GecoGedi</a></li>
+              <li><a href="http://www.altamatematica.it/gnsaga/">Indam - GNSAGA</a></li>
+              <li><a href="https://ncatlab.org/nlab/show/HomePage">nCatLab</a></li>
+              <li> <a href="https://www.lqp2.org/">Local Quantum Physics Crossroads</a> </li>
+              <li> <a href="https://dmf.bs.unicatt.it">Dmf</a> </li>
+              <li> <a href="https://lcm.mi.infn.it/">Lcm</a> </li>
+            </ul>
 
 	    </p>
           </div>
           <div class="col-lg-5 ml-auto order-lg-1">
             <br>
-            <img class="img-fluid" src="img/x" alt="Adventure!">
+	      <a href="https://shop.lego.com/en-CA/Imperial-Flagship-10210">
+		<img class="img-fluid" src="img/lego-imperialflaship.png" alt="Adventure!">
+	      </a>
           </div>
         </div>
       </div>

@@ -1,5 +1,4 @@
-
-d;Event_Title;Type;Organization;Location;Country;Approx_Date;Start_Date;End_Date;Organizers_Speakers;Url
+Period;Event_Title;Type;Organization;Location;Country;Approx_Date;Start_Date;End_Date;Organizers_Speakers;Url
 Post-Grad;Introduction to Scientific Programming using GPGPU and CUDA;Training Course;CINECA-SCAI;Milan;Italy;March 2014;;;;https://web.archive.org/web/20170623171128/http://www.hpc.cineca.it/content/introduction-to-gpu
 Post-Grad;Introduction to Scientific and Technical Computing in C++;Training Course;CINECA-SCAI;Milan;Italy;March 2016;;;;https://web.archive.org/save/http://www.hpc.cineca.it/content/introduction-object-oriented
 Post-Grad;Causal Fermion Systems;School;University of Regensburg;Regensburg;Germany;March 2016;;;Felix Finster, Johannes Kleiner, Jan-Hendrik Treude;https://web.archive.org/web/20170623170718/http://www.uni-regensburg.de/mathematics/causal-fermion-systems/
@@ -22,9 +21,9 @@ I Year;Category Theory;Master Course;Universita’ degli Studi di Milano;Milan;I
 I Year;Wolfram Technology Tour Italia;Seminar;Universita’ degli Studi di Milano;Milan;Italy;September 2017;20-Sep-17;20-Sep-17;Adalta;https://web.archive.org/web/20170924155137/http://www.adalta.it/Pages/SeminarioWolframTour2017.asp
 I Year;PADGE 2017;Conference;KU Leuven;Leuven;Belgium;August 2017;21-Aug-17;25-Aug-17;Joeri Van der Veken, Marco Zambon ;https://web.archive.org/web/20170924130155/https://wis.kuleuven.be/events/padge2017
 I Year;Exercise Class: Elements of Higher Geometry;Teaching;Universita’ Cattolica del Sacro Cuore;Brescia;Italy;October 2017;4-Oct-17;17-Dec-17;Mauro Spera;http://docenti.unicatt.it/web/html/index.html#/programmi/BS/2D9B/75017/2017/21065/MIH341/ita
-I Year;An Invitation to Geometric Mechanics;Talk;Universita’ Cattolica del Sacro Cuore;Brescia;Italy;November 2017;28-nov-17;28-nov-17;Fausto Borgonovi;
 I Year;Formal Theory of PDEs;Workshop;Universita’ degli Studi di Salerno;Fisciano;Italy;November 2017;06-nov-17;10-nov-17;Luca Vitagliano;http://www.dipmat2.unisa.it/people/vitagliano/www/micro-workshop.html
 I Year;Physics and Geometry;Workshop;Università degli Studi di Bologna;Bologna;Italy;November 2017;24-nov-17;25-nov-17;C. Degli Esposti Boschi, E. Ercolessi, F. Ortolani;https://agenda.infn.it/conferenceDisplay.py?confId=14261
+I Year;An Invitation to Geometric Mechanics;Talk;Universita’ Cattolica del Sacro Cuore;Brescia;Italy;November 2017;28-nov-17;28-nov-17;Fausto Borgonovi;
 II Year;Classical and Quantum Knots;Ph.D. Course;Università degli Studi di Milano Bicocca, Università degli Studi di Pavia;Milan;Italy;February 2018;01-feb-18;01-apr-18;Annalisa Marzuoli (Pavia), Renzo Ricca (Milano-Bicocca);https://drive.google.com/open?id=0B_GvmAPZMJoaLXh6TFVmZGs4eGs
 II Year;Exercise Class: Differential Topology and Geometry;Teaching;Universita’ Cattolica del Sacro Cuore;Brescia;Italy;March 2018;03-mar-18;1-Jun-18;Mauro Spera;http://docenti.unicatt.it/web/html/index.html#/programmi/BS/2D8B/75017/2017/21065/MGH344/ita
 II Year;Focus Program on Poisson Geometry and Physics;Conference;Fields Institute for Research in Mathematical Sciences;Toronto;Canada;July 2018;9-Jul-18;20-Jul-18;Marco Gualtieri , Eckhard Meinrenken;http://www.fields.utoronto.ca/activities/17-18/poisson

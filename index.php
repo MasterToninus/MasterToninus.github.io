@@ -48,7 +48,7 @@ How to describe my company? I'm the company!
               <a class="nav-link" href="#research">Research Interests</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#stuff">My Stuff</a>
+              <a class="nav-link" href="http://www.dmf.unicatt.it/~amm/stuff/">My Stuff</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
@@ -218,42 +218,9 @@ How to describe my company? I'm the company!
 
 
 
-    <!-- My Stuff-->
-    <a  name="stuff"></a>
-    <section class="content-section-a">
-
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-5 ml-auto">
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <h2 class="section-heading">Material</h2>
-            <!--
-            <p class="lead">Some of things that I produced in my years of studies.</p>
-            -->
-            <a href="stuff/index.php/#Teaching"><h4>Teaching</h4></a>
-            <a href="stuff/index.php/#Publications"><h4>Publications</h4></a>
-            <a href="stuff/index.php/#PostGrad"><h4>Post graduate material</h4></a>
-            <a href="stuff/index.php/#UnderGrad"><h4>Under graduate material</h4></a>
-
-        </div>
-          <div class="col-lg-5 mr-auto ">
-            <br>
-            <img class="img-fluid" src="img/clusterbassaT.gif" alt="Ising Cluster Algorithm">
-          </div>
-        </div>
-
-      </div>
-      <!-- /.container -->
-
-    </section>
-    <!-- /.content-section-a -->
-
-
     <!-- RECENTS AND UPCOMING ACTIVITIES -->
     <a  name="activities"></a>
-    <section class="content-section-b">
+    <section class="content-section-a">
       <div class="container">
         <div class="row">
           <div class="col-lg-5 mr-auto order-lg-2">
@@ -319,13 +286,13 @@ How to describe my company? I'm the company!
       <!-- /.container -->
 
     </section>
-    <!-- /.content-section-b -->
+    <!-- /.content-section-a -->
 
 
 
-    <!-- CONTACT INFORMATION -->
-    <a  name="address"></a>
-    <section class="content-section-a">
+    <!-- My Stuff-->
+    <a  name="stuff"></a>
+    <section class="content-section-b">
 
       <div class="container">
 
@@ -333,27 +300,19 @@ How to describe my company? I'm the company!
           <div class="col-lg-5 ml-auto">
             <hr class="section-heading-spacer">
             <div class="clearfix"></div>
-            <h2 class="section-heading">Address</h2>
-		<table>
-                  <tr><td valign=top><b>Mail </b>: <td>
-                    Dipartimento di Matematica e Fisica<br>
-                    Universit&agrave; Cattolica del Sacro Cuore<br>
-                    Via Trieste, 17<br>
-                    25121 Brescia, Italy<br>
-                  <tr><td valign=top><b>Room </b>: <td>
-                    "Ufficio dottorandi in Matematica"<br>
-                  <tr><td valign=top><b>Phone </b>: <td>
-                    +39 - 030.2406.715<br>
-                  <tr><td valign=top><b>E-mail </b>: <td>
-                    <A HREF="mailto:am.miti@dmf.unicatt.it">am.miti@dmf.unicatt.i
-t</A><br>
-                  <tr><td><b>Orario di ricevimento </b>: <td>
-                    [...]<br>
-		</table>
+            <h2 class="section-heading">Material</h2>
+            <!--
+            <p class="lead">Some of things that I produced in my years of studies.</p>
+            -->
+            <a href="http://www.dmf.unicatt.it/~amm/stuff/#Teaching"><h4>Teaching</h4></a>
+            <a href="http://www.dmf.unicatt.it/~amm/stuff/#Publications"><h4>Publications</h4></a>
+            <a href="http://www.dmf.unicatt.it/~amm/stuff/#PostGrad"><h4>Post graduate material</h4></a>
+            <a href="http://www.dmf.unicatt.it/~amm/stuff/#UnderGrad"><h4>Under graduate material</h4></a>
 
-	</div>
+        </div>
           <div class="col-lg-5 mr-auto ">
-            <img class="img-fluid" src="img/Mentaculus4.jpg" alt="The Mentaculus">
+            <br>
+            <img class="img-fluid" src="img/clusterbassaT.gif" alt="Ising Cluster Algorithm">
           </div>
         </div>
 
@@ -361,12 +320,17 @@ t</A><br>
       <!-- /.container -->
 
     </section>
-    <!-- /.content-section-a -->
+    <!-- /.content-section-b -->
+
+
+
+
+
 
 
     <!-- Links -->
     <a  name="links"></a>
-    <section class="content-section-b">
+    <section class="content-section-a">
       <div class="container">
         <div class="row">
           <div class="col-lg-5 mr-auto order-lg-2">
@@ -396,12 +360,54 @@ t</A><br>
       <!-- /.container -->
 
     </section>
+    <!-- /.content-section-a -->
+
+
+
+
+  <!-- CONTACT INFORMATION -->
+    <a  name="contact"></a>
+    <section class="content-section-b">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-5 ml-auto">
+            <hr class="section-heading-spacer">
+            <div class="clearfix"></div>
+            <h2 class="section-heading">Contact</h2>
+		<table>
+                  <tr><td valign=top><b>Address </b>: <td>
+                    Dipartimento di Matematica e Fisica<br>
+                    Universit&agrave; Cattolica del Sacro Cuore<br>
+                    Via Trieste, 17<br>
+                    25121 Brescia, Italy<br>
+                  <tr><td valign=top><b>Room </b>: <td>
+                    "Ufficio dottorandi in Matematica"<br>
+                  <tr><td valign=top><b>Phone </b>: <td>
+                    +39 - 030.2406.715<br>
+                  <tr><td valign=top><b>E-mail </b>: <td>
+                    <A HREF="mailto:am.miti@dmf.unicatt.it">am.miti@dmf.unicatt.i
+t</A><br>
+                  <tr><td><b>Orario di ricevimento </b>: <td>
+                    [...]<br>
+		</table>
+
+	</div>
+          <div class="col-lg-5 mr-auto ">
+            <img class="img-fluid" src="img/Mentaculus4.jpg" alt="The Mentaculus">
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container -->
+
+    </section>
     <!-- /.content-section-b -->
 
 
-
 <!-- Contatti-->
-<a  name="contact"></a>
+
     <aside class="banner">
 
       <div class="container">
@@ -457,7 +463,7 @@ t</A><br>
           </li>
           <li class="footer-menu-divider list-inline-item">&sdot;</li>
           <li class="list-inline-item">
-            <a href="#stuff">Stuff</a>
+            <a href="http://www.dmf.unicatt.it/~amm/stuff/">Stuff</a>
           </li>
           <li class="footer-menu-divider list-inline-item">&sdot;</li>
           <li class="list-inline-item">

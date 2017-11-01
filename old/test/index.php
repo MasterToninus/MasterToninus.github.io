@@ -143,3 +143,94 @@ t</A><br>
                   <tr><td><b>Orario di ricevimento </b>: <td>
                     [...]<br>
              </table>
+
+
+<h1>Stuff </h1>
+<?php
+  $papers = array();
+  $teaching = array();
+  $postgrad = array();
+
+  if (($handle = fopen("material.csv", "r")) !== FALSE) {
+
+    while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
+ 	$record = array(
+	  "Category" => $data[0],
+	  "Title" => $data[1],
+	  "Type" => $data[2],
+	  "Language" => $data[3],
+	  "Date" => $data[4],
+	  "Url" => $data[5],
+	  "Wip" => $data[6],
+	  "Authors" => $data[7],
+	);
+	if(strcmp($record["Category"],"Teaching")==0)
+	  array_push($teaching,$record);
+	else if(strcmp($record["Category"],"Paper")==0)
+	  array_push($papers,$record);
+	else if($record["Category"]=="Postgraduate")
+	  array_push($postgrad,$record);
+      
+  }
+  fclose($handle);
+}
+?>
+
+<?php if (count($papers) > 0): ?>
+<table>
+  <tbody>
+<?php foreach ($papers as $row): array_map('htmlentities', $row); ?>
+    <tr>
+      <?php 
+	if ($row["Wip"]==1)
+	 echo "<td> WIP </td>";
+	echo "<td><a href=" . $row["Url"] . ">" . $row["Title"] . "</a> ;</td>";
+	echo "<td>" . $row["Authors"] . "</td>";
+      ?>
+    </tr>
+<?php endforeach; ?>
+  </tbody>
+</table>
+<?php else:?>
+ TBA
+<?php endif;?>
+
+
+<?php if (count($teaching) > 0): ?>
+<table>
+  <tbody>
+<?php foreach ($teaching as $row): array_map('htmlentities', $row); ?>
+    <tr>
+      <?php 
+	if ($row["Wip"]==1)
+	 echo "<td> WIP </td>";
+	echo "<td><a href=" . $row["Url"] . ">" . $row["Title"] . "</a></td>";
+	echo "<td>" . $row["Type"] . "</td>";
+      ?>
+    </tr>
+<?php endforeach; ?>
+  </tbody>
+</table>
+<?php else:?>
+ TBA
+<?php endif;?>
+
+
+<?php if (count($postgrad) > 0): ?>
+<table>
+  <tbody>
+<?php foreach ($postgrad as $row): array_map('htmlentities', $row); ?>
+    <tr>
+      <?php 
+	if ($row["Wip"]==1)
+	 echo "<td> WIP </td>";
+	echo "<td><a href=" . $row["Url"] . ">" . $row["Title"] . "</a></td>";
+	echo "<td>" . $row["Type"] . "</td>";
+      ?>
+    </tr>
+<?php endforeach; ?>
+  </tbody>
+</table>
+<?php else:?>
+ TBA
+<?php endif;?>

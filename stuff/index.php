@@ -33,23 +33,23 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Tony</a>
+        <a class="navbar-brand" href="../#">Tony</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#about">About Me</a>
+              <a class="nav-link" href="../#about">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#research">Research Interests</a>
+              <a class="nav-link" href="../#research">Research Interests</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#stuff">My Stuff</a>
+              <a class="nav-link" href="#">My Stuff</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" href="../#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -65,7 +65,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="underconstruction-message">
-                        <h1>Under Construction</h1>
+                        <h1>Working Material</h1>
                     </div>
                 </div>
             </div>
@@ -74,6 +74,36 @@
      </div>
 
 
+     <!-- Generate Files array -->
+	<?php
+	  $papers = array();
+	  $teaching = array();
+	  $postgrad = array();
+
+	  if (($handle = fopen("../data/material.csv", "r")) !== FALSE) {
+
+	    while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
+		$record = array(
+		  "Category" => $data[0],
+		  "Title" => $data[1],
+		  "Type" => $data[2],
+		  "Language" => $data[3],
+		  "Date" => $data[4],
+		  "Url" => $data[5],
+		  "Wip" => $data[6],
+		  "Authors" => $data[7],
+		);
+		if(strcmp($record["Category"],"Teaching")==0)
+		  array_push($teaching,$record);
+		else if(strcmp($record["Category"],"Paper")==0)
+		  array_push($papers,$record);
+		else if($record["Category"]=="Postgraduate")
+		  array_push($postgrad,$record);
+
+	  }
+	  fclose($handle);
+	}
+	?>
 
 
 
@@ -87,12 +117,28 @@
              <div class="clearfix"></div>
              <h2 class="section-heading">Teaching<br></h2>
              <p class="lead">
-               text
+               My lecture notes:
              </p>
+		<?php if (count($teaching) > 0): ?>
+		<table>
+		  <tbody>
+		    <?php foreach ($teaching as $row): array_map('htmlentities', $row); ?>
+		    <tr>
+		      <?php
+			echo "<td><a href=" . $row["Url"] . ">" . $row["Title"] . "</a></td>";
+			echo "<td>" . $row["Type"] . "</td>";
+			if ($row["Wip"]==1)
+			 echo "<td> WIP </td>";
+		      ?>
+		    </tr>
+		<?php endforeach; ?>
+		  </tbody>
+		</table>
+		<?php endif;?>
            </div>
            <div class="col-lg-5 ml-auto order-lg-1">
              <a href="img/pic">
-                 <img class="img-fluid center-block" src="img/pic_crop" alt="Typical academic picture">
+                 <img class="img-fluid center-block" src="../img/serious-man.jpg" alt="Typical academic picture">
            </div>
          </div>
        </div>
@@ -111,12 +157,28 @@
              <div class="clearfix"></div>
              <h2 class="section-heading">Publications<br></h2>
                <p class="lead">
-                 Testo
+                 An hopefully growing list of my papers.
                </p>
+		<?php if (count($papers) > 0): ?>
+		<table>
+		  <tbody>
+		<?php foreach ($papers as $row): array_map('htmlentities', $row); ?>
+		    <tr>
+		      <?php
+			echo "<td><a href=" . $row["Url"] . ">" . $row["Title"] . "</a> ;</td>";
+			echo "<td>" . $row["Authors"] . "</td>";
+			if ($row["Wip"]==1)
+			 echo "<td> WIP </td>";
+		      ?>
+		    </tr>
+		<?php endforeach; ?>
+		  </tbody>
+		</table>
+		<?php endif;?>
            </div>
            <div class="col-lg-5 mr-auto">
              <a href="img/x">
-             <img class="img-fluid" src="img/x_crop" alt="picture text">
+             <img class="img-fluid" src="../img/UnderConstruction.gif" alt="Picture, work in progress.">
            </div>
          </div>
        </div>
@@ -135,8 +197,24 @@
              <div class="clearfix"></div>
              <h2 class="section-heading">Post Graduate Material<br></h2>
              <p class="lead">
-               text
+               Material produced during my Ph.D.
              </p>
+		<?php if (count($postgrad) > 0): ?>
+		<table>
+		  <tbody>
+		    <?php foreach ($postgrad as $row): array_map('htmlentities', $row); ?>
+		      <tr>
+			<?php
+			  echo "<td><a href=" . $row["Url"] . ">" . $row["Title"] . "</a></td>";
+			  echo "<td>" . $row["Type"] . "</td>";
+			  if ($row["Wip"]==1)
+			    echo "<td> WIP </td>";
+			  ?>
+		      </tr>
+		    <?php endforeach; ?>
+		  </tbody>
+		</table>
+		<?php endif;?>
            </div>
            <div class="col-lg-5 ml-auto order-lg-1">
              <a href="img/pic">
@@ -203,32 +281,50 @@
 
 
 
-
-
-
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <!-- Footer -->
+    <footer>
       <div class="container">
-        <a class="navbar-brand" href="#">Tony</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#research">Research Interests</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#stuff">My Stuff</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="../#">Home</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="../#about">About</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="../#research">Research</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="#">Stuff</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="../#contact">Contact</a>
+          </li>
+        </ul>
+        <p class="lastupdate text-muted small">
+          <script language="javascript">
+            document.write("<i><a href=\"https://github.com/MasterToninus/MasterToninus.github.io/commits/master\">Last Edit<\/a> "+document.lastModified+"<\/i>");
+          </script>
+        <p class="copyright text-muted small">
+          Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
+          &emsp; Italsing srl. &emsp;  All Rights Reserved.
+        </p>
+        </p>
       </div>
-    </nav>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
+
+
+
+

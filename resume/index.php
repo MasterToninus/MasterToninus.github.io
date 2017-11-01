@@ -35,23 +35,23 @@ How to describe my company? I'm the company!
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Tony</a>
+        <a class="navbar-brand" href="../#">Tony</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#about">About Me</a>
+              <a class="nav-link" href="../#about">About Me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#research">Research Interests</a>
+              <a class="nav-link" href="../#research">Research Interests</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#stuff">My Stuff</a>
+              <a class="nav-link" href="../stuff">My Stuff</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" href="../#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -97,7 +97,6 @@ How to describe my company? I'm the company!
                           }
                       }
                       fclose($handle);
-                    }
                     ?>
 
                     <?php if (count($table) > 0): ?>
@@ -127,28 +126,46 @@ How to describe my company? I'm the company!
     </div>     <!-- /.content-section-a -->
 
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <!-- Footer -->
+    <footer>
       <div class="container">
-        <a class="navbar-brand" href="#">Tony</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#research">Research Interests</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#stuff">My Stuff</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="../#">Home</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="../#about">About</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="../#research">Research</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="../stuff">Stuff</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="../#contact">Contact</a>
+          </li>
+        </ul>
+        <p class="lastupdate text-muted small">
+          <script language="javascript">
+            document.write("<i><a href=\"https://github.com/MasterToninus/MasterToninus.github.io/commits/master\">Last Edit<\/a> "+document.lastModified+"<\/i>");
+          </script>
+        <p class="copyright text-muted small">
+          Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
+          &emsp; Italsing srl. &emsp;  All Rights Reserved.
+        </p>
+        </p>
       </div>
-    </nav>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

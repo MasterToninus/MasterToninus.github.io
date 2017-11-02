@@ -56,23 +56,45 @@
       </div>
     </nav>
 
+    <!-- Header -->
+    <header class="intro-header">
+      <div class="container">
+        <div class="intro-message">
+          <h1>Working Material</h1>
+          <hr class="intro-divider">
+          <ul class="list-inline intro-social-buttons">
+            <li class="list-inline-item">
+              <a href="#Teaching" class="btn btn-default btn-lg">
+                <i class="fa fa-book fa-fw"></i>
+                <span class="network-name">teaching</span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#Publications" class="btn btn-default btn-lg">
+                <i class="fa fa-flask fa-fw"></i>
+                <span class="network-name">Publications</span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#PostGrad" class="btn btn-default btn-lg">
+                <i class="fa fa-graduation-cap fa-fw"></i>
+                <span class="network-name">PostGrad</span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#UnderGrad" class="btn btn-default btn-lg">
+                <i class="fa fa-eraser fa-fw"></i>
+                <span class="network-name">UnderGrad</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
 
 
     <!-- Put your page content here! -->
-    <div class="underconstruction-header">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="underconstruction-message">
-                        <h1>Working Material</h1>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-     </div>
-
 
      <!-- Generate Files array -->
 	<?php
@@ -137,8 +159,8 @@
 		<?php endif;?>
            </div>
            <div class="col-lg-5 ml-auto order-lg-1">
-             <a href="img/pic">
-                 <img class="img-fluid center-block" src="../img/serious-man.jpg" alt="Typical academic picture">
+		<br>
+                <img class="img-fluid center-block" src="../img/serious-man.jpg" alt="Typical academic picture">
            </div>
          </div>
        </div>
@@ -177,8 +199,8 @@
 		<?php endif;?>
            </div>
            <div class="col-lg-5 mr-auto">
-             <a href="img/x">
-             <img class="img-fluid" src="../img/UnderConstruction.gif" alt="Picture, work in progress.">
+		<br>
+		<img class="img-fluid" src="../img/UnderConstruction.gif" alt="Picture, work in progress.">
            </div>
          </div>
        </div>
@@ -217,8 +239,8 @@
 		<?php endif;?>
            </div>
            <div class="col-lg-5 ml-auto order-lg-1">
-             <a href="img/pic">
-                 <img class="img-fluid center-block" src="img/pic_crop" alt="Typical academic picture">
+		<br>
+                <img class="img-fluid center-block" src="../img/Figure_ms_landscape.jpg" alt="Typical academic picture">
            </div>
          </div>
        </div>
@@ -305,14 +327,11 @@
             <a href="../#contact">Contact</a>
           </li>
         </ul>
-        <p class="lastupdate text-muted small">
-<!--          <script language="javascript">
-            document.write("<i><a href=\"https://github.com/MasterToninus/MasterToninus.github.io/commits/master\">Last Edit<\/a> "+document.lastModified+"<\/i>");
-          </script>
--->        <p class="copyright text-muted small">
+        <p class="copyright text-muted small">
           Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
           &emsp; Italsing srl. &emsp;  All Rights Reserved.
-        </p>
+	  <br>
+          Credits to <a href="https://github.com/BlackrockDigital/startbootstrap-landing-page">BlackrockDigital</a> for the bootstrap template.
         </p>
       </div>
     </footer>

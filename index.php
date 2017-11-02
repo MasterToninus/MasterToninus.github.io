@@ -246,6 +246,7 @@ How to describe my company? I'm the company!
                       "Approx_Date" => $data[6],
                       "End_Date" => $data[8],
                       "Url" => $data[10],
+		      "Tbc" => $data[11]
                     );
                   array_push($table,$record);
                   }
@@ -261,9 +262,11 @@ How to describe my company? I'm the company!
                     <tr>
                      <?php
                        echo "<td>(" . $row["Type"] . ")</td>";
-                       echo "<td><a href=" . $row["Url"] . ">" . $row["Event_Title"] . "</a></td>";
+                       echo "<td><a href=" . $row["Url"] . ">" . $row["Event_Title"] . "</a>";
+		       if($row["Tbc"]==1) echo "<font face=\"verdana\" color=\"red\"> (TBC)</font>"; echo"</td>";
                        echo "<td>" . $row["Location"] . "</td>";
                        echo "<td>" . $row["Approx_Date"] . "</td>";
+
                      ?>
                     </tr>
                  <?php endforeach; ?>
@@ -304,10 +307,10 @@ How to describe my company? I'm the company!
             <!--
             <p class="lead">Some of things that I produced in my years of studies.</p>
             -->
-            <a href="http://www.dmf.unicatt.it/~amm/stuff/#Teaching"><h4>Teaching</h4></a>
-            <a href="http://www.dmf.unicatt.it/~amm/stuff/#Publications"><h4>Publications</h4></a>
-            <a href="http://www.dmf.unicatt.it/~amm/stuff/#PostGrad"><h4>Post graduate material</h4></a>
-            <a href="http://www.dmf.unicatt.it/~amm/stuff/#UnderGrad"><h4>Under graduate material</h4></a>
+            <a href="http://www.dmf.unicatt.it/~amm/stuff/#Teaching"><h5>Teaching</h5></a>
+            <a href="http://www.dmf.unicatt.it/~amm/stuff/#Publications"><h5>Publications</h5></a>
+            <a href="http://www.dmf.unicatt.it/~amm/stuff/#PostGrad"><h5>Post graduate material</h5></a>
+            <a href="http://www.dmf.unicatt.it/~amm/stuff/#UnderGrad"><h5>Under graduate material</h5></a>
 
         </div>
           <div class="col-lg-5 mr-auto ">
@@ -470,14 +473,12 @@ t</A><br>
             <a href="#contact">Contact</a>
           </li>
         </ul>
-        <p class="lastupdate text-muted small">
-<!--          <script language="javascript">
-            document.write("<i><a href=\"https://github.com/MasterToninus/MasterToninus.github.io/commits/master\">Last Edit<\/a> "+document.lastModified+"<\/i>");
-          </script>
--->        <p class="copyright text-muted small">
+        <p class="copyright text-muted small">
           Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
           &emsp; Italsing srl. &emsp;  All Rights Reserved.
-        </p>
+	  <br>
+	  Credits to <a href="https://github.com/BlackrockDigital/startbootstrap-landing-page">BlackrockDigital</a> for the bootstrap template.
+
         </p>
       </div>
     </footer>

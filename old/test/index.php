@@ -4,6 +4,10 @@
 
 	Prova PHP
 
+<script language="javascript">
+    document.write("<i><a href=\"https://github.com/MasterToninus/MasterToninus.github.io/commits/master\">Last Edit<\/a> "+document.lastModified+"<\/i>");
+</script>
+
 <h1>Versione basic</h1>
 
 <?php

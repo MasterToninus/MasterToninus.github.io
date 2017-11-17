@@ -48,7 +48,7 @@ How to describe my company? I'm the company!
               <a class="nav-link" href="#research">Research Interests</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="http://www.dmf.unicatt.it/~amm/stuff/">My Stuff</a>
+              <a class="nav-link" href="stuff/">My Stuff</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
@@ -307,10 +307,10 @@ How to describe my company? I'm the company!
             <!--
             <p class="lead">Some of things that I produced in my years of studies.</p>
             -->
-            <a href="http://www.dmf.unicatt.it/~amm/stuff/#Teaching"><h5>Teaching</h5></a>
-            <a href="http://www.dmf.unicatt.it/~amm/stuff/#Publications"><h5>Publications</h5></a>
-            <a href="http://www.dmf.unicatt.it/~amm/stuff/#PostGrad"><h5>Post graduate material</h5></a>
-            <a href="http://www.dmf.unicatt.it/~amm/stuff/#UnderGrad"><h5>Under graduate material</h5></a>
+            <a href="stuff/#Teaching"><h5>Teaching</h5></a>
+            <a href="stuff/#Publications"><h5>Publications</h5></a>
+            <a href="stuff/#PostGrad"><h5>Post graduate material</h5></a>
+            <a href="stuff/#UnderGrad"><h5>Under graduate material</h5></a>
 
         </div>
           <div class="col-lg-5 mr-auto ">
@@ -345,7 +345,12 @@ How to describe my company? I'm the company!
               <li><a href="https://gecogedi.dimai.unifi.it/">GecoGedi</a></li>
               <li><a href="http://www.altamatematica.it/gnsaga/">Indam - GNSAGA</a></li>
               <li><a href="https://ncatlab.org/nlab/show/HomePage">nCatLab</a></li>
+
+	      <li> <a href="http://poissongeometry.org/">Poisson Geometry</a> </li>
+	      <li> <a href="http://gmcnet.webs.ull.es/">GMC Network</a> </li>
               <li> <a href="https://www.lqp2.org/">Local Quantum Physics Crossroads</a> </li>
+	      <li> <a href="https://sites.google.com/site/levicivitainstitute/Activities/DiffietySchools/xxi-summer-diffiety-school">Diffiety</a> </li>
+
               <li> <a href="https://dmf.bs.unicatt.it">Dmf</a> </li>
               <li> <a href="https://lcm.mi.infn.it/">Lcm</a> </li>
             </ul>
@@ -392,8 +397,7 @@ How to describe my company? I'm the company!
                   <tr><td valign=top><b>E-mail </b>: <td>
                     <A HREF="mailto:am.miti@dmf.unicatt.it">am.miti@dmf.unicatt.i
 t</A><br>
-                  <tr><td><b>Orario di ricevimento </b>: <td>
-                    [...]<br>
+                 <!-- <tr><td><b>Orario di ricevimento </b>: <td>[...]<br>-->
 		</table>
 
 	</div>
@@ -466,7 +470,7 @@ t</A><br>
           </li>
           <li class="footer-menu-divider list-inline-item">&sdot;</li>
           <li class="list-inline-item">
-            <a href="http://www.dmf.unicatt.it/~amm/stuff/">Stuff</a>
+            <a href="stuff">Stuff</a>
           </li>
           <li class="footer-menu-divider list-inline-item">&sdot;</li>
           <li class="list-inline-item">

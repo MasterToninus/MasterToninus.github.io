@@ -256,7 +256,7 @@ How to describe my company? I'm the company!
             ?>
 
 	    <?php if (count($table) > 0): ?>
-              <table>
+              <table border="1">
                 <tbody>
                   <?php foreach ($table as $row): array_map('htmlentities', $row); ?>
                     <tr>

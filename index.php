@@ -351,7 +351,7 @@ How to describe my company? I'm the company!
               <li> <a href="https://www.lqp2.org/">Local Quantum Physics Crossroads</a> </li>
 	      <li> <a href="https://sites.google.com/site/levicivitainstitute/Activities/DiffietySchools/xxi-summer-diffiety-school">Diffiety</a> </li>
 
-              <li> <a href="https://dmf.bs.unicatt.it">Dmf</a> </li>
+              <li> <a href="http://dipartimenti.unicatt.it/dmf-home">Dmf</a> </li>
               <li> <a href="https://lcm.mi.infn.it/">Lcm</a> </li>
             </ul>
 

@@ -199,7 +199,8 @@ How to describe my company? I'm the company!
               <li> Axiomatization and mathematical foundations of classical and quantum field theories</li>
               <li> Geometric Mechanics of Field Systems</li>
               <li> Geometric and Algebraic Quantization</li>
-              <li> Secondary calculus and cohomological physics</li>
+              <!--<li> Secondary calculus and cohomological physics</li>-->
+              <!--<li> Categories, Topos and Gauge Theories</li>-->
             </ul>
 
           </div>

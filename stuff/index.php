@@ -270,7 +270,7 @@
                 <!-- Draft dispensarium -->
                 <li> (WIP) Notes on Fiber Bundle. <a href="https://github.com/MasterToninus/Dispensarium/blob/master/Fiber-Bundles/FiberBundles.pdf" >(Pdf)</a> <a href="https://github.com/MasterToninus/Dispensarium/blob/master/Fiber-Bundles/FiberBundles.tex" >(LaTex)</a></li>
                 <li> (WIP) AQFT mathematical preliminaries. <a href="https://github.com/MasterToninus/Dispensarium/blob/master/AQFT-Mathematical-Preliminaries/AQFT_Preliminaries.pdf" >(Pdf)</a> <a href="https://github.com/MasterToninus/Dispensarium/blob/master/AQFT-Mathematical-Preliminaries/AQFT_Preliminaries.tex" >(LaTex)</a></li>
-                <li> (WIP) Quick notes in abstract algebra. <a href="https://github.com/MasterToninus/Dispensarium/tree/master/Remarks-in-Algebra" >(Pdf)</a> <a href="https://github.com/MasterToninus/Dispensarium/blob/master/Remarks-in-Algebra/Algebraic-Structures.tex" >(LaTex)</a></li>
+                <!--<li> (WIP) Quick notes in abstract algebra. <a href="https://github.com/MasterToninus/Dispensarium/tree/master/Remarks-in-Algebra" >(Pdf)</a> <a href="https://github.com/MasterToninus/Dispensarium/blob/master/Remarks-in-Algebra/Algebraic-Structures.tex" >(LaTex)</a></li-->
               </ul>
               <h4>Computational Physics</h4>
               <ul>

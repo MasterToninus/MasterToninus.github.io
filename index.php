@@ -390,6 +390,20 @@ How to describe my company? I'm the company!
             <h2 class="section-heading">Contact</h2>
 		<table>
                   <tr><td valign=top><b>Address </b>: <td>
+                    Department of Mathematics<br>
+                    KU Leuven<br>
+                    Celestijnenlaan 200B, box 2400<br>
+                    B-3001 Leuven, Belgium<br>
+                  <tr><td valign=top><b>Room </b>: <td>
+                    3.27<br>
+                  <tr><td valign=top><b>Phone </b>: <td>
+                    +39 - 030.2406.715<br>
+                  <tr><td valign=top><b>E-mail </b>: <td>
+                    <A HREF="mailto:am.miti@dmf.unicatt.it">am.miti@dmf.unicatt.i
+t</A><br>
+		</table>
+<!--		<table>
+                  <tr><td valign=top><b>Address </b>: <td>
                     Dipartimento di Matematica e Fisica<br>
                     Universit&agrave; Cattolica del Sacro Cuore<br>
                     Via Trieste, 17<br>
@@ -401,9 +415,9 @@ How to describe my company? I'm the company!
                   <tr><td valign=top><b>E-mail </b>: <td>
                     <A HREF="mailto:am.miti@dmf.unicatt.it">am.miti@dmf.unicatt.i
 t</A><br>
-                 <!-- <tr><td><b>Orario di ricevimento </b>: <td>[...]<br>-->
+                  <tr><td><b>Orario di ricevimento </b>: <td>[...]<br>
 		</table>
-
+-->
 	</div>
           <div class="col-lg-5 mr-auto ">
             <img class="img-fluid" src="img/Mentaculus4.jpg" alt="The Mentaculus">
@@ -430,7 +444,7 @@ t</A><br>
           <div class="col-lg-6 my-auto">
             <ul class="list-inline banner-social-buttons">
               <li class="list-inline-item">
-                <a href="mailto:antoniomichele.miti@unicatt.it" class="btn btn-default btn-lg">
+                <a href="mailto:am.miti@dmf.unicatt.it" class="btn btn-default btn-lg">
                   <i class="fa fa-envelope fa-fw"></i>
                   <span class="network-name">E-Mail</span>
                 </a>

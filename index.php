@@ -80,6 +80,12 @@ How to describe my company? I'm the company!
               </a>
             </li>
             <li class="list-inline-item">
+              <a href="https://orcid.org/0000-0002-8829-1943" class="btn btn-default btn-lg">
+                <i class="fa fa-id-badge fa-fw"></i>
+                <span class="network-name">ORCID</span>
+              </a>
+            </li>
+            <li class="list-inline-item">
               <a href="https://it.pinterest.com/MasterToninus/math-phys/" class="btn btn-default btn-lg">
                 <i class="fa fa-pinterest fa-fw"></i>
                 <span class="network-name">Pinterest</span>

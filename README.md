@@ -1,5 +1,9 @@
 # MasterToninus.github.io
-Department web page.
+Academic web page.
 Dmf-Unicat (PHP)
 
 ## TODO
+
+- [ ] Generate "publications" from biblatex
+- [ ] put raw contents in a yaml file
+- [ ] 

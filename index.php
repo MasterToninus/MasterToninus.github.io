@@ -141,6 +141,7 @@ How to describe my company? I'm the company!
             </p>
           </div>
           <div class="col-lg-5 mr-auto">
+            <br>
             <a href="img/PicOfMe.png">
             <img class="img-fluid" src="img/PicOfMe_Crop.jpg" alt="Typical academic picture">
           </div>
@@ -172,10 +173,19 @@ How to describe my company? I'm the company!
                   <li> Internship in Java Programming; Mar 2016 - Jul 2016,<a href="http://www.csttech.it/">CST</a></li>
                   <li> Student collaboration; May 2014 - Feb 2015, <a href="https://lcm.mi.infn.it/">LCM</a></li>
                 </ul>
+
+        	<p align="center">
+        	  <a href="https://www.dropbox.com/s/guw0zynajvopoap/cv.pdf?dl=0" class="btn btn-default btn-lg"><i class="fa fa-file-pdf-o fa-fw"></i> <span class="network-name">Complete CV</span></a>
+       		  <!--<a href="https://1drv.ms/b/s!An70kyTiD3_in1HEOAGzYjZkXaYa" class="btn btn-default btn-lg"><i class="fa fa-file-pdf-o fa-fw"></i> <span class="network-name">(short) CV</span></a>-->
+        	  <!--<a href="https://onedrive.live.com/redir?resid=E27F0FE22493F47E!3676&authkey=!AAVHGxuclcZbKmA&ithint=file%2cpdf" class="btn btn-default btn-lg"><i class="fa fa-file-pdf-o fa-fw"></i> <span class="network-name">(europass) CV</span></a>-->
+        	</p>
+
               </div>
             </div>
 
           </div>
+
+
           <!-- /.container -->
         </section>
 
@@ -205,6 +215,7 @@ How to describe my company? I'm the company!
             </p>
             <ul>
               <li> Multi-symplectic geometry and L-&infin; Algebras</li>
+              <li> Higher structures and Homotopy structures</li>
               <li> Axiomatization and mathematical foundations of classical and quantum field theories</li>
               <li> Geometric Mechanics of Field Systems</li>
               <li> Geometric and Algebraic Quantization</li>
@@ -214,7 +225,8 @@ How to describe my company? I'm the company!
 
           </div>
           <div class="col-lg-5 ml-auto order-lg-1">
-            <img class="img-fluid center-block" src="img/Iamp.png" alt="IAMP logo" align="middle">
+            <br>
+            <!-- <img class="img-fluid center-block" src="img/Iamp.png" alt="IAMP logo" align="middle"> -->
             <a href="img/saggiatore.png">
                 <img class="img-fluid center-block" src="img/saggiatore_Crop.jpg" alt="Typical academic picture">
           </div>
@@ -325,7 +337,9 @@ How to describe my company? I'm the company!
         </div>
           <div class="col-lg-5 mr-auto ">
             <br>
-            <img class="img-fluid" src="img/clusterbassaT.gif" alt="Ising Cluster Algorithm">
+            <!--<img class="img-fluid" src="img/clusterbassaT.gif" alt="Ising Cluster Algorithm">-->
+            <a href="img/Zero.pdf">
+                <img class="img-fluid center-block" src="img/Zero_crop.png" alt="Firmacopie Zerocalcalcare, Bruxelles">
           </div>
         </div>
 
@@ -436,6 +450,16 @@ t</A><br>
     </section>
     <!-- /.content-section-b -->
 
+  <div class="content-section-b">
+    <p class="lastupdate text-muted small">
+	<!-- Last update, sketchy implementation -->
+	<?php
+	  $val = max(filemtime("data/activities.csv"),filemtime("data/material.csv"),filemtime("index.php"),filemtime("stuff/index.php"));
+	  echo filemtime("gfg.txt"); 
+	  echo "Last update: ".date("F d Y H:i:s.",$val); 
+	?> 
+    </p>
+  </div>
 
 <!-- Contatti-->
 
@@ -518,3 +542,4 @@ t</A><br>
   </body>
 
 </html>
+

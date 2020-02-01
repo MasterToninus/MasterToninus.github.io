@@ -174,7 +174,7 @@
      <section class="content-section-a">
        <div class="container">
          <div class="row">
-           <div class="col-lg-5 ml-auto">
+           <div class="col-lg-8 ml-auto">
              <hr class="section-heading-spacer">
              <div class="clearfix"></div>
              <h2 class="section-heading">Publications<br></h2>
@@ -198,7 +198,8 @@
 		</table>
 		<?php endif;?>
            </div>
-           <div class="col-lg-5 mr-auto">
+           <div class="col-lg-2 mr-auto">
+		<br>
 		<br>
 		<img class="img-fluid" src="../img/UnderConstruction.gif" alt="Picture, work in progress.">
            </div>

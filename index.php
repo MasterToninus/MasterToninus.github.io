@@ -128,7 +128,7 @@ How to describe my company? I'm the company!
               <a target="_blank" href="http://docenti.unicatt.it/ita/mauro_spera/">Mauro Spera</a>
               (UCSC) and Prof.
               <a target="_blank" href="https://perswww.kuleuven.be/~u0096206/">Marco Zambon</a>
-              (Ku Leuven).
+              (KU Leuven).
             </p>
             <p class="lead">
               I received my master's degree in Physics from the
@@ -139,6 +139,11 @@ How to describe my company? I'm the company!
               <a target="_blank" href="http://fisica.unipv.it/EN_index.php">University of Pavia</a>
                 .
             </p>
+	    <p>
+		<a title="Academic Bio" href="http://dmf.unicatt.it/miti/data/bio"><span style="background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 5px;">Bio</span>
+		</a>
+	    </p>	
+
           </div>
           <div class="col-lg-5 mr-auto">
             <br>

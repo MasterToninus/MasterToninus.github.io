@@ -374,6 +374,7 @@ How to describe my company? I'm the company!
               <li><a href="https://gecogedi.dimai.unifi.it/">GecoGedi</a></li>
               <li><a href="http://www.altamatematica.it/gnsaga/">Indam - GNSAGA</a></li>
               <li><a href="https://ncatlab.org/nlab/show/HomePage">nCatLab</a></li>
+              <li><a href="https://kerodon.net/">Kerodon</a></li>
 
 	      <li> <a href="http://poissongeometry.org/">Poisson Geometry</a> </li>
 	      <li> <a href="http://gmcnet.webs.ull.es/">GMC Network</a> </li>

@@ -116,20 +116,24 @@ How to describe my company? I'm the company!
             <div class="clearfix"></div>
             <h2 class="section-heading">About me:<br></h2>
             <p class="lead">
-              I am a Ph.D student in Mathematics in the <a target="_blank" href="http://scuoledidottorato.unicatt.it/phdschools/science-home">International Doctoral Program in Science</a>
-              jointly offered by
-              <a target="_blank" href="http://dipartimenti.unicatt.it/dmf">Università Cattolica del Sacro Cuore</a>
-              and
-              <a target="_blank" href="https://wis.kuleuven.be/english">KU Leuven</a>
-              University.
+            I recently got a Ph.D. in Mathematics from <a target="_blank" href="http://dipartimenti.unicatt.it/dmf">Università Cattolica del Sacro Cuore</a> and <a target="_blank" href="https://wis.kuleuven.be/english">KU Leuven</a> (double degree, <a target="_blank" href="http://scuoledidottorato.unicatt.it/phdschools/science-home">International Doctoral Program in Science</a>).
             </p>
             <p class="lead">
+            My doctoral research project focused on the higher generalization of comomentum maps in multisymplectic geometry and it has been supervised by Prof.
+            <a target="_blank" href="http://docenti.unicatt.it/ita/mauro_spera/">Mauro Spera</a>
+              (UCSC) and Prof.
+              <a target="_blank" href="https://perswww.kuleuven.be/~u0096206/">Marco Zambon</a>
+              (KU Leuven).
+            </p>
+            <!--
+              <p class="lead">
               Currently I am working in the Geometry group under the supervision of Prof.
               <a target="_blank" href="http://docenti.unicatt.it/ita/mauro_spera/">Mauro Spera</a>
               (UCSC) and Prof.
               <a target="_blank" href="https://perswww.kuleuven.be/~u0096206/">Marco Zambon</a>
               (KU Leuven).
             </p>
+            -->
             <p class="lead">
               I received my master's degree in Physics from the
               <a target="_blank" href="http://www.ccdfis.unimi.it/en/index.html?">University of Milano</a>
@@ -140,8 +144,10 @@ How to describe my company? I'm the company!
                 .
             </p>
 	    <p>
+    <!--
 		<a title="Academic Bio" href="http://dmf.unicatt.it/miti/data/bio"><span style="background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 5px;">Bio</span>
 		</a>
+    -->
 	    </p>	
 
           </div>

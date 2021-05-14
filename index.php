@@ -169,11 +169,11 @@ How to describe my company? I'm the company!
                 <div class="clearfix"></div>
                 <h3>Education</h3>
                 <ul>
-                  <li> Ph.D. student; Jan 2017 - Now, Mathematics, 
+                  <li> Ph.D. in Science; Jan 2017 - Apr 2021, Mathematics, 
 			<a href="http://scuoledidottorato.unicatt.it/phdschools/science-home#content">UCSC Brescia</a> &
 			<a target="_blank" href="https://wis.kuleuven.be/english">KU Leuven</a>
 		  </li>
-                  <li> M.Sc; Oct 2013 - Nov 2015, Physics, <a href="http://www.unimi.it/ENG/">Università degli Studi di Milano</a> </li>
+                  <li> M.Sc.; Oct 2013 - Nov 2015, Physics, <a href="http://www.unimi.it/ENG/">Università degli Studi di Milano</a> </li>
                   <li> Master's student; Nov 2010 - Feb 2013, Physics, <a href="http://www.unimib.it/go/102/Home/English">Università degli Studi di Milano Bicocca</a> </li>
                   <li> B.Sc.; Oct 2005 - Nov 2010, Physics, <a href="http://www.unimib.it/go/102/Home/English">Università degli Studi di Milano Bicocca</a></li>
                 </ul>

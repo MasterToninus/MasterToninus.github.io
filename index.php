@@ -64,7 +64,8 @@ How to describe my company? I'm the company!
         <div class="intro-message">
           <h1>Antonio Michele Miti</h1>
           <!-- <h3>Wannabe researcher in Mathematical Physics</h3> -->
-          <h3>Ph.D student in Mathematics</h3>
+          <!-- <h3>Ph.D student in Mathematics</h3> -->
+          <h3>Postdoctoral researcher in Mathematics</h3>
           <hr class="intro-divider">
           <ul class="list-inline intro-social-buttons">
             <li class="list-inline-item">
@@ -118,6 +119,11 @@ How to describe my company? I'm the company!
             <p class="lead">
             I recently got a Ph.D. in Mathematics from <a target="_blank" href="http://dipartimenti.unicatt.it/dmf">Università Cattolica del Sacro Cuore</a> and <a target="_blank" href="https://wis.kuleuven.be/english">KU Leuven</a> (double degree, <a target="_blank" href="http://scuoledidottorato.unicatt.it/phdschools/science-home">International Doctoral Program in Science</a>).
             </p>
+	    <!--
+            <p class="lead">
+	    From October 2021, I will be a postdoctoral fellow at the <a target="_blank" href="http://dipartimenti.unicatt.it/dmf">MPIM in Bonn</a>.            
+	    </p>
+	    -->
             <p class="lead">
             My doctoral research project focused on the higher generalization of comomentum maps in multisymplectic geometry and it has been supervised by Prof.
             <a target="_blank" href="http://docenti.unicatt.it/ita/mauro_spera/">Mauro Spera</a>

@@ -1,0 +1,410 @@
+/* thanks to https://codepen.io/nickisix/pen/julqA for the minimal responsive navbar code */
+
+:root {
+    --lg: rgba(200,200,200,0.2);
+
+    --font-small: 13pt;
+    --font-medium: 20pt;
+    --font-big: 40pt;
+    --icon-size: 35pt;
+
+    font-family: 'Comfortaa';
+    line-height: 1.5em;
+}
+
+/* reset */
+html, body, div, p {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: var(--font-small);
+}
+
+a {
+    color: black;
+}
+a:hover { color: #777; }
+
+footer{
+    height: 300px;
+}
+
+header {
+    overflow: hidden;
+    background: #222;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top:0;
+    width: 100vw;
+    line-height: 1.1em;
+    z-index: 9999;
+}
+
+#header-container {
+    width: 1000px;
+    margin: 0 20px;
+}
+
+header a, header label {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+header a:hover, header label:hover { color: #aaa; }
+
+header label {
+    float: left;
+    padding: 18px 20px;
+    cursor: pointer;
+    color: white;
+}
+
+header label:after {
+    content: "\2261";
+    font-size: 1.8em;
+}
+
+#logo {
+    overflow-wrap: anywhere;
+    float: left;
+    /* font-weight: bold; */
+    font-size: 1.5em;
+}
+
+nav {
+    float: right;
+    max-height: 0;
+    width: 100%;
+    -webkit-transition: max-height 0.3s; 
+    -moz-transition: max-height 0.3s;
+    -o-transition: max-height 0.3s;
+    transition: max-height 0.3s;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+nav li {
+    display: block;
+    text-align: center;
+}
+
+nav a {
+    padding: 10px;
+    width: 100%;
+}
+
+#nav { display: none; }
+
+#nav:checked ~ nav {
+    max-height: 200px; /* This can be anything bigger than your nav height. The transition duration works with this */
+}
+
+@media only screen and (min-width: 800px) {
+
+    header label { display: none; }
+
+    nav {
+        width: auto;
+        max-height: none;
+    }
+
+    nav ul {
+        padding: 0;
+        padding-right: 10px;
+    }
+
+    nav li {
+        display: inline-block;
+        text-align: left;
+    }
+
+    header nav a {
+        display: inline-block;
+        padding: 20px 10px;
+        width: auto;
+    }
+
+}
+
+
+#content {
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+    padding-top: 30px;
+}
+
+#content-container {
+    width: 1000px;
+    margin: 0 20px;
+}
+
+/* #content-container > * { */
+/*     padding: 0 20px; */
+/* } */
+
+#introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    font-size: xx-small;
+}
+
+#desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 800px;
+}
+
+#desc p {
+    padding: 10px 0px;
+    text-align: justify;
+}
+
+#photo {
+    display: flex;
+    flex-direction: horizontal;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#photo > img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    margin: 35px;
+}
+
+.sec {
+    margin-top: 35px;
+    width: 100%;
+}
+
+.sec-list {
+    margin-top:10px;
+}
+
+.sec-list > div {
+    width: 100%;
+    background: var(--lg);
+    padding: 10px 5px;
+}
+
+.sec-list b,p {
+    display: inline;
+}
+
+.sec-list > .shift {
+    padding-left: 25px;
+    background: white;
+}
+
+.sec-title {
+    font-size: 16pt;
+    width: 100%;
+    margin: 5px 0 10px 5px;
+    padding-top: 5px;
+    /* font-weight: bold; */
+}
+
+.sec-title i {
+    margin-left: 10px;
+}
+
+/* .ai-orcid { */
+    /* color: #b2c046; */
+/* } */
+
+:target{
+  padding-top: 80px; /* = to height of navbar */
+}
+
+.big-title{
+    /* display: block; */
+    font-size: 20pt;
+    margin: 25px 0 10px 5px;
+    width: max-content;
+    font-weight: bold;
+}
+
+.shaded {
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+    width: min-content;
+    overflow: visible;
+}
+
+.shaded:after {
+    background-color: #eeeeee;
+    bottom: 0px;
+    content: ' ';
+    display: block;
+    height: 15px;
+    left: 7px;
+    position: absolute;
+    width: calc(100% + 10px);
+    z-index: -1;
+}
+
+.list {
+    width: 100%;
+    text-align: left;
+}
+
+.list tr:nth-child(even) {
+    background: var(--lg);
+}
+
+.list tr {
+    line-height: 30px;
+}
+
+.list td {
+    vertical-align: top;
+}
+
+.right {
+    margin: 0;
+    padding: 5px 0 0 15px;
+}
+
+.left {
+    margin: 0;
+    width: 200px;
+    text-align: right;    
+    padding: 5px 15px 5px 0;
+}
+
+@media screen and (max-width: 1100px) {
+    #introduction {
+        align-items: flex-start;
+    }
+
+    .left {
+        margin: 0;
+        width: auto;
+        min-width: 100px;
+        text-align: right;    
+        padding: 5px 15px 5px 0;
+    }
+}
+
+
+@media screen and (max-width: 950px) {
+    
+    #introduction {
+        align-items: center;
+        margin-top: 0;
+        flex-direction: column-reverse;
+    }
+
+    #content {
+        padding-top: 50px;
+    }
+
+    /* #content-container > * { */
+    /*     padding: 0; */
+    /* } */
+
+    #desc {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sec-list > .shift {
+        padding-left: 5px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    
+    #header-container {
+        margin: 0;
+    }
+    .left {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .right {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 5px 1px;
+    }
+    
+    html, body, div, p {
+        font-size: 12pt;
+    }
+    
+    .sec-title {
+        font-size: 15pt;
+        width: 100%;
+        text-align: center;
+        /* font-weight: bold; */
+    }
+    
+    #logo {
+        float: right;
+        font-size: 1.0em;
+    }
+
+    .big-title{
+        font-size: 18pt;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+
+/* Schifezze mie*/
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: space-evenly;
+}
+.item {
+    margin: 5px;
+    width: 400px;
+    height: auto;
+}

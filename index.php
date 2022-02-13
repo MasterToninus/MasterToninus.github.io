@@ -1,563 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- My first, rudimental Homepage
-a mere personalization of a bootstrap template http://startbootstrap.com/template-categories/landing-pages/
-a poor attempt to give a better impression of myself
-How to describe my company? I'm the company!
--->
-<link rel="shortcut icon" href="img/mario_favicon.ico" type="image/x-icon">
-<link rel="icon" href="img/favicon.ico" type="image/x-icon">
-
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">  
+  <!-- -->
+  <!-- HEADER -->
+  <!-- -->
   <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Academic webpage">
-    <meta name="author" content="Antonio M. Miti">
-
     <title>Antonio Michele Miti</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- Custom styles for this template -->
-    <link href="css/landing-page.css" rel="stylesheet">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;display=swap" rel="stylesheet">
   </head>
-
   <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Tony</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#research">Research Interests</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="stuff/">My Stuff</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
+    <header>
+      <div id="header-container">
+        <label for="nav"></label>
+        <input id="nav" type="checkbox"><a id="logo" href="#">Antonio Michele MITI</a>
+        <nav>
+          <ul>
+            <li><a href="./research/">RESEARCH</a></li>
+            <li><a href="./teaching/">TEACHING</a></li>
+            <li><a href="#contacts">CONTACTS</a></li>
+            <!-- li-->
+            <!--     a(href='#') MISC-->
           </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Header -->
-    <header class="intro-header">
-      <div class="container">
-        <div class="intro-message">
-          <h1>Antonio Michele Miti</h1>
-          <!-- <h3>Wannabe researcher in Mathematical Physics</h3> -->
-          <!-- <h3>Ph.D student in Mathematics</h3> -->
-          <h3>Postdoctoral researcher in Mathematics</h3>
-          <hr class="intro-divider">
-          <ul class="list-inline intro-social-buttons">
-            <li class="list-inline-item">
-              <a href="https://github.com/MasterToninus" class="btn btn-default btn-lg">
-                <i class="fa fa-github fa-fw"></i>
-                <span class="network-name">Github</span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.researchgate.net/profile/Antonio_Michele_Miti" class="btn btn-default btn-lg">
-                <i class="fa fa-flask fa-fw"></i>
-                <span class="network-name">ResearchGate</span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://orcid.org/0000-0002-8829-1943" class="btn btn-default btn-lg">
-                <i class="fa fa-id-badge fa-fw"></i>
-                <span class="network-name">ORCID</span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://it.pinterest.com/MasterToninus/math-phys/" class="btn btn-default btn-lg">
-                <i class="fa fa-pinterest fa-fw"></i>
-                <span class="network-name">Pinterest</span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/antonio-michele-miti-666824144/" class="btn btn-default btn-lg">
-                <i class="fa fa-linkedin fa-fw"></i>
-                <span class="network-name">Linkedin</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+        </nav>
       </div>
     </header>
 
-    <!--              -->    <!--              -->
-    <!-- Page Content -->    <!--              -->
 
-    <!-- About me -->
-    <a  name="about"></a>
-    <section class="content-section-a">
+    <!-- ================================================= -->
+    <!-- Contents -->
+    <!-- ================================================= -->
+    <div id="content">
+      <div id="content-container">
 
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 ml-auto">
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <h2 class="section-heading">About me:<br></h2>
-            <p class="lead">
-            I recently got a Ph.D. in Mathematics from <a target="_blank" href="http://dipartimenti.unicatt.it/dmf">Università Cattolica del Sacro Cuore</a> and <a target="_blank" href="https://wis.kuleuven.be/english">KU Leuven</a> (double degree, <a target="_blank" href="http://scuoledidottorato.unicatt.it/phdschools/science-home">International Doctoral Program in Science</a>).
-            </p>
-	    <!--
-            <p class="lead">
-	    From October 2021, I will be a postdoctoral fellow at the <a target="_blank" href="http://dipartimenti.unicatt.it/dmf">MPIM in Bonn</a>.            
-	    </p>
-	    -->
-            <p class="lead">
-            My doctoral research project focused on the higher generalization of comomentum maps in multisymplectic geometry and it has been supervised by Prof.
-            <a target="_blank" href="http://docenti.unicatt.it/ita/mauro_spera/">Mauro Spera</a>
-              (UCSC) and Prof.
-              <a target="_blank" href="https://perswww.kuleuven.be/~u0096206/">Marco Zambon</a>
-              (KU Leuven).
-            </p>
+        <!-- --------------------------------------------- -->
+        <!-- Introduction -->
+        <!-- --------------------------------------------- -->
+        <div id="introduction">
+          <div id="desc">
+            <p>I am a postdoctoral fellow at the <a target="_blank" href="https://www.mpim-bonn.mpg.de/">Max Planck Institute for Mathematics</a> in Bonn.</p>
             <!--
-              <p class="lead">
-              Currently I am working in the Geometry group under the supervision of Prof.
-              <a target="_blank" href="http://docenti.unicatt.it/ita/mauro_spera/">Mauro Spera</a>
-              (UCSC) and Prof.
-              <a target="_blank" href="https://perswww.kuleuven.be/~u0096206/">Marco Zambon</a>
-              (KU Leuven).
-            </p>
+            <p>Currently I am working in the Geometry group under the supervision of Prof. <a target="_blank" href="http://docenti.unicatt.it/ita/mauro_spera/">Mauro Spera</a> (UCSC) and Prof. <a target="_blank" href="https://perswww.kuleuven.be/~u0096206/">Marco Zambon</a> (KU Leuven).</p>
             -->
-            <p class="lead">
-              I received my master's degree in Physics from the
-              <a target="_blank" href="http://www.ccdfis.unimi.it/en/index.html?">University of Milano</a>
-               and I wrote my thesis under the supervision of Prof.
-              <a target="_blank" href="http://fisica.unipv.it/personale/Persona.php?ID=256">Claudio Dappiaggi</a>
-                at the
-              <a target="_blank" href="http://fisica.unipv.it/EN_index.php">University of Pavia</a>
-                .
+            <p>
+              My research interests lie at the intersection of differential and symplectic geometry, mathematical physics and higher structures.
+            <!--  My current projects focus on the higher generalization of comomentum maps in multisymplectic geometry and their applications.-->
             </p>
-	    <p>
-    <!--
-		<a title="Academic Bio" href="http://dmf.unicatt.it/miti/data/bio"><span style="background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 5px;">Bio</span>
-		</a>
-    -->
-	    </p>	
-
+            <p>
+              I recently got a Ph.D. in Mathematics from <a target="_blank" href="http://dipartimenti.unicatt.it/dmf">Università Cattolica del Sacro Cuore</a> and <a target="_blank" href="https://wis.kuleuven.be/english">KU Leuven</a> (double degree, <a target="_blank" href="http://scuoledidottorato.unicatt.it/phdschools/science-home">International Doctoral Program in Science</a>).
+              My doctoral research project focused on the higher generalization of comomentum maps in multisymplectic geometry and it has been supervised by Prof. <a target="_blank" href="http://docenti.unicatt.it/ita/mauro_spera/">Mauro Spera</a> (UCSC) and Prof. <a target="_blank" href="https://perswww.kuleuven.be/~u0096206/">Marco Zambon</a>
+                (KU Leuven).            
+            </p>
+            <p class="lead">
+                I received my master's degree in Physics from the
+                <a target="_blank" href="http://www.ccdfis.unimi.it/en/index.html?">University of Milano</a>
+                 and I wrote my thesis under the supervision of Prof.
+                <a target="_blank" href="http://fisica.unipv.it/personale/Persona.php?ID=256">Claudio Dappiaggi</a>
+                  at the
+                <a target="_blank" href="http://fisica.unipv.it/EN_index.php">University of Pavia</a>
+                  .
+              </p>
+              <!--
+              <a title="Academic Bio" href="http://dmf.unicatt.it/miti/data/bio"><span style="background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 5px;">Bio</span>
+              </a>
+              -->                       
           </div>
-          <div class="col-lg-5 mr-auto">
-            <br>
-            <a href="img/PicOfMe.png">
-            <img class="img-fluid" src="img/PicOfMe_Crop.jpg" alt="Typical academic picture">
+          <div id="photo">
+              <!--<a href="img/ProfilePic.png"> LINK </a>-->
+              <img  src="img/ProfilePic_Crop.jpg" alt="Typical academic picture">
           </div>
         </div>
 
-      </div>
-      <!-- /.container -->
-
-    <!-- Short Cv -->
-    <a  name="cv"></a>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-5 ml-auto">
-                <div class="clearfix"></div>
-                <h3>Education</h3>
-                <ul>
-                  <li> Ph.D. in Science; Jan 2017 - Apr 2021, Mathematics, 
-			<a href="http://scuoledidottorato.unicatt.it/phdschools/science-home#content">UCSC Brescia</a> &
-			<a target="_blank" href="https://wis.kuleuven.be/english">KU Leuven</a>
-		  </li>
-                  <li> M.Sc.; Oct 2013 - Nov 2015, Physics, <a href="http://www.unimi.it/ENG/">Università degli Studi di Milano</a> </li>
-                  <li> Master's student; Nov 2010 - Feb 2013, Physics, <a href="http://www.unimib.it/go/102/Home/English">Università degli Studi di Milano Bicocca</a> </li>
-                  <li> B.Sc.; Oct 2005 - Nov 2010, Physics, <a href="http://www.unimib.it/go/102/Home/English">Università degli Studi di Milano Bicocca</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-5 mr-auto">
-                <h3>Others</h3>
-                <ul>
-                  <li> Internship in Java Programming; Mar 2016 - Jul 2016,<a href="http://www.csttech.it/">CST</a></li>
-                  <li> Student collaboration; May 2014 - Feb 2015, <a href="https://lcm.mi.infn.it/">LCM</a></li>
-                </ul>
-
-        	<p align="center">
-        	  <a href="https://www.dropbox.com/s/guw0zynajvopoap/cv.pdf?dl=0" class="btn btn-default btn-lg"><i class="fa fa-file-pdf-o fa-fw"></i> <span class="network-name">Complete CV</span></a>
-       		  <!--<a href="https://1drv.ms/b/s!An70kyTiD3_in1HEOAGzYjZkXaYa" class="btn btn-default btn-lg"><i class="fa fa-file-pdf-o fa-fw"></i> <span class="network-name">(short) CV</span></a>-->
-        	  <!--<a href="https://onedrive.live.com/redir?resid=E27F0FE22493F47E!3676&authkey=!AAVHGxuclcZbKmA&ithint=file%2cpdf" class="btn btn-default btn-lg"><i class="fa fa-file-pdf-o fa-fw"></i> <span class="network-name">(europass) CV</span></a>-->
-        	</p>
-
-              </div>
-            </div>
-
+        <!-- --------------------------------------------- -->
+        <!-- Resume -->
+        <!-- --------------------------------------------- -->        
+        <div class="sec" id="cv">
+          <div class="sec-title">Academic resume 
+            (<a href="https://www.dropbox.com/s/guw0zynajvopoap/cv.pdf?dl=0" class="btn btn-default btn-lg"><i class="fa fa-file-pdf-o fa-fw"></i> <span class="network-name">Complete CV</span></a> )
           </div>
-
-
-          <!-- /.container -->
-        </section>
-
-
-
-    <!-- Research Interest -->
-    <a  name="research"></a>
-    <section class="content-section-b">
-
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-5 mr-auto order-lg-2">
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <h2 class="section-heading">Research Interest:<br></h2>
-            <p class="lead">
-              Broadly speaking, my interests revolve around the interplay between Geometry and theoretical physics.
-            </p>
-            <p class="lead">
-              My
-              <a target="_blank" href="https://www.researchgate.net/project/Differential-geometry-and-applications-to-modern-physics">doctoral project</a>
-              proposes an intermingled research paths, mostly focussed
-              towards symplectic geometry and its n-plectic (equivalently, multisymplectic) generalisations,
-              together with applications to modern physics issues, both classical and quantum
-              mechanical, with an emphasis on topological aspects.
-            </p>
-            <ul>
-              <li> Multi-symplectic geometry and L-&infin; Algebras</li>
-              <li> Higher structures and Homotopy structures</li>
-              <li> Axiomatization and mathematical foundations of classical and quantum field theories</li>
-              <li> Geometric Mechanics of Field Systems</li>
-              <li> Geometric and Algebraic Quantization</li>
-              <!--<li> Secondary calculus and cohomological physics</li>-->
-              <!--<li> Categories, Topos and Gauge Theories</li>-->
-            </ul>
-
-          </div>
-          <div class="col-lg-5 ml-auto order-lg-1">
-            <br>
-            <!-- <img class="img-fluid center-block" src="img/Iamp.png" alt="IAMP logo" align="middle"> -->
-            <a href="img/saggiatore.png">
-                <img class="img-fluid center-block" src="img/saggiatore_Crop.jpg" alt="Typical academic picture">
-          </div>
+          <table class="list">
+            <tr>
+              <td class="left"> <b>2021 - 2022</b></td>
+              <td class="right">Postdoctoral fellow @ <a href="https://www.mpim-bonn.mpg.de/">MPIM</a></td>
+            </tr>
+            <tr>
+              <td class="left"> <b>2017 - 2021</b></td>
+              <td class="right">Ph.D. in Science: Mathematics @ <a href="http://scuoledidottorato.unicatt.it/phdschools/science-home#content">UCSC Brescia</a> & <a target="_blank" href="https://wis.kuleuven.be/english">KU Leuven</a></td>
+            </tr>
+            <tr>
+              <td class="left"> <b>2013 - 2015</b></td>
+              <td class="right">M.Sc. in Theoretical Physics @ <a href="https://www.unimi.it/en/education/physics-0">UNIMI</a></td>
+            </tr>
+            <tr>
+              <td class="left"> <b>2010 - 2013</b></td>
+              <td class="right">Master's student in Physics @ <a href="http://www.unimib.it/go/102/Home/English">UNIMIB</a></td>
+            </tr>
+            <tr>
+              <td class="left"> <b>2005 - 2010</b></td>
+              <td class="right">B.Sc. in Physics @ <a href="http://www.unimib.it/go/102/Home/English">UNIMIB</a></td>
+            </tr>       
+          </table>
         </div>
+        <!--
+        <div class="sec" id="cv">
+          <div class="sec-title">Other experiences </div>
+          <table class="list">     
+            <tr>
+              <td class="left"> <b>Mar 2016 - Jul 2016</b></td>
+              <td class="right">Internship in Java Programming @ <a href="http://www.csttech.it/">CST</a></td>       
+            </tr>
+            <tr>            
+              <td class="left"> <b>May 2014 - Feb 2015</b></td>
+              <td class="right">Student collaboration @ <a href="https://lcm.mi.infn.it/">LCM</a></td>    
+            </tr>            
+          </table>
+        </div>    
+        -->    
 
-      </div>
-      <!-- /.container -->
+        <!-- --------------------------------------------- -->
+        <!-- Upcoming activities -->
+        <!-- --------------------------------------------- -->
+        <div class="sec">
+          <div class="big-title shaded" id="upcoming">Upcoming Activities</div>     
+          <table class="list">
 
-    </section>
-    <!-- /.content-section-b -->
-
-
-
-    <!-- RECENTS AND UPCOMING ACTIVITIES -->
-    <a  name="activities"></a>
-    <section class="content-section-a">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 mr-auto order-lg-2">
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <h2 class="section-heading">Recent and Upcoming Activities</h2>
-            <p class="lead">
-
-	      <?php
-	      $today_date = strtotime( date('m/d/y') );
-	      //Generate a table of recent activities
-	      $table = array();
+            <?php
+              $today_date = strtotime( date('m/d/y') );
+              //Generate a table of recent activities
+              $table = array();
               if (($handle = fopen("data/activities.csv", "r")) !== FALSE) {
-
                 while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
                   $end_date = strtotime($data[8]);
                   if($end_date > $today_date){
-		    //Create Record
-	            $record = array(
+                    //Create Record
+                    $record = array(
                       "Event_Title" => $data[1],
                       "Type" => $data[2],
                       "Location" => $data[4],
                       "Approx_Date" => $data[6],
                       "End_Date" => $data[8],
                       "Url" => $data[10],
-		      "Tbc" => $data[11]
+                      "Tbc" => $data[11]
                     );
-                  array_push($table,$record);
+                    array_push($table,$record);
                   }
-               }
-              fclose($handle);
-            }
+                }
+                fclose($handle);
+              }
             ?>
 
-	    <?php if (count($table) > 0): ?>
-              <table border="1">
-                <tbody>
-                  <?php foreach ($table as $row): array_map('htmlentities', $row); ?>
-                    <tr>
-                     <?php
-                       echo "<td>(" . $row["Type"] . ")</td>";
-                       echo "<td><a href=" . $row["Url"] . ">" . $row["Event_Title"] . "</a>";
-		       if($row["Tbc"]==1) echo "<font face=\"verdana\" color=\"red\"> (TBC)</font>"; echo"</td>";
-                       echo "<td>" . $row["Location"] . "</td>";
-                       echo "<td>" . $row["Approx_Date"] . "</td>";
+            <?php if (count($table) > 0): ?>
+            <table class="list">
+              <tbody>
+            <?php foreach ($table as $row): array_map('htmlentities', $row); ?>
+                      <tr>
+                          <?php
+                              echo '<td class="left"> <b>' .  $row["Approx_Date"] . "</b></td>";
+                              echo '<td >' .$row["Type"] . "</td>";
+                              echo '<td class="right"><a href=' . $row["Url"] . ">" . $row["Event_Title"] . "</a></td>";
+                              echo "<td> " . $row["Location"];
+                              if($row["Tbc"]==1) echo "<font face=\"verdana\" color=\"red\"> (TBC)</font>";
+                              echo "</td>";
+                          ?>
+                      </tr>
+                  <?php endforeach; ?>
+                </tbody>
+              </table>
+            <?php else:?>
+              <tr>
+                  <td class="left"> <b> - </b></td>
+                  <td>
+                  <td>
+                  <td class="right">TBA</td>   
+              </tr>
+            <?php endif;?>
+          </table>
+        </div>  
 
-                     ?>
-                    </tr>
-                 <?php endforeach; ?>
-               </tbody>
-             </table>
-          <?php else:?>
-            TBA
-          <?php endif;?>
 
 
 
-          </p>
-          </div>
-          <div class="col-lg-5 ml-auto order-lg-1">
-            <br>
-            <img class="img-fluid" src="img/rickandtorty.jpg" alt="Rick and Torty (Credit by Linda)">
-          </div>
+
+        <!-- --------------------------------------------- -->
+        <!-- NEWS -->
+        <!-- --------------------------------------------- -->
+        <!--
+        <div class="sec">
+        <div class="big-title shaded" id="News">News</div>
+          <table class="list">
+            <tr>
+              <td class="left"><b>01 Ott 2022</b></td>
+              <td class="right">Started new job at <a href="https://www.mpim-bonn.mpg.de/">MPIM</a>.</td>
+            </tr>
+          </table>
         </div>
-      </div>
-      <!-- /.container -->
+        -->
+ 
 
-    </section>
-    <!-- /.content-section-a -->
-
-
-
-    <!-- My Stuff-->
-    <a  name="stuff"></a>
-    <section class="content-section-b">
-
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-5 ml-auto">
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <h2 class="section-heading">Material</h2>
-            <!--
-            <p class="lead">Some of things that I produced in my years of studies.</p>
-            -->
-            <a href="stuff/#Teaching"><h5>Teaching</h5></a>
-            <a href="stuff/#Publications"><h5>Publications</h5></a>
-            <a href="stuff/#PostGrad"><h5>Post graduate material</h5></a>
-            <a href="stuff/#UnderGrad"><h5>Under graduate material</h5></a>
-
-        </div>
-          <div class="col-lg-5 mr-auto ">
-            <br>
-            <!--<img class="img-fluid" src="img/clusterbassaT.gif" alt="Ising Cluster Algorithm">-->
-            <a href="img/Zero.pdf">
-                <img class="img-fluid center-block" src="img/Zero_crop.png" alt="Firmacopie Zerocalcalcare, Bruxelles">
-          </div>
-        </div>
-
-      </div>
-      <!-- /.container -->
-
-    </section>
-    <!-- /.content-section-b -->
-
-
-
-
-
-
-
-    <!-- Links -->
-    <a  name="links"></a>
-    <section class="content-section-a">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 mr-auto order-lg-2">
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <h2 class="section-heading">Links</h2>
-            <p class="lead">
-            <ul>
-              <li><a href="https://gecogedi.dimai.unifi.it/">GecoGedi</a></li>
-              <li><a href="http://www.altamatematica.it/gnsaga/">Indam - GNSAGA</a></li>
-              <li><a href="https://ncatlab.org/nlab/show/HomePage">nCatLab</a></li>
-              <li><a href="https://kerodon.net/">Kerodon</a></li>
-
-	      <li> <a href="http://poissongeometry.org/">Poisson Geometry</a> </li>
-	      <li> <a href="http://gmcnet.webs.ull.es/">GMC Network</a> </li>
-              <li> <a href="https://www.lqp2.org/">Local Quantum Physics Crossroads</a> </li>
-	      <li> <a href="https://sites.google.com/site/levicivitainstitute/Activities/DiffietySchools/xxi-summer-diffiety-school">Diffiety</a> </li>
-
-              <li> <a href="http://dipartimenti.unicatt.it/dmf-home">Dmf</a> </li>
-              <li> <a href="https://lcm.mi.infn.it/">Lcm</a> </li>
-            </ul>
-
-	    </p>
-          </div>
-          <div class="col-lg-5 ml-auto order-lg-1">
-            <br>
-	      <a href="https://shop.lego.com/en-CA/Imperial-Flagship-10210">
-		<img class="img-fluid" src="img/lego-imperialflaship.png" alt="Adventure!">
-	      </a>
-          </div>
-        </div>
-      </div>
-      <!-- /.container -->
-
-    </section>
-    <!-- /.content-section-a -->
-
-
-
-
-  <!-- CONTACT INFORMATION -->
-    <a  name="contact"></a>
-    <section class="content-section-b">
-
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-5 ml-auto">
-            <hr class="section-heading-spacer">
-            <div class="clearfix"></div>
-            <h2 class="section-heading">Contact</h2>
-		<table>
-                  <tr><td valign=top><b>Address </b>: <td>
-                    Department of Mathematics<br>
-                    KU Leuven<br>
-                    Celestijnenlaan 200B, box 2400<br>
-                    B-3001 Leuven, Belgium<br>
-                  <tr><td valign=top><b>Room </b>: <td>
-                    3.27<br>
-                  <tr><td valign=top><b>Phone </b>: <td>
-                    +39 - 030.2406.715<br>
-                  <tr><td valign=top><b>E-mail </b>: <td>
-                    <A HREF="mailto:am.miti@dmf.unicatt.it">am.miti@dmf.unicatt.i
-t</A><br>
-		</table>
-<!--		<table>
-                  <tr><td valign=top><b>Address </b>: <td>
-                    Dipartimento di Matematica e Fisica<br>
-                    Universit&agrave; Cattolica del Sacro Cuore<br>
-                    Via Trieste, 17<br>
-                    25121 Brescia, Italy<br>
-                  <tr><td valign=top><b>Room </b>: <td>
-                    "Ufficio dottorandi in Matematica"<br>
-                  <tr><td valign=top><b>Phone </b>: <td>
-                    +39 - 030.2406.715<br>
-                  <tr><td valign=top><b>E-mail </b>: <td>
-                    <A HREF="mailto:am.miti@dmf.unicatt.it">am.miti@dmf.unicatt.i
-t</A><br>
-                  <tr><td><b>Orario di ricevimento </b>: <td>[...]<br>
-		</table>
--->
-	</div>
-          <div class="col-lg-5 mr-auto ">
-            <img class="img-fluid" src="img/Mentaculus4.jpg" alt="The Mentaculus">
-          </div>
-        </div>
-
-      </div>
-      <!-- /.container -->
-
-    </section>
-    <!-- /.content-section-b -->
-
-  <div class="content-section-b">
-    <p class="lastupdate text-muted small">
-	<!-- Last update, sketchy implementation -->
-	<?php
-	  $val = max(filemtime("data/activities.csv"),filemtime("data/material.csv"),filemtime("index.php"),filemtime("stuff/index.php"));
-	  echo filemtime("gfg.txt"); 
-	  echo "Last update: ".date("F d Y H:i:s.",$val); 
-	?> 
-    </p>
-  </div>
-
-<!-- Contatti-->
-
-    <aside class="banner">
-
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-6 my-auto">
-            <h2>Get in touch:</h2>
-          </div>
-          <div class="col-lg-6 my-auto">
-            <ul class="list-inline banner-social-buttons">
-              <li class="list-inline-item">
+        <!-- --------------------------------------------- -->
+        <!-- Contacts -->
+        <!-- --------------------------------------------- -->
+        <a  name="contacts"></a>
+        <div id="introduction">         
+          <div id="desc">
+          <div class="big-title shaded" id="contact">Contacts</div>              
+            <table>
+                  <tr><td valign=top><b>Address: </b> <td>
+                    Max Planck Institute for Mathematics<br>
+                    Vivatsgasse 7<br>
+                    53111 Bonn, Germany<br>
+                  <tr><td valign=top><b>Room: </b> <td>
+                    B15<br>
+                  <tr><td valign=top><b>E-mail: </b> <td>
+                    <A HREF="mailto:am.miti@dmf.unicatt.it">am.miti@dmf.unicatt.it</A><br>
+		        </table>
+          </div>         
+          <div id="photo"> 
+            <table>
+              <tr><th><br></th></tr>
+              <tr>
+                <th>
+                  <a href="https://github.com/MasterToninus" class="btn btn-default btn-lg">
+                    <i class="fa fa-github fa-fw"></i>
+                    <span class="network-name">Github</span>
+                  </a>
+                </th>
+                <th>
+                  <a href="https://www.researchgate.net/profile/Antonio_Michele_Miti" class="btn btn-default btn-lg">
+                  <i class="ai ai-lg ai-researchgate"></i>
+                    <span class="network-name">ResearchGate</span>
+                  </a>
+                </th>
+              </tr>
+              <tr>
+                <th>
+                <a href="https://orcid.org/0000-0002-8829-1943" class="btn btn-default btn-lg">
+                            <i class="ai ai-lg ai-orcid"></i>
+                            <span class="network-name">ORCID</span>
+                          </a>
+                </th>
+                <th>
+                <a href="https://it.pinterest.com/MasterToninus/math-phys/" class="btn btn-default btn-lg">
+                            <i class="fa fa-pinterest fa-fw"></i>
+                            <span class="network-name">Pinterest</span>
+                          </a>
+                </th>    
+              </tr>
+              <tr>
+                <th>
+                <a href="https://www.linkedin.com/in/antonio-michele-miti-666824144/" class="btn btn-default btn-lg">
+                            <i class="fa fa-linkedin fa-fw"></i>
+                            <span class="network-name">Linkedin</span>
+                          </a>
+                </th>
+                <th>
                 <a href="mailto:am.miti@dmf.unicatt.it" class="btn btn-default btn-lg">
-                  <i class="fa fa-envelope fa-fw"></i>
-                  <span class="network-name">E-Mail</span>
-                </a>
-              </li>
-              <li class="list-inline-item">
+                              <i class="fa fa-envelope fa-fw"></i>
+                              <span class="network-name">E-Mail</span>
+                            </a>
+                </th>    
+              </tr>
+              <tr>
+                <th>
                 <a href="https://www.mendeley.com/profiles/antonio-m-miti/" class="btn btn-default btn-lg">
-                  <i class="fa fa-handshake-o fa-fw"></i>
-                  <span class="network-name">Mendeley</span>
-                </a>
-              </li>
-              <li class="list-inline-item">
+                              <i class="ai ai-lg ai-mendeley"></i>
+                              <span class="network-name">Mendeley</span>
+                            </a>
+                </th>
+                <th>
                 <a href="http://steamcommunity.com/id/Toninus/" class="btn btn-default btn-lg">
-                  <i class="fa fa-steam fa-fw"></i>
-                  <span class="network-name">Steam</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+                              <i class="fa fa-steam fa-fw"></i>
+                              <span class="network-name">Steam</span>
+                            </a>
+                </th>    
+              </tr>
+              <tr>
+                <th>
+                  <a href="https://scholar.google.com/citations?user=DWKPuJYAAAAJ&hl=it&oi=ao" class="btn btn-default btn-lg">
+                  <i class="ai ai-lg ai-google-scholar"></i>
+                    <span class="network-name">Google Scholar</span>
+                  </a>
+                </th>
+                <th>
+                  <a href="https://arxiv.org/search/math?searchtype=author&query=Miti%2C+A+M" class="btn btn-default btn-lg">
+                    <i class="ai ai-lg ai-arxiv"></i>
+                    <span class="network-name">ArXiv</span>
+                  </a>
+                </th>    
+              </tr>   
+            </table>            
+          </div>         
+        </div>        
+
+
 
       </div>
-      <!-- /.container -->
+    </div>
 
-    </aside>
-    <!-- /.banner -->
-
+    <!-- --------------------------------------------- -->
     <!-- Footer -->
+    <!-- --------------------------------------------- -->
     <footer>
-      <div class="container">
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a href="#">Home</a>
-          </li>
-          <li class="footer-menu-divider list-inline-item">&sdot;</li>
-          <li class="list-inline-item">
-            <a href="#about">About</a>
-          </li>
-          <li class="footer-menu-divider list-inline-item">&sdot;</li>
-          <li class="list-inline-item">
-            <a href="#research">Research</a>
-          </li>
-          <li class="footer-menu-divider list-inline-item">&sdot;</li>
-          <li class="list-inline-item">
-            <a href="stuff">Stuff</a>
-          </li>
-          <li class="footer-menu-divider list-inline-item">&sdot;</li>
-          <li class="list-inline-item">
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-        <p class="copyright text-muted small">
-          Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
-          &emsp; Italsing srl. &emsp;  All Rights Reserved.
-	  <br>
-	  Credits to <a href="https://github.com/BlackrockDigital/startbootstrap-landing-page">BlackrockDigital</a> for the bootstrap template.
+      <div id="content">
+        <div id="content-container">
+          <div id="footer">
+            <br>
+            <br>
+            <br>
+            <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
+              Credits to <a href="https://github.com/vittorioerba/vittorioerba.github.io">Vittorio Erba</a> for the webpage template.
+              <br>
 
-        </p>
+              <?php
+              $val = max(filemtime("data/activities.csv"),filemtime("data/material.csv"),filemtime("index.php"),filemtime("stuff/index.php"));
+              echo "Last update: ".date("F d Y H:i:s.",$val); 
+              ?>
+              <br>
+
+              Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
+              &emsp; Italsing srl. &emsp;  All Rights Reserved.
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
   </body>
-
 </html>
-

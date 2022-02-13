@@ -140,7 +140,9 @@
                     $record = array(
                       "Event_Title" => $data[1],
                       "Type" => $data[2],
+                      "Organization" => $data[3],
                       "Location" => $data[4],
+                      "Country" => $data[5],
                       "Approx_Date" => $data[6],
                       "End_Date" => $data[8],
                       "Url" => $data[10],
@@ -156,21 +158,21 @@
             <?php if (count($table) > 0): ?>
             <table class="list">
               <tbody>
-            <?php foreach ($table as $row): array_map('htmlentities', $row); ?>
-                      <tr>
-                          <?php
-                              echo '<td class="left"> <b>' .  $row["Approx_Date"] . "</b></td>";
-                              echo '<td >' .$row["Type"] . "</td>";
-                              echo '<td class="right"><a href=' . $row["Url"] . ">" . $row["Event_Title"] . "</a></td>";
-                              echo "<td> " . $row["Location"];
-                              if($row["Tbc"]==1) echo "<font face=\"verdana\" color=\"red\"> (TBC)</font>";
-                              echo "</td>";
-                          ?>
-                      </tr>
-                  <?php endforeach; ?>
-                </tbody>
-              </table>
-            <?php else:?>
+              <?php foreach ($table as $row): array_map('htmlentities', $row); ?>
+                <tr>
+                  <?php
+                    echo '<td class="left"> <b>' .  $row["Approx_Date"] . "</b></td>";
+                    echo '<td class="right">';
+                    echo '<b><a href=' . $row["Url"] . ">" . $row["Event_Title"] . '</a>.</b><br>';
+                    echo ' '.$row["Type"]." @ ". $row["Organization"].', '. $row["Location"].'.';
+                    if($row["Tbc"]==1) 
+                      echo '<font face="verdana" color="red">    (TBC)</font>';
+                  ?>
+                  </tr>                        
+                    <?php endforeach; ?>
+                  </tbody>
+                </table>
+              <?php else:?>
               <tr>
                   <td class="left"> <b> - </b></td>
                   <td>

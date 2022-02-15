@@ -80,51 +80,58 @@
             <p>
               Welcome <a href="https://readyplayerone.fandom.com/wiki/Gunter ">Gunt3r</a>
             </p>
-            <p>                
-            Sezioni eliminate dalla vecchia versione del sito 
-                <a class="btn btn-primary" href="./eliminata.html" id="stars">3l1m1n4t4</a>
-            </p>
         </div>
 
 
+        <!-- ================================================= -->
+        <!-- MEnu -->
+        <!-- ================================================= -->         
+        <!-- List Groups -->
+        <div class="row tall-row">
+            <div class="col-lg-12">
+                <h1>Menu</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="list-group">
+                    <a href="./eliminata.html" class="list-group-item">
+                        <h4 class="list-group-item-heading">3l1m1n4t4</h4>
+                        <p class="list-group-item-text">
+                            Sezioni eliminate dalla vecchia versione del sito    
+                        </p>
+                    </a>
+                    <a href="../resume/" class="list-group-item">
+                        <h4 class="list-group-item-heading">Php generated Resume</h4>
+                        <p class="list-group-item-text">
+                        - CSV Viewer -       
+                        </p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">Centraline Meteo</h4>
+                        <p class="list-group-item-text">
+                            TODO       
+                        </p>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <h4 class="list-group-item-heading">Fototrappola</h4>
+                        <p class="list-group-item-text">
+                            TODO       
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img class="img-responsive" src="https://darrenkearney.me/wp-content/uploads/2015/07/example_use4.gif" alt="Picture, work in progress.">
+            </div>
+        </div>
 
         
         <!-- ================================================= -->
         <!-- TEMPLATE -->
         <!-- ================================================= -->         
 
-        <!-- Typography -->
-        <div class="row tall-row">
-            <div class="col-lg-12">
-                <h1>Typography</h1>
-                <hr>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <h1>Heading 1</h1>
-                <h2>Heading 2</h2>
-                <h3>Heading 3</h3>
-                <h4>Heading 4</h4>
-                <h5>Heading 5</h5>
-                <h6>Heading 6</h6>
-            </div>
-            <div class="col-md-4">
-                <h2>Example body text</h2>
-                <p>Doge doge doge doge <a href="#">Yeah!</a> Doge doge doge doge doge doge doge doge doge.</p>
-                <p><small>Fine print</small></p>
-                <p><strong>Bold text</strong>.</p>
-                <p><em>Italicized text</em>.</p>
-            </div>
-            <div class="col-md-4">
-                <h2>Emphasis classes</h2>
-                <p class="text-primary">You put the emPHAsis on the wrong syLLAbles.</p>
-                <p class="text-warning">Has Anyone Really Been Far Even as Decided to Use Even Go Want to do Look More Like?</p>
-                <p class="text-danger">If the answer to all questions is yes, so why not?</p>
-                <p class="text-success">And when everyone is super, no one will be.</p>
-                <p class="text-info">The force will be with you, always.</p>
-            </div>
-        </div>
 
 
         <!-- ================================================= -->

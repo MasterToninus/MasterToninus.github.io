@@ -49,18 +49,18 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CLICK ME!!!<span class="caret"></span> </a>
                         <ul class="dropdown-menu" role="menu">
+                            <li><a href="../">Home</a></li>
                             <li><a href="./eliminata.html">Eliminata</a></li>
-                            <li><a href="#">Two links?! Oh boy</a></li>
-                            <li><a href="#">Now you're being ridiculous</a></li>
+                            <li><a href="./h4x0rs.html">Template</a></li>
                             <li class="divider"></li>
                             <li class="dropdown-header">Much Wow</li>
                             <li><a href="#">So link</a></li>
                             <li><a href="#">Many internet</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="../index.php"><i class="fa fa-2x fa-home"></i></a>
-                    </li>
+                    <!--<li>
+                        <a href="../"><i class="fa fa-2x fa-home"></i></a>
+                    </li>-->
                 </ul>
             </div>
         </div>
@@ -81,7 +81,8 @@
               Welcome <a href="https://readyplayerone.fandom.com/wiki/Gunter ">Gunt3r</a>
             </p>
             <p>                
-                <a class="btn btn-primary" href="./eliminata.html" id="stars">Sezioni eliminate dalla vecchia versione del sito.</a>
+            Sezioni eliminate dalla vecchia versione del sito 
+                <a class="btn btn-primary" href="./eliminata.html" id="stars">3l1m1n4t4</a>
             </p>
         </div>
 
@@ -136,6 +137,23 @@
         </div>
 
     </div>
+
+
+    <!-- ================================================= -->
+    <!-- ??? -->
+    <!-- ================================================= -->            
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <!-- Github stars script -->
+    <script>
+    $(document).ready(function(){
+        $.getJSON("https://api.github.com/repos/Bachittarjeet/Hacker-Bootstrap-Template/", function(data){
+            var stars = data['stargazers_count'];
+            $("#stars").text(stars + " stars");
+        });
+    });
+    </script>
 
     
 </body>

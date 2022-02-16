@@ -161,12 +161,19 @@
               <?php foreach ($table as $row): array_map('htmlentities', $row); ?>
                 <tr>
                   <?php
-                    echo '<td class="left"> <b>' .  $row["Approx_Date"] . "</b></td>";
-                    echo '<td class="right">';
-                    echo '<b><a href=' . $row["Url"] . ">" . $row["Event_Title"] . '</a>.</b><br>';
-                    echo ' '.$row["Type"]." @ ". $row["Organization"].', '. $row["Location"].'.';
-                    if($row["Tbc"]==1) 
-                      echo '<font face="verdana" color="red">    (TBC)</font>';
+                    if($row["Tbc"]==1){
+                      echo '<td class="left"> <font color="gray"><em><b>' .  $row["Approx_Date"] . "</b></em></font></td>";
+                      echo '<td class="right">';
+                      echo '<em><a href=' . $row["Url"] . ">" . $row["Event_Title"] . '</a>';
+                      echo '&emsp; &emsp; <a href="https://en.wikipedia.org/wiki/To_be_announced">(tbc)</a><br>';
+                      echo ' <font color="gray">'.$row["Type"]." @ ". $row["Organization"].', '. $row["Location"].'.</font>';
+                    }
+                    else {
+                      echo '<td class="left"> <b>' .  $row["Approx_Date"] . "</b></td>";
+                      echo '<td class="right">';
+                      echo '<b><a href=' . $row["Url"] . ">" . $row["Event_Title"] . '</a>.</b><br>';
+                      echo ' '.$row["Type"]." @ ". $row["Organization"].', '. $row["Location"].'.';  
+                    }
                   ?>
                   </tr>                        
                     <?php endforeach; ?>

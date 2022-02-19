@@ -1,4 +1,5 @@
 /* thanks to https://codepen.io/nickisix/pen/julqA for the minimal responsive navbar code */
+/* Credits to <a href="https://github.com/vittorioerba/vittorioerba.github.io">Vittorio Erba</a> for the webpage template.*/
 
 :root {
     --lg: rgba(200,200,200,0.2);
@@ -155,6 +156,17 @@ nav a {
 /*     padding: 0 20px; */
 /* } */
 
+#subpage-title {
+    background-color: #EBEBEB;
+    display: flex;
+    /*justify-content: space-between;*/
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    padding-left: 15px;
+    padding-right:60px;
+}
+
 #introduction {
     display: flex;
     justify-content: space-between;
@@ -164,6 +176,7 @@ nav a {
 }
 
 #contacts {
+    margin-top: 35px;    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -187,9 +200,26 @@ nav a {
     max-width: 800px;
 }
 
+#address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 800px;
+    width: 120%; 
+}
+
 #desc p {
-    padding: 10px 0px;
+    padding: 10px 10px;
     text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#address table {
+    padding: 5px 0px;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 0px;   
 }
 
 #photo {
@@ -198,13 +228,34 @@ nav a {
     justify-content: space-around;
     width: 100%;
 }
+#links {
+    display: flex;
+    flex-direction: horizontal;
+    justify-content: space-around;
+    width: 80%;
+    border-collapse: separate;
+    border-spacing: 50px 0;
+}
 
 #photo > img {
     width: 230px;
-    height: 230px;
+    height: auto;
     border-radius: 50%;
     margin: 35px;
 }
+
+.links-list {
+    margin: 35px;
+    width: 100%;
+    margin-top: 45px;
+    text-align:left;
+    margin-left: auto;
+    margin-right: auto;
+}
+.links-list td {
+    padding-left: 10px;
+  }
+
 
 .sec {
     margin-top: 35px;
@@ -283,7 +334,7 @@ nav a {
     text-align: left;
 }
 
-.list tr:nth-child(even) {
+.list tr:nth-child(odd) {
     background: var(--lg);
 }
 
@@ -312,6 +363,10 @@ nav a {
         align-items: flex-start;
     }
 
+    #contacts {
+        align-items: flex-start;
+    }
+
     .left {
         margin: 0;
         width: auto;
@@ -319,6 +374,8 @@ nav a {
         text-align: right;    
         padding: 5px 15px 5px 0;
     }
+    
+
 }
 
 
@@ -330,6 +387,12 @@ nav a {
         flex-direction: column-reverse;
     }
 
+    #contacts {
+        align-items: center;
+        margin-top: 0;
+        flex-direction: column;
+    }
+
     #content {
         padding-top: 50px;
     }
@@ -339,6 +402,12 @@ nav a {
     /* } */
 
     #desc {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #address {
         width: 100%;
         margin: 0;
         padding: 0;
@@ -408,3 +477,20 @@ nav a {
     width: 400px;
     height: auto;
 }
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.sec-small {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /*font-size: smaller;*/
+}
+.sec-small td {
+    padding-left: 10px;
+  }

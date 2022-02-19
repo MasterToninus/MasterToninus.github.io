@@ -71,7 +71,7 @@
           </div>
           <div id="photo">
               <!--<a href="img/ProfilePic.png"> LINK </a>-->
-              <img  src="img/ProfilePic_Crop.jpg" alt="Typical academic picture">
+              <img  src="img/ProfilePic.jpg" alt="Typical academic picture">
           </div>
         </div>
 
@@ -79,9 +79,7 @@
         <!-- Resume -->
         <!-- --------------------------------------------- -->        
         <div class="sec" id="cv">
-          <div class="sec-title">Academic resume 
-            (<a href="https://www.dropbox.com/s/guw0zynajvopoap/cv.pdf?dl=0" class="btn btn-default btn-lg"><i class="fa fa-file-pdf-o fa-fw"></i> <span class="network-name">Complete CV</span></a> )
-          </div>
+          <div class="sec-title">Academic resume </div>
           <table class="list">
             <tr>
               <td class="left"> <b>2021 - 2022</b></td>
@@ -105,22 +103,18 @@
             </tr>       
           </table>
         </div>
-        <!--
-        <div class="sec" id="cv">
-          <div class="sec-title">Other experiences </div>
-          <table class="list">     
-            <tr>
-              <td class="left"> <b>Mar 2016 - Jul 2016</b></td>
-              <td class="right">Internship in Java Programming @ <a href="http://www.csttech.it/">CST</a></td>       
+        <div class="sec-small">
+            <table class="center" style="width: 80%;text-align: center">
+             <tr>
+              <td>(<a href="https://www.dropbox.com/s/guw0zynajvopoap/cv.pdf?dl=0" class="btn btn-default btn-lg"><i class="fa fa-file-pdf-o fa-fw"></i> <span class="network-name">Complete CV</span></a> )
+</td>
+              <td>(<a href="./resume" class="btn btn-default btn-lg"><i class="fa fa-id-badge fa-fw"></i><span class="network-name">Extended Resume</span></a> )
+</td>
             </tr>
-            <tr>            
-              <td class="left"> <b>May 2014 - Feb 2015</b></td>
-              <td class="right">Student collaboration @ <a href="https://lcm.mi.infn.it/">LCM</a></td>    
-            </tr>            
-          </table>
-        </div>    
-        -->    
+		        </table>            
+        </div>
 
+        
         <!-- --------------------------------------------- -->
         <!-- Upcoming activities -->
         <!-- --------------------------------------------- -->
@@ -214,92 +208,102 @@
         <!-- Contacts -->
         <!-- --------------------------------------------- -->
         <a  name="contacts"></a>
-        <div id="introduction">         
-          <div id="desc">
+        <div id="contacts">         
+          <div id="address">
           <div class="big-title shaded" id="contact">Contacts</div>              
-            <table>
-                  <tr><td valign=top><b>Address: </b> <td>
+          <p>
+            <table class="center">
+            <tr>
+              <td valign=top><b>Address: </b> </td>
+              <td>
                     Max Planck Institute for Mathematics<br>
                     Vivatsgasse 7<br>
                     53111 Bonn, Germany<br>
-                  <tr><td valign=top><b>Room: </b> <td>
-                    B15<br>
-                  <tr><td valign=top><b>E-mail: </b> <td>
-                    <A HREF="mailto:am.miti@dmf.unicatt.it">am.miti@dmf.unicatt.it</A><br>
+              </td>
+            </tr>
+            <tr><td valign=top><b>Room: </b> 
+              <td>B15</td>
+            </tr>
+            <tr>
+              <td valign=top><b>E-mail: </b></td> 
+              <td>
+                    <a href="mailto:am.miti@dmf.unicatt.it">am.miti@dmf.unicatt.it</a>
+              </td>
+            </tr>    
 		        </table>
+          </p>  
           </div>         
-          <div id="photo"> 
-            <table>
-              <tr><th><br></th></tr>
+          <div id="links"> 
+              <table class="links-list">
               <tr>
-                <th>
+                <td>
                   <a href="https://github.com/MasterToninus" class="btn btn-default btn-lg">
                     <i class="fa fa-github fa-fw"></i>
                     <span class="network-name">Github</span>
                   </a>
-                </th>
-                <th>
+                </td>
+                <td>
                   <a href="https://www.researchgate.net/profile/Antonio_Michele_Miti" class="btn btn-default btn-lg">
                   <i class="ai ai-lg ai-researchgate"></i>
                     <span class="network-name">ResearchGate</span>
                   </a>
-                </th>
+                </td>
               </tr>
               <tr>
-                <th>
+                <td>
                 <a href="https://orcid.org/0000-0002-8829-1943" class="btn btn-default btn-lg">
                             <i class="ai ai-lg ai-orcid"></i>
                             <span class="network-name">ORCID</span>
                           </a>
-                </th>
-                <th>
+                </td>
+                <td>
                 <a href="https://it.pinterest.com/MasterToninus/math-phys/" class="btn btn-default btn-lg">
                             <i class="fa fa-pinterest fa-fw"></i>
                             <span class="network-name">Pinterest</span>
                           </a>
-                </th>    
+                </td>    
               </tr>
               <tr>
-                <th>
+                <td>
                 <a href="https://www.linkedin.com/in/antonio-michele-miti-666824144/" class="btn btn-default btn-lg">
                             <i class="fa fa-linkedin fa-fw"></i>
                             <span class="network-name">Linkedin</span>
                           </a>
-                </th>
-                <th>
+                </td>
+                <td>
                 <a href="mailto:am.miti@dmf.unicatt.it" class="btn btn-default btn-lg">
                               <i class="fa fa-envelope fa-fw"></i>
                               <span class="network-name">E-Mail</span>
                             </a>
-                </th>    
+                </td>    
               </tr>
               <tr>
-                <th>
+                <td>
                 <a href="https://www.mendeley.com/profiles/antonio-m-miti/" class="btn btn-default btn-lg">
                               <i class="ai ai-lg ai-mendeley"></i>
                               <span class="network-name">Mendeley</span>
                             </a>
-                </th>
-                <th>
+                </td>
+                <td>
                 <a href="http://steamcommunity.com/id/Toninus/" class="btn btn-default btn-lg">
                               <i class="fa fa-steam fa-fw"></i>
                               <span class="network-name">Steam</span>
                             </a>
-                </th>    
+                </td>    
               </tr>
               <tr>
-                <th>
+                <td>
                   <a href="https://scholar.google.com/citations?user=DWKPuJYAAAAJ&hl=it&oi=ao" class="btn btn-default btn-lg">
                   <i class="ai ai-lg ai-google-scholar"></i>
                     <span class="network-name">Google Scholar</span>
                   </a>
-                </th>
-                <th>
+                </td>
+                <td>
                   <a href="https://arxiv.org/search/math?searchtype=author&query=Miti%2C+A+M" class="btn btn-default btn-lg">
                     <i class="ai ai-lg ai-arxiv"></i>
                     <span class="network-name">ArXiv</span>
                   </a>
-                </th>    
+                </td>    
               </tr>   
             </table>            
           </div>         
@@ -321,9 +325,6 @@
             <br>
             <br>
             <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
-              Credits to <a href="https://github.com/vittorioerba/vittorioerba.github.io">Vittorio Erba</a> for the webpage template.
-              <br>
-
               <?php
               $val = max(filemtime("data/activities.csv"),filemtime("data/material.csv"),filemtime("index.php"),filemtime("stuff/index.php"));
               echo "Last update: ".date("F d Y H:i:s.",$val); 

@@ -44,23 +44,29 @@
         <!-- --------------------------------------------- -->
         <!-- Title -->
         <!-- --------------------------------------------- -->
-        <div id="introduction">
-        <div class="big-title shaded" id="research">Research</div> 
-          <div id="desc">
-  
-          </div>
-          <div id="photo">
-          </div>
+        <div id="subpage-title">
+          <h1>Research</h1> 
+          &emsp;
+          <a href="https://scholar.google.com/citations?hl=en&user=DWKPuJYAAAAJ"><i class="ai ai-lg ai-google-scholar"></i></a> 
+          &emsp;
+          <a href="https://www.scopus.com/authid/detail.uri?authorId=57218509273"><i class="ai ai-lg ai-scopus"></i></a> 
+          &emsp;
+          <a href="https://arxiv.org/search/?searchtype=author&query=Miti%2C+A+M"><i class="ai ai-lg ai-arxiv"></i></a> 
+          &emsp;
+          <a href="https://orcid.org/0000-0002-8829-1943"><i class="ai ai-lg ai-orcid"></i></a>
         </div>
+
+
+
 
         <!-- --------------------------------------------- -->
         <!-- Research Intersts -->
         <!-- --------------------------------------------- -->
         <div id="introduction">
           <div id="desc">
-          <div class="sec-title">Interests</div>                     
+          <div class="big-title shaded" id="research">Interests</div>               
           <p class="lead">
-            Broadly speaking, my research interests lie primarily in the field of differential geometry and its interplay with mathematical physics.
+            Broadly speaking, my research interests lie in the field of differential geometry and its interplay with mathematical physics.
           </p>
           <p class="lead">
             I work with higher geometry methods in multisymplectic geometry and, most of all, I am interested in structures “up to homotopies” inspired by geometry and mechanics.
@@ -149,12 +155,7 @@
         <!-- Publications -->
         <!-- --------------------------------------------- -->        
         <div class="sec">
-          <div class="sec-title">Publications 
-            <a href="https://scholar.google.com/citations?hl=en&user=DWKPuJYAAAAJ"><i class="ai ai-lg ai-google-scholar"></i></a> 
-            <a href="https://www.scopus.com/authid/detail.uri?authorId=57218509273"><i class="ai ai-lg ai-scopus"></i></a> 
-            <a href="https://arxiv.org/search/?searchtype=author&query=Miti%2C+A+M"><i class="ai ai-lg ai-arxiv"></i></a> 
-            <a href="https://orcid.org/0000-0002-8829-1943"><i class="ai ai-lg ai-orcid"></i></a>
-          </div>
+          <div class="big-title shaded" id="publications">Publications</div> 
           <table class="list">
           <?php
             foreach ($publications as $bibentry) {

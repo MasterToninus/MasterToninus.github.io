@@ -237,31 +237,17 @@
               <table class="links-list">
               <tr>
                 <td>
-                  <a href="https://github.com/MasterToninus" class="btn btn-default btn-lg">
-                    <i class="fa fa-github fa-fw"></i>
-                    <span class="network-name">Github</span>
-                  </a>
-                </td>
-                <td>
                   <a href="https://www.researchgate.net/profile/Antonio_Michele_Miti" class="btn btn-default btn-lg">
                   <i class="ai ai-lg ai-researchgate"></i>
                     <span class="network-name">ResearchGate</span>
                   </a>
                 </td>
-              </tr>
-              <tr>
                 <td>
-                <a href="https://orcid.org/0000-0002-8829-1943" class="btn btn-default btn-lg">
-                            <i class="ai ai-lg ai-orcid"></i>
-                            <span class="network-name">ORCID</span>
-                          </a>
+                  <a href="https://github.com/MasterToninus" class="btn btn-default btn-lg">
+                    <i class="fa fa-github fa-fw"></i>
+                    <span class="network-name">Github</span>
+                  </a>
                 </td>
-                <td>
-                <a href="https://it.pinterest.com/MasterToninus/math-phys/" class="btn btn-default btn-lg">
-                            <i class="fa fa-pinterest fa-fw"></i>
-                            <span class="network-name">Pinterest</span>
-                          </a>
-                </td>    
               </tr>
               <tr>
                 <td>
@@ -271,18 +257,36 @@
                           </a>
                 </td>
                 <td>
-                <a href="mailto:am.miti@dmf.unicatt.it" class="btn btn-default btn-lg">
-                              <i class="fa fa-envelope fa-fw"></i>
-                              <span class="network-name">E-Mail</span>
-                            </a>
+                <a href="https://orcid.org/0000-0002-8829-1943" class="btn btn-default btn-lg">
+                            <i class="ai ai-lg ai-orcid"></i>
+                            <span class="network-name">ORCID</span>
+                          </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://scholar.google.com/citations?user=DWKPuJYAAAAJ&hl=it&oi=ao" class="btn btn-default btn-lg">
+                  <i class="ai ai-lg ai-google-scholar"></i>
+                    <span class="network-name">GoogleScholar</span>
+                  </a>
+                </td>
+                <td>
+                  <a href="https://arxiv.org/search/math?searchtype=author&query=Miti%2C+A+M" class="btn btn-default btn-lg">
+                    <i class="ai ai-lg ai-arxiv"></i>
+                    <span class="network-name">ArXiv</span>
+                  </a>
                 </td>    
               </tr>
               <tr>
                 <td>
-                <a href="https://www.mendeley.com/profiles/antonio-m-miti/" class="btn btn-default btn-lg">
+                <a href="https://www.scopus.com/authid/detail.uri?authorId=57218509273" class="btn btn-default btn-lg">
+                              <i class="ai ai-lg ai-scopus"></i>
+                              <span class="network-name">Scopus</span>
+                            </a>
+                <!--<a href="https://www.mendeley.com/profiles/antonio-m-miti/" class="btn btn-default btn-lg">
                               <i class="ai ai-lg ai-mendeley"></i>
                               <span class="network-name">Mendeley</span>
-                            </a>
+                            </a>-->
                 </td>
                 <td>
                 <a href="http://steamcommunity.com/id/Toninus/" class="btn btn-default btn-lg">
@@ -293,18 +297,18 @@
               </tr>
               <tr>
                 <td>
-                  <a href="https://scholar.google.com/citations?user=DWKPuJYAAAAJ&hl=it&oi=ao" class="btn btn-default btn-lg">
-                  <i class="ai ai-lg ai-google-scholar"></i>
-                    <span class="network-name">Google Scholar</span>
-                  </a>
-                </td>
-                <td>
-                  <a href="https://arxiv.org/search/math?searchtype=author&query=Miti%2C+A+M" class="btn btn-default btn-lg">
-                    <i class="ai ai-lg ai-arxiv"></i>
-                    <span class="network-name">ArXiv</span>
-                  </a>
+                <a href="https://it.pinterest.com/MasterToninus/math-phys/" class="btn btn-default btn-lg">
+                            <i class="fa fa-pinterest fa-fw"></i>
+                            <span class="network-name">Pinterest</span>
+                          </a>
                 </td>    
-              </tr>   
+                <td>
+                <a href="mailto:am.miti@dmf.unicatt.it" class="btn btn-default btn-lg">
+                              <i class="fa fa-envelope fa-fw"></i>
+                              <span class="network-name">E-Mail</span>
+                            </a>
+                </td>    
+              </tr>
             </table>            
           </div>         
         </div>        

@@ -81,71 +81,10 @@
         <!-- JUMBOTRON -->
         <!-- ================================================= -->  
         <div class="jumbotron">
-            <h1>
-                <a href="https://en.wikipedia.org/wiki/Easter_egg_(media)">34ST3r-3GGS</a>
-            </h1>
-            <h3>
-              Welcome <a href="https://readyplayerone.fandom.com/wiki/Gunter ">Gunt3r</a>
-            </h3>
-            <p>
-              Contenuti e funzionalità non adatti ad essere facilmente reperibili dal mio sito internet "accademico".
-            </p>            
+            <h1>Facciata Informatica</h1>
+            Protocollo di tutti i profili pubblici da mantenere.
         </div>
 
-
-        <!-- ================================================= -->
-        <!-- MEnu -->
-        <!-- ================================================= -->         
-        <div class="row tall-row">
-            <div class="col-lg-12">
-                <h1>Menu</h1>
-                <hr>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="list-group">
-                    <a href="./eliminata.html" class="list-group-item">
-                        <h4 class="list-group-item-heading">3l1m1n4t4</h4>
-                        <p class="list-group-item-text">
-                            Sezioni eliminate dalla vecchia versione del sito    
-                        </p>
-                    </a>
-                    <a href="../data/" class="list-group-item">
-                        <h4 class="list-group-item-heading">Php generated Resume</h4>
-                        <p class="list-group-item-text">
-                        - CSV Viewer -       
-                        </p>
-                    </a>
-                    <a href="./facciata.php" class="list-group-item">
-                        <h4 class="list-group-item-heading">Protocollo facciata</h4>
-                        <p class="list-group-item-text">
-                         Cosa fare per aggiornare in modo consistente tutti i profili?
-                        </p>
-                    </a>                    
-                    <a href="./meteo.php" class="list-group-item">
-                        <h4 class="list-group-item-heading">Centraline Meteo</h4>
-                        <p class="list-group-item-text">
-                            TODO       
-                        </p>
-                    </a>
-                    <a href="./gallery.php" class="list-group-item">
-                        <h4 class="list-group-item-heading">Photo gallery</h4>
-                        <p class="list-group-item-text">
-                            Raccolta foto Varie                            
-                        </p>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <img class="img-responsive" src="https://darrenkearney.me/wp-content/uploads/2015/07/example_use4.gif" alt="Picture, work in progress.">
-            </div>
-        </div>
-
-        
-        <!-- ================================================= -->
-        <!-- TEMPLATE -->
-        <!-- ================================================= -->         
 
         <!-- ================================================= -->
         <!-- Contents -->
@@ -155,7 +94,7 @@
 
         <?php 
             require_once('Parsedown.php');
-            $file = file_get_contents('link-utili.md');
+            $file = file_get_contents('vetrine.md');
             $Parsedown = new Parsedown();
             echo '<div class="col-md-5">';        
             echo $Parsedown->text($file); 
@@ -163,14 +102,12 @@
             echo '<div class="col-md-1"></div>';
             $file = file_get_contents('todo-facciata.md');
             echo '<div class="col-md-6">';        
-            /*echo $Parsedown->text($file); */
+            echo $Parsedown->text($file); 
             echo '</div>';                             
         ?>
             
         </div>
 
-
-       
 
 
         <!-- ================================================= -->

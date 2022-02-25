@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,18 +13,19 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;display=swap" rel="stylesheet">
 
     <style>
-    .tall-row {
-        margin-top: 40px;
-    }
-    .modal {
-        position: relative;
-        top: auto;
-        right: auto;
-        left: auto;
-        bottom: auto;
-        z-index: 1;
-        display: block;
-    }
+        .tall-row {
+            margin-top: 40px;
+        }
+
+        .modal {
+            position: relative;
+            top: auto;
+            right: auto;
+            left: auto;
+            bottom: auto;
+            z-index: 1;
+            display: block;
+        }
     </style>
 </head>
 
@@ -56,7 +57,7 @@
                             <li class="dropdown-header">Photo Gallery</li>
                             <li><a href="./gallery.php#fototrappla">Fototrappola</a></li>
                             <li><a href="./gallery.php#gamingrig">Gaming rig</a></li>
-                            <li><a href="./gallery.php#maker">Maker</a></li>                            
+                            <li><a href="./gallery.php#maker">Maker</a></li>
                         </ul>
                     </li>
                     <li>
@@ -199,7 +200,7 @@
                             <td>Dreadfort / Winterfell</td>
                         </tr>
                     </tbody>
-                </table> 
+                </table>
             </div>
         </div>
 
@@ -504,27 +505,37 @@
             </div>
             <div class="col-md-4">
                 <div class="panel panel-primary">
-                    <div class="panel-heading"><h3 class="panel-title">Panel primary</h3></div>
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel primary</h3>
+                    </div>
                     <div class="panel-body">Panel content</div>
                 </div>
 
                 <div class="panel panel-success">
-                    <div class="panel-heading"><h3 class="panel-title">Panel success</h3></div>
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel success</h3>
+                    </div>
                     <div class="panel-body">Panel content</div>
                 </div>
 
                 <div class="panel panel-warning">
-                    <div class="panel-heading"><h3 class="panel-title">Panel warning</h3></div>
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel warning</h3>
+                    </div>
                     <div class="panel-body">Panel content</div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="panel panel-danger">
-                    <div class="panel-heading"><h3 class="panel-title">Panel danger</h3></div>
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel danger</h3>
+                    </div>
                     <div class="panel-body">Panel content</div>
                 </div>
                 <div class="panel panel-info">
-                    <div class="panel-heading"><h3 class="panel-title">Panel info</h3></div>
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel info</h3>
+                    </div>
                     <div class="panel-body">Panel content</div>
                 </div>
             </div>
@@ -658,7 +669,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes  </button>
+                                <button type="button" class="btn btn-primary">Save changes </button>
                             </div>
                         </div>
                     </div>
@@ -679,13 +690,14 @@
 
     <!-- Github stars script -->
     <script>
-    $(document).ready(function(){
-        $.getJSON("https://api.github.com/repos/Bachittarjeet/Hacker-Bootstrap-Template/", function(data){
-            var stars = data['stargazers_count'];
-            $("#stars").text(stars + " stars");
+        $(document).ready(function() {
+            $.getJSON("https://api.github.com/repos/Bachittarjeet/Hacker-Bootstrap-Template/", function(data) {
+                var stars = data['stargazers_count'];
+                $("#stars").text(stars + " stars");
+            });
         });
-    });
     </script>
 
 </body>
+
 </html>

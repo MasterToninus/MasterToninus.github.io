@@ -100,7 +100,7 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-            <a href="https://photos.app.goo.gl/ZTZK5LfFVhQphhGc8" role="button">Selezione 2021</a>  
+            <a href="https://photos.app.goo.gl/ZTZK5LfFVhQphhGc8" class="btn btn-warning" role="button">Selezione 2021</a>  
             <br>
             <img width="250" height="auto" src="../img/volpe.JPG" alt="Volpe.">
 

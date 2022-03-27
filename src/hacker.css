@@ -1,5 +1,5 @@
 html {
-    font-family: Bitwise, sans-serif;
+    font-family: 'Bitwise', sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
@@ -120,7 +120,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: Bitwise, monospace, monospace;
+    font-family: 'Bitwise', monospace, monospace;
     font-size: 1em
 }
 
@@ -311,16 +311,23 @@ th {
 }
 
 @font-face {
-    font-family: Bitwise, 'Glyphicons Halflings';
+    font-family: 'Glyphicons Halflings';
     src: url('../fonts/glyphicons-halflings-regular.eot');
     src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg')
+}
+
+@font-face {
+    font-family: 'Bitwise';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Bitwise'), url('https://fonts.cdnfonts.com/s/6817/bitwise.woff') format('woff');
 }
 
 .glyphicon {
     position: relative;
     top: 1px;
     display: inline-block;
-    font-family: Bitwise, 'Glyphicons Halflings';
+    font-family: 'Bitwise', 'Glyphicons Halflings';
     font-style: normal;
     font-weight: normal;
     line-height: 1;
@@ -1396,7 +1403,7 @@ html {
 }
 
 body {
-    font-family: Bitwise, Monospace;
+    font-family: 'Bitwise', Monospace;
     font-size: 14px;
     line-height: 1.428571429;
     color: #0c0;
@@ -1407,7 +1414,7 @@ input,
 button,
 select,
 textarea {
-    font-family: Bitwise, inherit;
+    font-family: 'Bitwise', inherit;
     font-size: inherit;
     line-height: inherit
 }
@@ -1513,7 +1520,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: Bitwise, Monospace;
+    font-family: 'Bitwise', Monospace;
     font-weight: 500;
     line-height: 1.1;
     color: inherit
@@ -1919,7 +1926,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: Bitwise, Monospace
+    font-family: 'Bitwise', Monospace
 }
 
 code {
@@ -7200,7 +7207,7 @@ button.close {
     position: absolute;
     z-index: 1070;
     display: block;
-    font-family: Bitwise, Monospace;
+    font-family: 'Bitwise', Monospace;
     font-size: 12px;
     font-weight: normal;
     line-height: 1.4;
@@ -7323,7 +7330,7 @@ button.close {
     display: none;
     max-width: 276px;
     padding: 1px;
-    font-family: Bitwise, Monospace;
+    font-family: 'Bitwise', Monospace;
     font-size: 14px;
     font-weight: normal;
     line-height: 1.428571429;
@@ -7622,7 +7629,7 @@ button.close {
     height: 20px;
     margin-top: -10px;
     line-height: 1;
-    font-family: Bitwise, serif
+    font-family: 'Bitwise', serif
 }
 
 .carousel-control .icon-prev:before {

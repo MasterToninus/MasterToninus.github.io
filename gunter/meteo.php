@@ -93,6 +93,12 @@
             <div class="col-lg-12">
                 <h1>TODO</h1>
                 <hr>
+                Attualmente non c'e' modo di farlo. 
+                L'idea piu' accreditata era di usare google script per leggere il webhook di arduino iot e scrivere i dati in un google sheet,
+                poi embed del google sheet
+                <br>
+                il problema è che la guida per il primo passo non funziona! 
+                <a href="https://create.arduino.cc/projecthub/Arduino_Genuino/arduino-iot-cloud-google-sheets-integration-71b6bc">(link)</a>
             </div>
         </div>
         <div class="row">
@@ -101,8 +107,40 @@
                 <h2>Heading 2</h2>
                 <h3>Heading 3</h3>
                 <h4>Heading 4</h4>
-                <h5>Heading 5</h5>
-                <h6>Heading 6</h6>
+                <h5>idea</h5>
+                <ol type = "1">
+                    <li><strong>Arduino:</strong>
+                        Creare uno sketch di arduino con una sola variable "cloud" contentente la stringa dei valori "ext,int,hum,pres"
+                    </li>
+                    <li>
+                        <strong>IFTT:</strong>
+                        Creare un job che prende il webhook di arduino e aggiorna la prima cella della tabella Rawdata (appende all'inizio anche la data associata)
+                    </li>
+                    <li><strong>Google sheet script:</strong>
+                        doGet della prima cella in html (magari cambia formato della data?)
+                        , deploy come webapp
+                    </li>
+                    <li><strong>Webpage PHP:</strong>
+                        legge l'indirizzo associato al deployment come un file, parsa il csv e  lo mostra in una tabella
+                    </li>
+                </ol>
+
+                <h6>Primo Test</h6>
+                <?php
+                    $url = 'https://script.google.com/macros/s/AKfycbz3fBg448sdNGt4EtQ-t4J9wds2h62Pk_l558-KyAAzCcrxN8M/exec';
+                    $csv = file_get_contents($url);
+                    $data = str_getcsv($csv);
+                    
+                    echo "Date = ".$data[0]."<br>";
+                    echo "Year = ".$data[1]."<br>";
+                    echo "Time = ".$data[2]."<br>";
+                    echo "External Temperature = ".$data[3]." °C <br>";
+                    echo "Internal Temperature  = ".$data[4]." °C<br>";
+                    echo "Humidity = ".$data[5]." % <br>";                    
+                    echo "Pression = ".$data[6]." mBar <br>";
+                ?>
+
+
             </div>
         </div>        
 

@@ -130,15 +130,13 @@
                                 $url = 'https://script.google.com/macros/s/AKfycbz3fBg448sdNGt4EtQ-t4J9wds2h62Pk_l558-KyAAzCcrxN8M/exec';
                                 $csv = file_get_contents($url);
                                 $data = str_getcsv($csv);
-                                echo "<tr>";
-                                echo "<td>Date</td><td>".$data[0]."</td>";
-                                echo "<td>Year</td><td>".$data[1]."</td>";
-                                echo "<td>Time</td><td>".$data[2]."</td>";
-                                echo "<td>External Temperature</td><td>".$data[3]." °C</td>";
-                                echo "<td>Internal Temperature</td><td>".$data[4]." °C</td>";
-                                echo "<td>Humidity</td><td>".$data[5]." %</td>";                    
-                                echo "<td>Pression</td><td>".$data[6]." mBar</td>";
-                                echo "</tr>";
+                                echo "<tr><td>Date</td><td>".$data[0]."</td></tr>";
+                                echo "<tr><td>Year</td><td>".$data[1]."</td></tr>";
+                                echo "<tr><td>Time</td><td>".$data[2]."</td></tr>";
+                                echo "<tr><td>External Temperature</td><td>".$data[3]." °C</td></tr>";
+                                echo "<tr><td>Internal Temperature</td><td>".$data[4]." °C</td></tr>";
+                                echo "<tr><td>Humidity</td><td>".$data[5]." %</td></tr>";                    
+                                echo "<tr><td>Pression</td><td>".$data[6]." mBar</td></tr>";
                                 ?>
                             </tbody>
                         </table>

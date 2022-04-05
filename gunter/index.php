@@ -54,7 +54,7 @@
                             <li><a href="./eliminata.html">Eliminata</a></li>
                             <li><a href="./h4x0rs.html">Template</a></li>
                             <li><a href="./facciata.php">Protocollo Facciata</a></li>
-                            <li><a href="./meteo.php">Meteo</a></li>
+                            <li><a href="./meteo/">Meteo</a></li>
                             <li class="divider"></li>
                             <li class="dropdown-header">Photo Gallery</li>
                             <li><a href="./gallery.php#fototrappla">Fototrappola</a></li>
@@ -125,7 +125,7 @@
                          Cosa fare per aggiornare in modo consistente tutti i profili?
                         </p>
                     </a>                    
-                    <a href="./meteo.php" class="list-group-item">
+                    <a href="./meteo/" class="list-group-item">
                         <h4 class="list-group-item-heading">Centraline Meteo</h4>
                         <p class="list-group-item-text">
                             TODO       

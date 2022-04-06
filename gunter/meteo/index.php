@@ -119,10 +119,7 @@
             <div class="col-md-6">
                 <ul class="nav nav-tabs">
                     <li class="active"><a aria-expanded="true" href="#home1" data-toggle="tab">Immagini</a></li>
-                    <li class="tab"><a aria-expanded="false" href="#info1" data-toggle="tab">Info</a></li>
                     <li class="tab"><a aria-expanded="false" href="#pos1" data-toggle="tab">Posizione</a></li>
-                    <li class=""><a aria-expanded="false" href="#howto1" data-toggle="tab">Funzionamento</a></li>
-                    <li class=""><a aria-expanded="false" href="#todo1" data-toggle="tab">Todo</a></li>
                     <li class="dropdown">
                         <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#">Info<span class="caret"></span>
                         </a>

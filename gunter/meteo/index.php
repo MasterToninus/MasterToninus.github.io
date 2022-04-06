@@ -123,6 +123,16 @@
                     <li class="tab"><a aria-expanded="false" href="#pos1" data-toggle="tab">Posizione</a></li>
                     <li class=""><a aria-expanded="false" href="#howto1" data-toggle="tab">Funzionamento</a></li>
                     <li class=""><a aria-expanded="false" href="#todo1" data-toggle="tab">Todo</a></li>
+                    <li class="dropdown">
+                        <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#">Info<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#dropdown1" data-toggle="tab">Info</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#dropdown2" data-toggle="tab">Funzionamento</a></li>
+                            <li><a href="#dropdown3" data-toggle="tab">Todo</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="home1">
@@ -138,7 +148,11 @@
                             <object data="https://lh3.googleusercontent.com/fqKB4ZhygEcTRM8QdLNLuFWZEDy9j5qQsCdMZgCzYPTvOj5hv0Hm5SBnDY1RBdiFCSKQUO1SLYhJc5mishjhA1agu_Vk-YWTuVWSG4qCwj1g7ytZZgOFJnWxD-0Nj8lKhR6UdE2iTTo=w1920-h1080"></object>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="info1">
+                    <div class="tab-pane fade" id="pos1">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.6779479762627!2d9.332089835319529!3d45.536685991714066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x159bfb807b5cbcfa!2zNDXCsDMyJzEyLjEiTiA5wrAyMCcwMC41IkU!5e0!3m2!1sit!2sit!4v1649271898516!5m2!1sit!2sit" width="300px" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="tab-pane fade" id="dropdown1">
+                        <h4>Info</h4>
                         <ol type = "1">
                             <li><strong>Data Creazione:</strong>
                                 Gennaio 2022;
@@ -156,10 +170,8 @@
                             </li>
                         </ol>
                     </div>                    
-                    <div class="tab-pane fade" id="pos1">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.6779479762627!2d9.332089835319529!3d45.536685991714066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x159bfb807b5cbcfa!2zNDXCsDMyJzEyLjEiTiA5wrAyMCcwMC41IkU!5e0!3m2!1sit!2sit!4v1649271898516!5m2!1sit!2sit" width="300px" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="tab-pane fade" id="howto1">
+                    <div class="tab-pane fade" id="dropdown2">
+                        <h4>Funzionamento</h4>
                         <ol type = "1">
                             <li><strong>Arduino:</strong>
                                 Creare uno sketch di arduino con una sola variable "cloud" contentente la stringa dei valori "ext,int,hum,pres"
@@ -177,9 +189,9 @@
                             </li>
                         </ol>
                     </div>
-                    <div class="tab-pane fade" id="todo1">
+                    <div class="tab-pane fade" id="dropdown3">
+                        <h4>Todo:</h4>
                         <p>
-                            <strong>Todo:</strong>
                             Attualmente non c'e' modo di farlo senza IFTT. 
                             L'idea piu' accreditata era di usare google script per leggere il webhook di arduino iot e scrivere i dati in un google sheet,
                             poi embed del google sheet

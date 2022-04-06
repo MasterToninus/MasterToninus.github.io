@@ -83,7 +83,7 @@
         <!-- ================================================= -->  
         <div class="jumbotron">
             <h1>Meteo</h1>
-            Dashboard dei dati misurati con il mio arduino oplà.            
+            Dashboard dei dati misurati con arduino, raspberry etc.    
         </div>
 
         <!-- ================================================= -->
@@ -91,82 +91,93 @@
         <!-- ================================================= -->  
         <div class="row tall-row">
             <div class="col-lg-12">
-                <h1>Stazioni</h1>
+                <h1>Stazioni Meteo 1</h1>
                 <hr>
             </div>
         </div>
-   
+
         <div class="row">
-            <div class="col-md-12">
-                <h3>Stazione Meteo 1</h3>
+            <div class="col-md-6">
+                <h3>Dati</h3>
+                <table class="table table-striped table-hover ">
+                    <tbody>
+                        <?php
+                        $url = 'https://script.google.com/macros/s/AKfycbz3fBg448sdNGt4EtQ-t4J9wds2h62Pk_l558-KyAAzCcrxN8M/exec';
+                        $csv = file_get_contents($url);
+                        $data = str_getcsv($csv);
+                        echo "<tr><td>Time</td><td>".$data[2]."</td></tr>";
+                        echo "<tr><td>Date</td><td>".$data[0]."</td></tr>";
+                        echo "<tr><td>Year</td><td>".$data[1]."</td></tr>";
+                        echo "<tr><td>External Temperature</td><td>".$data[3]." °C</td></tr>";
+                        echo "<tr><td>Internal Temperature</td><td>".$data[4]." °C</td></tr>";
+                        echo "<tr><td>Humidity</td><td>".$data[5]." %</td></tr>";                    
+                        echo "<tr><td>Pression</td><td>".$data[6]." mBar</td></tr>";
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a aria-expanded="true" href="#home" data-toggle="tab">Home</a></li>
-                    <li class=""><a aria-expanded="false" href="#dati" data-toggle="tab">Dati</a></li>
-                    <li class="dropdown">
-                        <a aria-expanded="false" class="dropdown-toggle" data-toggle="dropdown" href="#">Funzionamento <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#dropdown1" data-toggle="tab">Arduino</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#dropdown2" data-toggle="tab">IFTT</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#dropdown3" data-toggle="tab">Google Sheet</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#dropdown4" data-toggle="tab">Php</a></li>                    
-                            <li><a href="#dropdown5" data-toggle="tab">Upgrade</a></li>       
-                        </ul>
-                    </li>
+                    <li class="active"><a aria-expanded="true" href="#home1" data-toggle="tab">Immagini</a></li>
+                    <li class="tab"><a aria-expanded="false" href="#info1" data-toggle="tab">Info</a></li>
+                    <li class="tab"><a aria-expanded="false" href="#pos1" data-toggle="tab">Posizione</a></li>
+                    <li class=""><a aria-expanded="false" href="#howto1" data-toggle="tab">Funzionamento</a></li>
+                    <li class=""><a aria-expanded="false" href="#todo1" data-toggle="tab">Todo</a></li>
                 </ul>
                 <div id="myTabContent" class="tab-content">
-                    <div class="tab-pane fade active in" id="home">
-                        <p>
-                            Stazione 1, posizione e immagini
-                        </p>
+                    <div class="tab-pane fade active in" id="home1">
+                        <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+                        <div class="pa-gallery-player-widget" style="width:100%; height:300px; display:none;"
+                        data-link="https://photos.app.goo.gl/pVLxtVT6q1gN1XUy7"
+                        data-title="Arduino - Opla - Meteo "
+                        data-description="5 new items · Album by Spettro di Toninus">
+                            <object data="https://lh3.googleusercontent.com/iea5DTNq1_cgevVgJpxAo1POoNx9sgpE9BGGAEdM8rfBFeDROsMojVmsYYIt9VP7rFEspcjY2fLgv58abVDNjEEElmvH6i_hIEjevR8FUGQkdHTBU31hw8Qm91vBqquu2kUddXMqOdg=w1920-h1080"></object>
+                            <object data="https://lh3.googleusercontent.com/CpzZ8g4WcJ2a8mJ5NfuIaz0Zf6r2bkKRzafCnhR5hyC4klyYu7IFWA9iZgTzStkRkfPeZRG3Ni2_WU5_N-QVz06EtbMSTtVAl3-wU8oBXIMxLuY8vuhS_4hf_PQQcqb0NdnaQE7bTJQ=w1920-h1080"></object>
+                            <object data="https://lh3.googleusercontent.com/98unD7Gbr8I4cyOlJ7y1-tMoTp4YpNNvwudEXn1FbTz88uHRMOKoTQwfgJblAmuEPINNpUqDH9btaGm_-2VwPxVrIkh2E4llbTW0dAz_sQsQIVLnZHA0CYHCb8YBjBL8Mrla2QDrBrE=w1920-h1080"></object>
+                            <object data="https://lh3.googleusercontent.com/L4AWF7mh_B7q3PlgRsJPdh-vOrAOUBcMH_I7mC9FRm1dgr4Zqz0ziLGU7BwJXuSNAUKHpo49JOuRRRZn44WEFVwtvcrR69Nc_eIDqYqRVbHHXu4wrK9EvSBIvYqk9evDjv-jKS_xSwo=w1920-h1080"></object>
+                            <object data="https://lh3.googleusercontent.com/fqKB4ZhygEcTRM8QdLNLuFWZEDy9j5qQsCdMZgCzYPTvOj5hv0Hm5SBnDY1RBdiFCSKQUO1SLYhJc5mishjhA1agu_Vk-YWTuVWSG4qCwj1g7ytZZgOFJnWxD-0Nj8lKhR6UdE2iTTo=w1920-h1080"></object>
+                        </div>
                     </div>
-                    <div class="tab-pane fade" id="dati">
-                        <table class="table table-striped table-hover ">
-                            <tbody>
-                                <?php
-                                $url = 'https://script.google.com/macros/s/AKfycbz3fBg448sdNGt4EtQ-t4J9wds2h62Pk_l558-KyAAzCcrxN8M/exec';
-                                $csv = file_get_contents($url);
-                                $data = str_getcsv($csv);
-                                echo "<tr><td>Date</td><td>".$data[0]."</td></tr>";
-                                echo "<tr><td>Year</td><td>".$data[1]."</td></tr>";
-                                echo "<tr><td>Time</td><td>".$data[2]."</td></tr>";
-                                echo "<tr><td>External Temperature</td><td>".$data[3]." °C</td></tr>";
-                                echo "<tr><td>Internal Temperature</td><td>".$data[4]." °C</td></tr>";
-                                echo "<tr><td>Humidity</td><td>".$data[5]." %</td></tr>";                    
-                                echo "<tr><td>Pression</td><td>".$data[6]." mBar</td></tr>";
-                                ?>
-                            </tbody>
-                        </table>
+                    <div class="tab-pane fade" id="info1">
+                        <ol type = "1">
+                            <li><strong>Data Creazione:</strong>
+                                Gennaio 2022;
+                            </li>
+                            <li>
+                                <strong>Materiali:</strong>
+                                <ol type = "2">
+                                    <li> 
+                                        <a href="https://opla.arduino.cc/">Arduino Opla'</a>;
+                                    </li>
+                                    <li>
+                                        <a href="https://www.amazon.it/AZDelivery-digitale-temperatura-impermeabile-Raspberry/dp/B07CZ1G29V?pd_rd_w=6y8g7&pf_rd_p=769960df-a4d6-46c4-915c-a6d8016f230d&pf_rd_r=Q9TGW9QEDFCF3726YMZS&pd_rd_r=144c5020-0a5a-43d9-bc22-d648548638cd&pd_rd_wg=G3Gna&pd_rd_i=B07CZ1G29V&psc=1&ref_=pd_bap_d_rp_1_t">Sonda DS18B20</a>;
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </div>                    
+                    <div class="tab-pane fade" id="pos1">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.6779479762627!2d9.332089835319529!3d45.536685991714066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x159bfb807b5cbcfa!2zNDXCsDMyJzEyLjEiTiA5wrAyMCcwMC41IkU!5e0!3m2!1sit!2sit!4v1649271898516!5m2!1sit!2sit" width="300px" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div class="tab-pane fade" id="dropdown1">
-                        <p>
-                            <strong>Arduino:</strong>
+                    <div class="tab-pane fade" id="howto1">
+                        <ol type = "1">
+                            <li><strong>Arduino:</strong>
                                 Creare uno sketch di arduino con una sola variable "cloud" contentente la stringa dei valori "ext,int,hum,pres"
-                        </p>
-                    </div>
-                    <div class="tab-pane fade" id="dropdown2">
-                        <p>
-                            <strong>IFTT:</strong>
+                            </li>
+                            <li>
+                                <strong>IFTT:</strong>
                                 Creare un job che prende il webhook di arduino e aggiorna la prima cella della tabella Rawdata (appende all'inizio anche la data associata)
-                        </p>
-                    </div>
-                    <div class="tab-pane fade" id="dropdown3">
-                        <p>
-                            <strong>Google sheet script:</strong>
+                            </li>
+                            <li><strong>Google sheet script:</strong>
                                 doGet della prima cella in html (magari cambia formato della data?)
                                 , deploy come webapp
-                        </p>
-                    </div>
-                    <div class="tab-pane fade" id="dropdown4">
-                        <p>
-                            <strong>Webpage PHP:</strong>
+                            </li>
+                            <li><strong>Webpage PHP:</strong>
                                 legge l'indirizzo associato al deployment come un file, parsa il csv e  lo mostra in una tabella
-                        </p>
+                            </li>
+                        </ol>
                     </div>
-                    <div class="tab-pane fade" id="dropdown5">
+                    <div class="tab-pane fade" id="todo1">
                         <p>
                             <strong>Todo:</strong>
                             Attualmente non c'e' modo di farlo senza IFTT. 
@@ -179,11 +190,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>        
+        
 
-
-
-
+        
         <!-- ================================================= -->
         <!-- Footer -->
         <!-- ================================================= -->            

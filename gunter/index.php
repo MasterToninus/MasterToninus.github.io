@@ -128,7 +128,7 @@
                     <a href="./meteo/" class="list-group-item">
                         <h4 class="list-group-item-heading">Centraline Meteo</h4>
                         <p class="list-group-item-text">
-                            TODO       
+                            Dati diretti dai miei sensori       
                         </p>
                     </a>
                     <a href="./gallery.php" class="list-group-item">

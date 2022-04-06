@@ -56,13 +56,13 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="./eliminata.html">Eliminata</a></li>
                             <li><a href="./h4x0rs.html">Template</a></li>
-                            <li><a href="./facciat.php">Protocollo Facciata</a></li>
+                            <li><a href="./facciata.php">Protocollo Facciata</a></li>
                             <li><a href="./meteo">Meteo</a></li>
-                            <li><a href="./gallery#fototrappla">Photo Gallery</a></li>            
+                            <li><a href="./gallery/index.html#fototrappla">Photo Gallery</a></li>            
                         </ul>
                     </li>
                     <li>
-                        <a href="../../"><i class="fa fa-1x fa-home"></i></a>
+                        <a href="../"><i class="fa fa-1x fa-home"></i></a>
                     </li>
                 </ul>
             </div>
@@ -127,7 +127,7 @@
                             Dati diretti dai miei sensori       
                         </p>
                     </a>
-                    <a href="./gallery#fototrappla" class="list-group-item">
+                    <a href="./gallery/index.html#fototrappla" class="list-group-item">
                         <h4 class="list-group-item-heading">Photo gallery</h4>
                         <p class="list-group-item-text">
                             Raccolta foto Varie                            

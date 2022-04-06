@@ -43,7 +43,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="./">M4st3r-T0n1nus</a>
+                <a class="navbar-brand" href="../">
+                    <i class="fa fa-1x fa-terminal"></i> 
+                    M4st3r-T0n1nus
+                </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -52,13 +55,13 @@
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="./eliminata.html">Eliminata</a></li>
                             <li><a href="./h4x0rs.html">Template</a></li>
-                            <li><a href="./">Protocollo Facciata</a></li>
+                            <li><a href="./facciata.php">Protocollo Facciata</a></li>
                             <li><a href="./meteo">Meteo</a></li>
-                            <li><a href="./gallery#fototrappla">Photo Gallery</a></li>            
+                            <li><a href="./gallery/index.html#fototrappla">Photo Gallery</a></li>            
                         </ul>
                     </li>
                     <li>
-                        <a href="../../"><i class="fa fa-1x fa-home"></i></a>
+                        <a href="../"><i class="fa fa-1x fa-home"></i></a>
                     </li>
                 </ul>
             </div>

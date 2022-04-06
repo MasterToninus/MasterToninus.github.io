@@ -3,7 +3,7 @@
 <link rel="shortcut icon" href="../../img/terminal.ico" type="image/x-icon">
 <link rel="icon" href="../../img/terminal.ico" type="image/x-icon">
 <head>
-    <title>34st3r-3ggs</title>
+    <title>34st3r-3ggs: M3T30</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,26 +43,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../../">M4st3r-T0n1nus</a>
+                <a class="navbar-brand" href="../">
+                    <i class="fa fa-1x fa-terminal"></i> 
+                    M4st3r-T0n1nus
+                </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CLICK ME!!!<span class="caret"></span> </a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu<span class="caret"></span> </a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="../eliminata.html">Eliminata</a></li>
                             <li><a href="../h4x0rs.html">Template</a></li>
                             <li><a href="../facciata.php">Protocollo Facciata</a></li>
                             <li><a href="./">Meteo</a></li>
-                            <li class="divider"></li>
-                            <li class="dropdown-header">Photo Gallery</li>
-                            <li><a href="../gallery.php#fototrappla">Fototrappola</a></li>
-                            <li><a href="../gallery.php#gamingrig">Gaming rig</a></li>
-                            <li><a href="../gallery.php#maker">Maker</a></li>                            
+                            <li><a href="../gallery.php#fototrappla">Photo Gallery</a></li>            
                         </ul>
-                    </li>
-                    <li>
-                        <a href="../"><i class="fa fa-1x fa-terminal"></i></a>
                     </li>
                     <li>
                         <a href="../../"><i class="fa fa-1x fa-home"></i></a>

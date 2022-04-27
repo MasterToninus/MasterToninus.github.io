@@ -78,7 +78,7 @@
         <!-- JUMBOTRON -->
         <!-- ================================================= -->  
         <div class="jumbotron">
-            <h1>Meteo</h1>
+            <h1>Stazioni Meteo</h1>
             Dashboard dei dati misurati con arduino, raspberry etc.    
         </div>
 
@@ -87,7 +87,7 @@
         <!-- ================================================= -->  
         <div class="row tall-row">
             <div class="col-lg-12">
-                <h1>Stazioni Meteo 1</h1>
+                <h1>Casa</h1>
                 <hr>
             </div>
         </div>
@@ -196,6 +196,35 @@
                 </div>
             </div>
         </div>        
+
+
+        <div class="row tall-row">
+            <div class="col-lg-12">
+                <h1>Monterotto</h1>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <a href="https://app.weathercloud.net/d7780602661#profile" class="btn btn-warning" role="button">WeatherCloud</a>  
+                <br>
+                <div style="width:100%; padding-bottom:56.25%; position:relative;">
+                    <iframe src="https://app.weathercloud.net/d7780602661#profile" 
+                            style="position:absolute; top:0px; left:0px; 
+                                width:100%; height:100%; border: none; overflow: hidden;"
+                                scrolling="no" 
+                                onload="iframeclick(50,30);window.scrollByLines(15)"
+                    >
+                    </iframe>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <a href="https://www.wunderground.com/dashboard/pws/IAMAND1" class="btn btn-warning" role="button">WunderGround</a>  
+                <br>
+                <embed src="https://www.wunderground.com/dashboard/pws/IAMAND1" style="width:500px; height: 300px;">
+            </div>
+        </div>                
         
 
         

@@ -213,8 +213,7 @@
                     <iframe src="https://app.weathercloud.net/d7780602661#profile" 
                             style="position:absolute; top:0px; left:0px; 
                                 width:100%; height:100%; border: none; overflow: hidden;"
-                                scrolling="no" 
-                                onload="iframeclick(50,30);window.scrollByLines(15)"
+                                scrolling="auto"
                     >
                     </iframe>
                 </div>
@@ -222,7 +221,7 @@
             <div class="col-md-6">
                 <a href="https://www.wunderground.com/dashboard/pws/IAMAND1" class="btn btn-warning" role="button">WunderGround</a>  
                 <br>
-                <embed src="https://www.wunderground.com/dashboard/pws/IAMAND1" style="width:500px; height: 300px;">
+                <!--<embed src="https://www.wunderground.com/dashboard/pws/IAMAND1" style="width:500px; height: 300px;">-->
             </div>
         </div>                
         

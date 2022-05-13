@@ -86,7 +86,7 @@
               Welcome <a href="https://readyplayerone.fandom.com/wiki/Gunter ">Gunt3r</a>
             </h3>
             <p>
-              Contenuti e funzionalità non adatti ad essere facilmente reperibili dal mio sito internet "accademico".
+              Contenuti e funzionalita' non adatti ad essere facilmente reperibili dal mio sito internet "accademico".
             </p>            
         </div>
 

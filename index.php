@@ -191,17 +191,22 @@
         <!-- --------------------------------------------- -->
         <!-- NEWS -->
         <!-- --------------------------------------------- -->
-        <!--
         <div class="sec">
         <div class="big-title shaded" id="News">News</div>
           <table class="list">
             <tr>
-              <td class="left"><b>01 Ott 2022</b></td>
-              <td class="right">Started new job at <a href="https://www.mpim-bonn.mpg.de/">MPIM</a>.</td>
+              <td class="left"><b>June 2022</b></td>
+              <td class="right">New preprint on arxiv <a href="https://arxiv.org/abs/2206.03137">arXiv: 2206.03137</a>.</td>
             </tr>
+ 
+            <tr>
+              <td class="left"><b>June 2022</b></td>
+              <td class="right">Slides of my talk on <a href="https://www.researchgate.net/publication/361261330_L_-structures_via_the_Nijenhuis-Richardson_algebra">Neijhuis-Richardson algebras and L∞ algebras</a>.</td>
+            </tr>            
+            
           </table>
         </div>
-        -->
+        
  
 
         <!-- --------------------------------------------- -->

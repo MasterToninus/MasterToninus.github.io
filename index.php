@@ -215,7 +215,10 @@
         <a  name="contacts"></a>
         <div id="contacts">         
           <div id="address">
-          <div class="big-title shaded" id="contact">Contacts</div>              
+            <!--<div class="big-title shaded" id="contact">Contacts</div>  -->            
+            <div id="subpage-title">
+              <a  name="contacts"><h1>Contacts</h1></a>
+            </div>             
           <p>
             <table class="center">
             <tr>

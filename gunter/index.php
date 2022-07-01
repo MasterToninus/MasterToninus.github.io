@@ -109,6 +109,13 @@
                             Sezioni eliminate dalla vecchia versione del sito    
                         </p>
                     </a>
+                    <a href="https://xila.altervista.org/" class="list-group-item">
+                        <h4 class="list-group-item-heading">Xila</h4>
+                        <p class="list-group-item-text">
+                            Esperimenti web di Diana 
+                            (sito mantenuto da Diego)    
+                        </p>
+                    </a>
                     <a href="../data/" class="list-group-item">
                         <h4 class="list-group-item-heading">Php generated Resume</h4>
                         <p class="list-group-item-text">

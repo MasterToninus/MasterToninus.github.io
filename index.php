@@ -196,7 +196,7 @@
           <table class="list">
             <tr>
               <td class="left"><b>June 2022</b></td>
-              <td class="right">New preprint on arxiv <a href="https://arxiv.org/abs/2206.03137">arXiv: 2206.03137</a>.</td>
+              <td class="right">New preprint on arxiv <a href="https://arxiv.org/abs/2206.03137">arXiv: 2206.03137</a> and <a href="https://www.mpim-bonn.mpg.de/newpreprints?ppyear=2022&ppnum=44">MPIM</a>.</td>
             </tr>
  
             <tr>

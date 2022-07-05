@@ -7,7 +7,8 @@ In essa giaceva il povero corpo di Franzisca Solowska e tutto il mio animo.
 Appena giunto al cancello dell'Infectious Desèases Hospital di Nairobi l'automezzo si fermò, raccolse a bordo il sacerdote, piegò a sinistra,accelerò e scomparve verso Majenko
 Avevo assistito, con la morte nel cuore, a tutta la scena dalla veranda del mio padiglione:  quello dei ricoverati italiani.
 Come internato, non mi fu permesso di seguire quel misero feretro che portava con sè il mio affetto, un sogno, una speranza.
-             --------------------- 
+             
+--------------------- 
 Dopo un pò di tempo che ero stato       trasferito dall'Italian Evacuèes Camp di Nyeri a quello di Kabete, sul lato sinistro del mio naso si formarono delle pustolette purulenti. Mi recai all'infermeria, fui ricoverato all' ospedale delle malattie infettive ( lebbrosario ) di Nairobi.
 Esso era situato in località Kalandini, tra le carceri di Sua Maestà Britannica ed il 351 P.O.W. Camp. il campo dei prigionieri di guerra italiani.
 Era diviso in tre settori: quello più grande, costituito da baracche, per gli africani, e gli altri due , in muratura per i bianchi e per gli asiatici, compresi i Seicellesi.
@@ -36,7 +37,8 @@ Quando Mr. Henfrey aveva bisogno di qualcosa, ad esempio di un paio di scarpe, m
 Nel caso che il venditore di scarpe non avesse  bisogno di olio di merluzzo ma, poniamo, di un cappello, Mwanichi si recava dal cappellaio, per proporgli lo scambio con l'olio.
 In caso affermativo, il mukamba, in cambio dell'olio, ritirava il copricapo per scambiarlo con le scarpe.
 Questi erano i casi più semplici, poichè il sistema dei baratti multipli si ampliava a ragnatela. Naturalmente tutto quell'olio, che fungeva da moneta di scambio, veniva sottratto dal fabbisogno degli ammalati.
-              ------------------
+              
+------------------
 Un giorno, al reparto dei bianchi fu ricoverata una ragazza polacca. Aveva diciotto anni.
 Facemmo subito amicizia. Era biondissima, longilinea, aveva i capelli raccolti in grandi trecce cinerine, aveva occhi azzurri molto limpidi.
 Nei momenti di minore sorveglianza andavo a trovarla, lei mi attendeva.
@@ -65,7 +67,8 @@ e nol piega in cotant'anni Italia tutta e Roma;
 vil feminella in Puglia il prende e lega ."
 Attraverso i secoli il mito della tragica amante salapina si è tramandato fino ai giorni nostri, soprattutto  nei tenimenti della Cerina, di Torre dei monaci, della Risaia giardino, di Montaltino e di Alma Dannata, in agro di Cerignola.
  In autunno, nei tempi delle semine, i contadini, stando intorno al fuoco del camino, mentre affettano il pane per abbrustolirlo sulla fiamma e condirlo con olio ed aglio, saporosa e misera cena, si raccontano, affascinati e intimoriti, le funeste gioie amorose e le persecuzioni patite, nonchè la tragica fine della magica donna di Salapia.
-             --------------------
+             
+--------------------
 Pochi giorni prima del mio incontro con Franziska, radio Boscaglia mi aveva trasmesso la triste notizia della fine del mio povero concittadino, Luigi Bremvaldi, chiamato " Sciusc-caridd ", ma meglio conosciuto col saprannome " U scarparidd " ( piccolo calzolaio ) " .
 Durante la deportazione degli italiani dall'Etiopia, nel Dicembre del 1941, nel primo scaglione che partì da Harar, c'era anche lui.
 Era uno sportivo di razza, aveva partecipato e vinto, con Peppino Fiume, molte competizioni ciclistiche ed era stato massaggiatore e accompagnatore della squadra di calcio " Audace " del Cerignola.
@@ -104,10 +107,12 @@ All'inizio della prigionia, nei campi si erano formate delle squadracce di scalm
 Lo stesso fenomeno infame infurio' dopo l'8 settembre del 1943. Gruppi di teppisti, che si qualificavano badogliani, aggredivano coloro che ritenevano che fossero fascisti o comunisti e li riducevano in condizioni pietose.
 Cosi' fu picchiato nel campo 1/A di Nyeri il falegname calabrese Palumbo, che riportò la frattura di un arto.
 Successivamente, ormai  guarito, fu mandato a Rongay per la costruzione di un nuovo campo. Li' capitò, in viaggio premio, uno dei suoi aggressori. Scorgerlo, afferrare  un legno e balzargli addosso e picchiare senza sosta, fu tutt'uno per il calabrese. Egli continuo' ad infierire, senza accorgersi che la sua vittima era gia' morta. Fu condannato perciò all'impiccagione.
+
 --------------------
 Mi affacciai alla veranda ed il primo mio sguardo fu per il padiglione di fronte, quello di Franya.
 Davanti ad esso sostava il camioncino della spesa.
 Dopo un po' usci' un prete seguito da una bara portata a mano.
+
 --------------------
 L'antica credenza slava non aveva trovato conferma.
 Il male fatale non aveva abbandonato il corpo della povera inferma per passare in quello del cagnolino accucciato sotto il suo letto. 

@@ -101,6 +101,13 @@
 
         <div class="row">
             <div class="col-lg-6">
+                <video width="320" height="240" controls>
+                    <source src="movie.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-lg-6">
+                
                 <?php
                     ksort($fileArray);
                     foreach ($fileArray as $key => $val) {
@@ -109,12 +116,6 @@
                         echo '</a><br>';
                     }
                 ?>            
-            </div>
-            <div class="col-lg-6">
-                <video width="320" height="240" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
             </div>
         </div>        
 

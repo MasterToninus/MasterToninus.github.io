@@ -82,47 +82,61 @@
             Conversione del libro di nonno Michele.
         </div>
 
+
+        <?php
+            $fileArray = array();
+            foreach (new DirectoryIterator('./Capitoli') as $fileInfo) {
+                if($fileInfo->isDot()) continue;
+                $fileName = $fileInfo->getFilename();
+                $fileName = substr($fileName, 0, strpos($fileName, "."));
+                $fileKey = substr($fileName, 0, strpos($fileName, "_"));
+                $fileName = substr($fileName, strpos($fileName, "_") + 1); 
+                $fileArray[$fileKey] = $fileName;
+            }
+        ?>
+
+        <!-- ================================================= -->
+        <!-- Index -->
+        <!-- ================================================= -->  
+
         <div class="row">
+            <div class="col-lg-6">
+                <?php
+                    ksort($fileArray);
+                    foreach ($fileArray as $key => $val) {
+                        echo '<a href="#Cap_'.$key.'">';
+                        echo "$key = $val";
+                        echo '</a><br>';
+                    }
+                ?>            
+            </div>
             <div class="col-lg-6">
                 <video width="320" height="240" controls>
                     <source src="movie.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
-        </div>
+        </div>        
 
         <!-- ================================================= -->
         <!-- Contents -->
         <!-- ================================================= -->         
-        <?php 
+        <?php
             require_once('../Parsedown.php');
-
-            echo '<div class="row tall-row">';   
-            echo '<div class="-lg-12">';   
-            echo '<h1>NOTE</h1><hr>';   
-            $file = file_get_contents('Readme.md');
-            $Parsedown = new Parsedown();
-            echo $Parsedown->text($file); 
-            echo '</div>'; 
-            echo '</div>';  
-
-
-
-            $fileNum = ['','1','2','3','4','5','21'];
-            $i = 0;
-            while($i < count($fileNum))
-            {
-                echo '<div class="row tall-row">';   
-                echo '<div class="-lg-12">';   
-                echo '<h1>NONNO'.$fileNum[$i].'.FW2</h1><hr>';   
-                $file = file_get_contents('Nonno'.$fileNum[$i].'.md');
+            foreach ($fileArray as $key => $val) {
+                $filename = $key.'_'.$val.'.md';
+                echo '<div class="row tall-row">';
+                echo '<a name="Cap_'.$key.'">'; 
+                echo '</a>';
+                echo '<div class="-lg-12">';    
+                $file = file_get_contents('./Capitoli/'.$filename);
                 $Parsedown = new Parsedown();
                 echo $Parsedown->text($file); 
                 echo '</div>'; 
-                echo '</div>';  
-                $i++;
-            }        
+                echo '</div>';
+            }
         ?>
+
 
 
 

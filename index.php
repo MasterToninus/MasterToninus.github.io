@@ -106,7 +106,7 @@
         <div class="sec-small">
             <table class="center" style="width: 80%;text-align: center">
              <tr>
-              <td>(<a href="https://www.dropbox.com/s/guw0zynajvopoap/cv.pdf?dl=0" class="btn btn-default btn-lg"><i class="fa fa-file-pdf-o fa-fw"></i> <span class="network-name">Complete CV</span></a> )
+              <td>(<a href="https://www.dropbox.com/s/guw0zynajvopoap/cv.pdf?dl=0" class="btn btn-default btn-lg"><i class="fa fa-file-pdf-o fa-fw"></i><span class="network-name">Complete CV</span></a> )
 </td>
               <td>(<a href="./resume" class="btn btn-default btn-lg"><i class="fa fa-id-badge fa-fw"></i><span class="network-name">Extended Resume</span></a> )
 </td>

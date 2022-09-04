@@ -190,12 +190,13 @@
 
         <!-- --------------------------------------------- -->
         <!-- NEWS -->
+        <!-- Todo: generate from a MD file -->
         <!-- --------------------------------------------- -->
         <div class="sec">
         <div class="big-title shaded" id="News">News</div>
           <table class="list">
 
-          <tr>
+            <tr>
               <td class="left"><b>August 2022</b></td>
               <td class="right">Slides of my talk on 
                 <a href="https://www.researchgate.net/publication/359847200_Symmetries_and_Reduction_of_Multisymplectic_Manifolds/comments">Symmetries and Reduction of Multisymplectic Manifolds
@@ -203,13 +204,13 @@
                 <a href="https://www.esi.ac.at/events/e430/"> Esi
                 </a>
                 and 
-                <a href="https://www.youtube.com/channel/UCUHyfvOFOuaUumnWaVrtfaQ/videos"> recordings
+                <a href="https://www.youtube.com/watch?v=AXJyMxz1p2I"> recordings
                 </a>
 		.
               </td>
             </tr> 
 
-          <tr>
+            <tr>
               <td class="left"><b>June 2022</b></td>
               <td class="right">New preprint on arxiv <a href="https://arxiv.org/abs/2206.03137">arXiv: 2206.03137</a> and <a href="https://www.mpim-bonn.mpg.de/newpreprints?ppyear=2022&ppnum=44">MPIM</a>.</td>
             </tr>

@@ -205,8 +205,7 @@
                 </a>
                 and 
                 <a href="https://www.youtube.com/watch?v=AXJyMxz1p2I"> recordings
-                </a>
-		.
+                </a>.
               </td>
             </tr> 
 

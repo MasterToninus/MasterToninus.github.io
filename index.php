@@ -42,8 +42,19 @@
         <!-- --------------------------------------------- -->
         <div id="introduction">
           <div id="desc">
-            <p>I am a postdoctoral fellow at the <a target="_blank" href="https://www.mpim-bonn.mpg.de/">Max Planck Institute for Mathematics</a> in Bonn.</p>
+            <p>
+              I am a postdoctoral researcher ("assegnista di ricerca") at the 
+              <a target="_blank" href="http://dipartimenti.unicatt.it/dmf">department of Mathematics of Physics of Università Cattolica del Sacro Cuore</a>
+              .
+            </p>
+            <p>
+              Previously, I was a postdoctoral fellow at the 
+              <a target="_blank" href="https://www.mpim-bonn.mpg.de/">Max Planck Institute for Mathematics</a> 
+              in Bonn under the supervision of Prof. 
+              <a target="_blank" href="http://people.mpim-bonn.mpg.de/blohmann/">Christian Blohmann</a>.
+            </p>
             <!--
+            <p>I am a postdoctoral fellow at the <a target="_blank" href="https://www.mpim-bonn.mpg.de/">Max Planck Institute for Mathematics</a> in Bonn.</p>
             <p>Currently I am working in the Geometry group under the supervision of Prof. <a target="_blank" href="http://docenti.unicatt.it/ita/mauro_spera/">Mauro Spera</a> (UCSC) and Prof. <a target="_blank" href="https://perswww.kuleuven.be/~u0096206/">Marco Zambon</a> (KU Leuven).</p>
             -->
             <p>
@@ -81,6 +92,10 @@
         <div class="sec" id="cv">
           <div class="sec-title">Academic resume </div>
           <table class="list">
+          <tr>
+              <td class="left"> <b>2022 - 2023</b></td>
+              <td class="right">Postdoctoral fellow @ <a href="http://dipartimenti.unicatt.it/dmf">UCSC Brescia</a></td>
+            </tr>
             <tr>
               <td class="left"> <b>2021 - 2022</b></td>
               <td class="right">Postdoctoral fellow @ <a href="https://www.mpim-bonn.mpg.de/">MPIM</a></td>
@@ -196,6 +211,11 @@
         <div class="big-title shaded" id="News">News</div>
           <table class="list">
 
+          <tr>
+              <td class="left"><b>October 2022</b></td>
+              <td class="right">Starting new position at <a href="https://dipartimenti.unicatt.it/dmf">Università Cattolica</a> in Brescia.
+          </tr>
+
             <tr>
               <td class="left"><b>September 2022</b></td>
               <td class="right">New preprint on arxiv <a href="https://arxiv.org/abs/2209.05836">arXiv: 2209.05836</a> and <a href="https://www.mpim-bonn.mpg.de/newpreprints?ppyear=2022&ppnum=44">MPIM</a>.</td>
@@ -219,10 +239,7 @@
               <td class="right">New preprint on arxiv <a href="https://arxiv.org/abs/2206.03137">arXiv: 2206.03137</a> and <a href="https://www.mpim-bonn.mpg.de/newpreprints?ppyear=2022&ppnum=44">MPIM</a>.</td>
             </tr>
  
-            <tr>
-              <td class="left"><b>June 2022</b></td>
-              <td class="right">Slides of my talk on <a href="https://www.researchgate.net/publication/361261330_L_-structures_via_the_Nijenhuis-Richardson_algebra">Neijhuis-Richardson algebras and L∞ algebras</a>.</td>
-            </tr>            
+      
             
           </table>
         </div>
@@ -243,14 +260,19 @@
             <table class="center">
             <tr>
               <td valign=top><b>Address: </b> </td>
-              <td>
+              <td>  
+                  Università Cattolica del Sacro Cuore di Brescia<br>
+                  Via della Garzetta, 48 <br> 
+                  25133 Brescia
+                    <!--
                     Max Planck Institute for Mathematics<br>
                     Vivatsgasse 7<br>
                     53111 Bonn, Germany<br>
+                    --> 
               </td>
             </tr>
             <tr><td valign=top><b>Room: </b> 
-              <td>B15</td>
+              <td>03.002</td>
             </tr>
             <tr>
               <td valign=top><b>E-mail: </b></td> 

@@ -337,6 +337,7 @@
                               <i class="ai ai-lg ai-mendeley"></i>
                               <span class="network-name">Mendeley</span>
                             </a>-->
+                <!-- https://mathscinet.ams.org/mathscinet/search/publications.html?pg1=INDI&s1=1435797 -->
                 </td>
                 <td>
                 <a href="http://steamcommunity.com/id/Toninus/" class="btn btn-default btn-lg">

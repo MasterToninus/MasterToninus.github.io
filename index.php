@@ -212,6 +212,16 @@
           <table class="list">
 
           <tr>
+              <td class="left"><b>December 2022</b></td>
+              <td class="right">Notes on my talk on 
+                <a href="https://www.researchgate.net/publication/366216470_Multisymplectic_observables_and_higher_Courant_algebroids">Multisymplectic observables and higher Courant algebroids
+                </a> @ 
+                <a href="https://indico.math.cnrs.fr/event/8621/"> ICJ
+                </a>.
+              </td>
+          </tr>
+
+          <tr>
               <td class="left"><b>October 2022</b></td>
               <td class="right">Starting new position at <a href="https://dipartimenti.unicatt.it/dmf">Università Cattolica</a> in Brescia.
           </tr>

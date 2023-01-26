@@ -212,10 +212,21 @@
           <table class="list">
 
           <tr>
+              <td class="left"><b>January 2023</b></td>
+              <td class="right">Notes on my talk 
+                <a href="https://www.dropbox.com/s/8daetmem0kkp443/2301-Brescia-PhdSeminar.pdf?dl=0"><em>First steps in geometric quantum mechanics</em></a> @ 
+                <a href="https://scuoledidottorato.unicatt.it/science-home"> UCSC
+                </a>.
+              </td>
+          </tr>
+
+          
+          
+          <tr>
               <td class="left"><b>December 2022</b></td>
               <td class="right">Notes on my talk on 
-                <a href="https://www.researchgate.net/publication/366216470_Multisymplectic_observables_and_higher_Courant_algebroids">Multisymplectic observables and higher Courant algebroids
-                </a> @ 
+                <a href="https://www.researchgate.net/publication/366216470_Multisymplectic_observables_and_higher_Courant_algebroids"><em>Multisymplectic observables and higher Courant algebroids
+              </em></a> @ 
                 <a href="https://indico.math.cnrs.fr/event/8621/"> ICJ
                 </a>.
               </td>
@@ -234,8 +245,8 @@
             <tr>
               <td class="left"><b>August 2022</b></td>
               <td class="right">Slides of my talk on 
-                <a href="https://www.researchgate.net/publication/359847200_Symmetries_and_Reduction_of_Multisymplectic_Manifolds/comments">Symmetries and Reduction of Multisymplectic Manifolds
-                </a> @ 
+                <a href="https://www.researchgate.net/publication/359847200_Symmetries_and_Reduction_of_Multisymplectic_Manifolds/comments"><em>Symmetries and Reduction of Multisymplectic Manifolds
+              </em></a> @ 
                 <a href="https://www.esi.ac.at/events/e430/"> Esi
                 </a>
                 and 

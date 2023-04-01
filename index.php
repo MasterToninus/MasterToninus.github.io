@@ -203,8 +203,9 @@
                 <a href="https://www.esi.ac.at/events/e430/"> Esi
                 </a>
                 and 
-                <a href="https://www.youtube.com/channel/UCUHyfvOFOuaUumnWaVrtfaQ/videos"> recordings.
+                <a href="https://www.youtube.com/channel/UCUHyfvOFOuaUumnWaVrtfaQ/videos"> recordings
                 </a>
+                .
               </td>
             </tr> 
 

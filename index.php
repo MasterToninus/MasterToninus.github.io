@@ -212,6 +212,17 @@
           <table class="list">
 
           <tr>
+              <td class="left"><b>April 2023</b></td>
+              <td class="right">Notes on my talk on 
+                <a href="https://www.dropbox.com/s/gx9cslaoa8488w2/2304-Pavia-MsReduction.pdf?dl=0"><em>Symmetries and Reduction of Multisymplectic Manifolds
+              </em></a> @ 
+                <a href="https://mathematicalphysicspavia.wordpress.com/2023/04/04/antonio-michele-miti-28-04-2023-symmetries-and-reduction-of-multisymplectic-manifoldsantonio-michele-miti/"> UniPv, Pavia
+                </a>.
+              </td>
+          </tr>
+
+
+          <tr>
               <td class="left"><b>January 2023</b></td>
               <td class="right">Notes on my talk 
                 <a href="https://www.dropbox.com/s/8daetmem0kkp443/2301-Brescia-PhdSeminar.pdf?dl=0"><em>First steps in geometric quantum mechanics</em></a> @ 
@@ -232,10 +243,7 @@
               </td>
           </tr>
 
-          <tr>
-              <td class="left"><b>October 2022</b></td>
-              <td class="right">Starting new position at <a href="https://dipartimenti.unicatt.it/dmf">Università Cattolica</a> in Brescia.
-          </tr>
+
 
             <tr>
               <td class="left"><b>September 2022</b></td>

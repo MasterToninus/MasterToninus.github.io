@@ -212,6 +212,15 @@
           <table class="list">
 
           <tr>
+              <td class="left"><b>July 2023</b></td>
+              <td class="right">Notes on my (reading) talk 
+                <a href="https://www.dropbox.com/scl/fi/xmtn9ylsyumbmzmw9x8pc/2307-Gottingen-MsLFT.pdf?rlkey=utee9k269l43uijv1fwz3sudb&dl=0"><em>The multisymplectic structure of Lagrangian field theories</em></a> @ 
+                <a href="https://www.uni-goettingen.de/en/20693.html"> UniGoettingen, Gottingen
+                </a>.
+              </td>
+          </tr>
+
+          <tr>
               <td class="left"><b>April 2023</b></td>
               <td class="right">Notes on my talk on 
                 <a href="https://www.dropbox.com/s/gx9cslaoa8488w2/2304-Pavia-MsReduction.pdf?dl=0"><em>Symmetries and Reduction of Multisymplectic Manifolds

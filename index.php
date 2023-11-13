@@ -82,7 +82,7 @@
           </div>
           <div id="photo">
               <!--<a href="img/ProfilePic.png"> LINK </a>-->
-              <img  src="img/Profile_old_crop.jpg" alt="Typical academic picture">
+              <img  src="img/profilePic/Tony-Feb23_v1.jpg" alt="Typical academic picture">
           </div>
         </div>
 

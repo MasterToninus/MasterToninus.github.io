@@ -256,9 +256,10 @@ nav a {
 #photo>img {
     width: 230px;
     height: auto;
-    border-radius: 50%;
+    border-radius: 20%;
     margin: 35px;
 }
+
 
 .links-list {
     margin: 35px;

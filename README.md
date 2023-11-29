@@ -1,10 +1,59 @@
 # MasterToninus.github.io
-A personal ( ideally academic) homepage.
+Academic web page.
+Dmf-Unicat (PHP)
+
+
+## WebSiteTree
+```
+Splashpage
+│   about me
+|   short resume
+|   activities
+│   contact    
+│
+└───Research
+│   │   Interests
+│   │   publications
+|   |   talks
+|   |   posters
+│   │
+│   └───subfolder1
+│       │   file111.txt
+│       │   file112.txt
+│       │   ...
+│   
+└───Teaching
+│   │   upcoming lectures
+│   │   past lectures
+│   │
+│   └───template course
+│   │   │   file111.txt
+│   │   │   file112.txt
+│   │   │   ...
+│   │
+│   └───multisym-2022
+│       │   ...
+│
+│
+└───Other Stuff
+│       notes
+│       code
+│   
+│   
+└───Eliminata
+        links
+        material    
+```
+
 
 
 ## TODO
-Prima la pagina era ibrida fra lo pseudo accademico (per cercare di entrare in un dottorato) e altro (cercare lavoro). Ora che sono dentro deve concretizzarsi:
-- about me attuale è essenzialmente la mia cover letter, devo trasformarlo in qualcosa più stringato su quello che faccio (e nascondere la cover da altra parte)
-- aggiungere gli interessi attuali e mettere spazio per il proposal di ricerca international.
-- il blog va eliminato per ora. L'unica utilità potrebbe essere quella di pubblicizzare le cose che sto scriveno in latex (mettendo il github, qualche immagine e l'idea), i progetti su github, le mindmap, le infografiche per memorizzare la teoria e le illustrazioni che genero. Conviene pensare al blog appena avrò qualcosa da scrivere.
-- nascondi stack-exchange, mettilo nel momento in cui avrai scritto qualcosa.
+
+- [x] Generate "publications" from biblatex
+- [ ] put raw contents in a yaml file
+- [ ] 
+
+## Note da chi ho copiato il template
+La versione copiata era generata tramite questo pack
+https://github.com/brewingcode/pug-pack
+a partire da dei file pug

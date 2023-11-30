@@ -1,7 +1,7 @@
 # MasterToninus.github.io
 A personal ( ideally academic) homepage.
 
-New address: [antoniomiti.it](antoniomiti.it).
+New address: [www.antoniomiti.it](www.antoniomiti.it).
 
 ## Status
 The former academic splash has been moved to a dedicated web server (in order to use PHP).

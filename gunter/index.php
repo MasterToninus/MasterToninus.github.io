@@ -155,9 +155,15 @@
                     <a href="./familytree/" class="list-group-item">
                         <h4 class="list-group-item-heading">Family tree</h4>
                         <p class="list-group-item-text">
-                            Albero Genealogico Todo
+                            Albero Genealogico (Installato tramite servizio Aruba)
                         </p>
                     </a>
+                    <a href="./paste/" class="list-group-item">
+                        <h4 class="list-group-item-heading">Servizio pastebin</h4>
+                        <p class="list-group-item-text">
+                            (Installato tramite servizio Aruba)
+                        </p>
+                    </a>                    
                 </div>
             </div>
             <div class="col-lg-6">

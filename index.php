@@ -212,6 +212,11 @@
           <table class="list">
 
           <tr>
+                        <td class="left"><b>February 2024</b></td>
+                        <td class="right">Starting new position at <a href="https://www.uniroma1.it/it/">Sapienza Università di Roma</a> in Rome.
+                    </tr>
+
+          <tr>
               <td class="left"><b>July 2023</b></td>
               <td class="right">Notes on my (reading) talk 
                 <a href="https://www.dropbox.com/scl/fi/xmtn9ylsyumbmzmw9x8pc/2307-Gottingen-MsLFT.pdf?rlkey=utee9k269l43uijv1fwz3sudb&dl=0"><em>The multisymplectic structure of Lagrangian field theories</em></a> @ 
@@ -259,18 +264,7 @@
               <td class="right">New preprint on arxiv <a href="https://arxiv.org/abs/2209.05836">arXiv: 2209.05836</a> and <a href="https://www.mpim-bonn.mpg.de/newpreprints?ppyear=2022&ppnum=44">MPIM</a>.</td>
             </tr>
 
-            <tr>
-              <td class="left"><b>August 2022</b></td>
-              <td class="right">Slides of my talk on 
-                <a href="https://www.researchgate.net/publication/359847200_Symmetries_and_Reduction_of_Multisymplectic_Manifolds/comments"><em>Symmetries and Reduction of Multisymplectic Manifolds
-              </em></a> @ 
-                <a href="https://www.esi.ac.at/events/e430/"> Esi
-                </a>
-                and 
-                <a href="https://www.youtube.com/watch?v=AXJyMxz1p2I"> recordings
-                </a>.
-              </td>
-            </tr> 
+
 
             <tr>
               <td class="left"><b>June 2022</b></td>

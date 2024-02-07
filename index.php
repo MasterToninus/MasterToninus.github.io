@@ -43,15 +43,16 @@
         <div id="introduction">
           <div id="desc">
             <p>
-              I am a postdoctoral researcher ("assegnista di ricerca") at the 
-              <a target="_blank" href="http://dipartimenti.unicatt.it/dmf">department of Mathematics of Physics of Università Cattolica del Sacro Cuore</a>
-              .
+              I am a Marie Skłodowska-Curie Researcher
+              <a target="_blank" href="https://civis3i.univ-amu.fr/en/antonio-michele-miti">(MSCA-H2020 COFUND)</a>  at the 
+              <a target="_blank" href="https://www.mat.uniroma1.it/en">Department of Mathematics of Università di Roma la Sapienza</a>, under the supervision of 
+              <a target="_blank" href="https://www1.mat.uniroma1.it/~fiorenza/">Domenico Fiorenza</a>.
             </p>
             <p>
-              Previously, I was a postdoctoral fellow at the 
+              Previously, I was a postdoctoral fellow at 
+              <a target="_blank" href="http://dipartimenti.unicatt.it/dmf">Università Cattolica del Sacro Cuore</a> in Brescia (with <a target="_blank" href="https://docenti.unicatt.it/ppd2/en/docenti/21065/mauro-spera/profilo">Mauro Spera</a>) and at the
               <a target="_blank" href="https://www.mpim-bonn.mpg.de/">Max Planck Institute for Mathematics</a> 
-              in Bonn under the supervision of Prof. 
-              <a target="_blank" href="http://people.mpim-bonn.mpg.de/blohmann/">Christian Blohmann</a>.
+              in Bonn (with <a target="_blank" href="http://people.mpim-bonn.mpg.de/blohmann/">Christian Blohmann</a>).
             </p>
             <!--
             <p>I am a postdoctoral fellow at the <a target="_blank" href="https://www.mpim-bonn.mpg.de/">Max Planck Institute for Mathematics</a> in Bonn.</p>
@@ -62,7 +63,7 @@
             <!--  My current projects focus on the higher generalization of comomentum maps in multisymplectic geometry and their applications.-->
             </p>
             <p>
-              I recently got a Ph.D. in Mathematics from <a target="_blank" href="http://dipartimenti.unicatt.it/dmf">Università Cattolica del Sacro Cuore</a> and <a target="_blank" href="https://wis.kuleuven.be/english">KU Leuven</a> (double degree, <a target="_blank" href="http://scuoledidottorato.unicatt.it/phdschools/science-home">International Doctoral Program in Science</a>).
+              I got a Ph.D. in Mathematics from <a target="_blank" href="http://dipartimenti.unicatt.it/dmf">Università Cattolica del Sacro Cuore</a> and <a target="_blank" href="https://wis.kuleuven.be/english">KU Leuven</a> (double degree, <a target="_blank" href="http://scuoledidottorato.unicatt.it/phdschools/science-home">International Doctoral Program in Science</a>).
               My doctoral research project focused on the higher generalization of comomentum maps in multisymplectic geometry and it has been supervised by Prof. <a target="_blank" href="http://docenti.unicatt.it/ita/mauro_spera/">Mauro Spera</a> (UCSC) and Prof. <a target="_blank" href="https://perswww.kuleuven.be/~u0096206/">Marco Zambon</a>
                 (KU Leuven).            
             </p>
@@ -93,7 +94,11 @@
           <div class="sec-title">Academic resume </div>
           <table class="list">
           <tr>
-              <td class="left"> <b>2022 - 2023</b></td>
+              <td class="left"> <b>2024 -  Now</b></td>
+              <td class="right">Postdoctoral fellow @ <a href="https://civis3i.univ-amu.fr/en/antonio-michele-miti">Civis-3i Rome</a></td>
+            </tr>
+          <tr>
+              <td class="left"> <b>2022 - 2024</b></td>
               <td class="right">Postdoctoral fellow @ <a href="http://dipartimenti.unicatt.it/dmf">UCSC Brescia</a></td>
             </tr>
             <tr>
@@ -213,7 +218,7 @@
 
           <tr>
                         <td class="left"><b>February 2024</b></td>
-                        <td class="right">Starting new position at <a href="https://www.uniroma1.it/it/">Sapienza Università di Roma</a> in Rome.
+                        <td class="right">Starting new position at <a href="https://www.uniroma1.it/it/">Università di Roma la Sapienza</a> in Rome.
                     </tr>
 
           <tr>
@@ -293,23 +298,28 @@
             <tr>
               <td valign=top><b>Address: </b> </td>
               <td>  
-                  Università Cattolica del Sacro Cuore di Brescia<br>
-                  Via della Garzetta, 48 <br> 
-                  25133 Brescia
+                  Dipartimento di Matematica Guido Castelnuovo<br>
+                  Piazzale Aldo Moro, 5<br> 
+                  00185 Roma
                     <!--
-                    Max Planck Institute for Mathematics<br>
-                    Vivatsgasse 7<br>
-                    53111 Bonn, Germany<br>
+                      Università Cattolica del Sacro Cuore di Brescia<br>
+                      Via della Garzetta, 48 <br> 
+                      25133 Brescia
+                    -->
+                    <!--
+                      Max Planck Institute for Mathematics<br>
+                      Vivatsgasse 7<br>
+                      53111 Bonn, Germany<br>
                     --> 
               </td>
             </tr>
             <tr><td valign=top><b>Room: </b> 
-              <td>03.002</td>
+              <td>8 CU36 (ex-falegnameria)</td>
             </tr>
             <tr>
               <td valign=top><b>E-mail: </b></td> 
               <td>
-                    <a href="mailto:am.miti@dmf.unicatt.it">am.miti@dmf.unicatt.it</a>
+                    <a href="mailto:antoniomichele.miti@uniroma1.it">antoniomichele.[surname]@uniroma1.it</a>
               </td>
             </tr>    
 		        </table>

@@ -43,8 +43,10 @@
         <div id="introduction">
           <div id="desc">
             <p>
-              I am a Marie Skłodowska-Curie Researcher
-              <a target="_blank" href="https://civis3i.univ-amu.fr/en/antonio-michele-miti">(MSCA-H2020 COFUND)</a>  at the 
+              I am a 
+              <a target="_blank" href="https://civis3i.univ-amu.fr/en/antonio-michele-miti">CIVIS3i</a>
+              Postoctoral Fellow
+              <a target="_blank" href="https://civis3i.univ-amu.fr/en/civis3i-alliance-programme">(MSCA-H2020 COFUND)</a>  at the 
               <a target="_blank" href="https://www.mat.uniroma1.it/en">Department of Mathematics of Università di Roma la Sapienza</a>, under the supervision of 
               <a target="_blank" href="https://www1.mat.uniroma1.it/~fiorenza/">Domenico Fiorenza</a>.
             </p>

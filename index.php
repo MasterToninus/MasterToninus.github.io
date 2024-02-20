@@ -321,7 +321,7 @@
             <tr>
               <td valign=top><b>E-mail: </b></td> 
               <td>
-                    <a href="mailto:antoniomichele.miti@uniroma1.it">antoniomichele.[surname]@uniroma1.it</a>
+                    <a href="mailto:antoniomichele.miti@uniroma1.it">antoniomichele.miti@uniroma1.it</a>
               </td>
             </tr>    
 		        </table>

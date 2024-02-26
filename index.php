@@ -128,7 +128,7 @@
         <div class="sec-small">
             <table class="center" style="width: 80%;text-align: center">
              <tr>
-              <td>(<a href="https://www.dropbox.com/s/zws9vqeulbromyc/cv.pdf?dl=0" class="btn btn-default btn-lg"><i class="fa fa-file-pdf-o fa-fw"></i><span class="network-name">Complete CV</span></a> )
+              <td>(<a href="https://www.dropbox.com/scl/fi/fy1xy3re0xixm8ejwhitt/cv.pdf?rlkey=jtdw6jw8bmh3ctr7u0xwj0kzh&dl=0" class="btn btn-default btn-lg"><i class="fa fa-file-pdf-o fa-fw"></i><span class="network-name">Complete CV</span></a> )
 </td>
               <td>(<a href="./resume" class="btn btn-default btn-lg"><i class="fa fa-id-badge fa-fw"></i><span class="network-name">Extended Resume</span></a> )
 </td>

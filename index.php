@@ -398,7 +398,7 @@
                           </a>
                 </td>    
                 <td>
-                <a href="mailto:am.miti@dmf.unicatt.it" class="btn btn-default btn-lg">
+                <a href="mailto:antoniomichele.miti@gmail.com" class="btn btn-default btn-lg">
                               <i class="fa fa-envelope fa-fw"></i>
                               <span class="network-name">E-Mail</span>
                             </a>

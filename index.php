@@ -219,66 +219,27 @@
           <table class="list">
 
           <tr>
-                        <td class="left"><b>February 2024</b></td>
-                        <td class="right">Starting new position at <a href="https://www.uniroma1.it/it/">Università di Roma la Sapienza</a> in Rome.
-                    </tr>
-
-          <tr>
-              <td class="left"><b>July 2023</b></td>
-              <td class="right">Notes on my (reading) talk 
-                <a href="https://www.dropbox.com/scl/fi/xmtn9ylsyumbmzmw9x8pc/2307-Gottingen-MsLFT.pdf?rlkey=utee9k269l43uijv1fwz3sudb&dl=0"><em>The multisymplectic structure of Lagrangian field theories</em></a> @ 
-                <a href="https://www.uni-goettingen.de/en/20693.html"> UniGoettingen, Gottingen
+              <td class="left"><b>May 2024</b></td>
+              <td class="right">Slides for my talk
+                <a href="https://www.researchgate.net/publication/381297576_Multisymplectic_approach_to_LFT_the_Stress-Energy_tensor"><em>Multisymplectic approach to LFT and the Stress-Energy tensor</em></a> @ 
+                <a href="https://www.dropbox.com/scl/fi/j54tl4m10fl2scbrtc4sx/2405-Torino-Conservationlaws.pdf?rlkey=ay7nrxda4fg8lklvox578g6yj&st=iqht9v8o&dl=0"> UniTorino, Torino
                 </a>.
               </td>
           </tr>
 
           <tr>
-              <td class="left"><b>April 2023</b></td>
-              <td class="right">Notes on my talk on 
-                <a href="https://www.dropbox.com/s/gx9cslaoa8488w2/2304-Pavia-MsReduction.pdf?dl=0"><em>Symmetries and Reduction of Multisymplectic Manifolds
-              </em></a> @ 
-                <a href="https://mathematicalphysicspavia.wordpress.com/2023/04/04/antonio-michele-miti-28-04-2023-symmetries-and-reduction-of-multisymplectic-manifoldsantonio-michele-miti/"> UniPv, Pavia
+              <td class="left"><b>May 2024</b></td>
+              <td class="right">Notes on my minicourse with L. Ryvkin
+                <a href="http://localhost/tony-public/teaching/Obs-Constraint-2024/"><em>Reduction of multisymplectic observables</em></a> @ 
+                <a href="https://sites.google.com/view/poisson2024/seminars-workshops/symmetry-reduction?authuser=0"> UniSalerno, Fisciano
                 </a>.
               </td>
           </tr>
-
 
           <tr>
-              <td class="left"><b>January 2023</b></td>
-              <td class="right">Notes on my talk 
-                <a href="https://www.dropbox.com/s/8daetmem0kkp443/2301-Brescia-PhdSeminar.pdf?dl=0"><em>First steps in geometric quantum mechanics</em></a> @ 
-                <a href="https://scuoledidottorato.unicatt.it/science-home"> UCSC
-                </a>.
-              </td>
-          </tr>
-
-          
-          
-          <tr>
-              <td class="left"><b>December 2022</b></td>
-              <td class="right">Notes on my talk on 
-                <a href="https://www.researchgate.net/publication/366216470_Multisymplectic_observables_and_higher_Courant_algebroids"><em>Multisymplectic observables and higher Courant algebroids
-              </em></a> @ 
-                <a href="https://indico.math.cnrs.fr/event/8621/"> ICJ
-                </a>.
-              </td>
-          </tr>
-
-
-
-            <tr>
-              <td class="left"><b>September 2022</b></td>
-              <td class="right">New preprint on arxiv <a href="https://arxiv.org/abs/2209.05836">arXiv: 2209.05836</a> and <a href="https://www.mpim-bonn.mpg.de/newpreprints?ppyear=2022&ppnum=44">MPIM</a>.</td>
-            </tr>
-
-
-
-            <tr>
-              <td class="left"><b>June 2022</b></td>
-              <td class="right">New preprint on arxiv <a href="https://arxiv.org/abs/2206.03137">arXiv: 2206.03137</a> and <a href="https://www.mpim-bonn.mpg.de/newpreprints?ppyear=2022&ppnum=44">MPIM</a>.</td>
-            </tr>
- 
-      
+            <td class="left"><b>February 2024</b></td>
+            <td class="right">Starting new position at <a href="https://www.uniroma1.it/it/">Università di Roma la Sapienza</a> in Rome.
+          </tr>     
             
           </table>
         </div>

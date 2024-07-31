@@ -45,7 +45,7 @@
             <p>
               I am a 
               <a target="_blank" href="https://civis3i.univ-amu.fr/en/antonio-michele-miti">CIVIS3i</a>
-              Postoctoral Fellow
+              Postdoctoral Fellow
               <a target="_blank" href="https://civis3i.univ-amu.fr/en/civis3i-alliance-programme">(MSCA-H2020 COFUND)</a>  at the 
               <a target="_blank" href="https://www.mat.uniroma1.it/en">Department of Mathematics of Università di Roma la Sapienza</a>, under the supervision of 
               <a target="_blank" href="https://www1.mat.uniroma1.it/~fiorenza/">Domenico Fiorenza</a>.
@@ -217,6 +217,18 @@
         <div class="sec">
         <div class="big-title shaded" id="News">News</div>
           <table class="list">
+
+          <!--
+          <tr>
+            <td class="left"><b>October 2024</b></td>
+            <td class="right">Reserch stay at <a href="https://math.univ-lyon1.fr/icj/probabilites-statistique-physique-mathematique/">Institut Camille Jordan</a> in Lyon.
+          </tr>     
+          -->
+
+          <tr>
+              <td class="left"><b>July 2024</b></td>
+              <td class="right">New preprint on arxiv <a href="https://arxiv.org/abs/2407.20167">arXiv:2407.20167</a>. (Venturing slightly out of my comfort zone!)</td>
+          </tr>          
 
           <tr>
               <td class="left"><b>May 2024</b></td>

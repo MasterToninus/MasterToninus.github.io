@@ -218,12 +218,10 @@
         <div class="big-title shaded" id="News">News</div>
           <table class="list">
 
-          <!--
           <tr>
             <td class="left"><b>October 2024</b></td>
             <td class="right">Reserch stay at <a href="https://math.univ-lyon1.fr/icj/probabilites-statistique-physique-mathematique/">Institut Camille Jordan</a> in Lyon.
           </tr>     
-          -->
 
           <tr>
               <td class="left"><b>July 2024</b></td>

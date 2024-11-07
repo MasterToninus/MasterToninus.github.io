@@ -220,7 +220,7 @@
 
           <tr>
             <td class="left"><b>October 2024</b></td>
-            <td class="right">Reserch stay at <a href="https://math.univ-lyon1.fr/icj/probabilites-statistique-physique-mathematique/">Institut Camille Jordan</a> in Lyon.
+            <td class="right">Research stay at <a href="https://math.univ-lyon1.fr/icj/probabilites-statistique-physique-mathematique/">Institut Camille Jordan</a> in Lyon.
           </tr>     
 
           <tr>

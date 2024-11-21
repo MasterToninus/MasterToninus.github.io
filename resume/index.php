@@ -74,6 +74,10 @@
           <div class="sec-title">Academic resume </div>
           <table class="list">
           <tr>
+              <td class="left"> <b>2024 - 2026</b></td>
+              <td class="right">Postdoctoral fellow @ <a href="https://www.mat.uniroma1.it/">UNIROMA1</a></td>
+            </tr>  
+          <tr>
               <td class="left"> <b>2022 - 2024</b></td>
               <td class="right">Postdoctoral fellow @ <a href="https://dipartimenti.unicatt.it/dmf">UCSC</a></td>
             </tr>            

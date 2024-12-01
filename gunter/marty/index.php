@@ -6,7 +6,8 @@
     <title>Marty -- Workspace</title>
 </head>
 <body>
-    <h1>Sottocartelle nella Directory Corrente</h1>
+    <h1>Marty -- Workspace</h1>
+    <h3> Sottocartelle </h3>
     <ul>
         <?php
         // Ottieni la directory corrente

@@ -37,6 +37,6 @@ $header = array_shift($rows); // Rimuove l'intestazione
             <?php endforeach; ?>
         </tbody>
     </table>
-    <a href="form.php">Torna al modulo</a>
+    <a href="index.php">Torna al modulo</a>
 </body>
 </html>

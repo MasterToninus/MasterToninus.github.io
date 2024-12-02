@@ -163,7 +163,13 @@
                         <p class="list-group-item-text">
                             (Installato tramite servizio Aruba)
                         </p>
-                    </a>                    
+                    </a>      
+                    <a href="./marty/" class="list-group-item">
+                        <h4 class="list-group-item-heading">Marty -- Workspace</h4>
+                        <p class="list-group-item-text">
+                            Spazio di test per Marty.                          
+                        </p>
+                    </a>              
                 </div>
             </div>
             <div class="col-lg-6">

@@ -18,5 +18,11 @@
     </form>
     <br>
     <a href="view.php">Visualizza dati salvati</a>
+    <br>
+    <br>
+    <br>
+    Creato con chatgpt usando il seguente prompt:
+    <br>
+    <i>Sviluppare un programma che permetta di inserire tramite form il cognome e il nome di un utente. Scrivere tutti i dati recuperati dal form su un file CSV. Creare una pagina che visualizzi il file CSV. Fai in modo che il file Csv non superi la dimensione di 100 righe, se le supera cancella la prima riga e appendi l'ultima informazione. Fai in modo che non sia possibile iniettare codice php malevolo dentro il form.</i>
 </body>
 </html>

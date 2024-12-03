@@ -240,7 +240,7 @@
           <tr>
               <td class="left"><b>May 2024</b></td>
               <td class="right">Notes on my minicourse with L. Ryvkin
-                <a href="http://localhost/tony-public/teaching/Obs-Constraint-2024/"><em>Reduction of multisymplectic observables</em></a> @ 
+                <a href="../teaching/Obs-Constraint-2024/"><em>Reduction of multisymplectic observables</em></a> @ 
                 <a href="https://sites.google.com/view/poisson2024/seminars-workshops/symmetry-reduction?authuser=0"> UniSalerno, Fisciano
                 </a>.
               </td>

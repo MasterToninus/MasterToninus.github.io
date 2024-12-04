@@ -1,6 +1,6 @@
 <?php
 // Define the folder containing images
-$folder = 'images'; // Replace 'images' with the relative path to your image folder
+$folder = '../../img'; // Replace 'images' with the relative path to your image folder
 
 /**
  * Function to recursively scan a directory for images.

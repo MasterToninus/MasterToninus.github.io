@@ -73,7 +73,7 @@
                 I received my master's degree in Physics from the
                 <a target="_blank" href="http://www.ccdfis.unimi.it/en/index.html?">University of Milano</a>
                  and I wrote my thesis under the supervision of Prof.
-                <a target="_blank" href="http://fisica.unipv.it/personale/Persona.php?ID=256">Claudio Dappiaggi</a>
+                <a target="_blank" href="https://claudiodappiaggi.com/">Claudio Dappiaggi</a>
                   at the
                 <a target="_blank" href="http://fisica.unipv.it/EN_index.php">University of Pavia</a>
                   .

@@ -170,6 +170,12 @@
                             Spazio di test per Marty.                          
                         </p>
                     </a>              
+                    <a href="./diego/" class="list-group-item">
+                        <h4 class="list-group-item-heading">Diego -- Workspace</h4>
+                        <p class="list-group-item-text">
+                            Spazio di test per Diego.
+                        </p>
+                    </a>              
                 </div>
             </div>
             <div class="col-lg-6">

@@ -537,7 +537,7 @@ html body {
 
 
 
-
+/* Desktop: Two columns side by side */
 #title-box {
     display: flex; /* Arrange children in a row */
     justify-content: space-between; /* Space between description and image */
@@ -547,14 +547,14 @@ html body {
 }
 
 #title-box #description {
-    flex: 2; /* Take up twice the space of the image */
+    flex: 2; /* Description takes up twice the space of the image */
     margin-right: 20px; /* Add space between description and image */
 }
 
 #title-box #image {
-    flex: 1; /* Restrict image to half the width of the description */
+    flex: 1; /* Image takes up one part of the layout */
     max-width: 50%; /* Ensure image doesn't exceed half the page width */
-    display: flex; /* Flexbox to align image */
+    display: flex; /* Flexbox for alignment */
     justify-content: center; /* Center image horizontally */
     align-items: center; /* Center image vertically */
 }
@@ -562,4 +562,22 @@ html body {
 #title-box #image img {
     max-width: 100%; /* Scale image to fit container */
     height: auto; /* Preserve aspect ratio */
+}
+
+/* Mobile: Image above the description */
+@media screen and (max-width: 768px) {
+    #title-box {
+        flex-direction: column; /* Stack description and image vertically */
+        align-items: center; /* Center both image and description */
+    }
+
+    #title-box #description {
+        margin-right: 0; /* Remove margin for vertical layout */
+        margin-top: 20px; /* Add space below the image */
+        text-align: center; /* Center-align text for better mobile UX */
+    }
+
+    #title-box #image {
+        max-width: 100%; /* Ensure image uses full width on smaller screens */
+    }
 }

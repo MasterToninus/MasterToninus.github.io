@@ -564,7 +564,7 @@ html body {
     height: auto; /* Preserve aspect ratio */
 }
 
-/* Mobile: Image above the description */
+/* Mobile: Ensure the image fits within the screen */
 @media screen and (max-width: 768px) {
     #title-box {
         flex-direction: column; /* Stack description and image vertically */
@@ -578,6 +578,15 @@ html body {
     }
 
     #title-box #image {
-        max-width: 100%; /* Ensure image uses full width on smaller screens */
+        max-width: 100%; /* Ensure image container uses full width */
+        display: flex;
+        justify-content: center;
+    }
+
+    #title-box #image img {
+        max-width: 100%; /* Scale image to fit the container's width */
+        max-height: 100vh; /* Scale image to fit within the viewport height */
+        height: auto; /* Preserve aspect ratio */
+        object-fit: contain; /* Ensure the image scales proportionally */
     }
 }

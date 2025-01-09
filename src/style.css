@@ -534,3 +534,32 @@ p {
 html body {
     padding-top: 65px;
 }
+
+
+
+
+#title-box {
+    display: flex; /* Arrange children in a row */
+    justify-content: space-between; /* Space between description and image */
+    align-items: flex-start; /* Align items to the top */
+    width: 100%; /* Use full width */
+    margin-top: 20px; /* Optional spacing */
+}
+
+#title-box #description {
+    flex: 2; /* Take up twice the space of the image */
+    margin-right: 20px; /* Add space between description and image */
+}
+
+#title-box #image {
+    flex: 1; /* Restrict image to half the width of the description */
+    max-width: 50%; /* Ensure image doesn't exceed half the page width */
+    display: flex; /* Flexbox to align image */
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+}
+
+#title-box #image img {
+    max-width: 100%; /* Scale image to fit container */
+    height: auto; /* Preserve aspect ratio */
+}

@@ -207,7 +207,7 @@
                 echo "</tbody></table>";
                 echo "</div>"; // Close table-responsive div
                 echo "</div>"; // Close component column
-
+                echo "<hr>";
                 echo "</div>"; // Close row
             }
         } else {
@@ -219,6 +219,7 @@
     <!-- Footer -->
     <!-- ================================================= -->
     <footer class="text-center footer">
+        <p></p><p></p>
         <p>&copy; <?php echo date('Y'); ?> My Personal Computer History</p>
         <p>Last updated: <?php echo $lastModified ?: 'Unknown'; ?></p>
         <p>Disclaimer: This page was generated using ChatGPT. Model version: GPT-4</p>

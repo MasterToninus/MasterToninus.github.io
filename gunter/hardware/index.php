@@ -138,7 +138,8 @@
                 echo "<p><strong>Total Cost:</strong> {$pcTotalCost}</p>";
                 echo "<p><strong>Revision Costs:</strong> {$pcRevisionCosts}</p>";
                 if (!empty($pc['notes'])) {
-                    echo "<p><strong>Notes:</strong> {$pc['notes']}</p>";
+                    foreach ($pc['notes'] as $note)
+                        echo "<p>{$note}</p>";
                 }
                 echo "</div>"; // Close box
 

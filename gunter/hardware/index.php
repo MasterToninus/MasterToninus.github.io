@@ -95,7 +95,7 @@
         $yaml = new Yaml();
         $yamlFile = 'pc_data.yaml';
         $yamlData = [];       
-        $array = $yaml->load($yamlFile);
+
 
 
 
@@ -104,7 +104,7 @@
         $revisionCosts = 0;
 
         if (file_exists($yamlFile)) {
-            $yamlData = yaml_parse_file($yamlFile);
+            $yamlData = $yaml->load($yamlFile);
             $lastModified = date("F d, Y H:i:s", filemtime($yamlFile));
         } else {
             echo "<p>Error: YAML file not found.</p>";

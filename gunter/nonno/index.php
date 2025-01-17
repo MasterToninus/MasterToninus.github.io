@@ -123,7 +123,7 @@
         <!-- Contents -->
         <!-- ================================================= -->         
         <?php
-            require_once('../Parsedown.php');
+            require_once('../src/Parsedown.php');
             foreach ($fileArray as $key => $val) {
                 $filename = $key.'_'.$val.'.md';
                 echo '<div class="row tall-row">';

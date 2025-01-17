@@ -91,8 +91,14 @@
         //error_reporting(EALL);
 
         // Load the YAML file containing PC data
+        include '../src/Yaml.php';
+        $yaml = new Yaml();
         $yamlFile = 'pc_data.yaml';
-        $yamlData = [];
+        $yamlData = [];       
+        $array = $yaml->load($yamlFile);
+
+
+
         $lastModified = '';
         $totalCost = 0;
         $revisionCosts = 0;
@@ -133,24 +139,10 @@
                 echo "<p><strong>Revision Costs:</strong> {$pcRevisionCosts}</p>";
                 echo "</div>"; // Close box
 
-                echo "<div id='carousel-{$pc['id']}' class='carousel slide' data-ride='carousel'>";
-                echo "<div class='carousel-inner'>";
-                foreach ($pc['images'] as $index => $image) {
-                    $active = $index === 0 ? 'active' : '';
-                    echo "<div class='item $active'>";
-                    echo "<img src='{$image}' alt='PC Image'>";
-                    echo "</div>";
-                }
-                echo "</div>"; // Close carousel-inner
-                echo "<a class='left carousel-control' href='#carousel-{$pc['id']}' role='button' data-slide='prev'>";
-                echo "<span class='glyphicon glyphicon-chevron-left' aria-hidden='true'></span>";
-                echo "<span class='sr-only'>Previous</span>";
+                // Image gallery for the PC
+                echo "<a href='{$pc['album']}' target='_blank'>";
+                echo "<img src='{$pc['image']}' alt='PC Image' class='img-responsive'>";
                 echo "</a>";
-                echo "<a class='right carousel-control' href='#carousel-{$pc['id']}' role='button' data-slide='next'>";
-                echo "<span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span>";
-                echo "<span class='sr-only'>Next</span>";
-                echo "</a>";
-                echo "</div>"; // Close carousel
                 echo "</div>"; // Close image column
 
                 // Component table for the PC

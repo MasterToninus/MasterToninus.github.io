@@ -1,8 +1,7 @@
 - id: lhpc
   name: LHPC Large Heavy Pixel Collider
-  images:
-    - "images/office_pc_front.jpg"
-    - "images/office_pc_back.jpg"
+  image: "LHPC.jpg"
+  album: "https://photos.app.goo.gl/k3GSAL25ja86NF52A"
   url: "https://pcpartpicker.com/user/Toninus/saved/TJ8gXL"
   build_date: "2017-04-01"
   components:
@@ -75,9 +74,8 @@
 
 - id: lhpc2
   name: LHPC 2025
-  images:
-    - "images/office_pc_front.jpg"
-    - "images/office_pc_back.jpg"
+  image: null
+  album: null
   url: "https://pcpartpicker.com/list/3J2Qwh"
   build_date: "TBA"
   components:

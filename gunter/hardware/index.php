@@ -28,6 +28,13 @@
         display: block;
     }
     </style>
+    <style>
+    .img-responsive {
+        max-width: 90%;
+        height: auto;
+        max-height: 90%;
+    }
+    </style>
 </head>
 
 <body>

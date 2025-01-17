@@ -1,114 +1,89 @@
-- id: pc1
-  name: "Office PC 2015"
+- id: lhpc
+  name: LHPC Large Heavy Pixel Collider
+  images:
+    - "images/office_pc_front.jpg"
+    - "images/office_pc_back.jpg"
+  url: "https://pcpartpicker.com/user/Toninus/saved/TJ8gXL"
+  build_date: "2017-04-01"
+  components:
+    psu:
+      model: "SEASONIC Alimentatore 850W Prime Modulare ATX Certificato 80 Plus Titanium"
+      url: "https://seasonic.com/prime-titanium"
+      cost: 242
+      revision: null
+      addition: null
+    cooler:
+      model: "NOCTUA Dissipatore NH-U14S Per CPU Intel Socket LGA 2011/1150/1155/1156 e AMD Socket AM2 / AM2+ / AM3 / AM3+ / FM1 / FM2 / FM2+"
+      url: "https://noctua.at/en/nh-u14s"
+      cost: 78
+      revision: null
+      addition: null
+    mobo:
+      model: "ASUS Scheda Madre CROSSHAIR VI HERO Socket AM4 Chipset X370 ATX"
+      url: "https://www.asus.com/Motherboards-Components/Motherboards/All-series/ROG-CROSSHAIR-VI-HERO/"
+      cost: 272
+      revision: null
+      addition: null
+    cpu:
+      model: "AMD Processore Ryzen 7 1700X (Zen) 8 Core 3.4 GHz Socket AM4 Boxato Moltiplicatore Sbloccato (Dissipatore Escluso)"
+      url: "https://www.amd.com/en/products/cpu/amd-ryzen-7-1700x"
+      cost: 425
+      revision: null
+      addition: null    
+    ssd_m2:
+      model: "SAMSUNG SSD 512 GB 960 PRO M.2 Interfaccia PCI Express 3.0 x4 NVMe"
+      url: "https://www.samsung.com/semiconductor/minisite/ssd/product/consumer/960pro/"
+      cost: 323
+      revision: 
+        model: "SAMSUNG SSD 1 TB Serie 980 PRO M.2 Interfaccia PCI Express"
+        url: "https://www.samsung.com/semiconductor/minisite/ssd/product/consumer/980pro/"
+        cost: 221
+        date: 2021-03-17
+      addition: null
+    hdd:
+      model: "2X WESTERN DIGITAL Hard Disk Interno WD Black 1 TB 3,5\" Sata III 6 Gb / s Buffer 64 Mb 7200 rpm"
+      url: "https://www.westerndigital.com/products/internal-drives/wd-black-desktop-sata-hdd"
+      cost: 160
+      revision: null
+      addition: null
+    case:
+      model: "SILVERSTONE SST-PM01W-RGB Primera Midi Tower ATX Gaming Computer Case"
+      url: "https://www.silverstonetek.com/product.php?pid=703"
+      cost: 170
+      revision: null
+      addition: null
+    ram:
+      model: "CORSAIR Memory Corsair Dominator Platinum 32GB (2x16GB) DDR4 3000MHz DIMM Unbuffered"
+      url: "https://www.corsair.com/us/en/Categories/Products/Memory/Dominator-Platinum/p/CMD32GX4M2B3000C15"
+      cost: 300
+      addition: 
+        model: "G.SKILL Memoria Dimm Trident Z NEO 32GB (16 GB x 2) DDR4 3600 MHz CL16"
+        url: "https://www.gskill.com/product/165/326/1562839672/F4-3600C16D-32GTZNCTrident-Z-NEO-DDR4-3600MHz-CL16-32GB-(2x16GB)"
+        cost: 190
+        date: 2020-12-10
+    gpu:
+      model: "ASUS Radeon RX 580 8 GB GDDR5 PCI Express 3.0 x16 / DVI-D / 2x HDMI / 2x DisplayPort STRIX Gaming (OC)"
+      url: "https://www.asus.com/Motherboards-Components/Graphics-Cards/All-series/ROG-STRIX-RX580-O8G-GAMING/"
+      cost: 387
+      revision: 
+        model: AMD Radeon RX 6700 XT
+        url: "https://www.amd.com/en/products/graphics/amd-radeon-rx-6700-xt"
+        cost: 446
+        date: 2021-03-22
+      addition: null
+
+
+- id: lhpc2
+  name: LHPC 2025
   images:
     - "images/office_pc_front.jpg"
     - "images/office_pc_back.jpg"
   url: "https://pcpartpicker.com/list/3J2Qwh"
+  build_date: "TBA"
   components:
-    mobo:
-      model: "Gigabyte GA-H81M-HD3"
-      url: "https://www.gigabyte.com/Motherboard/GA-H81M-HD3-rev-10"
-      cost: 60
-      revision:
-        model: "Gigabyte GA-H81M-HD3 (Rev. 2.0)"
-        url: "https://www.gigabyte.com/Motherboard/GA-H81M-HD3-rev-20"
-        cost: 65
-        date: "2016-03-10"
-    cpu:
-      model: "Intel Core i3-4130"
-      url: "https://ark.intel.com/products/77480/Intel-Core-i3-4130-Processor-3M-Cache-3-40-GHz-"
-      cost: 120
-      revision:
-        model: "Intel Core i3-4150"
-        url: "https://ark.intel.com/products/77481/Intel-Core-i3-4150-Processor-3M-Cache-3-50-GHz-"
-        cost: 125
-        date: "2015-05-15"
-    ram:
-      model: "Kingston HyperX Fury 8GB (2x4GB) 1600MHz"
-      url: "https://www.kingston.com/hyperx/fury"
-      cost: 40
-      revision:
-        model: "Kingston HyperX Fury 16GB (2x8GB) 1600MHz"
-        url: "https://www.kingston.com/hyperx/fury"
-        cost: 80
-        date: "2017-09-01"
-    gpu:
-      model: "NVIDIA GeForce GT 730"
-      url: "https://www.nvidia.com/en-us/geforce/730/"
-      cost: 50
-      revision:
-        model: "NVIDIA GeForce GTX 750 Ti"
-        url: "https://www.nvidia.com/en-us/geforce/750ti/"
-        cost: 120
-        date: "2016-06-20"
     psu:
-      model: "Cooler Master Elite 350W"
-      url: "https://www.coolermaster.com/elite-350w"
-      cost: 30
-      revision:
-        model: "Cooler Master MasterWatt 400W"
-        url: "https://www.coolermaster.com/masterwatt-400w"
-        cost: 40
-        date: "2018-02-10"
-    storage:
-      ssd:
-        model: "Crucial BX100 120GB"
-        url: "https://www.crucial.com/ssd/bx100"
-        cost: 50
-        revision:
-          model: "Crucial BX300 240GB"
-          url: "https://www.crucial.com/ssd/bx300"
-          cost: 75
-          date: "2017-12-15"
-      hdd:
-        model: "Western Digital Blue 1TB"
-        url: "https://www.westerndigital.com/hdd/blue"
-        cost: 60
-        revision:
-          model: "Western Digital Blue 2TB"
-          url: "https://www.westerndigital.com/hdd/blue"
-          cost: 80
-          date: "2018-05-01"
-    fans:
-      model: "ARCTIC F12"
-      url: "https://www.arctic.ac/f12"
-      cost: 10
-      revision:
-        model: "ARCTIC F12 PWM"
-        url: "https://www.arctic.ac/f12-pwm"
-        cost: 12
-        date: "2016-11-25"
-- id: pc2
-  name: "Gaming PC 2020"
-  images:
-    - "images/gaming_pc_front.jpg"
-    - "images/gaming_pc_side.jpg"
-  url: "https://pcpartpicker.com/list/3J2Qwh"
-  components:
-    mobo:
-      model: "MSI B450 TOMAHAWK"
-      url: "https://www.msi.com/Motherboard/B450-TOMAHAWK"
-      cost: 120
-      revision:
-        model: "MSI B450 TOMAHAWK MAX"
-        url: "https://www.msi.com/Motherboard/B450-TOMAHAWK-MAX"
-        cost: 130
-        date: "2020-01-20"
-    cpu:
-      model: "AMD Ryzen 5 3600"
-      url: "https://www.amd.com/en/products/cpu/amd-ryzen-5-3600"
-      cost: 200
-      revision:
-        model: "AMD Ryzen 5 3600XT"
-        url: "https://www.amd.com/en/products/cpu/amd-ryzen-5-3600xt"
-        cost: 240
-        date: "2020-06-15"
-    gpu:
-      model: "NVIDIA GeForce RTX 2060"
-      url: "https://www.nvidia.com/en-us/geforce/rtx-2060/"
-      cost: 300
-      revision:
-        model: "NVIDIA GeForce RTX 2060 SUPER"
-        url: "https://www.nvidia.com/en-us/geforce/rtx-2060-super/"
-        cost: 400
-        date: "2020-08-10"
+      model: "SEASONIC Alimentatore 850W Prime Modulare ATX Certificato 80 Plus Titanium"
+      url: "https://seasonic.com/prime-titanium"
+      cost: 242
+      revision: null
+ 

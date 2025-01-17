@@ -58,6 +58,7 @@
                             <li><a href="./h4x0rs.html">Template</a></li>
                             <li><a href="./facciata.php">Protocollo Facciata</a></li>
                             <li><a href="./meteo">Meteo</a></li>
+                            <li><a href="./hardware">Hardware</a></li>
                             <li><a href="./gallery/index.html#fototrappla">Photo Gallery</a></li>            
                         </ul>
                     </li>
@@ -109,13 +110,19 @@
                             Sezioni eliminate dalla vecchia versione del sito    
                         </p>
                     </a>
+                    <a href="./hardware/" class="list-group-item">
+                        <h4 class="list-group-item-heading">Pc History</h4>
+                        <p class="list-group-item-text">
+                            Storia dei miei Pc
+                        </p>
+                    </a>                    
                     <a href="https://xila.altervista.org/" class="list-group-item">
                         <h4 class="list-group-item-heading">Xila</h4>
                         <p class="list-group-item-text">
                             Esperimenti web di Diana 
                             (sito mantenuto da Diego)    
                         </p>
-                    </a>
+                    </a>                 
                     <a href="./nonno/" class="list-group-item">
                         <h4 class="list-group-item-heading">Foglie Sparse</h4>
                         <p class="list-group-item-text">

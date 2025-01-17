@@ -57,6 +57,7 @@
                             <li><a href="../h4x0rs.html">Template</a></li>
                             <li><a href="../facciata.php">Protocollo Facciata</a></li>
                             <li><a href="./">Meteo</a></li>
+                            <li><a href="../hardware">Hardware</a></li>
                             <li><a href="../gallery/index.html#fototrappla">Photo Gallery</a></li>            
                         </ul>
                     </li>

@@ -34,6 +34,9 @@
         height: auto;
         max-height: 90%;
     }
+    .footer {
+        margin-top: 40px;
+    }
     </style>
 </head>
 
@@ -215,7 +218,7 @@
     <!-- ================================================= -->
     <!-- Footer -->
     <!-- ================================================= -->
-    <footer class="text-center">
+    <footer class="text-center footer">
         <p>&copy; <?php echo date('Y'); ?> My Personal Computer History</p>
         <p>Last updated: <?php echo $lastModified ?: 'Unknown'; ?></p>
         <p>Disclaimer: This page was generated using ChatGPT. Model version: GPT-4</p>

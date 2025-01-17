@@ -144,37 +144,37 @@
     cpu:
       model: "AMD Ryzen 7 9800X3D 4.7 GHz 8-Core Processor"
       url: "https://pcpartpicker.com/product/fPyH99/amd-ryzen-7-9800x3d-47-ghz-8-core-processor-100-1000001084wof"
-      cost: 597.00
+      cost: 600
       revision: null
       addition: null
     cooler:
       model: "Thermalright Peerless Assassin 120 SE WHITE ARGB 66.17 CFM CPU Cooler"
       url: "https://pcpartpicker.com/product/xMLFf7/thermalright-peerless-assassin-120-se-white-argb-6617-cfm-cpu-cooler-pa120-se-white-argb"
-      cost: null
+      cost: 50
       revision: null
       addition: null
     mobo:
       model: "Asus ROG STRIX X670E-A GAMING WIFI ATX AM5 Motherboard"
       url: "https://pcpartpicker.com/product/rPRYcf/asus-rog-strix-x670e-a-gaming-wifi-atx-am5-motherboard-rog-strix-x670e-a-gaming-wifi"
-      cost: 259.99
+      cost: 260
       revision: null
       addition: null
     ram:
       model: "Corsair Dominator Titanium 64 GB (2 x 32 GB) DDR5-6600 CL32 Memory"
       url: "https://pcpartpicker.com/product/bWKscf/corsair-dominator-titanium-64-gb-2-x-32-gb-ddr5-6600-cl32-memory-cmp64gx5m2x6600c32w"
-      cost: 299.99
+      cost: 300
       revision: null
       addition: null
     ssd_primary:
       model: "Samsung 990 Pro 2 TB M.2-2280 PCIe 4.0 X4 NVME Solid State Drive"
       url: "https://pcpartpicker.com/product/34ytt6/samsung-990-pro-2-tb-m2-2280-pcie-40-x4-nvme-solid-state-drive-mz-v9p2t0bw"
-      cost: 169.99
+      cost: 170
       revision: null
       addition: null
     ssd_secondary:
       model: "Samsung 960 Pro 512 GB M.2-2280 PCIe 3.0 X4 NVME Solid State Drive"
       url: "https://pcpartpicker.com/product/TstWGX/samsung-960-pro-512gb-m2-2280-solid-state-drive-mz-v6p512bw"
-      cost: 157.11
+      cost: null
       revision: null
       addition: null
     raid:
@@ -186,19 +186,19 @@
     gpu:
       model: "Sapphire PURE Radeon RX 7800 XT 16 GB Video Card"
       url: "https://pcpartpicker.com/product/nh26Mp/sapphire-pure-radeon-rx-7800-xt-16-gb-video-card-11330-03-20g"
-      cost: 489.99
+      cost: 500
       revision: null
       addition: null
     case:
       model: "Fractal Design North ATX Mid Tower Case"
       url: "https://pcpartpicker.com/product/d8WzK8/fractal-design-north-atx-mid-tower-case-fd-c-nor1c-03"
-      cost: 139.99
+      cost: 140
       revision: null
       addition: null
     psu:
       model: "SeaSonic PRIME TX-850 850 W 80+ Titanium Certified Fully Modular ATX Power Supply"
       url: "https://pcpartpicker.com/product/4X2bt6/seasonic-prime-tx-850-w-80-titanium-certified-fully-modular-atx-power-supply-prime-tx-850"
-      cost: 456.26
+      cost: null
       revision: null
       addition: null
  

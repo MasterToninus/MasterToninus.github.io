@@ -3,7 +3,7 @@
 <link rel="shortcut icon" href="../img/terminal.ico" type="image/x-icon">
 <link rel="icon" href="../img/terminal.ico" type="image/x-icon">
 <head>
-<title>C0mput3r hystory</title>
+<title>C0mput3rs H1story</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -137,6 +137,9 @@
                 echo "<p><strong>Build Date:</strong> {$pc['build_date']}</p>";
                 echo "<p><strong>Total Cost:</strong> {$pcTotalCost}</p>";
                 echo "<p><strong>Revision Costs:</strong> {$pcRevisionCosts}</p>";
+                if (!empty($pc['notes'])) {
+                    echo "<p><strong>Notes:</strong> {$pc['notes']}</p>";
+                }
                 echo "</div>"; // Close box
 
                 // Image gallery for the PC
@@ -147,8 +150,9 @@
 
                 // Component table for the PC
                 echo "<div class='col-md-6'>";
+                echo "<div class='table-responsive'>"; // Add this line
                 echo "<table class='table table-striped'>";
-                echo "<thead><tr><th>Component</th><th>Model</th><th>Cost</th><th>Date</th></tr></thead><tbody>";
+                echo "<thead><tr><th>Component</th><th>Model</th><th>Cost</th><th>Date</th></thead><tbody>";
 
                 foreach ($pc['components'] as $component => $details) {
                     $revision = $details['revision'] ?? null;
@@ -190,6 +194,7 @@
                 }
 
                 echo "</tbody></table>";
+                echo "</div>"; // Close table-responsive div
                 echo "</div>"; // Close component column
 
                 echo "</div>"; // Close row

@@ -1,9 +1,68 @@
+- id: PC-One
+  name: PC-One
+  image: "PC-One.jpg"
+  album: "https://photos.google.com/u/1/share/AF1QipMxSSCjrTisIpHhH0Kt1dGrM2rqmb2cxsY0xPH1BvdBorogqIAwGiWz-Htoyq1OtQ?hl=it"
+  url: "https://pcpartpicker.com/list/zmXJ8K"
+  build_date: "200?-?-?"
+  notes:
+   - "Raffreddamento a liquido custom con celle di Peltier."
+   - "Il contenuto del case ha subito numerose evoluzioni. La prima versione risale a prima del 2005. I ricordi si perdono nel tempo!"
+  components:
+    cpu:
+      model: "Intel Core i3-6100 3.7 GHz Dual-Core Processor"
+      url: "https://ark.intel.com/content/www/us/en/ark/products/90729/intel-core-i36100-processor-3m-cache-3-70-ghz.html"
+      cost: 0
+      revision: null
+      addition: null
+    mobo:
+      model: "Asus H110M-A Micro ATX LGA1151 Motherboard"
+      url: "https://www.asus.com/motherboards-components/motherboards/all-series/h110m-a/"
+      cost: 0
+      revision: null
+      addition: null
+    ram:
+      model: "Kingston HyperX Savage 8 GB (1 x 8 GB) DDR4-2133 CL13 Memory"
+      url: "https://www.kingston.com/en/memory/search?partid=HX421C13SB2"
+      cost: 0
+      revision: null
+      addition: null
+    ssd:
+      model: "Corsair Force GT 90 GB 2.5\" Solid State Drive"
+      url: "https://www.corsair.com/us/en/Categories/Products/Storage/Force-Series™-GT/p/CSSD-F90GBGT-BK"
+      cost: 0
+      revision: null
+      addition: null
+    hdd:
+      model: "Western Digital WD_BLACK 1 TB 3.5\" 7200 RPM Internal Hard Drive"
+      url: "https://www.westerndigital.com/products/internal-drives/wd-black-desktop-sata-hdd"
+      cost: null
+      revision: null
+      addition: null
+    gpu:
+      model: "Sapphire 11199-10-40G Radeon HD 7870 GHz Edition 2 GB Video Card"
+      url: "https://www.sapphiretech.com/en/consumer/hd-7870-ghz-edition-2gb-gddr5"
+      cost: 0
+      revision: null
+      addition: null
+    case:
+      model: "Thermaltake Armor Series ATX Full Tower Case"
+      url: "https://www.thermaltake.com/armor-full-tower-chassis.html"
+      cost: 0
+      revision: null
+      addition: null
+
+
+
+
 - id: lhpc
   name: LHPC Large Heavy Pixel Collider
   image: "LHPC.jpg"
   album: "https://photos.app.goo.gl/k3GSAL25ja86NF52A"
   url: "https://pcpartpicker.com/user/Toninus/saved/TJ8gXL"
   build_date: "2017-04-01"
+  notes: 
+    - "Comprato con i primi stipendi da dottorando."
+    - "Mi ha seguito in tutti i miei traslochi: Milano -> Bruxelles -> Valenciennes -> Leuven -> Milano -> Bonn -> Milano -> Roma ."
   components:
     psu:
       model: "SEASONIC Alimentatore 850W Prime Modulare ATX Certificato 80 Plus Titanium"

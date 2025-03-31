@@ -165,24 +165,34 @@
       cost: 300
       revision: null
       addition: null
-    ssd_primary:
+    ssd_M2_primary:
       model: "Samsung 990 Pro 2 TB M.2-2280 PCIe 4.0 X4 NVME Solid State Drive"
       url: "https://pcpartpicker.com/product/34ytt6/samsung-990-pro-2-tb-m2-2280-pcie-40-x4-nvme-solid-state-drive-mz-v9p2t0bw"
       cost: 170
       revision: null
       addition: null
-    ssd_secondary:
+      info: "Win 11"
+    ssd_M2_secondary:
       model: "Samsung 960 Pro 512 GB M.2-2280 PCIe 3.0 X4 NVME Solid State Drive"
       url: "https://pcpartpicker.com/product/TstWGX/samsung-960-pro-512gb-m2-2280-solid-state-drive-mz-v6p512bw"
       cost: null
       revision: null
       addition: null
+      info: "Steam Os"
+    ssd_sata_1:
+      model: "Samsung 512GB"
+      url: " "
+      cost: null
+      revision: null
+      addition: null
+      info: "Steam Library"      
     raid:
       model: "2 x Western Digital Caviar Black 1 TB 3.5\" 7200 RPM Internal Hard Drive"
       url: "https://pcpartpicker.com/product/Bqn2FT/western-digital-internal-hard-drive-wd10000lsrtl"
       cost: null
       revision: null
       addition: null
+      info: "Raid 1: Archive"
     gpu:
       model: "Sapphire PURE Radeon RX 7800 XT 16 GB Video Card"
       url: "https://pcpartpicker.com/product/nh26Mp/sapphire-pure-radeon-rx-7800-xt-16-gb-video-card-11330-03-20g"

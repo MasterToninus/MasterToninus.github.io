@@ -219,13 +219,18 @@
           <table class="list">
 
           <tr>
+            <td class="left"><b>March 2025</b></td>
+            <td class="right">Research stay at <a href="https://www.mittag-leffler.se/activities/cohomological-aspects-of-quantum-field-theory/">Institut Mittag-Leffler</a> in Djursholm.
+          </tr>
+
+          <tr>
             <td class="left"><b>October 2024</b></td>
             <td class="right">Research stay at <a href="https://math.univ-lyon1.fr/icj/probabilites-statistique-physique-mathematique/">Institut Camille Jordan</a> in Lyon.
           </tr>     
 
           <tr>
-              <td class="left"><b>July 2024</b></td>
-              <td class="right">New preprint on arxiv <a href="https://arxiv.org/abs/2407.20167">arXiv:2407.20167</a>. (Venturing slightly out of my comfort zone!)</td>
+            <td class="left"><b>July 2024</b></td>
+            <td class="right">New preprint on arxiv <a href="https://arxiv.org/abs/2407.20167">arXiv:2407.20167</a>. (Venturing slightly out of my comfort zone!)</td>
           </tr>          
 
           <tr>

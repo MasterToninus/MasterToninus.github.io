@@ -218,6 +218,18 @@
         <div class="big-title shaded" id="News">News</div>
           <table class="list">
 
+        <!--
+          <tr> 
+            <td class="left"><b>July 2025</b></td>
+            <td class="right">On parental leave for three months. Returning to office on October 1st, 2025.</td>
+          </tr>
+        -->
+
+          <tr> 
+            <td class="left"><b>May 2025</b></td>
+            <td class="right">Leonid Ryvkin will visit the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome. More about him: <a href="https://www.ryvkin.eu/">Leonid Ryvkin</a>.</td>
+          </tr>
+
           <tr>
             <td class="left"><b>March 2025</b></td>
             <td class="right">Research stay at <a href="https://www.mittag-leffler.se/activities/cohomological-aspects-of-quantum-field-theory/">Institut Mittag-Leffler</a> in Djursholm.

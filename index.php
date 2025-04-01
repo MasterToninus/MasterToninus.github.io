@@ -227,17 +227,17 @@
 
           <tr> 
             <td class="left"><b>May 2025</b></td>
-            <td class="right">Leonid Ryvkin will visit the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome. More about him: <a href="https://www.ryvkin.eu/">Leonid Ryvkin</a>.</td>
+            <td class="right"><a href="https://www.ryvkin.eu/">Leonid Ryvkin</a> will be a guest at the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome.</td>
           </tr>
 
           <tr>
             <td class="left"><b>March 2025</b></td>
-            <td class="right">Research stay at <a href="https://www.mittag-leffler.se/activities/cohomological-aspects-of-quantum-field-theory/">Institut Mittag-Leffler</a> in Djursholm.
+            <td class="right">Research stay at <a href="https://www.mittag-leffler.se/activities/cohomological-aspects-of-quantum-field-theory/">Institut Mittag-Leffler</a> in Djursholm.</td>
           </tr>
 
           <tr>
             <td class="left"><b>October 2024</b></td>
-            <td class="right">Research stay at <a href="https://math.univ-lyon1.fr/icj/probabilites-statistique-physique-mathematique/">Institut Camille Jordan</a> in Lyon.
+            <td class="right">Research stay at <a href="https://math.univ-lyon1.fr/icj/probabilites-statistique-physique-mathematique/">Institut Camille Jordan</a> in Lyon.</td>
           </tr>     
 
           <tr>

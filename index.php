@@ -221,9 +221,19 @@
         <!--
           <tr> 
             <td class="left"><b>July 2025</b></td>
-            <td class="right">On parental leave for three months. Returning to office on October 1st, 2025.</td>
+            <td class="right">On parental leave for two months. Returning to office on September 15th, 2025.</td>
           </tr>
         -->
+
+          <tr> 
+            <td class="left"><b>June 2025</b></td>
+            <td class="right">
+              New preprint on arxiv <a href="https://arxiv.org/abs/2506.00234">arXiv:2506.00234</a>, inspired by the 
+                <a href="../teaching/Obs-Constraint-2024/"><em>minicourse</em></a> @ 
+                <a href="https://sites.google.com/view/poisson2024/seminars-workshops/symmetry-reduction?authuser=0"> UniSa
+                </a>.
+            </td>
+          </tr>
 
           <tr> 
             <td class="left"><b>May 2025</b></td>
@@ -254,14 +264,7 @@
               </td>
           </tr>
 
-          <tr>
-              <td class="left"><b>May 2024</b></td>
-              <td class="right">Notes on my minicourse with L. Ryvkin
-                <a href="../teaching/Obs-Constraint-2024/"><em>Reduction of multisymplectic observables</em></a> @ 
-                <a href="https://sites.google.com/view/poisson2024/seminars-workshops/symmetry-reduction?authuser=0"> UniSalerno, Fisciano
-                </a>.
-              </td>
-          </tr>
+
 
           <tr>
             <td class="left"><b>February 2024</b></td>

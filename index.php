@@ -226,7 +226,7 @@
         -->
 
           <tr>
-              <td class="left"><b>May 2024</b></td>
+              <td class="left"><b>July 2025</b></td>
               <td class="right">Slides for my talk
                 <a href="https://www.researchgate.net/publication/393357377_A_canonical_morphism_between_twisted_and_untwisted_higher_Courant_Lie_infinity_algebras"><em>A canonical morphism between twisted and untwisted higher Courant Lie infinity algebras</em></a> @ 
                 <a href="https://www.mat.uniroma2.it/~kowalzig/ws.html"> Indam, Rome

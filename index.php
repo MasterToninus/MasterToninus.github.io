@@ -225,6 +225,15 @@
           </tr>
         -->
 
+          <tr>
+              <td class="left"><b>May 2024</b></td>
+              <td class="right">Slides for my talk
+                <a href="https://www.researchgate.net/publication/393357377_A_canonical_morphism_between_twisted_and_untwisted_higher_Courant_Lie_infinity_algebras"><em>A canonical morphism between twisted and untwisted higher Courant Lie infinity algebras</em></a> @ 
+                <a href="https://www.mat.uniroma2.it/~kowalzig/ws.html"> Indam, Rome
+                </a>.
+              </td>
+          </tr>
+
           <tr> 
             <td class="left"><b>June 2025</b></td>
             <td class="right">
@@ -254,16 +263,6 @@
             <td class="left"><b>July 2024</b></td>
             <td class="right">New preprint on arxiv <a href="https://arxiv.org/abs/2407.20167">arXiv:2407.20167</a>. (Venturing slightly out of my comfort zone!)</td>
           </tr>          
-
-          <tr>
-              <td class="left"><b>May 2024</b></td>
-              <td class="right">Slides for my talk
-                <a href="https://www.researchgate.net/publication/381297576_Multisymplectic_approach_to_LFT_the_Stress-Energy_tensor"><em>Multisymplectic approach to LFT and the Stress-Energy tensor</em></a> @ 
-                <a href="https://www.dropbox.com/scl/fi/j54tl4m10fl2scbrtc4sx/2405-Torino-Conservationlaws.pdf?rlkey=ay7nrxda4fg8lklvox578g6yj&st=iqht9v8o&dl=0"> UniTorino, Torino
-                </a>.
-              </td>
-          </tr>
-
 
 
           <tr>

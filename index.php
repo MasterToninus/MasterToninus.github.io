@@ -218,12 +218,13 @@
         <div class="big-title shaded" id="News">News</div>
           <table class="list">
 
-        <!--
           <tr> 
             <td class="left"><b>July 2025</b></td>
-            <td class="right">On parental leave for two months. Returning to office on September 15th, 2025.</td>
+            <td class="right">
+              Wonderful news: <a href="img/malia-2giorni.jpeg"><b>Marta Velia</b></a> is born!<br>
+              I'm currently on parental leave and will be back in office on September 15th, 2025.
+            </td>
           </tr>
-        -->
 
           <tr>
               <td class="left"><b>July 2025</b></td>

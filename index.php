@@ -218,6 +218,27 @@
         <div class="big-title shaded" id="News">News</div>
           <table class="list">
 
+            <!--
+          <tr>
+            <td class="left"><b>February 2026</b></td>
+            <td class="right">Five months Research stay at <a href="https://math.univ-lyon1.fr/icj/probabilites-statistique-physique-mathematique/">Institut Camille Jordan</a> in Lyon.</td>
+          </tr>
+              -->
+
+          <!--
+          <tr>
+            <td class="left"><b>December 2025</b></td>
+            <td class="right"><a href="https://sites.google.com/view/fabrizio-zanello-mathphy">Fabrizio Zanello</a> will be a guest at the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome.</td>
+          </tr>
+          -->
+
+          <!--
+          <tr>
+            <td class="left"><b>December 2025</b></td>
+            <td class="right"><a href="https://sites.google.com/view/agtortorella">Alfonso Tortorella</a> will be a guest at the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome.</td>
+          </tr>
+          -->
+
           <tr> 
             <td class="left"><b>July 2025</b></td>
             <td class="right">
@@ -255,21 +276,7 @@
             <td class="right">Research stay at <a href="https://www.mittag-leffler.se/activities/cohomological-aspects-of-quantum-field-theory/">Institut Mittag-Leffler</a> in Djursholm.</td>
           </tr>
 
-          <tr>
-            <td class="left"><b>October 2024</b></td>
-            <td class="right">Research stay at <a href="https://math.univ-lyon1.fr/icj/probabilites-statistique-physique-mathematique/">Institut Camille Jordan</a> in Lyon.</td>
-          </tr>     
-
-          <tr>
-            <td class="left"><b>July 2024</b></td>
-            <td class="right">New preprint on arxiv <a href="https://arxiv.org/abs/2407.20167">arXiv:2407.20167</a>. (Venturing slightly out of my comfort zone!)</td>
-          </tr>          
-
-
-          <tr>
-            <td class="left"><b>February 2024</b></td>
-            <td class="right">Starting new position at <a href="https://www.uniroma1.it/it/">Università di Roma la Sapienza</a> in Rome.
-          </tr>     
+    
             
           </table>
         </div>

@@ -225,31 +225,35 @@
           </tr>
               -->
 
-          <!--
+          
           <tr>
             <td class="left"><b>December 2025</b></td>
-            <td class="right"><a href="https://sites.google.com/view/fabrizio-zanello-mathphy">Fabrizio Zanello</a> will be a guest at the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome.</td>
+            <td class="right"><a href="https://sites.google.com/view/fabrizio-zanello-mathphy">Fabrizio Zanello</a> will be our guest at the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome.
+            He will deliver a <a href="https://sites.google.com/view/dottorato-matematica-roma/home">PhD minicourse</a> on AQFT.
+          </td>
           </tr>
-          -->
+          
 
-          <!--
+          
           <tr>
             <td class="left"><b>December 2025</b></td>
-            <td class="right"><a href="https://sites.google.com/view/agtortorella">Alfonso Tortorella</a> will be a guest at the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome.</td>
+            <td class="right"><a href="https://sites.google.com/view/agtortorella">Alfonso Tortorella</a> will be our guest at the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome.
+            He will deliver a <a href="https://sites.google.com/uniroma1.it/sag/">seminar</a> on Deformations of co-isotropic submanifolds.
+          </td>
           </tr>
-          -->
+          
 
           <tr> 
             <td class="left"><b>July 2025</b></td>
             <td class="right">
               Wonderful news: <a href="img/malia-2giorni.jpeg"><b>Marta Velia</b></a> is born!<br>
-              I'm currently on parental leave and will be back in office on September 15th, 2025.
+              I have been on parental leave until September 15th, 2025.
             </td>
           </tr>
 
           <tr>
               <td class="left"><b>July 2025</b></td>
-              <td class="right">Slides for my talk
+              <td class="right">Slides of my talk
                 <a href="https://www.researchgate.net/publication/393357377_A_canonical_morphism_between_twisted_and_untwisted_higher_Courant_Lie_infinity_algebras"><em>A canonical morphism between twisted and untwisted higher Courant Lie infinity algebras</em></a> @ 
                 <a href="https://www.mat.uniroma2.it/~kowalzig/ws.html"> Indam, Rome
                 </a>.
@@ -268,7 +272,7 @@
 
           <tr> 
             <td class="left"><b>May 2025</b></td>
-            <td class="right"><a href="https://www.ryvkin.eu/">Leonid Ryvkin</a> will be a guest at the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome.</td>
+            <td class="right"><a href="https://www.ryvkin.eu/">Leonid Ryvkin</a> has been our guest at the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome.</td>
           </tr>
 
           <tr>

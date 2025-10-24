@@ -241,7 +241,16 @@
             He will deliver a <a href="https://sites.google.com/uniroma1.it/sag/">seminar</a> on Deformations of co-isotropic submanifolds.
           </td>
           </tr>
-          
+
+          <tr>
+              <td class="left"><b>October 2025</b></td>
+              <td class="right">Slides of my talk
+                <a href="https://www.researchgate.net/publication/396871060_Construction_and_Reduction_of_the_L_Algebra_of_Observables_Associated_with_a_BV-Module"><em>Construction and Reduction of the L∞ Algebra of Observables Associated with a BV-Module</em></a> @ 
+                <a href="https://www.mat.uniroma1.it/it/construction-and-reduction-lie-infinity-algebra-observables-associated-bv-module"> Tor Vergata, Rome
+                </a>.
+              </td>
+          </tr>          
+
 
           <tr> 
             <td class="left"><b>July 2025</b></td>

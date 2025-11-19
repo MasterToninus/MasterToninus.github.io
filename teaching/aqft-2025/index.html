@@ -5,7 +5,7 @@
   <!-- HEADER -->
   <!-- -->
   <head>
-    <title>pAQFT @ Sapienza — PhD Course</title>
+    <title>pAQFT @ Sapienza - PhD Course</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../../src/style.css">
@@ -44,6 +44,20 @@
         font-family: 'Comfortaa', sans-serif;
         color: #004d7a;
       }
+      /* Badge / pill per la mailing list */
+      .ml-link {
+        display: inline-block;
+        padding: 2px 10px;
+        border-radius: 999px;
+        background-color: rgba(0, 77, 122, 0.08);
+        font-weight: 500;
+        text-decoration: none;
+        font-family: 'Comfortaa', sans-serif;
+        white-space: nowrap;
+      }
+      .ml-link i {
+        margin-right: 5px;
+      }
     </style>
   </head>
 
@@ -63,10 +77,10 @@
 
 
     <div id="content">
-        <div id="content-container">
+      <div id="content-container">
 
         <!-- --------------------------------------------- -->
-        <!-- Introduction -->
+        <!-- Intro -->
         <!-- --------------------------------------------- -->
         <div id="introduction">
           <div id="desc">
@@ -88,13 +102,13 @@
             <table class="list">
               <tr> 
                 <td class="right">
-                  <b>PhD Course</b> &emsp; <span>Duration: <b>8 hours (4 meetings)</b></span>
+                  <b>PhD Course</b> &nbsp; <span>Duration: <b>8 hours (4 meetings)</b></span>
                 </td>
               </tr>
               <tr>
                 <td class="right">
                   Dr. <b><a href="https://sites.google.com/view/fabrizio-zanello-mathphy" target="_blank" rel="noopener">Fabrizio Zanello</a></b>
-                  &emsp; &emsp; 
+                  &nbsp;&nbsp; 
                   (<a href="https://www.uni-potsdam.de/" target="_blank" rel="noopener">University of Potsdam</a>)
                 </td>
               </tr>
@@ -102,7 +116,7 @@
                 <td class="right">
                   Organization: 
                   <a href="../../index.php">Antonio Michele Miti</a>
-                  &emsp; &emsp; 
+                  &nbsp;&nbsp; 
                   (<a href="https://www.mat.uniroma1.it/" target="_blank" rel="noopener">Sapienza Università di Roma</a>)
                 </td>
               </tr>                                                    
@@ -110,7 +124,8 @@
           </div>
           <div id="image">
             <a href="https://aboatmadeoutoftrash.wordpress.com/wp-content/uploads/2012/01/feynmanlastboard1.gif" target="_blank" rel="noopener">
-            <img src="../../img/feynman+aqft.jpg" alt="Course banner"></a>
+              <img src="../../img/feynman+aqft.jpg" alt="Course banner">
+            </a>
           </div>
         </div>
 
@@ -122,19 +137,32 @@
             <tr> 
               <td class="left"><b>Where:</b></td>
               <td class="right">
-                <b>Sapienza University of Rome — Dept. of Mathematics</b><br>
-                Format: <b>Hybrid</b> (on-site &amp; online) — room / Teams link: <i>TBD</i>
+                <b>Sapienza University of Rome - Dept. of Mathematics</b><br>
+                Rooms F and L (PhD classrooms). See 
+                <a href="https://www.mat.uniroma1.it/it/dove-siamo" target="_blank" rel="noopener">
+                  come raggiungerci
+                </a> (in Italian).<br>
+                Format: <b>Hybrid</b> (on-site and online).<br>
+                The Zoom link will be circulated via the 
+                <a class="ml-link" href="https://groups.google.com/u/2/g/paqft-phd-roma" target="_blank" rel="noopener">
+                  <i class="fa fa-users"></i> mailing list
+                </a>, 
+                and recordings will be provided on request.
               </td>
             </tr>
             <tr> 
               <td class="left"><b>When:</b></td>
               <td class="right">
                 <b>December 2025</b><br>
-                Calendar &amp; timetable will be announced here.
+                Detailed course schedule is provided in the Syllabus section below.<br>
+                The schedule may be adjusted if needed to accommodate participants (updates via the 
+                <a class="ml-link" href="https://groups.google.com/u/2/g/paqft-phd-roma" target="_blank" rel="noopener">
+                  <i class="fa fa-users"></i> mailing list
+                </a>).
               </td>
             </tr>
             <tr> 
-              <td class="left"><b>Contacts</b></td>
+              <td class="left"><b>Contacts:</b></td>
               <td class="right">
                 <a href="mailto:antoniomichele.miti@uniroma1.it">
                   <i class="fa fa-1x fa-envelope"></i> antoniomichele.miti [at] uniroma1 [dot] it
@@ -147,16 +175,20 @@
           </table>
 
           <!-- --------------------------------------------- -->
-          <!-- Registration and Scheduling -->
+          <!-- Registration -->
           <!-- --------------------------------------------- -->
-          <div class="mini-sec-title">Registration and scheduling</div>
+          <div class="mini-sec-title">Registration</div>
+
           <div class="button-box">
             <a class="button" href="https://groups.google.com/u/2/g/paqft-phd-roma" target="_blank" rel="noopener">
-              <i class="fa fa-envelope"></i> Join the Mailing List
+              <i class="fa fa-users"></i> Join the Mailing List
             </a>
+
+            <!--
             <a class="button" href="https://forms.gle/9TYhdg37eHuqHWyS9" target="_blank" rel="noopener">
               <i class="fa fa-calendar"></i> Fill in the Doodle for Dates
             </a>
+            -->
           </div>
         </div>
 
@@ -169,18 +201,24 @@
             The course introduces the algebraic approach to Quantum Field Theory on flat Lorentzian spacetimes. 
             We start from configurations and observables as elements of abstract algebras and recall microlocal tools (wavefront sets) to characterise admissible observables. 
             We then discuss generalised Lagrangians and explain how the free Lagrangian determines the Poisson structure and the perturbative implementation of the classical interaction picture. 
-            Finally, we quantise the free theory via a non-commutative star product, outline the quantum interaction picture through retarded products and Bogoliubov’s formula, and present the Epstein–Glaser renormalisation scheme for a mathematically rigorous construction.
+            Finally, we quantise the free theory via a non-commutative star product, outline the quantum interaction picture through retarded products and Bogoliubov's formula, and present the Epstein-Glaser renormalisation scheme for a mathematically rigorous construction.
           </p>
         </div>  
 
         <!-- --------------------------------------------- -->
-        <!-- Outline -->
+        <!-- Format -->
         <!-- --------------------------------------------- -->
         <div class="sec">
           <div class="sec-title">Format</div> 
           <ul>
             <li>
-              Four lectures of 2 hours each, delivered in a hybrid format (on-site &amp; online TBD).
+              Four lectures of 2 hours each, delivered in hybrid format (rooms F and L, Zoom link via the 
+              <a class="ml-link" href="https://groups.google.com/u/2/g/paqft-phd-roma" target="_blank" rel="noopener">
+                <i class="fa fa-users"></i> mailing list
+              </a>).
+            </li>
+            <li>
+              Recordings will be provided on request.
             </li>
             <li>
               No examination. Attendance certificate upon request.
@@ -195,58 +233,86 @@
           <div class="sec-title">References</div>        
           <ol>
             <li>
-              M. Dütsch, <i><a href="https://link.springer.com/book/10.1007/978-3-030-04738-2" target="_blank" rel="noopener">From Classical Field Theory to Perturbative Quantum Field Theory</a></i>, Progress in Mathematical Physics, Birkhäuser Cham (2019).
+              M. Dütsch, <i><a href="https://link.springer.com/book/10.1007/978-3-030-04738-2" target="_blank" rel="noopener">From Classical Field Theory to Perturbative Quantum Field Theory</a></i>.
             </li>
             <li>
-              K. Rejzner, <i><a href="https://link.springer.com/book/10.1007/978-3-319-25901-7" target="_blank" rel="noopener">Perturbative Algebraic Quantum Field Theory</a></i>, Mathematical Physics Studies, Springer (2016).
+              K. Rejzner, <i><a href="https://link.springer.com/book/10.1007/978-3-319-25901-7" target="_blank" rel="noopener">Perturbative Algebraic Quantum Field Theory</a></i>.
             </li>
           </ol>
-          <p style="font-size:smaller; opacity:0.85;">
-            Additional articles may be suggested during the course.
-          </p>           
         </div>    
 
         <!-- --------------------------------------------- -->
         <!-- Syllabus -->
         <!-- --------------------------------------------- -->
         <div class="sec">
-          <div class="sec-title">Syllabus (TBD)</div>
+          <div class="sec-title">Syllabus</div>
+
           <table class="list">
+
+            <!-- Lecture 1 -->
             <tr> 
-              <td class="left"><b>Lecture 1</b></td>
+              <td class="left">
+                <b>Thu 4 Dec 2025</b><br>
+                <i class="fa fa-clock-o"></i> 10:30-12:30<br>
+                <i class="fa fa-map-marker"></i> Room F
+              </td>
               <td class="right">
                 <b>Algebraic approach to classical field theory, Part I</b><br>
                 Configurations; observables; wavefront sets and admissibility of observables.<br>
-                <a href="">[Lecture notes — to be uploaded]</a>
+                <a href="">[Lecture notes - to be uploaded]</a>
               </td>
             </tr>
+
+            <!-- Lecture 2 -->
             <tr> 
-              <td class="left"><b>Lecture 2</b></td>
+              <td class="left">
+                <b>Tue 9 Dec 2025</b><br>
+                <i class="fa fa-clock-o"></i> 10:30-12:30<br>
+                <i class="fa fa-map-marker"></i> Room L
+              </td>
               <td class="right">
                 <b>Algebraic approach to classical field theory, Part II</b><br>
                 Generalised Lagrangians; Poisson structure from the free theory; classical interaction picture (perturbative).<br>
-                <a href="">[Lecture notes — to be uploaded]</a>
+                <a href="">[Lecture notes - to be uploaded]</a>
               </td>
             </tr>
+
+            <!-- Lecture 3 -->
             <tr> 
-              <td class="left"><b>Lecture 3</b></td>
+              <td class="left">
+                <b>Thu 11 Dec 2025</b><br>
+                <i class="fa fa-clock-o"></i> 10:30-12:30<br>
+                <i class="fa fa-map-marker"></i> Room L
+              </td>
               <td class="right">
                 <b>Deformation quantisation of the free theory</b><br>
-                Star product; retarded products; Bogoliubov’s formula and quantum interaction picture.<br>
-                <a href="">[Lecture notes — to be uploaded]</a>
+                Star product; retarded products; Bogoliubov's formula and quantum interaction picture.<br>
+                <a href="">[Lecture notes - to be uploaded]</a>
               </td>
             </tr>
+
+            <!-- Lecture 4 -->
             <tr> 
-              <td class="left"><b>Lecture 4</b></td>
+              <td class="left">
+                <b>Thu 18 Dec 2025</b><br>
+                <i class="fa fa-clock-o"></i> 10:30-12:30<br>
+                <i class="fa fa-map-marker"></i> Room L
+              </td>
               <td class="right">
-                <b>Epstein–Glaser renormalisation</b><br>
+                <b>Epstein-Glaser renormalisation</b><br>
                 Construction issues for retarded products; rigorous resolution via EG renormalisation.<br>
-                <a href="">[Lecture notes — to be uploaded]</a>
+                <a href="">[Lecture notes - to be uploaded]</a>
               </td>
             </tr>
+
           </table>
-          <p style="font-size:smaller; opacity:0.85;">
-            Notes: hand-written notes may be scanned and shared on this page.
+
+          <p style="font-size:smaller; opacity:0.85; margin-top:1em;">
+            Notes: hand-written notes may be scanned and shared on this page.<br>
+            Updates will be communicated via the 
+            <a class="ml-link" href="https://groups.google.com/u/2/g/paqft-phd-roma" target="_blank" rel="noopener">
+              <i class="fa fa-users"></i> mailing list
+            </a>.
           </p>
         </div>
 
@@ -263,7 +329,7 @@
             <br><br><br>
             <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
               Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
-              &emsp; Italsing srl. &emsp;  All Rights Reserved.
+              &nbsp; Italsing srl. &nbsp; All Rights Reserved.
             </div>
           </div>
         </div>

@@ -218,17 +218,25 @@
         <div class="big-title shaded" id="News">News</div>
           <table class="list">
 
-            <!--
+          <!--
           <tr>
-            <td class="left"><b>February 2026</b></td>
-            <td class="right">Five months Research stay at <a href="https://math.univ-lyon1.fr/icj/probabilites-statistique-physique-mathematique/">Institut Camille Jordan</a> in Lyon.</td>
+            <td class="left"><b>May 2026</b></td>
+            <td class="right">On the job market / on parental leave / unemployed.</td>
           </tr>
-              -->
+          % cerca fontawesome adatta alla disoccupazione !
+          -->
+
+          <!--
+          <tr>
+            <td class="left"><b>March 2026</b></td>
+            <td class="right">Two months Research stay at <a href="https://math.univ-lyon1.fr/icj/probabilites-statistique-physique-mathematique/">Institut Camille Jordan</a> in Lyon.</td>
+          </tr>
+          -->
 
           
           <tr>
             <td class="left"><b>December 2025</b></td>
-            <td class="right"><a href="https://sites.google.com/view/fabrizio-zanello-mathphy">Fabrizio Zanello</a> will be our guest at the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome.
+            <td class="right"><a href="https://sites.google.com/view/fabrizio-zanello-mathphy">Fabrizio Zanello</a> has been our guest at the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome.
             He will deliver a <a href="https://sites.google.com/view/dottorato-matematica-roma/home">PhD minicourse</a> on AQFT.
           </td>
           </tr>
@@ -237,7 +245,7 @@
           
           <tr>
             <td class="left"><b>December 2025</b></td>
-            <td class="right"><a href="https://sites.google.com/view/agtortorella">Alfonso Tortorella</a> will be our guest at the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome.
+            <td class="right"><a href="https://sites.google.com/view/agtortorella">Alfonso Tortorella</a> has been our guest at the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome.
             He will deliver a <a href="https://sites.google.com/uniroma1.it/sag/">seminar</a> on Deformations of co-isotropic submanifolds.
           </td>
           </tr>

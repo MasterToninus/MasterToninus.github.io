@@ -182,7 +182,13 @@
                         <p class="list-group-item-text">
                             Spazio di test per Diego.
                         </p>
-                    </a>              
+                    </a> 
+                    <a href="./listanozze/" class="list-group-item">
+                        <h4 class="list-group-item-heading">Lista Nozze</h4>
+                        <p class="list-group-item-text">
+                            Pagina per la lista nozze non molto utilizzata.
+                        </p>
+                    </a>             
                 </div>
             </div>
             <div class="col-lg-6">

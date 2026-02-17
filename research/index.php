@@ -136,11 +136,15 @@
             $entries=$db->multisearch($query);
             uasort($entries, 'compare_bib_entry_by_mtime');
             $publications = array();
+            $preprints = array();
             $theses = array();
 
             foreach ($entries as $bibentry) {
-              if ($bibentry->getType() == 'article' || $bibentry->getType() =='unpublished'){
+              if ($bibentry->getType() == 'article' || $bibentry->getType() =='inproceedings' || $bibentry->getType() == 'unpublished') {
                 array_push($publications,$bibentry);
+              }
+              if( $bibentry->getType() == 'preprint' || $bibentry->getType() == 'online' ){
+                array_push($preprints,$bibentry);
               }
               elseif ($bibentry->getType() == 'phdthesis'){
                 array_push($theses,$bibentry);
@@ -148,8 +152,32 @@
             }
           ?>
 
-
-
+        <!-- --------------------------------------------- -->
+        <!-- Month number to month name conversion -->
+        <!-- --------------------------------------------- -->
+        <?php
+          function stringToMonth(string $monthString): ?string {
+          // Check format: exactly two digits between 01 and 12
+          if (!preg_match('/^(0[1-9]|1[0-2])$/', $monthString)) {
+            return null; // or throw an exception if preferred
+          }
+          $months = [
+            "01" => "Jan",
+            "02" => "Feb",
+            "03" => "Mar",
+            "04" => "Apr",
+            "05" => "May",
+            "06" => "Jun",
+            "07" => "Jul",
+            "08" => "Aug",
+            "09" => "Sep",
+            "10" => "Oct",
+            "11" => "Nov",
+            "12" => "Dec"
+          ];
+          return $months[$monthString];
+          }
+        ?>
 
         <!-- --------------------------------------------- -->
         <!-- Publications -->
@@ -163,7 +191,33 @@
               if ($bibentry->getType() =='unpublished')
                 echo '<td class="left"><b>(expected) '.$bibentry->getYear().'</b></td>';              
               else
-                echo '<td class="left"><b>'.$bibentry->getField('month').' '.$bibentry->getYear().'</b></td>';
+                echo '<td class="left"><b>'.stringToMonth($bibentry->getField('month')).' '.$bibentry->getYear().'</b></td>';
+              echo '<td class="right">';
+              echo '<b>'.$bibentry->getTitle().'.</b><br>';
+              echo ' '.$bibentry->getFormattedAuthorsString().";";
+              echo ' <a href="'.$bibentry->getField('url').'">'.$bibentry->getField('journal').'</a>.<br/>';
+              echo ' '.$bibentry->getBibLink().' '.$bibentry->getArxivLink()."<br/>";
+              //echo $bibentry->toHTML()."<br/>";
+              echo '</td>';
+              echo '</tr>';
+            }
+          ?>
+          </table>
+        </div>
+
+        <!-- --------------------------------------------- -->
+        <!-- Preprints -->
+        <!-- --------------------------------------------- -->        
+        <div class="sec">
+          <div class="sec-title">Preprints</div> 
+          <table class="list">
+          <?php
+            foreach ($preprints as $bibentry) {
+              echo '<tr>';
+              if ($bibentry->getType() =='unpublished')
+                echo '<td class="left"><b>(expected) '.$bibentry->getYear().'</b></td>';              
+              else
+                echo '<td class="left"><b>'.stringToMonth($bibentry->getField('month')).' '.$bibentry->getYear().'</b></td>';
               echo '<td class="right">';
               echo '<b>'.$bibentry->getTitle().'.</b><br>';
               echo ' '.$bibentry->getFormattedAuthorsString().";";
@@ -187,7 +241,7 @@
           <?php
             foreach ($theses as $bibentry) {
               echo '<tr>';
-              echo '<td class="left"><b>'.$bibentry->getField('month').' '.$bibentry->getYear().'</b></td>';
+              echo '<td class="left"><b>'.stringToMonth($bibentry->getField('month')).' '.$bibentry->getYear().'</b></td>';
               echo '<td class="right">';
               echo '<b>'.$bibentry->getTitle().'.</b><br>';
               echo ' '.$bibentry->getField('type')." @ ".$bibentry->getField('school').";<br/>";
@@ -258,7 +312,7 @@
         <!-- Slides and Posters -->
         <!-- --------------------------------------------- -->        
         <div class="sec">
-          <div class="sec-title">Presentations</div>
+          <div class="big-title shaded" id="presentations">Presentations</div>           
            <table class="list">
 		        <tbody>
               <?php if (count($presentations) > 0): ?>
@@ -284,7 +338,7 @@
         <!-- Notes Codes and Misc -->
         <!-- --------------------------------------------- -->       
         <div class="sec">
-          <div class="sec-title">Miscs</div>
+          <div class="big-title shaded" id="miscs">Miscellaneous</div>       
           <table class="list">
 		        <tbody>
               <?php if (count($miscs) > 0): ?>

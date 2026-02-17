@@ -230,6 +230,21 @@
               New preprint on arxiv <a href="https://arxiv.org/abs/2602.14702">arXiv:2602.14702</a>.
             </td>
           </tr>
+          <!--
+          <tr>
+            <td class="left"><b>May 2026</b></td>
+            <td class="right">On the job market / on parental leave / unemployed.</td>
+          </tr>
+          % cerca fontawesome adatta alla disoccupazione !
+          -->
+
+          <!--
+          <tr>
+            <td class="left"><b>March 2026</b></td>
+            <td class="right">Two months Research stay at <a href="https://math.univ-lyon1.fr/icj/probabilites-statistique-physique-mathematique/">Institut Camille Jordan</a> in Lyon.</td>
+          </tr>
+          -->
+
           
           <tr>
             <td class="left"><b>December 2025</b></td>

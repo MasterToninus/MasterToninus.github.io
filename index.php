@@ -218,6 +218,18 @@
         <div class="big-title shaded" id="News">News</div>
           <table class="list">
 
+          
+          <tr>
+            <td class="left"><b>March 2026</b></td>
+            <td class="right">Five months Research stay at <a href="https://math.univ-lyon1.fr/icj/probabilites-statistique-physique-mathematique/">Institut Camille Jordan</a> in Lyon.</td>
+          </tr>
+          
+          <tr> 
+            <td class="left"><b>February 2026</b></td>
+            <td class="right">
+              New preprint on arxiv <a href="https://arxiv.org/abs/2602.14702">arXiv:2602.14702</a>.
+            </td>
+          </tr>
           <!--
           <tr>
             <td class="left"><b>May 2026</b></td>
@@ -226,18 +238,11 @@
           % cerca fontawesome adatta alla disoccupazione !
           -->
 
-          <!--
-          <tr>
-            <td class="left"><b>March 2026</b></td>
-            <td class="right">Two months Research stay at <a href="https://math.univ-lyon1.fr/icj/probabilites-statistique-physique-mathematique/">Institut Camille Jordan</a> in Lyon.</td>
-          </tr>
-          -->
-
           
           <tr>
             <td class="left"><b>December 2025</b></td>
             <td class="right"><a href="https://sites.google.com/view/fabrizio-zanello-mathphy">Fabrizio Zanello</a> has been our guest at the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome.
-            He will deliver a <a href="https://sites.google.com/view/dottorato-matematica-roma/home">PhD minicourse</a> on AQFT.
+            He delivered a <a href="https://sites.google.com/view/dottorato-matematica-roma/home">PhD minicourse</a> on AQFT.
           </td>
           </tr>
           
@@ -246,7 +251,7 @@
           <tr>
             <td class="left"><b>December 2025</b></td>
             <td class="right"><a href="https://sites.google.com/view/agtortorella">Alfonso Tortorella</a> has been our guest at the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome.
-            He will deliver a <a href="https://sites.google.com/uniroma1.it/sag/">seminar</a> on Deformations of co-isotropic submanifolds.
+            He delivered a <a href="https://sites.google.com/uniroma1.it/sag/">seminar</a> on Deformations of co-isotropic submanifolds.
           </td>
           </tr>
 
@@ -277,25 +282,6 @@
               </td>
           </tr>
 
-          <tr> 
-            <td class="left"><b>June 2025</b></td>
-            <td class="right">
-              New preprint on arxiv <a href="https://arxiv.org/abs/2506.00234">arXiv:2506.00234</a>, inspired by the 
-                <a href="../teaching/Obs-Constraint-2024/"><em>minicourse</em></a> @ 
-                <a href="https://sites.google.com/view/poisson2024/seminars-workshops/symmetry-reduction?authuser=0"> UniSa
-                </a>.
-            </td>
-          </tr>
-
-          <tr> 
-            <td class="left"><b>May 2025</b></td>
-            <td class="right"><a href="https://www.ryvkin.eu/">Leonid Ryvkin</a> has been our guest at the <a href="https://www.mat.uniroma1.it/">Department of Mathematics</a> in Rome.</td>
-          </tr>
-
-          <tr>
-            <td class="left"><b>March 2025</b></td>
-            <td class="right">Research stay at <a href="https://www.mittag-leffler.se/activities/cohomological-aspects-of-quantum-field-theory/">Institut Mittag-Leffler</a> in Djursholm.</td>
-          </tr>
 
     
             

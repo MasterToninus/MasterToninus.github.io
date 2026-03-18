@@ -72,11 +72,11 @@
             I work with higher geometry methods in multisymplectic geometry and, most of all, I am interested in structures “up to homotopies” inspired by geometry and mechanics.
           </p>          
           </div>          
+          <a href="https://members.iamp.org/users/cm5010is500elz7g46jgptx7c"><!-- IAMP: International Association of Mathematical Physics -->
           <div id="photo">
-            <a href="https://members.iamp.org/users/cm5010is500elz7g46jgptx7c"><!-- IAMP: International Association of Mathematical Physics -->
             <img src="../img/Iamp.png" alt="Mathematics and/or Physics ? (IAMP Logo)">
-            </a>
-          </div>          
+          </div>   
+          </a>       
         </div>
 
         <!-- --------------------------------------------- -->

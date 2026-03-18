@@ -73,7 +73,9 @@
           </p>          
           </div>          
           <div id="photo">
-            <img src="../img/Iamp.png" alt="Physically inspired mathematics">
+            <a href="https://members.iamp.org/users/cm5010is500elz7g46jgptx7c"><!-- IAMP: International Association of Mathematical Physics -->
+            <img src="../img/Iamp.png" alt="Mathematics and/or Physics ? (IAMP Logo)">
+            </a>
           </div>          
         </div>
 
@@ -97,7 +99,9 @@
             </p>        
           </div>
           <div id="photo">
-                <img src="../img/saggiatore_Crop.jpg" alt="Typical academic picture">
+                <a href="https://it.wikisource.org/wiki/Pagina:Le_opere_di_Galileo_Galilei_VI.djvu/238">
+                <img src="../img/saggiatore_Crop.jpg" alt="... aggirarsi vanamente per un oscuro laberinto ... Galileo Galilei, Il Saggiatore (1623)">
+                </a>
           </div>          
         </div>        
 

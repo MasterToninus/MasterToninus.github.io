@@ -98,10 +98,9 @@
               In this perspective, I am always interested in expanding my knowledge both in the pure direction (homotopical algebra, higher categories) than in the applied direction (symplectic integrators, numerical simulations).
             </p>        
           </div>
-          <a href="https://it.wikisource.org/wiki/Pagina:Le_opere_di_Galileo_Galilei_VI.djvu/238"></a>
+          <a href="https://it.wikisource.org/wiki/Pagina:Le_opere_di_Galileo_Galilei_VI.djvu/238">
           <div id="photo">
                 <img src="../img/saggiatore_Crop.jpg" alt="... aggirarsi vanamente per un oscuro laberinto ... Galileo Galilei, Il Saggiatore (1623)">
-                
           </div>
           </a>          
         </div>        

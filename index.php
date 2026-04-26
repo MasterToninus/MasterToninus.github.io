@@ -42,14 +42,19 @@
         <!-- --------------------------------------------- -->
         <div id="introduction">
           <div id="desc">
-            <p>
-              I am a 
-              <a target="_blank" href="https://civis3i.univ-amu.fr/en/antonio-michele-miti">CIVIS3i</a>
-              Postdoctoral Fellow
-              <a target="_blank" href="https://civis3i.univ-amu.fr/en/civis3i-alliance-programme">(MSCA-H2020 COFUND)</a>  at the 
-              <a target="_blank" href="https://www.mat.uniroma1.it/en">Department of Mathematics of Università di Roma la Sapienza</a>, under the supervision of 
-              <a target="_blank" href="https://www1.mat.uniroma1.it/~fiorenza/">Domenico Fiorenza</a>.
-            </p>
+          <p>
+          I am an aspiring mathematician, currently in Lyon for a research stay at the Institut Camille Jordan, collaborating with the <a target="_blank" href="https://physmath.pages.math.cnrs.fr/">Réseau de recherche en physique mathématique</a>, although mostly on <a target="_blank" href="/img/Malia/Malia-Lyon.jpeg">parental duties</a>.
+          </p>
+          <p>
+            Most recently, I was a
+            <a target="_blank" href="https://civis3i.univ-amu.fr/en/antonio-michele-miti">CIVIS3i</a>
+            Postdoctoral Fellow
+            <a target="_blank" href="https://civis3i.univ-amu.fr/en/civis3i-alliance-programme">(MSCA-H2020 COFUND)</a>
+            at the
+            <a target="_blank" href="https://www.mat.uniroma1.it/en">Department of Mathematics of Sapienza Università di Roma</a>,
+            under the supervision of
+            <a target="_blank" href="https://www1.mat.uniroma1.it/~fiorenza/">Domenico Fiorenza</a>.
+          </p>
             <p>
               Previously, I was a postdoctoral fellow at 
               <a target="_blank" href="http://dipartimenti.unicatt.it/dmf">Università Cattolica del Sacro Cuore</a> in Brescia (with <a target="_blank" href="https://docenti.unicatt.it/ppd2/en/docenti/21065/mauro-spera/profilo">Mauro Spera</a>) and at the
@@ -96,7 +101,7 @@
           <div class="sec-title">Academic resume </div>
           <table class="list">
           <tr>
-              <td class="left"> <b>2024 -  Now</b></td>
+              <td class="left"> <b>2024 -  2026</b></td>
               <td class="right">Postdoctoral fellow @ <a href="https://civis3i.univ-amu.fr/en/antonio-michele-miti">Civis-3i Rome</a></td>
             </tr>
           <tr>
@@ -268,7 +273,7 @@
           <tr> 
             <td class="left"><b>July 2025</b></td>
             <td class="right">
-              Wonderful news: <a href="img/malia-2giorni.jpeg"><b>Marta Velia</b></a> is born!<br>
+              Wonderful news: <a href="img/Malia/malia-2giorni.jpeg"><b>Marta Velia</b></a> is born!<br>
               I have been on parental leave until September 15th, 2025.
             </td>
           </tr>

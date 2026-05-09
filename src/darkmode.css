@@ -33,6 +33,7 @@ h4,
 h5,
 h6 {
     color: #fafafa !important;
+    font-weight: 500;
 }
 
 /* =========================================================
@@ -41,6 +42,7 @@ h6 {
 
 a {
     color: #8ec5ff !important;
+    transition: color 0.2s ease;
 }
 
 a:hover {
@@ -58,10 +60,7 @@ section,
 article,
 main,
 #contacts,
-#address,
-#publications,
-#papers,
-#bibtex_display {
+#address {
     background: #111 !important;
     color: #dddddd !important;
 }
@@ -71,7 +70,9 @@ main,
    ========================================================= */
 
 header,
-footer {
+footer,
+#footer,
+.footer {
     background: #1a1a1a !important;
     border-color: #333 !important;
 }
@@ -83,25 +84,79 @@ header label {
     color: #f0f0f0 !important;
 }
 
+footer,
+#footer,
+.footer {
+    color: #cccccc !important;
+    border-top: 1px solid #333 !important;
+}
+
 /* =========================================================
    BIG SHADED TITLES
    ========================================================= */
 
 .big-title.shaded {
-    background: #222 !important;
-    color: #ffffff !important;
+    background: #1d1d1d !important;
+    color: #f2f2f2 !important;
 
-    border-left: 4px solid #6db3ff !important;
+    border-left: 4px solid #8ec5ff !important;
+    border-top: 1px solid #2f2f2f !important;
+    border-bottom: 1px solid #2f2f2f !important;
 
-    padding: 0.35em 0.6em !important;
+    padding: 0.45em 0.75em !important;
+    margin: 1.25em 0 0.75em 0 !important;
 
-    font-weight: 500;
-
-    letter-spacing: 0.03em;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.25;
 }
 
 .big-title.shaded a {
-    color: #ffffff !important;
+    color: #f2f2f2 !important;
+    text-decoration: none;
+}
+
+/* =========================================================
+   CONTACTS BLOCK
+   ========================================================= */
+
+#contacts,
+#address {
+    background: #111 !important;
+    color: #dddddd !important;
+}
+
+#subpage-title {
+    background: transparent !important;
+    margin-bottom: 0.75em;
+}
+
+#subpage-title h1 {
+    color: #fafafa !important;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 0.4em;
+}
+
+#subpage-title a {
+    color: #fafafa !important;
+    text-decoration: none;
+}
+
+#contacts p {
+    color: #dddddd !important;
+    line-height: 1.6;
+    margin: 0.35em 0;
+}
+
+#contacts a {
+    color: #8ec5ff !important;
+    text-decoration: none;
+}
+
+#contacts a:hover {
+    color: #d0e7ff !important;
+    text-decoration: underline;
 }
 
 /* =========================================================
@@ -145,6 +200,10 @@ button {
     border: 1px solid #444 !important;
 }
 
+button:hover {
+    background: #2d2d2d !important;
+}
+
 /* =========================================================
    BLOCKQUOTE
    ========================================================= */
@@ -178,4 +237,24 @@ img {
 .MathJax,
 mjx-container {
     color: #f0f0f0 !important;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666;
 }

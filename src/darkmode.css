@@ -37,12 +37,12 @@ h6 {
    ========================================================= */
 
 a {
-    color: #8ec5ff !important;
+    color: #8fd6a3 !important;
     transition: color 0.2s ease;
 }
 
 a:hover {
-    color: #d0e7ff !important;
+    color: #b8f0c5 !important;
 }
 
 /* =========================================================
@@ -102,13 +102,13 @@ footer::after,
 footer a,
 #footer a,
 .footer a {
-    color: #8ec5ff !important;
+    color: #8fd6a3 !important;
 }
 
 footer a:hover,
 #footer a:hover,
 .footer a:hover {
-    color: #d0e7ff !important;
+    color: #b8f0c5 !important;
 }
 
 /* =========================================================
@@ -120,7 +120,7 @@ footer a:hover,
     color: #f2f2f2 !important;
 
     border: none !important;
-    border-left: 4px solid #8ec5ff !important;
+    border-left: 4px solid #8fd6a3 !important;
 
     box-shadow: none !important;
 
@@ -148,9 +148,22 @@ footer a:hover,
    CONTACTS
    ========================================================= */
 
+#contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+    align-items: flex-start;
+}
+
+#address,
+#links {
+    min-width: 240px;
+}
+
 #subpage-title {
     background: transparent !important;
     margin-bottom: 0.75em;
+    width: 100%;
 }
 
 #subpage-title h1 {
@@ -171,12 +184,12 @@ footer a:hover,
 }
 
 #contacts a {
-    color: #8ec5ff !important;
+    color: #8fd6a3 !important;
     text-decoration: none;
 }
 
 #contacts a:hover {
-    color: #d0e7ff !important;
+    color: #b8f0c5 !important;
     text-decoration: underline;
 }
 

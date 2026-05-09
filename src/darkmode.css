@@ -149,33 +149,31 @@ footer a:hover,
    ========================================================= */
 
 #contacts {
-    display: flex;
-    align-items: flex-start;
-    gap: 4em;
-    flex-wrap: wrap;
+    background: #111 !important;
+    color: #dddddd !important;
 }
 
 #address,
 #links {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    background: transparent !important;
 }
 
+/* mantiene il layout originale */
+
 #address {
-    min-width: 320px;
-    max-width: 100%;
+    float: left;
 }
 
 #links {
-    min-width: 220px;
-    padding-top: 0.35em;
+    float: right;
+    text-align: left;
 }
+
+/* titoli */
 
 #subpage-title {
     background: transparent !important;
     margin-bottom: 0.75em;
-    width: 100%;
 }
 
 #subpage-title h1 {
@@ -190,6 +188,8 @@ footer a:hover,
     text-decoration: none;
 }
 
+/* testo */
+
 #address p,
 #links p {
     margin: 0.35em 0;
@@ -198,6 +198,8 @@ footer a:hover,
     overflow-wrap: break-word;
     word-break: break-word;
 }
+
+/* links */
 
 #contacts a {
     color: #8fd6a3 !important;
@@ -209,26 +211,18 @@ footer a:hover,
     text-decoration: underline;
 }
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* mobile */
 
 @media (max-width: 768px) {
 
-    #contacts {
-        flex-direction: column;
-        gap: 1.5em;
-    }
-
     #address,
     #links {
+        float: none;
         width: 100%;
-        min-width: 0;
     }
 
-    #address p,
-    #links p {
-        width: 100%;
+    #links {
+        margin-top: 1.5em;
     }
 }
 

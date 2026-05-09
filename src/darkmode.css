@@ -1,16 +1,30 @@
 /* =========================================================
-   DARK MODE OVERRIDES
+   Created in "vibe coding" with ChatGPT
+   ========================================================= */
+
+/* =========================================================
+   GLOBAL
    ========================================================= */
 
 html,
 body {
-    background: #111 !important;
-    color: #e6e6e6 !important;
+    background-color: #111 !important;
+    color: #e4e4e4 !important;
 }
 
 /* =========================================================
    TYPOGRAPHY
    ========================================================= */
+
+body,
+p,
+li,
+td,
+th,
+span,
+div {
+    color: #dcdcdc !important;
+}
 
 h1,
 h2,
@@ -18,17 +32,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #f5f5f5 !important;
-}
-
-p,
-li,
-td,
-th,
-label,
-span,
-div {
-    color: #dddddd;
+    color: #fafafa !important;
 }
 
 /* =========================================================
@@ -40,29 +44,18 @@ a {
 }
 
 a:hover {
-    color: #c2e0ff !important;
+    color: #d0e7ff !important;
 }
 
 /* =========================================================
-   HEADER / NAVBAR
-   ========================================================= */
-
-header {
-    background: #1a1a1a !important;
-    border-bottom: 1px solid #333;
-}
-
-header a,
-header label {
-    color: #f0f0f0 !important;
-}
-
-/* =========================================================
-   CONTENT AREAS
+   MAIN CONTENT CONTAINERS
    ========================================================= */
 
 #content,
 #content-container,
+#contacts,
+#address,
+#subpage-title,
 .content,
 section,
 article,
@@ -72,18 +65,72 @@ main {
 }
 
 /* =========================================================
-   CARDS / BOXES
+   TITLES
+   ========================================================= */
+
+.big-title,
+#subpage-title h1 {
+    color: #ffffff !important;
+}
+
+.big-title.shaded {
+    background: #2a2a2a !important;
+    color: #f5f5f5 !important;
+    border-color: #444 !important;
+}
+
+.big-title.shaded a {
+    color: #f5f5f5 !important;
+}
+
+/* =========================================================
+   CONTACTS SECTION
+   ========================================================= */
+
+#contacts p,
+#contacts div,
+#contacts span,
+#address p,
+#address div,
+#address span {
+    color: #e0e0e0 !important;
+}
+
+#contacts h1,
+#contacts h2,
+#contacts h3,
+#subpage-title h1 {
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   HEADER / NAVIGATION
+   ========================================================= */
+
+header {
+    background: #1a1a1a !important;
+    border-bottom: 1px solid #333 !important;
+}
+
+header a,
+header label,
+header span {
+    color: #f5f5f5 !important;
+}
+
+/* =========================================================
+   BOXES / PANELS
    ========================================================= */
 
 .box,
 .card,
 .paper,
 .project,
-.teaching,
-.publication {
+.publication,
+.teaching {
     background: #1b1b1b !important;
-    border-color: #333 !important;
     color: #dddddd !important;
+    border-color: #333 !important;
 }
 
 /* =========================================================
@@ -91,16 +138,17 @@ main {
    ========================================================= */
 
 table {
-    background: #181818;
-    color: #e0e0e0;
-}
-
-tr:nth-child(even) {
-    background: #151515;
+    background: #181818 !important;
+    color: #e0e0e0 !important;
 }
 
 th {
-    background: #222;
+    background: #222 !important;
+    color: #ffffff !important;
+}
+
+tr:nth-child(even) {
+    background: #151515 !important;
 }
 
 /* =========================================================
@@ -114,13 +162,13 @@ code {
 }
 
 /* =========================================================
-   BLOCKQUOTES
+   BLOCKQUOTE
    ========================================================= */
 
 blockquote {
-    background: #1a1a1a;
-    border-left: 4px solid #555;
-    color: #cccccc;
+    background: #1a1a1a !important;
+    border-left: 4px solid #555 !important;
+    color: #cccccc !important;
 }
 
 /* =========================================================
@@ -141,14 +189,6 @@ button:hover {
 }
 
 /* =========================================================
-   HORIZONTAL RULES
-   ========================================================= */
-
-hr {
-    border-color: #333 !important;
-}
-
-/* =========================================================
    FOOTER
    ========================================================= */
 
@@ -158,11 +198,19 @@ footer {
 }
 
 /* =========================================================
+   HORIZONTAL RULES
+   ========================================================= */
+
+hr {
+    border-color: #333 !important;
+}
+
+/* =========================================================
    IMAGES
    ========================================================= */
 
 img {
-    opacity: 0.94;
+    opacity: 0.95;
 }
 
 /* =========================================================

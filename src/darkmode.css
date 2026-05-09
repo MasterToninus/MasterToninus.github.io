@@ -66,29 +66,43 @@ main,
 }
 
 /* =========================================================
-   HEADER / FOOTER
+   HEADER
    ========================================================= */
 
-header,
-footer,
-#footer,
-.footer {
+header {
     background: #1a1a1a !important;
     border-color: #333 !important;
 }
 
 header a,
-footer a,
 header span,
 header label {
     color: #f0f0f0 !important;
 }
 
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
 footer,
 #footer,
 .footer {
+    background: #111 !important;
     color: #cccccc !important;
-    border-top: 1px solid #333 !important;
+
+    border-top: 1px solid #222 !important;
+}
+
+footer a,
+#footer a,
+.footer a {
+    color: #8ec5ff !important;
+}
+
+footer a:hover,
+#footer a:hover,
+.footer a:hover {
+    color: #d0e7ff !important;
 }
 
 /* =========================================================
@@ -99,9 +113,10 @@ footer,
     background: #1d1d1d !important;
     color: #f2f2f2 !important;
 
+    border: none !important;
     border-left: 4px solid #8ec5ff !important;
-    border-top: 1px solid #2f2f2f !important;
-    border-bottom: 1px solid #2f2f2f !important;
+
+    box-shadow: none !important;
 
     padding: 0.45em 0.75em !important;
     margin: 1.25em 0 0.75em 0 !important;
@@ -109,11 +124,21 @@ footer,
     font-weight: 600;
     letter-spacing: 0.02em;
     line-height: 1.25;
+
+    text-decoration: none !important;
+}
+
+.big-title.shaded::before,
+.big-title.shaded::after {
+    display: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
 }
 
 .big-title.shaded a {
     color: #f2f2f2 !important;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 /* =========================================================

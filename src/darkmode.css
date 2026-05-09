@@ -22,10 +22,6 @@ div {
     color: #dddddd !important;
 }
 
-/* =========================================================
-   TYPOGRAPHY
-   ========================================================= */
-
 h1,
 h2,
 h3,
@@ -50,7 +46,7 @@ a:hover {
 }
 
 /* =========================================================
-   MAIN CONTAINERS
+   LAYOUT
    ========================================================= */
 
 #content,
@@ -90,7 +86,17 @@ footer,
     background: #111 !important;
     color: #cccccc !important;
 
-    border-top: 1px solid #222 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+footer::before,
+footer::after,
+#footer::before,
+#footer::after,
+.footer::before,
+.footer::after {
+    display: none !important;
 }
 
 footer a,
@@ -106,7 +112,7 @@ footer a:hover,
 }
 
 /* =========================================================
-   BIG SHADED TITLES
+   SHADED TITLES
    ========================================================= */
 
 .big-title.shaded {
@@ -131,9 +137,6 @@ footer a:hover,
 .big-title.shaded::before,
 .big-title.shaded::after {
     display: none !important;
-    border: none !important;
-    box-shadow: none !important;
-    background: transparent !important;
 }
 
 .big-title.shaded a {
@@ -142,14 +145,8 @@ footer a:hover,
 }
 
 /* =========================================================
-   CONTACTS BLOCK
+   CONTACTS
    ========================================================= */
-
-#contacts,
-#address {
-    background: #111 !important;
-    color: #dddddd !important;
-}
 
 #subpage-title {
     background: transparent !important;
@@ -169,7 +166,6 @@ footer a:hover,
 }
 
 #contacts p {
-    color: #dddddd !important;
     line-height: 1.6;
     margin: 0.35em 0;
 }

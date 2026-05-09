@@ -8,8 +8,8 @@
 
 html,
 body {
-    background-color: #111 !important;
-    color: #e4e4e4 !important;
+    background: #111 !important;
+    color: #dddddd !important;
 }
 
 body,
@@ -19,7 +19,7 @@ td,
 th,
 span,
 div {
-    color: #dcdcdc !important;
+    color: #dddddd !important;
 }
 
 /* =========================================================
@@ -33,7 +33,6 @@ h4,
 h5,
 h6 {
     color: #fafafa !important;
-    font-weight: 500;
 }
 
 /* =========================================================
@@ -42,7 +41,6 @@ h6 {
 
 a {
     color: #8ec5ff !important;
-    transition: color 0.2s ease;
 }
 
 a:hover {
@@ -50,112 +48,60 @@ a:hover {
 }
 
 /* =========================================================
-   MAIN CONTENT
+   MAIN CONTAINERS
    ========================================================= */
 
 #content,
 #content-container,
-#contacts,
-#address,
-#subpage-title,
 .content,
 section,
 article,
-main {
+main,
+#contacts,
+#address,
+#publications,
+#papers,
+#bibtex_display {
     background: #111 !important;
     color: #dddddd !important;
 }
 
 /* =========================================================
-   TITLES
+   HEADER / FOOTER
    ========================================================= */
 
-.big-title,
-#subpage-title h1 {
-    color: #ffffff !important;
-}
-
-/* =========================================================
-   SHADED TITLES
-   ========================================================= */
-
-.big-title.shaded {
-    background: linear-gradient(
-        90deg,
-        #2a2a2a 0%,
-        #242424 100%
-    ) !important;
-
-    color: #f4f4f4 !important;
-
-    border-left: 4px solid #5da9ff !important;
-
-    border-top: 1px solid #333 !important;
-    border-bottom: 1px solid #333 !important;
-
-    padding-left: 12px !important;
-
-    letter-spacing: 0.04em;
-
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.03),
-        0 1px 3px rgba(0,0,0,0.25);
-}
-
-.big-title.shaded a {
-    color: #f5f5f5 !important;
-}
-
-/* =========================================================
-   CONTACTS SECTION
-   ========================================================= */
-
-#contacts p,
-#contacts div,
-#contacts span,
-#address p,
-#address div,
-#address span {
-    color: #e0e0e0 !important;
-}
-
-#contacts h1,
-#contacts h2,
-#contacts h3,
-#subpage-title h1 {
-    color: #ffffff !important;
-}
-
-/* =========================================================
-   HEADER / NAVIGATION
-   ========================================================= */
-
-header {
+header,
+footer {
     background: #1a1a1a !important;
-    border-bottom: 1px solid #333 !important;
+    border-color: #333 !important;
 }
 
 header a,
-header label,
-header span {
-    color: #f5f5f5 !important;
+footer a,
+header span,
+header label {
+    color: #f0f0f0 !important;
 }
 
 /* =========================================================
-   BOXES / PANELS
+   BIG SHADED TITLES
    ========================================================= */
 
-.box,
-.card,
-.paper,
-.project,
-.publication,
-.teaching {
-    background: #1b1b1b !important;
-    color: #dddddd !important;
-    border-color: #333 !important;
+.big-title.shaded {
+    background: #222 !important;
+    color: #ffffff !important;
+
+    border-left: 4px solid #6db3ff !important;
+
+    padding: 0.35em 0.6em !important;
+
+    font-weight: 500;
+
+    letter-spacing: 0.03em;
+}
+
+.big-title.shaded a {
+    color: #ffffff !important;
 }
 
 /* =========================================================
@@ -187,16 +133,6 @@ code {
 }
 
 /* =========================================================
-   BLOCKQUOTE
-   ========================================================= */
-
-blockquote {
-    background: #1a1a1a !important;
-    border-left: 4px solid #555 !important;
-    color: #cccccc !important;
-}
-
-/* =========================================================
    FORMS
    ========================================================= */
 
@@ -209,43 +145,18 @@ button {
     border: 1px solid #444 !important;
 }
 
-button:hover {
-    background: #2d2d2d !important;
-}
-
 /* =========================================================
-   RESEARCH PAGE FIX
+   BLOCKQUOTE
    ========================================================= */
 
-#publications,
-#papers,
-#bibtex_display,
-.bibtex_structure,
-.bibtex_template,
-.bibtexentry,
-.bibtexVar,
-#bibtex_input,
-#bibtex_display pre,
-#bibtex_display div,
-#publications-container,
-.publications,
-.publication-list {
-    background: #111 !important;
-    color: #dddddd !important;
-    border-color: #333 !important;
-}
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-footer {
+blockquote {
     background: #1a1a1a !important;
+    border-left: 4px solid #555 !important;
     color: #cccccc !important;
 }
 
 /* =========================================================
-   HORIZONTAL RULES
+   HR
    ========================================================= */
 
 hr {
@@ -267,24 +178,4 @@ img {
 .MathJax,
 mjx-container {
     color: #f0f0f0 !important;
-}
-
-/* =========================================================
-   SCROLLBAR
-   ========================================================= */
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #111;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #444;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #666;
 }

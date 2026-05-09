@@ -1,0 +1,195 @@
+/* =========================================================
+   DARK MODE OVERRIDES
+   ========================================================= */
+
+html,
+body {
+    background: #111 !important;
+    color: #e6e6e6 !important;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #f5f5f5 !important;
+}
+
+p,
+li,
+td,
+th,
+label,
+span,
+div {
+    color: #dddddd;
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+    color: #8ec5ff !important;
+}
+
+a:hover {
+    color: #c2e0ff !important;
+}
+
+/* =========================================================
+   HEADER / NAVBAR
+   ========================================================= */
+
+header {
+    background: #1a1a1a !important;
+    border-bottom: 1px solid #333;
+}
+
+header a,
+header label {
+    color: #f0f0f0 !important;
+}
+
+/* =========================================================
+   CONTENT AREAS
+   ========================================================= */
+
+#content,
+#content-container,
+.content,
+section,
+article,
+main {
+    background: #111 !important;
+    color: #dddddd !important;
+}
+
+/* =========================================================
+   CARDS / BOXES
+   ========================================================= */
+
+.box,
+.card,
+.paper,
+.project,
+.teaching,
+.publication {
+    background: #1b1b1b !important;
+    border-color: #333 !important;
+    color: #dddddd !important;
+}
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+table {
+    background: #181818;
+    color: #e0e0e0;
+}
+
+tr:nth-child(even) {
+    background: #151515;
+}
+
+th {
+    background: #222;
+}
+
+/* =========================================================
+   CODE
+   ========================================================= */
+
+pre,
+code {
+    background: #1b1b1b !important;
+    color: #f0f0f0 !important;
+}
+
+/* =========================================================
+   BLOCKQUOTES
+   ========================================================= */
+
+blockquote {
+    background: #1a1a1a;
+    border-left: 4px solid #555;
+    color: #cccccc;
+}
+
+/* =========================================================
+   FORMS
+   ========================================================= */
+
+input,
+textarea,
+select,
+button {
+    background: #222 !important;
+    color: #f0f0f0 !important;
+    border: 1px solid #444 !important;
+}
+
+button:hover {
+    background: #2d2d2d !important;
+}
+
+/* =========================================================
+   HORIZONTAL RULES
+   ========================================================= */
+
+hr {
+    border-color: #333 !important;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background: #1a1a1a !important;
+    color: #cccccc !important;
+}
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+img {
+    opacity: 0.94;
+}
+
+/* =========================================================
+   MATHJAX
+   ========================================================= */
+
+.MathJax,
+mjx-container {
+    color: #f0f0f0 !important;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}

@@ -101,31 +101,31 @@
           <div class="sec-title">Academic resume </div>
           <table class="list">
           <tr>
-              <td class="center"> <b>2024 -  2026</b></td>
+              <td class="left"> <b>2024 - 2026 </b></td>
               <td class="right">Postdoctoral fellow @ <a href="https://civis3i.univ-amu.fr/en/antonio-michele-miti">Civis-3i Rome</a></td>
             </tr>
           <tr>
-              <td class="center"> <b>2022 - 2024</b></td>
+              <td class="left"> <b>2022 - 2024 </b></td>
               <td class="right">Postdoctoral fellow @ <a href="http://dipartimenti.unicatt.it/dmf">UCSC Brescia</a></td>
             </tr>
             <tr>
-              <td class="center"> <b>2021 - 2022</b></td>
+              <td class="left"> <b>2021 - 2022 </b></td>
               <td class="right">Postdoctoral fellow @ <a href="https://www.mpim-bonn.mpg.de/">MPIM</a></td>
             </tr>
             <tr>
-              <td class="center"> <b>2017 - 2021</b></td>
+              <td class="left"> <b>2017 - 2021 </b></td>
               <td class="right">Ph.D. in Science: Mathematics @ <a href="http://scuoledidottorato.unicatt.it/phdschools/science-home#content">UCSC Brescia</a> & <a target="_blank" href="https://wis.kuleuven.be/english">KU Leuven</a></td>
             </tr>
             <tr>
-              <td class="center"> <b>2013 - 2015</b></td>
+              <td class="left"> <b>2013 - 2015 </b></td>
               <td class="right">M.Sc. in Theoretical Physics @ <a href="https://www.unimi.it/en/education/physics-0">UNIMI</a></td>
             </tr>
             <tr>
-              <td class="center"> <b>2010 - 2013</b></td>
+              <td class="left"> <b>2010 - 2013 </b></td>
               <td class="right">Master's student in Physics @ <a href="http://www.unimib.it/go/102/Home/English">UNIMIB</a></td>
             </tr>
             <tr>
-              <td class="center"> <b>2005 - 2010</b></td>
+              <td class="left"> <b>2005 - 2010 </b></td>
               <td class="right">B.Sc. in Physics @ <a href="http://www.unimib.it/go/102/Home/English">UNIMIB</a></td>
             </tr>       
           </table>

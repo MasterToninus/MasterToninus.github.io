@@ -1,0 +1,327 @@
+/* =========================================================
+   Created in "vibe coding" with ChatGPT
+   ========================================================= */
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+html,
+body {
+    background: #111 !important;
+    color: #dddddd !important;
+}
+
+body,
+p,
+li,
+td,
+th,
+span,
+div {
+    color: #dddddd !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #fafafa !important;
+    font-weight: 500;
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+    color: #8fd6a3 !important;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #b8f0c5 !important;
+}
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+#content,
+#content-container,
+.content,
+section,
+article,
+main,
+#contacts,
+#address {
+    background: #111 !important;
+    color: #dddddd !important;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    background: #1a1a1a !important;
+    border-color: #333 !important;
+}
+
+header a,
+header span,
+header label {
+    color: #f0f0f0 !important;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer,
+#footer,
+.footer {
+    background: #111 !important;
+    color: #cccccc !important;
+
+    border: none !important;
+    box-shadow: none !important;
+}
+
+footer::before,
+footer::after,
+#footer::before,
+#footer::after,
+.footer::before,
+.footer::after {
+    display: none !important;
+}
+
+footer a,
+#footer a,
+.footer a {
+    color: #8fd6a3 !important;
+}
+
+footer a:hover,
+#footer a:hover,
+.footer a:hover {
+    color: #b8f0c5 !important;
+}
+
+/* =========================================================
+   SHADED TITLES
+   ========================================================= */
+
+.big-title.shaded {
+    background: #1d1d1d !important;
+    color: #f2f2f2 !important;
+
+    border: none !important;
+    border-left: 4px solid #8fd6a3 !important;
+
+    box-shadow: none !important;
+
+    padding: 0.45em 0.75em !important;
+    margin: 1.25em 0 0.75em 0 !important;
+
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.25;
+
+    text-decoration: none !important;
+}
+
+.big-title.shaded::before,
+.big-title.shaded::after {
+    display: none !important;
+}
+
+.big-title.shaded a {
+    color: #f2f2f2 !important;
+    text-decoration: none !important;
+}
+
+/* =========================================================
+   CONTACTS
+   ========================================================= */
+
+#contacts {
+    background: #111 !important;
+    color: #dddddd !important;
+}
+
+#address,
+#links {
+    background: transparent !important;
+}
+
+/* mantiene il layout originale */
+
+#address {
+    float: left;
+}
+
+#links {
+    float: right;
+    text-align: left;
+}
+
+/* titoli */
+
+#subpage-title {
+    background: transparent !important;
+    margin-bottom: 0.75em;
+}
+
+#subpage-title h1 {
+    color: #fafafa !important;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 0.4em;
+}
+
+#subpage-title a {
+    color: #fafafa !important;
+    text-decoration: none;
+}
+
+/* testo */
+
+#address p,
+#links p {
+    margin: 0.35em 0;
+    line-height: 1.6;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* links */
+
+#contacts a {
+    color: #8fd6a3 !important;
+    text-decoration: none;
+}
+
+#contacts a:hover {
+    color: #b8f0c5 !important;
+    text-decoration: underline;
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+
+    #address,
+    #links {
+        float: none;
+        width: 100%;
+    }
+
+    #links {
+        margin-top: 1.5em;
+    }
+}
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+table {
+    background: #181818 !important;
+    color: #e0e0e0 !important;
+}
+
+th {
+    background: #222 !important;
+    color: #ffffff !important;
+}
+
+tr:nth-child(even) {
+    background: #151515 !important;
+}
+
+/* =========================================================
+   CODE
+   ========================================================= */
+
+pre,
+code {
+    background: #1b1b1b !important;
+    color: #f0f0f0 !important;
+}
+
+/* =========================================================
+   FORMS
+   ========================================================= */
+
+input,
+textarea,
+select,
+button {
+    background: #222 !important;
+    color: #f0f0f0 !important;
+    border: 1px solid #444 !important;
+}
+
+button:hover {
+    background: #2d2d2d !important;
+}
+
+/* =========================================================
+   BLOCKQUOTE
+   ========================================================= */
+
+blockquote {
+    background: #1a1a1a !important;
+    border-left: 4px solid #555 !important;
+    color: #cccccc !important;
+}
+
+/* =========================================================
+   HR
+   ========================================================= */
+
+hr {
+    border-color: #333 !important;
+}
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+img {
+    opacity: 0.95;
+}
+
+/* =========================================================
+   MATHJAX
+   ========================================================= */
+
+.MathJax,
+mjx-container {
+    color: #f0f0f0 !important;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}

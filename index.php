@@ -9,6 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/darkmode.css"><!-- override darkmode -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;display=swap" rel="stylesheet">
@@ -43,7 +44,7 @@
         <div id="introduction">
           <div id="desc">
           <p>
-          I am an aspiring mathematician, currently in Lyon for a research stay at the Institut Camille Jordan, collaborating with the <a target="_blank" href="https://physmath.pages.math.cnrs.fr/">Réseau de recherche en physique mathématique</a>, although mostly on <a target="_blank" href="/img/Malia/Malia-Lyon.jpeg">parental duties</a>.
+          I am an aspiring mathematician currently based in Lyon for a research stay at the Institut Camille Jordan, in collaboration with the <a target="_blank" href="https://physmath.pages.math.cnrs.fr/">Réseau de recherche en physique mathématique</a>, although much of my time is presently devoted to <a target="_blank" href="/img/Malia/Malia-Lyon.jpeg">parental duties</a>.
           </p>
           <p>
             Most recently, I was a
@@ -53,7 +54,7 @@
             at the
             <a target="_blank" href="https://www.mat.uniroma1.it/en">Department of Mathematics of Sapienza Università di Roma</a>,
             under the supervision of
-            <a target="_blank" href="https://www1.mat.uniroma1.it/~fiorenza/">Domenico Fiorenza</a>.
+            <a target="_blank" href="https://ncatlab.org/nlab/show/Domenico+Fiorenza">Domenico Fiorenza</a>.
           </p>
             <p>
               Previously, I was a postdoctoral fellow at 
@@ -82,7 +83,7 @@
                   at the
                 <a target="_blank" href="http://fisica.unipv.it/EN_index.php">University of Pavia</a>
                   .
-              </p>
+            </p>
               <!--
               <a title="Academic Bio" href="http://dmf.unicatt.it/miti/data/bio"><span style="background-color: #2b2301; color: #fff; display: inline-block; padding: 3px 10px; font-weight: bold; border-radius: 5px;">Bio</span>
               </a>
@@ -101,31 +102,31 @@
           <div class="sec-title">Academic resume </div>
           <table class="list">
           <tr>
-              <td class="left"> <b>2024 -  2026</b></td>
+              <td class="left"> <b>2024 - 2026 </b></td>
               <td class="right">Postdoctoral fellow @ <a href="https://civis3i.univ-amu.fr/en/antonio-michele-miti">Civis-3i Rome</a></td>
             </tr>
           <tr>
-              <td class="left"> <b>2022 - 2024</b></td>
+              <td class="left"> <b>2022 - 2024 </b></td>
               <td class="right">Postdoctoral fellow @ <a href="http://dipartimenti.unicatt.it/dmf">UCSC Brescia</a></td>
             </tr>
             <tr>
-              <td class="left"> <b>2021 - 2022</b></td>
+              <td class="left"> <b>2021 - 2022 </b></td>
               <td class="right">Postdoctoral fellow @ <a href="https://www.mpim-bonn.mpg.de/">MPIM</a></td>
             </tr>
             <tr>
-              <td class="left"> <b>2017 - 2021</b></td>
+              <td class="left"> <b>2017 - 2021 </b></td>
               <td class="right">Ph.D. in Science: Mathematics @ <a href="http://scuoledidottorato.unicatt.it/phdschools/science-home#content">UCSC Brescia</a> & <a target="_blank" href="https://wis.kuleuven.be/english">KU Leuven</a></td>
             </tr>
             <tr>
-              <td class="left"> <b>2013 - 2015</b></td>
+              <td class="left"> <b>2013 - 2015 </b></td>
               <td class="right">M.Sc. in Theoretical Physics @ <a href="https://www.unimi.it/en/education/physics-0">UNIMI</a></td>
             </tr>
             <tr>
-              <td class="left"> <b>2010 - 2013</b></td>
+              <td class="left"> <b>2010 - 2013 </b></td>
               <td class="right">Master's student in Physics @ <a href="http://www.unimib.it/go/102/Home/English">UNIMIB</a></td>
             </tr>
             <tr>
-              <td class="left"> <b>2005 - 2010</b></td>
+              <td class="left"> <b>2005 - 2010 </b></td>
               <td class="right">B.Sc. in Physics @ <a href="http://www.unimib.it/go/102/Home/English">UNIMIB</a></td>
             </tr>       
           </table>

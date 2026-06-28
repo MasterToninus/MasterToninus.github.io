@@ -31,7 +31,7 @@
 //
 $fileNames = array(
 	"./activities.csv",
-	"./activities_2.csv"
+	"./dropped-activities.csv"
 ); // CSV files location
 
 $delimiter = ";"; // CSV delimiter character: , ; /t

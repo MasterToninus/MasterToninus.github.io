@@ -175,96 +175,105 @@
           ];
         ?>
 
-        <!-- --------------------------------------------- -->
-        <!-- Indicators Data Table -->
-        <!-- --------------------------------------------- -->
-        <div class="sec" id="indicators">
-          <div class="sec-title">Indicators</div>
-          <table class="list">
-            <tr>
-              <td class="left"><b>ORCID</b></td>
-              <td class="right">
-                <a href="https://orcid.org/" target="_blank" rel="noopener">
-                  <i class="ai ai-orcid ai-fw"></i> ORCID profile
+<!-- --------------------------------------------- -->
+<!-- Indicators Table -->
+<!-- --------------------------------------------- -->
+<div class="sec" id="indicators">
+  <div class="sec-title">Indicators</div>
+
+  <?php if (
+    isset($bibliometric_profiles) &&
+    isset($bibliometric_data) &&
+    isset($bibliometric_rows) &&
+    count($bibliometric_profiles) > 0 &&
+    count($bibliometric_data) > 0 &&
+    count($bibliometric_rows) > 0
+  ): ?>
+
+    <table class="list">
+      <tbody>
+
+        <!-- Header row -->
+        <tr>
+          <td class="left">
+            <b>Indicator</b>
+          </td>
+
+          <?php foreach ($bibliometric_profiles as $source_key => $profile): ?>
+            <td class="right">
+              <?php
+                $label = $profile['label'] ?? $source_key;
+                $icon  = $profile['icon'] ?? '';
+                $url   = $profile['url'] ?? null;
+              ?>
+
+              <?php if (!empty($url)): ?>
+                <a href="<?php echo html($url); ?>" target="_blank" rel="noopener">
+                  <?php if (!empty($icon)): ?>
+                    <i class="<?php echo html($icon); ?>"></i>
+                  <?php endif; ?>
+                  <b><?php echo html($label); ?></b>
                 </a>
-              </td>
-            </tr>
-            <tr>
-              <td class="left"><b>Google Scholar</b></td>
-              <td class="right">
-                <a href="https://scholar.google.com/" target="_blank" rel="noopener">
-                  <i class="ai ai-google-scholar ai-fw"></i> Google Scholar profile
+              <?php else: ?>
+                <?php if (!empty($icon)): ?>
+                  <i class="<?php echo html($icon); ?>"></i>
+                <?php endif; ?>
+                <b><?php echo html($label); ?></b>
+              <?php endif; ?>
+            </td>
+          <?php endforeach; ?>
+        </tr>
+
+        <!-- Data rows -->
+        <?php foreach ($bibliometric_rows as $row_key => $row): ?>
+          <tr>
+            <td class="left">
+              <?php
+                $row_label = $row['label'] ?? $row_key;
+                $row_url   = $row['url'] ?? null;
+              ?>
+
+              <?php if (!empty($row_url)): ?>
+                <a href="<?php echo html($row_url); ?>" target="_blank" rel="noopener">
+                  <b><?php echo html($row_label); ?></b>
                 </a>
-              </td>
-            </tr>
-            <tr>
-              <td class="left"><b>Scopus</b></td>
+              <?php else: ?>
+                <b><?php echo html($row_label); ?></b>
+              <?php endif; ?>
+            </td>
+
+            <?php foreach ($bibliometric_profiles as $source_key => $profile): ?>
+              <?php
+                /*
+                 * The profile array uses the key "self-assessed",
+                 * while the data array uses the key "self".
+                 */
+                $data_key = ($source_key === 'self-assessed') ? 'self' : $source_key;
+
+                $value = $bibliometric_data[$data_key][$row_key] ?? '-';
+              ?>
+
               <td class="right">
-                <a href="https://www.scopus.com/" target="_blank" rel="noopener">
-                  <i class="ai ai-scopus ai-fw"></i> Scopus author profile
-                </a>
+                <?php echo html($value); ?>
               </td>
-            </tr>
-            <tr>
-              <td class="left"><b>Web of Science</b></td>
-              <td class="right">
-                <a href="https://www.webofscience.com/" target="_blank" rel="noopener">
-                  <i class="ai ai-clarivate ai-fw"></i> Web of Science researcher profile
-                </a>
-              </td>
-            </tr>
-          </table>
-        </div>
+            <?php endforeach; ?>
+          </tr>
+        <?php endforeach; ?>
 
-        <!-- --------------------------------------------- -->
-        <!-- Indicators -->
-        <!-- --------------------------------------------- -->
-        <div class="sec" id="indicators">
-          <div class="sec-title">Indicators</div>
+      </tbody>
+    </table>
 
-          <?php if (count($bibliometrics) > 0): ?>
-            <table class="list">
-              <tbody>
-                <?php foreach ($bibliometrics as $row): ?>
-                  <tr>
-                    <td class="left">
-                      <b><?php echo html($row["Indicator"]); ?></b>
-                    </td>
-                    <td class="right">
-                      <?php
-                        $url = safe_url($row["Url"]);
-                        if ($url !== "") {
-                          echo '<b><a href="' . html($url) . '" target="_blank" rel="noopener">' . html($row["Value"]) . '</a></b>';
-                        } else {
-                          echo '<b>' . html($row["Value"]) . '</b>';
-                        }
+  <?php else: ?>
 
-                        if (trim($row["Source"]) !== "") {
-                          echo '<br>Source: ' . html($row["Source"]);
-                        }
+    <table class="list">
+      <tr>
+        <td class="left"><b>-</b></td>
+        <td class="right">Bibliometric indicators to be inserted.</td>
+      </tr>
+    </table>
 
-                        if (trim($row["Last_update"]) !== "") {
-                          echo ' | Last update: ' . html($row["Last_update"]);
-                        }
-
-                        if (trim($row["Notes"]) !== "") {
-                          echo '<br><em>' . html($row["Notes"]) . '</em>';
-                        }
-                      ?>
-                    </td>
-                  </tr>
-                <?php endforeach; ?>
-              </tbody>
-            </table>
-          <?php else: ?>
-            <table class="list">
-              <tr>
-                <td class="left"><b>-</b></td>
-                <td class="right">Bibliometric indicators to be inserted.</td>
-              </tr>
-            </table>
-          <?php endif; ?>
-        </div>
+  <?php endif; ?>
+</div>
 
         <!-- --------------------------------------------- -->
         <!-- Disclaimer -->

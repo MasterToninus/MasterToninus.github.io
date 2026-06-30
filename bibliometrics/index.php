@@ -31,9 +31,9 @@
       </div>
     </header>
 
-<!-- ================================================= -->
-<!-- Contents -->
-<!-- ================================================= -->
+    <!-- ================================================= -->
+    <!-- Contents -->
+    <!-- ================================================= -->
     <div id="content">
       <div id="content-container">
 
@@ -196,31 +196,174 @@
             </tbody>
           </table>
         </div>
-              
+        <?php
+          /* =============================================================
+           * Self-counted citations from YAML
+           * -------------------------------------------------------------
+           * Reads a YAML file and prints only articles having a non-empty
+           * citations list. For each such article, it prints:
+           * - title
+           * - authors
+           * - linkable DOI, when available
+           * - the same data for each citing paper
+           *
+           * Requires the PHP YAML extension:
+           * https://www.php.net/manual/en/book.yaml.php
+           * ============================================================= */
+
+
+          /* ---------- Configuration ---------- */
+
+          $yaml_path = __DIR__ . "../data/citations.yaml";
+
+
+          /* ---------- Helpers ---------- */
+
+          function html($string) {
+            return htmlspecialchars((string) $string, ENT_QUOTES, "UTF-8");
+          }
+
+          function doi_url($doi) {
+            $doi = trim((string) $doi);
+
+            if ($doi === "" || strtolower($doi) === "null") {
+              return "";
+            }
+
+            if (preg_match("/^10\.\S+$/", $doi)) {
+              return "https://doi.org/" . $doi;
+            }
+
+            return "";
+          }
+
+          function print_doi($doi) {
+            $doi = trim((string) $doi);
+            $url = doi_url($doi);
+
+            if ($doi === "" || strtolower($doi) === "null") {
+              echo "No DOI";
+              return;
+            }
+
+            if ($url !== "") {
+              echo '<a href="' . html($url) . '" target="_blank" rel="noopener">' . html($doi) . '</a>';
+              return;
+            }
+
+            echo html($doi);
+          }
+
+          function has_non_empty_citations($article) {
+            return (
+              isset($article["citations"]) &&
+              is_array($article["citations"]) &&
+              count($article["citations"]) > 0
+            );
+          }
+
+
+          /* ---------- Load YAML ---------- */
+
+          if (!function_exists("yaml_parse_file")) {
+            echo "<p><b>Error:</b> the PHP YAML extension is not installed.</p>";
+            return;
+          }
+
+          if (!file_exists($yaml_path)) {
+            echo "<p><b>Error:</b> YAML file not found.</p>";
+            return;
+          }
+
+          $data = yaml_parse_file($yaml_path);
+
+          if (
+            !is_array($data) ||
+            !isset($data["articles"]) ||
+            !is_array($data["articles"])
+          ) {
+            echo "<p><b>Error:</b> invalid YAML structure.</p>";
+            return;
+          }
+
+          $articles_with_citations = array_filter($data["articles"], "has_non_empty_citations");
+        ?>
+
 
         <!-- --------------------------------------------- -->
-        <!-- Disclaimer -->
+        <!-- Self-counted citations -->
         <!-- --------------------------------------------- -->
-        <div class="sec" id="disclaimer">
-          <div class="sec-title">Disclaimer</div>
-          <table class="list">
-            <tr>
-              <td class="left"><b>Use</b></td>
-              <td class="right">
-                These data are provided only for administrative purposes. They should not be read as a mathematical, scientific, or human evaluation of the work listed elsewhere on this website.
-              </td>
-            </tr>
-            <tr>
-              <td class="left"><b>Sources</b></td>
-              <td class="right">
-                Bibliometric values may differ across databases, update schedules, author-profile mergers, indexing choices, and the general mood of the algorithmic bureaucracy involved.
-              </td>
-            </tr>
-          </table>
+        <div class="sec" id="self-counted-citations">
+          <div class="sec-title">Self-counted citations</div>
+
+          <?php if (count($articles_with_citations) > 0): ?>
+
+            <table class="list">
+              <tbody>
+
+                <?php foreach ($articles_with_citations as $article): ?>
+
+                  <!-- Cited article -->
+                  <tr>
+                    <td class="left">
+                      <b>Cited article</b>
+                    </td>
+
+                    <td class="right">
+                      <b><?php echo html($article["title"] ?? "Untitled"); ?></b>
+                      <br>
+                      <?php echo html($article["authors"] ?? ""); ?>
+                      <br>
+                      DOI:
+                      <?php print_doi($article["doi"] ?? ""); ?>
+                    </td>
+                  </tr>
+
+                  <!-- Citing papers -->
+                  <tr>
+                    <td class="left">
+                      <b>Citing papers</b>
+                    </td>
+
+                    <td class="right">
+                      <table class="list">
+                        <tbody>
+                          <?php foreach ($article["citations"] as $citation): ?>
+                            <tr>
+                              <td class="left">
+                                <b><?php echo html($citation["title"] ?? "Untitled"); ?></b>
+                              </td>
+
+                              <td class="right">
+                                <?php echo html($citation["authors"] ?? ""); ?>
+                                <br>
+                                DOI:
+                                <?php print_doi($citation["doi"] ?? ""); ?>
+                              </td>
+                            </tr>
+                          <?php endforeach; ?>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+
+                <?php endforeach; ?>
+
+              </tbody>
+            </table>
+
+          <?php else: ?>
+
+            <table class="list">
+              <tr>
+                <td class="left"><b>-</b></td>
+                <td class="right">No self-counted citations inserted.</td>
+              </tr>
+            </table>
+
+          <?php endif; ?>
         </div>
 
-      </div>
-    </div>
 
     <!-- --------------------------------------------- -->
     <!-- Footer -->
@@ -232,7 +375,19 @@
             <br>
             <br>
             <br>
+
             <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
+
+              <div style="margin-bottom: 0.8em;">
+                <b>Disclaimer.</b>
+                These data are provided only for administrative purposes.
+                They should not be read as a mathematical, scientific, or human evaluation
+                of the work listed elsewhere on this website.
+                Bibliometric values may differ across databases, update schedules,
+                author-profile mergers, indexing choices, and the general mood
+                of the algorithmic bureaucracy involved.
+              </div>
+
               <?php
                 $files = array($csv_path, "index.php");
                 $times = array();
@@ -247,10 +402,11 @@
                   echo "Last update: " . date("F d Y H:i:s.", max($times));
                 }
               ?>
+
               <br>
 
               Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
-              &emsp; Italsing srl. &emsp;  All Rights Reserved.
+              &emsp; Italsing srl. &emsp; All Rights Reserved.
             </div>
           </div>
         </div>

@@ -217,6 +217,7 @@
           $yaml_path = __DIR__ . "../data/citations.yaml";
 
 
+
           /* ---------- Helpers ---------- */
 
           function html($string) {
@@ -295,6 +296,9 @@
         <!-- --------------------------------------------- -->
         <div class="sec" id="self-counted-citations">
           <div class="sec-title">Self-counted citations</div>
+          <p>
+            Last update: <?php echo date("F d Y H:i:s.", filemtime($yaml_path)); ?>
+          </p>
 
           <?php if (count($articles_with_citations) > 0): ?>
 

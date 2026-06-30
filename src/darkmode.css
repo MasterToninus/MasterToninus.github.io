@@ -326,7 +326,7 @@ mjx-container {
     background: #666;
 }
 /* =========================================================
-   RESPONSIVE BIBLIOMETRICS TABLE
+   RESPONSIVE TABLEs
    ========================================================= */
 
 .table-scroll {
@@ -348,19 +348,4 @@ mjx-container {
 .table-scroll::-webkit-scrollbar-thumb:hover {
     background: #666;
 }
-
-.bibliometrics-table {
-    background: #181818 !important;
-}
-
-.bibliometrics-table td {
-    border-color: #333 !important;
-}
-
-.bibliometrics-table a {
-    color: #8fd6a3 !important;
-}
-
-.bibliometrics-table a:hover {
-    color: #b8f0c5 !important;
-}
+ 

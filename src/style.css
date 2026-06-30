@@ -592,7 +592,7 @@ html body {
 }
 
 /* =========================================================
-   RESPONSIVE BIBLIOMETRICS TABLE
+   RESPONSIVE TABLE
    ========================================================= */
 
 .table-scroll {
@@ -602,47 +602,4 @@ html body {
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
 }
-
-.bibliometrics-table {
-    width: 100%;
-    min-width: 620px;
-    border-collapse: collapse;
-}
-
-.bibliometrics-table td {
-    vertical-align: middle;
-}
-
-.bibliometrics-table .left {
-    white-space: nowrap;
-}
-
-.bibliometrics-table .right {
-    text-align: right;
-    white-space: nowrap;
-}
-
-@media screen and (max-width: 600px) {
-    .bibliometrics-table {
-        min-width: 560px;
-        font-size: 0.9em;
-    }
-
-    .bibliometrics-table td {
-        padding: 0.45em;
-    }
-
-    .bibliometrics-table .left,
-    .bibliometrics-table .right {
-        display: table-cell;
-        width: auto;
-        margin: 0;
-        padding: 0.45em;
-        text-align: center;
-        white-space: nowrap;
-    }
-
-    .bibliometrics-table .left {
-        text-align: right;
-    }
-}
+ 

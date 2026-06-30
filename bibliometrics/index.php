@@ -133,12 +133,13 @@
         <!-- Indicators Table -->
         <!-- --------------------------------------------- -->
         <div class="sec" id="indicators">
-          <div class="sec-title">Indicators</div>
+          <!-- <div class="sec-title">Indicators</div> -->
+          <div class="sec-title">  </div>
 
           <table class="list">
             <tbody>
               <tr>
-                <td class="left"><b> // </b></td>
+                <td class="left"><b> Indicators </b></td>
                 <td class="right">
                   <i class="ai ai-user ai-fw"></i>
                   <b>Self-assessed</b>
@@ -196,20 +197,27 @@
             </tbody>
           </table>
         </div>
+
+
+
+        <!--
+          =============================================================
+          * Self-counted citations from YAML
+          * -------------------------------------------------------------
+          * Reads a YAML file and prints only articles having a non-empty
+          * citations list. For each such article, it prints:
+          * - title
+          * - authors
+          * - linkable DOI, when available
+          * - the same data for each citing paper
+          *
+          * Requires the PHP YAML extension:
+          * https://www.php.net/manual/en/book.yaml.php
+
+          * ATTENzione: non posso installare l'estensione YAML su questo server, quindi non posso usare questa funzione.
+          * =============================================================
+        -->
         <?php
-          /* =============================================================
-           * Self-counted citations from YAML
-           * -------------------------------------------------------------
-           * Reads a YAML file and prints only articles having a non-empty
-           * citations list. For each such article, it prints:
-           * - title
-           * - authors
-           * - linkable DOI, when available
-           * - the same data for each citing paper
-           *
-           * Requires the PHP YAML extension:
-           * https://www.php.net/manual/en/book.yaml.php
-           * ============================================================= */
 
 
           /* ---------- Configuration ---------- */

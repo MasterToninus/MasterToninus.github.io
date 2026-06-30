@@ -54,7 +54,7 @@
             </p>
           </div>
           <div id="photo">
-            <img src="../img/underconstruction-bg.jpg" alt="Bibliometrics">
+            <img src="../img/pop-ai-slop.png" alt="Publish-or-perish Bibliometrics">
           </div>
         </div>
 
@@ -62,7 +62,7 @@
         <!-- Links -->
         <!-- --------------------------------------------- -->        
         <div class="sec">
-          <div class="sec-title"> ! </div>
+          <div class="sec-title"></div>
           <ul>
             <li>
               To know more about the Italian National Scientific Habilitation, see the official ministerial portal:
@@ -89,49 +89,18 @@
               - web scraping of Scopus, WoS, and Google Scholar to automatically update the data using api call
               - self-assessment data compoutet from a local database of citations (csv file or maybe is better something tree-like like yaml)
           *///=============================================================
-          function html_escape($string) {
-            return htmlspecialchars((string) $string, ENT_QUOTES, 'UTF-8');
-          }
-
-          /* ---------- Profile links ---------- */
-          $bibliometric_profiles = [
-            'self-assessed' => [
-              'label' => 'self-assessed',
-              'icon'  => 'ai ai-user ai-fw',
-              'url'   => null,
-            ],
-
-            'scopus' => [
-              'label' => 'Scopus',
-              'icon'  => 'ai ai-scopus ai-fw',
-              'url'   => 'https://www.scopus.com/authid/detail.uri?authorId=YOUR_SCOPUS_ID',
-            ],
-
-            'wos' => [
-              'label' => 'WoS',
-              'icon'  => 'ai ai-clarivate ai-fw',
-              'url'   => 'https://www.webofscience.com/wos/author/record/YOUR_WOS_ID',
-            ],
-
-            'gscholar' => [
-              'label' => 'GScholar',
-              'icon'  => 'ai ai-google-scholar ai-fw',
-              'url'   => 'https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID&hl=en',
-            ],
-          ];
 
           /* ---------- Bibliometric data ---------- */
           // Temporary workaround: the data are manually compiled below. 
           // In the future, they will be automatically collected from the main bibliometric databases using web scraping and/or API calls.
           //
-
-
           $bibliometric_data = [
-            'self' => [
+            'self-assessed' => [
               'label'     => 'Self-assessed',
               'articles'  => 7,
               'citations' => 10,
               'hindex'    => 2,
+              'url'       => null,
             ],
 
             'scopus' => [
@@ -139,6 +108,7 @@
               'articles'  => 7,
               'citations' => 1,
               'hindex'    => 1,
+              'url'       => 'https://www.scopus.com/authid/detail.uri?authorId=57218509273',
             ],
 
             'wos' => [
@@ -146,6 +116,7 @@
               'articles'  => 7,
               'citations' => 1,
               'hindex'    => 1,
+              'url'       => 'https://www.webofscience.com/wos/author/record/JNS-8304-2023',
             ],
 
             'gscholar' => [
@@ -153,127 +124,79 @@
               'articles'  => 7,
               'citations' => 41,
               'hindex'    => 4,
-            ],
-          ];
-
-          /* ---------- Table rows ---------- */
-          $bibliometric_rows = [
-            'articles' => [
-              'label' => 'Articles',
-              'url'   => null,
-            ],
-
-            'citations' => [
-              'label' => 'Number of citations',
-              'url'   => null,
-            ],
-
-            'hindex' => [
-              'label' => 'h-index',
-              'url'   => 'https://en.wikipedia.org/wiki/H-index',
+              'url'       => 'https://scholar.google.com/citations?user=DWKPuJYAAAAJ&hl=en',
             ],
           ];
         ?>
 
-<!-- --------------------------------------------- -->
-<!-- Indicators Table -->
-<!-- --------------------------------------------- -->
-<div class="sec" id="indicators">
-  <div class="sec-title">Indicators</div>
+        <!-- --------------------------------------------- -->
+        <!-- Indicators Table -->
+        <!-- --------------------------------------------- -->
+        <div class="sec" id="indicators">
+          <div class="sec-title">Indicators</div>
 
-  <?php if (
-    isset($bibliometric_profiles) &&
-    isset($bibliometric_data) &&
-    isset($bibliometric_rows) &&
-    count($bibliometric_profiles) > 0 &&
-    count($bibliometric_data) > 0 &&
-    count($bibliometric_rows) > 0
-  ): ?>
+          <table class="list">
+            <tbody>
+              <tr>
+                <td class="left"><b> // </b></td>
+                <td class="right">
+                  <i class="ai ai-user ai-fw"></i>
+                  <b>Self-assessed</b>
+                </td>
 
-    <table class="list">
-      <tbody>
+                <td class="right">
+                  <a href="https://www.scopus.com/authid/detail.uri?authorId=YOUR_SCOPUS_ID" target="_blank" rel="noopener">
+                    <i class="ai ai-scopus ai-fw"></i>
+                    <b>Scopus</b>
+                  </a>
+                </td>
 
-        <!-- Header row -->
-        <tr>
-          <td class="left">
-            <b>Indicator</b>
-          </td>
+                <td class="right">
+                  <a href="https://www.webofscience.com/wos/author/record/YOUR_WOS_ID" target="_blank" rel="noopener">
+                    <i class="ai ai-clarivate ai-fw"></i>
+                    <b>WoS</b>
+                  </a>
+                </td>
 
-          <?php foreach ($bibliometric_profiles as $source_key => $profile): ?>
-            <td class="right">
-              <?php
-                $label = $profile['label'] ?? $source_key;
-                $icon  = $profile['icon'] ?? '';
-                $url   = $profile['url'] ?? null;
-              ?>
+                <td class="right">
+                  <a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID&amp;hl=en" target="_blank" rel="noopener">
+                    <i class="ai ai-google-scholar ai-fw"></i>
+                    <b>GScholar</b>
+                  </a>
+                </td>
+              </tr>
 
-              <?php if (!empty($url)): ?>
-                <a href="<?php echo html($url); ?>" target="_blank" rel="noopener">
-                  <?php if (!empty($icon)): ?>
-                    <i class="<?php echo html($icon); ?>"></i>
-                  <?php endif; ?>
-                  <b><?php echo html($label); ?></b>
-                </a>
-              <?php else: ?>
-                <?php if (!empty($icon)): ?>
-                  <i class="<?php echo html($icon); ?>"></i>
-                <?php endif; ?>
-                <b><?php echo html($label); ?></b>
-              <?php endif; ?>
-            </td>
-          <?php endforeach; ?>
-        </tr>
+              <tr>
+                <td class="left"><b>Articles</b></td>
+                <td class="right">7</td>
+                <td class="right">7</td>
+                <td class="right">7</td>
+                <td class="right">7</td>
+              </tr>
 
-        <!-- Data rows -->
-        <?php foreach ($bibliometric_rows as $row_key => $row): ?>
-          <tr>
-            <td class="left">
-              <?php
-                $row_label = $row['label'] ?? $row_key;
-                $row_url   = $row['url'] ?? null;
-              ?>
+              <tr>
+                <td class="left"><b>Number of citations</b></td>
+                <td class="right">10</td>
+                <td class="right">1</td>
+                <td class="right">1</td>
+                <td class="right">41</td>
+              </tr>
 
-              <?php if (!empty($row_url)): ?>
-                <a href="<?php echo html($row_url); ?>" target="_blank" rel="noopener">
-                  <b><?php echo html($row_label); ?></b>
-                </a>
-              <?php else: ?>
-                <b><?php echo html($row_label); ?></b>
-              <?php endif; ?>
-            </td>
-
-            <?php foreach ($bibliometric_profiles as $source_key => $profile): ?>
-              <?php
-                /*
-                 * The profile array uses the key "self-assessed",
-                 * while the data array uses the key "self".
-                 */
-                $data_key = ($source_key === 'self-assessed') ? 'self' : $source_key;
-
-                $value = $bibliometric_data[$data_key][$row_key] ?? '-';
-              ?>
-
-              <td class="right">
-                <?php echo html($value); ?>
-              </td>
-            <?php endforeach; ?>
-          </tr>
-        <?php endforeach; ?>
-
-      </tbody>
-    </table>
-
-  <?php else: ?>
-
-    <table class="list">
-      <tr>
-        <td class="left"><b>-</b></td>
-        <td class="right">Bibliometric indicators to be inserted.</td>
-      </tr>
-    </table>
-
-  <?php endif; ?>
-</div>
+              <tr>
+                <td class="left">
+                  <a href="https://en.wikipedia.org/wiki/H-index" target="_blank" rel="noopener">
+                    <b>h-index</b>
+                  </a>
+                </td>
+                <td class="right">2</td>
+                <td class="right">1</td>
+                <td class="right">1</td>
+                <td class="right">4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+              
 
         <!-- --------------------------------------------- -->
         <!-- Disclaimer -->

@@ -325,3 +325,42 @@ mjx-container {
 ::-webkit-scrollbar-thumb:hover {
     background: #666;
 }
+/* =========================================================
+   RESPONSIVE BIBLIOMETRICS TABLE
+   ========================================================= */
+
+.table-scroll {
+    background: transparent !important;
+}
+
+.table-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+    background: #111;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+    background: #444;
+}
+
+.table-scroll::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+.bibliometrics-table {
+    background: #181818 !important;
+}
+
+.bibliometrics-table td {
+    border-color: #333 !important;
+}
+
+.bibliometrics-table a {
+    color: #8fd6a3 !important;
+}
+
+.bibliometrics-table a:hover {
+    color: #b8f0c5 !important;
+}

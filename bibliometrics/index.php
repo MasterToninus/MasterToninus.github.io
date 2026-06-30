@@ -88,6 +88,7 @@
             TODO
               - web scraping of Scopus, WoS, and Google Scholar to automatically update the data using api call
               - self-assessment data compoutet from a local database of citations (csv file or maybe is better something tree-like like yaml)
+              - 
           *///=============================================================
 
           /* ---------- Bibliometric data ---------- */
@@ -133,69 +134,71 @@
         <!-- Indicators Table -->
         <!-- --------------------------------------------- -->
         <div class="sec" id="indicators">
-          <!-- <div class="sec-title">Indicators</div> -->
-          <div class="sec-title">  </div>
+          <div class="sec-title"> </div>
 
-          <table class="list">
-            <tbody>
-              <tr>
-                <td class="left"><b> Indicators </b></td>
-                <td class="right">
-                  <i class="ai ai-user ai-fw"></i>
-                  <b>Self-assessed</b>
-                </td>
+          <div class="table-scroll">
+            <table class="list bibliometrics-table">
+              <tbody>
+                <tr>
+                  <td class="left"><b>Indicators</b></td>
 
-                <td class="right">
-                  <a href="https://www.scopus.com/authid/detail.uri?authorId=YOUR_SCOPUS_ID" target="_blank" rel="noopener">
-                    <i class="ai ai-scopus ai-fw"></i>
-                    <b>Scopus</b>
-                  </a>
-                </td>
+                  <td class="right">
+                    <i class="ai ai-user ai-fw"></i>
+                    <b>Self-assessed</b>
+                  </td>
 
-                <td class="right">
-                  <a href="https://www.webofscience.com/wos/author/record/YOUR_WOS_ID" target="_blank" rel="noopener">
-                    <i class="ai ai-clarivate ai-fw"></i>
-                    <b>WoS</b>
-                  </a>
-                </td>
+                  <td class="right">
+                    <a href="https://www.scopus.com/authid/detail.uri?authorId=57218509273" target="_blank" rel="noopener">
+                      <i class="ai ai-scopus ai-fw"></i>
+                      <b>Scopus</b>
+                    </a>
+                  </td>
 
-                <td class="right">
-                  <a href="https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID&amp;hl=en" target="_blank" rel="noopener">
-                    <i class="ai ai-google-scholar ai-fw"></i>
-                    <b>GScholar</b>
-                  </a>
-                </td>
-              </tr>
+                  <td class="right">
+                    <a href="https://www.webofscience.com/wos/author/record/JNS-8304-2023" target="_blank" rel="noopener">
+                      <i class="ai ai-clarivate ai-fw"></i>
+                      <b>WoS</b>
+                    </a>
+                  </td>
 
-              <tr>
-                <td class="left"><b>Articles</b></td>
-                <td class="right">7</td>
-                <td class="right">7</td>
-                <td class="right">7</td>
-                <td class="right">7</td>
-              </tr>
+                  <td class="right">
+                    <a href="https://scholar.google.com/citations?user=DWKPuJYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+                      <i class="ai ai-google-scholar ai-fw"></i>
+                      <b>GScholar</b>
+                    </a>
+                  </td>
+                </tr>
 
-              <tr>
-                <td class="left"><b>Number of citations</b></td>
-                <td class="right">10</td>
-                <td class="right">1</td>
-                <td class="right">1</td>
-                <td class="right">41</td>
-              </tr>
+                <tr>
+                  <td class="left"><b>Articles</b></td>
+                  <td class="right">7</td>
+                  <td class="right">7</td>
+                  <td class="right">7</td>
+                  <td class="right">7</td>
+                </tr>
 
-              <tr>
-                <td class="left">
-                  <a href="https://en.wikipedia.org/wiki/H-index" target="_blank" rel="noopener">
-                    <b>h-index</b>
-                  </a>
-                </td>
-                <td class="right">2</td>
-                <td class="right">1</td>
-                <td class="right">1</td>
-                <td class="right">4</td>
-              </tr>
-            </tbody>
-          </table>
+                <tr>
+                  <td class="left"><b>Number of citations</b></td>
+                  <td class="right">10</td>
+                  <td class="right">1</td>
+                  <td class="right">1</td>
+                  <td class="right">41</td>
+                </tr>
+
+                <tr>
+                  <td class="left">
+                    <a href="https://en.wikipedia.org/wiki/H-index" target="_blank" rel="noopener">
+                      <b>h-index</b>
+                    </a>
+                  </td>
+                  <td class="right">2</td>
+                  <td class="right">1</td>
+                  <td class="right">1</td>
+                  <td class="right">4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
 
@@ -217,6 +220,11 @@
           * ATTENzione: non posso installare l'estensione YAML su questo server, quindi non posso usare questa funzione.
           * =============================================================
         -->
+
+        <p>
+          Current state of this page is very tentative.
+          Data are updated as of June 2026.
+        </p>
         <?php
 
 
@@ -375,54 +383,54 @@
 
           <?php endif; ?>
         </div>
+        <!-- --------------------------------------------- -->
+        <!-- Footer -->
+        <!-- --------------------------------------------- -->
+        <footer>
+          <div id="content">
+            <div id="content-container">
+              <div id="footer">
+                <br>
+                <br>
+                <br>
 
+                <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
 
-    <!-- --------------------------------------------- -->
-    <!-- Footer -->
-    <!-- --------------------------------------------- -->
-    <footer>
-      <div id="content">
-        <div id="content-container">
-          <div id="footer">
-            <br>
-            <br>
-            <br>
+                  <div style="margin-bottom: 0.8em;">
+                    <b>Disclaimer.</b>
+                    These data are provided only for administrative purposes.
+                    They should not be read as a mathematical, scientific, or human evaluation
+                    of the work listed elsewhere on this website.
+                    Bibliometric values may differ across databases, update schedules,
+                    author-profile mergers, indexing choices, and the general mood
+                    of the algorithmic bureaucracy involved.
+                  </div>
 
-            <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
+                  <?php
+                    $files = array($csv_path, "index.php");
+                    $times = array();
 
-              <div style="margin-bottom: 0.8em;">
-                <b>Disclaimer.</b>
-                These data are provided only for administrative purposes.
-                They should not be read as a mathematical, scientific, or human evaluation
-                of the work listed elsewhere on this website.
-                Bibliometric values may differ across databases, update schedules,
-                author-profile mergers, indexing choices, and the general mood
-                of the algorithmic bureaucracy involved.
+                    foreach ($files as $file) {
+                      if (file_exists($file)) {
+                        array_push($times, filemtime($file));
+                      }
+                    }
+
+                    if (count($times) > 0) {
+                      echo "Last update: " . date("F d Y H:i:s.", max($times));
+                    }
+                  ?>
+
+                  <br>
+
+                  Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
+                  &emsp; Italsing srl. &emsp; All Rights Reserved.
+                </div>
               </div>
-
-              <?php
-                $files = array($csv_path, "index.php");
-                $times = array();
-
-                foreach ($files as $file) {
-                  if (file_exists($file)) {
-                    array_push($times, filemtime($file));
-                  }
-                }
-
-                if (count($times) > 0) {
-                  echo "Last update: " . date("F d Y H:i:s.", max($times));
-                }
-              ?>
-
-              <br>
-
-              Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
-              &emsp; Italsing srl. &emsp; All Rights Reserved.
             </div>
           </div>
-        </div>
+        </footer>
       </div>
-    </footer>
+    </div>
   </body>
 </html>

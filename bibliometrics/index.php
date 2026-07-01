@@ -48,6 +48,15 @@
         margin-bottom: 0.6em;
       }
 
+      /* Bibliometric indicators table */
+      .bibliometrics-table td:first-child {
+        font-style: italic;
+      }
+
+      .bibliometrics-table td:not(:first-child) {
+        text-align: center;
+      }
+
       @media screen and (max-width: 520px) {
         .citations-list,
         .citing-papers {
@@ -122,151 +131,9 @@
 
 
         <!-- --------------------------------------------- -->
-        <!-- PhP: Bibliometric data -->
+        <!-- PHP: XML data and bibliometric indicators -->
         <!-- --------------------------------------------- -->
         <?php
-          /*// =============================================================
-            - Bibliometric indicators
-            - Data are manually compiled below.
-
-            TODO
-              - web scraping of Scopus, WoS, and Google Scholar to automatically update the data using api call
-              - self-assessment data computed from a local database of citations (csv file or maybe is better something tree-like like yaml)
-              - 
-          *///=============================================================
-
-          /* ---------- Bibliometric data ---------- */
-          // Temporary workaround: the data are manually compiled below. 
-          // In the future, they will be automatically collected from the main bibliometric databases using web scraping and/or API calls.
-          //
-          $bibliometric_data = [
-            'self-assessed' => [
-              'label'     => 'Self-assessed',
-              'articles'  => 7,
-              'citations' => 10,
-              'hindex'    => 2,
-              'url'       => null,
-            ],
-
-            'scopus' => [
-              'label'     => 'Scopus',
-              'articles'  => 7,
-              'citations' => 1,
-              'hindex'    => 1,
-              'url'       => 'https://www.scopus.com/authid/detail.uri?authorId=57218509273',
-            ],
-
-            'wos' => [
-              'label'     => 'WoS',
-              'articles'  => 7,
-              'citations' => 1,
-              'hindex'    => 1,
-              'url'       => 'https://www.webofscience.com/wos/author/record/JNS-8304-2023',
-            ],
-
-            'gscholar' => [
-              'label'     => 'GScholar',
-              'articles'  => 7,
-              'citations' => 41,
-              'hindex'    => 4,
-              'url'       => 'https://scholar.google.com/citations?user=DWKPuJYAAAAJ&amp;hl=en',
-            ],
-          ];
-        ?>
-
-        <!-- --------------------------------------------- -->
-        <!-- Indicators Table -->
-        <!-- --------------------------------------------- -->
-        <div class="sec" id="indicators">
-          <!-- <div class="sec-title">Indicators</div> -->
-          <div class="sec-title">  </div>
-
-          <div class="table-scroll">
-            <table class="list bibliometrics-table">
-              <tbody>
-                <tr>
-                  <td class="left"><b>Indicators</b></td>
-                <td class="right">
-                  <i class="ai ai-user ai-fw"></i>
-                  <b>Self-assessed</b>
-                </td>
-
-                <td class="right">
-                  <a href="https://www.scopus.com/authid/detail.uri?authorId=57218509273" target="_blank" rel="noopener">
-                    <i class="ai ai-scopus ai-fw"></i>
-                    <b>Scopus</b>
-                  </a>
-                </td>
-
-                <td class="right">
-                  <a href="https://www.webofscience.com/wos/author/record/JNS-8304-2023" target="_blank" rel="noopener">
-                    <i class="ai ai-clarivate ai-fw"></i>
-                    <b>WoS</b>
-                  </a>
-                </td>
-
-                <td class="right">
-                  <a href="https://scholar.google.com/citations?user=DWKPuJYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
-                    <i class="ai ai-google-scholar ai-fw"></i>
-                    <b>GScholar</b>
-                  </a>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="left"><b>Articles</b></td>
-                <td class="right">7</td>
-                <td class="right">7</td>
-                <td class="right">7</td>
-                <td class="right">7</td>
-              </tr>
-
-              <tr>
-                <td class="left"><b>Number of citations</b></td>
-                <td class="right">10</td>
-                <td class="right">1</td>
-                <td class="right">1</td>
-                <td class="right">41</td>
-              </tr>
-
-              <tr>
-                <td class="left">
-                  <a href="https://en.wikipedia.org/wiki/H-index" target="_blank" rel="noopener">
-                    <b>h-index</b>
-                  </a>
-                </td>
-                <td class="right">2</td>
-                <td class="right">1</td>
-                <td class="right">1</td>
-                <td class="right">4</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-
-        <!-- --------------------------------------------- -->
-        <!-- Self-counted citations from XML -->
-        <!-- --------------------------------------------- -->
-        <!--
-          Reads an XML file and prints only articles having a non-empty
-          citations list. For each such article, it prints:
-          - title
-          - authors
-          - linkable DOI, when available
-          - the same data for each citing paper
-
-          Requires SimpleXML, usually enabled by default in PHP.
-        -->
-
-        <p>
-          Current state of this page is very tentative.
-          Data are updated as of June 2026.
-        </p>
-
-        <?php
-
           /* ---------- Configuration ---------- */
 
           $xml_path = __DIR__ . "/../data/citations.xml";
@@ -325,32 +192,95 @@
             );
           }
 
+          function xml_valid_doi($doi) {
+            return preg_match("/^10\.\S+$/", trim((string) $doi)) === 1;
+          }
+
+          function xml_article_is_countable($article) {
+            /*
+             * Count only published/indexable articles, identified here by a
+             * genuine DOI. This excludes entries such as submitted manuscripts
+             * with <doi nil="true"/>.
+             */
+            return xml_valid_doi(xml_text($article, "doi"));
+          }
+
+          function count_xml_articles($articles) {
+            $count = 0;
+
+            foreach ($articles as $article) {
+              if (xml_article_is_countable($article)) {
+                $count++;
+              }
+            }
+
+            return $count;
+          }
+
+          function count_xml_citations($articles) {
+            $count = 0;
+
+            foreach ($articles as $article) {
+              if (xml_article_is_countable($article) && xml_article_has_citations($article)) {
+                $count += count($article->citations->citation);
+              }
+            }
+
+            return $count;
+          }
+
+          function calculate_xml_hindex($articles) {
+            $citation_counts = [];
+
+            foreach ($articles as $article) {
+              if (xml_article_is_countable($article)) {
+                $citation_counts[] = xml_article_has_citations($article)
+                  ? count($article->citations->citation)
+                  : 0;
+              }
+            }
+
+            rsort($citation_counts, SORT_NUMERIC);
+
+            $hindex = 0;
+            foreach ($citation_counts as $position => $citation_count) {
+              $rank = $position + 1;
+
+              if ($citation_count >= $rank) {
+                $hindex = $rank;
+              } else {
+                break;
+              }
+            }
+
+            return $hindex;
+          }
+
 
           /* ---------- Load XML ---------- */
 
+          $articles = [];
           $articles_with_citations = [];
+          $xml_error = "";
 
           if (!function_exists("simplexml_load_file")) {
-            echo "<p><b>Error:</b> SimpleXML is not available on this server.</p>";
+            $xml_error = "SimpleXML is not available on this server.";
           } elseif (!file_exists($xml_path)) {
-            echo "<p><b>Error:</b> XML file not found.</p>";
+            $xml_error = "XML file not found.";
           } else {
             libxml_use_internal_errors(true);
 
             $data = simplexml_load_file($xml_path);
 
             if ($data === false) {
-              echo "<p><b>Error:</b> unable to parse XML file.</p>";
-
-              foreach (libxml_get_errors() as $error) {
-                echo "<p><em>" . html($error->message) . "</em></p>";
-              }
-
+              $xml_error = "Unable to parse XML file.";
               libxml_clear_errors();
             } elseif (!isset($data->articles) || !isset($data->articles->article)) {
-              echo "<p><b>Error:</b> invalid XML structure.</p>";
+              $xml_error = "Invalid XML structure.";
             } else {
               foreach ($data->articles->article as $article) {
+                $articles[] = $article;
+
                 if (xml_article_has_citations($article)) {
                   $articles_with_citations[] = $article;
                 }
@@ -358,13 +288,149 @@
             }
           }
 
+          $self_assessed_articles  = count_xml_articles($articles);
+          $self_assessed_citations = count_xml_citations($articles);
+          $self_assessed_hindex    = calculate_xml_hindex($articles);
+
+
+          /* ---------- Bibliometric data ---------- */
+          /*
+           * Self-assessed data are computed from citations.xml.
+           * Scopus, WoS, and Google Scholar values are still manually compiled.
+           */
+
+          $bibliometric_data = [
+            'self-assessed' => [
+              'label'     => 'Self-assessed',
+              'articles'  => $self_assessed_articles,
+              'citations' => $self_assessed_citations,
+              'hindex'    => $self_assessed_hindex,
+              'url'       => '#self-counted-citations',
+            ],
+
+            'scopus' => [
+              'label'     => 'Scopus',
+              'articles'  => 7,
+              'citations' => 1,
+              'hindex'    => 1,
+              'url'       => 'https://www.scopus.com/authid/detail.uri?authorId=57218509273',
+            ],
+
+            'wos' => [
+              'label'     => 'WoS',
+              'articles'  => 7,
+              'citations' => 1,
+              'hindex'    => 1,
+              'url'       => 'https://www.webofscience.com/wos/author/record/JNS-8304-2023',
+            ],
+
+            'gscholar' => [
+              'label'     => 'GScholar',
+              'articles'  => 7,
+              'citations' => 41,
+              'hindex'    => 4,
+              'url'       => 'https://scholar.google.com/citations?user=DWKPuJYAAAAJ&amp;hl=en',
+            ],
+          ];
         ?>
+
+        <!-- --------------------------------------------- -->
+        <!-- Indicators Table -->
+        <!-- --------------------------------------------- -->
+        <div class="sec" id="indicators">
+          <!-- <div class="sec-title">Indicators</div> -->
+          <div class="sec-title">  </div>
+
+          <div class="table-scroll">
+            <table class="list bibliometrics-table">
+              <tbody>
+                <tr>
+                  <td class="left"><b>Indicators</b></td>
+                  <td class="right">
+                    <a href="#self-counted-citations">
+                      <i class="ai ai-user ai-fw"></i>
+                      <b>Self-assessed</b>
+                    </a>
+                  </td>
+
+                  <td class="right">
+                  <a href="https://www.scopus.com/authid/detail.uri?authorId=57218509273" target="_blank" rel="noopener">
+                    <i class="ai ai-scopus ai-fw"></i>
+                    <b>Scopus</b>
+                  </a>
+                </td>
+
+                <td class="right">
+                  <a href="https://www.webofscience.com/wos/author/record/JNS-8304-2023" target="_blank" rel="noopener">
+                    <i class="ai ai-clarivate ai-fw"></i>
+                    <b>WoS</b>
+                  </a>
+                </td>
+
+                <td class="right">
+                  <a href="https://scholar.google.com/citations?user=DWKPuJYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+                    <i class="ai ai-google-scholar ai-fw"></i>
+                    <b>GScholar</b>
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="left"><b>Articles</b></td>
+                <td class="right"><?php echo html($bibliometric_data["self-assessed"]["articles"]); ?></td>
+                <td class="right"><?php echo html($bibliometric_data["scopus"]["articles"]); ?></td>
+                <td class="right"><?php echo html($bibliometric_data["wos"]["articles"]); ?></td>
+                <td class="right"><?php echo html($bibliometric_data["gscholar"]["articles"]); ?></td>
+              </tr>
+
+              <tr>
+                <td class="left"><b>Number of citations</b></td>
+                <td class="right"><?php echo html($bibliometric_data["self-assessed"]["citations"]); ?></td>
+                <td class="right"><?php echo html($bibliometric_data["scopus"]["citations"]); ?></td>
+                <td class="right"><?php echo html($bibliometric_data["wos"]["citations"]); ?></td>
+                <td class="right"><?php echo html($bibliometric_data["gscholar"]["citations"]); ?></td>
+              </tr>
+
+              <tr>
+                <td class="left">
+                  <a href="https://en.wikipedia.org/wiki/H-index" target="_blank" rel="noopener">
+                    <b>h-index</b>
+                  </a>
+                </td>
+                <td class="right"><?php echo html($bibliometric_data["self-assessed"]["hindex"]); ?></td>
+                <td class="right"><?php echo html($bibliometric_data["scopus"]["hindex"]); ?></td>
+                <td class="right"><?php echo html($bibliometric_data["wos"]["hindex"]); ?></td>
+                <td class="right"><?php echo html($bibliometric_data["gscholar"]["hindex"]); ?></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+        <!-- --------------------------------------------- -->
+        <!-- Self-counted citations from XML -->
+        <!-- --------------------------------------------- -->
+        <!--
+          Reads citations.xml and prints only articles having a non-empty
+          citations list. The same XML file is also used above to compute
+          the self-assessed number of articles, citations, and h-index.
+        -->
+
+        <p>
+          Current state of this page is very tentative.
+          Data are updated as of June 2026.
+        </p>
 
         <!-- --------------------------------------------- -->
         <!-- Self-counted citations -->
         <!-- --------------------------------------------- -->
         <div class="sec" id="self-counted-citations">
           <div class="sec-title">Self-counted citations</div>
+
+          <?php if ($xml_error !== ""): ?>
+            <p><b>Error:</b> <?php echo html($xml_error); ?></p>
+          <?php endif; ?>
 
           <?php if (file_exists($xml_path)): ?>
             <p>

@@ -384,10 +384,10 @@
               </tr>
               <tr>
                 <td>
-                <a href="https://www.scopus.com/authid/detail.uri?authorId=57218509273" class="btn btn-default btn-lg">
+                  <a href="https://www.scopus.com/authid/detail.uri?authorId=57218509273" class="btn btn-default btn-lg">
                               <i class="ai ai-lg ai-scopus"></i>
                               <span class="network-name">Scopus</span>
-                            </a>
+                  </a>
                 <!--<a href="https://www.mendeley.com/profiles/antonio-m-miti/" class="btn btn-default btn-lg">
                               <i class="ai ai-lg ai-mendeley"></i>
                               <span class="network-name">Mendeley</span>
@@ -395,19 +395,32 @@
                 <!-- https://mathscinet.ams.org/mathscinet/search/publications.html?pg1=INDI&s1=1435797 -->
                 </td>
                 <td>
+                  <a href="https://zbmath.org/authors/miti.antonio-michele" class="btn btn-default btn-lg">
+                    <i class="fa fa-square-o fa-fw"></i>
+                              <span class="network-name">zbMath</span>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://mathscinet.ams.org/mathscinet/MRAuthorID/1435797" class="btn btn-default btn-lg">
+                              <i class="fa fa-microchip fa-fw"></i>
+                              <span class="network-name">MathSciNet</span>
+                            </a>
+                </td>   
+                <td>
                 <a href="http://steamcommunity.com/id/Toninus/" class="btn btn-default btn-lg">
                               <i class="fa fa-steam fa-fw"></i>
                               <span class="network-name">Steam</span>
                             </a>
-                </td>    
-              </tr>
+                </td>   
               <tr>
                 <td>
                 <a href="https://it.pinterest.com/MasterToninus/math-phys/" class="btn btn-default btn-lg">
                             <i class="fa fa-pinterest fa-fw"></i>
                             <span class="network-name">Pinterest</span>
                           </a>
-                </td>    
+                </td>   
                 <td>
                 <a href="mailto:antoniomichele.miti@gmail.com" class="btn btn-default btn-lg">
                               <i class="fa fa-envelope fa-fw"></i>

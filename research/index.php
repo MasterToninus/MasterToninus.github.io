@@ -123,18 +123,7 @@
             </ul>          
         </div>
 
-        <!-- --------------------------------------------- -->
-        <!-- Bibliometrics -->
-        <!-- --------------------------------------------- -->
-        <div class="sec" id="bibliometrics">
-          <div class="sec-title" style="font-size: 0.95em;">Bibliometrics</div>
-            <p style="font-size: 0.9em; line-height: 1.45;">
-              If you are really interested in this kind of data, you can look at the dedicated
-              <a href="../bibliometrics/" target="_self">
-                PAGE <i class="ai ai-altmetric  ai-fw"></i>
-              </a>.
-            </p>
-        </div>
+
 
 
         <!-- --------------------------------------------- -->
@@ -203,6 +192,13 @@
         <!-- --------------------------------------------- -->        
         <div class="sec">
           <div class="big-title shaded" id="publications">Publications</div> 
+
+           <p style="font-size: 0.9em; line-height: 1.45;">
+            <a href="../bibliometrics/" target="_self">
+              <i class="ai ai-open-data ai-fw"></i> Bibliometrics - dedicated page
+            </a>
+          </p>
+
           <table class="list">
           <?php
             foreach ($publications as $bibentry) {

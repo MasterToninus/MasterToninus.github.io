@@ -98,6 +98,53 @@
         margin: 0.5em 0 1em 0;
       }
 
+
+      /*
+       * Responsive wrapper for the indicators table.
+       *
+       * The global stylesheet sets overflow-x: hidden on generic div elements.
+       * That rule prevents horizontal scrolling on mobile, so it must be
+       * explicitly overridden here for this wrapper.
+       */
+      .table-scroll {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto !important;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      /*
+       * Keep the indicators table as an actual table on every screen size.
+       * The external mobile CSS turns .left and .right cells into block
+       * elements below 520px; the more specific rules below undo that only
+       * for this table.
+       */
+      .bibliometrics-table {
+        width: 100%;
+        min-width: 660px;
+        border-collapse: collapse;
+        table-layout: auto;
+      }
+
+      .bibliometrics-table td {
+        display: table-cell !important;
+        vertical-align: middle;
+        white-space: nowrap;
+      }
+
+      .bibliometrics-table .left {
+        width: auto;
+        min-width: 130px;
+        text-align: right;
+      }
+
+      .bibliometrics-table .right {
+        width: auto;
+        text-align: center;
+      }
+
       /*
        * Mobile adjustment for the nested citation lists.
        *
@@ -111,6 +158,40 @@
           margin-left: 15px;
           padding-left: 15px;
           text-align: left;
+        }
+
+        /*
+         * Mobile override for the indicators table.
+         * This keeps the row/column structure intact and relies on
+         * horizontal scrolling instead of stacking cells vertically.
+         */
+        .table-scroll {
+          margin-left: 0;
+          margin-right: 0;
+          padding-bottom: 0.4em;
+          overflow-x: auto !important;
+        }
+
+        .bibliometrics-table {
+          width: max-content;
+          min-width: 660px;
+          font-size: 0.9em;
+        }
+
+        .bibliometrics-table .left,
+        .bibliometrics-table .right {
+          display: table-cell !important;
+          width: auto !important;
+          min-width: unset !important;
+          padding: 5px 10px !important;
+        }
+
+        .bibliometrics-table .left {
+          text-align: right !important;
+        }
+
+        .bibliometrics-table .right {
+          text-align: center !important;
         }
       }
     </style>
@@ -512,7 +593,7 @@
                   <td class="left"><b> </b></td>
                   <td class="right">
                     <a href="#self-counted-citations">
-                      <i class="ai ai-user ai-fw"></i>
+                      <i class="ai ai-open-data ai-fw"></i>
                       <b>Self-assessed</b>
                     </a>
                   </td>

@@ -1,11 +1,18 @@
+<!-- WARNING -->
+<!-- This page has been generated in "wibe-coding" using chatgpt Plus (...) -->
+<!-- TODO :
+      * scrape data from Scopus, WoS, and Google Scholar to automatically update the data using api call
+      * self-assessment data computed from a local database of citations (xml file or mysql database provided by Aruba hosting)
+      * add a "last update" timestamp to the page footer
+-->
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" href="../img/favicon.ico" type="image/x-icon">
   <!-- -->
   <!-- HEADER -->
   <!-- -->
   <head>
     <title>Bibliometrics | Antonio Michele Miti</title>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../src/style.css">
@@ -13,6 +20,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;display=swap" rel="stylesheet">
+
+    <style>
+      /* Self-counted citations list */
+      .citations-list {
+        font-size: 0.92em;
+        line-height: 1.45em;
+        margin: 10px 0 0 25px;
+        padding-left: 20px;
+      }
+
+      .citations-list > li {
+        margin-bottom: 1.2em;
+      }
+
+      .cited-article-main {
+        margin-bottom: 0.4em;
+      }
+
+      .citing-papers {
+        font-size: 0.95em;
+        margin: 0.5em 0 0 25px;
+        padding-left: 18px;
+      }
+
+      .citing-papers > li {
+        margin-bottom: 0.6em;
+      }
+
+      @media screen and (max-width: 520px) {
+        .citations-list,
+        .citing-papers {
+          margin-left: 15px;
+          padding-left: 15px;
+          text-align: left;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -87,7 +131,7 @@
 
             TODO
               - web scraping of Scopus, WoS, and Google Scholar to automatically update the data using api call
-              - self-assessment data compoutet from a local database of citations (csv file or maybe is better something tree-like like yaml)
+              - self-assessment data computed from a local database of citations (csv file or maybe is better something tree-like like yaml)
               - 
           *///=============================================================
 
@@ -125,22 +169,23 @@
               'articles'  => 7,
               'citations' => 41,
               'hindex'    => 4,
-              'url'       => 'https://scholar.google.com/citations?user=DWKPuJYAAAAJ&hl=en',
+              'url'       => 'https://scholar.google.com/citations?user=DWKPuJYAAAAJ&amp;hl=en',
             ],
           ];
         ?>
 
-<!-- --------------------------------------------- -->
+        <!-- --------------------------------------------- -->
         <!-- Indicators Table -->
         <!-- --------------------------------------------- -->
         <div class="sec" id="indicators">
           <!-- <div class="sec-title">Indicators</div> -->
           <div class="sec-title">  </div>
 
-          <table class="list">
-            <tbody>
-              <tr>
-                <td class="left"><b> Indicators </b></td>
+          <div class="table-scroll">
+            <table class="list bibliometrics-table">
+              <tbody>
+                <tr>
+                  <td class="left"><b>Indicators</b></td>
                 <td class="right">
                   <i class="ai ai-user ai-fw"></i>
                   <b>Self-assessed</b>
@@ -161,7 +206,7 @@
                 </td>
 
                 <td class="right">
-                  <a href="https://scholar.google.com/citations?user=DWKPuJYAAAAJ&hl=en" target="_blank" rel="noopener">
+                  <a href="https://scholar.google.com/citations?user=DWKPuJYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
                     <i class="ai ai-google-scholar ai-fw"></i>
                     <b>GScholar</b>
                   </a>
@@ -195,259 +240,225 @@
                 <td class="right">1</td>
                 <td class="right">4</td>
               </tr>
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+          </div>
         </div>
 
 
-<!--
-  =============================================================
-  * Self-counted citations from XML
-  * -------------------------------------------------------------
-  * Reads an XML file and prints only articles having a non-empty
-  * citations list. For each such article, it prints:
-  * - title
-  * - authors
-  * - linkable DOI, when available
-  * - the same data for each citing paper
-  *
-  * Requires SimpleXML, usually enabled by default in PHP.
-  * =============================================================
--->
+        <!-- --------------------------------------------- -->
+        <!-- Self-counted citations from XML -->
+        <!-- --------------------------------------------- -->
+        <!--
+          Reads an XML file and prints only articles having a non-empty
+          citations list. For each such article, it prints:
+          - title
+          - authors
+          - linkable DOI, when available
+          - the same data for each citing paper
 
-<p>
-  Current state of this page is very tentative.
-  Data are updated as of June 2026.
-</p>
+          Requires SimpleXML, usually enabled by default in PHP.
+        -->
 
-<?php
+        <p>
+          Current state of this page is very tentative.
+          Data are updated as of June 2026.
+        </p>
 
-  /* ---------- Configuration ---------- */
+        <?php
 
-  $xml_path = __DIR__ . "/../data/citations.xml";
+          /* ---------- Configuration ---------- */
 
-
-  /* ---------- Helpers ---------- */
-
-  function html($string) {
-    return htmlspecialchars((string) $string, ENT_QUOTES, "UTF-8");
-  }
-
-  function doi_url($doi) {
-    $doi = trim((string) $doi);
-
-    if ($doi === "" || strtolower($doi) === "null") {
-      return "";
-    }
-
-    if (preg_match("/^10\.\S+$/", $doi)) {
-      return "https://doi.org/" . $doi;
-    }
-
-    return "";
-  }
-
-  function print_doi($doi) {
-    $doi = trim((string) $doi);
-    $url = doi_url($doi);
-
-    if ($doi === "" || strtolower($doi) === "null") {
-      echo "No DOI";
-      return;
-    }
-
-    if ($url !== "") {
-      echo '<a href="' . html($url) . '" target="_blank" rel="noopener">' . html($doi) . '</a>';
-      return;
-    }
-
-    echo html($doi);
-  }
-
-  function xml_text($node, $field, $default = "") {
-    if (isset($node->{$field})) {
-      return trim((string) $node->{$field});
-    }
-
-    return $default;
-  }
-
-  function xml_article_has_citations($article) {
-    return (
-      isset($article->citations) &&
-      isset($article->citations->citation) &&
-      count($article->citations->citation) > 0
-    );
-  }
+          $xml_path = __DIR__ . "/../data/citations.xml";
 
 
-  /* ---------- Load XML ---------- */
+          /* ---------- Helpers ---------- */
 
-  $articles_with_citations = [];
+          function html($string) {
+            return htmlspecialchars((string) $string, ENT_QUOTES, "UTF-8");
+          }
 
-  if (!function_exists("simplexml_load_file")) {
-    echo "<p><b>Error:</b> SimpleXML is not available on this server.</p>";
-  } elseif (!file_exists($xml_path)) {
-    echo "<p><b>Error:</b> XML file not found.</p>";
-  } else {
-    libxml_use_internal_errors(true);
+          function doi_url($doi) {
+            $doi = trim((string) $doi);
 
-    $data = simplexml_load_file($xml_path);
+            if ($doi === "" || strtolower($doi) === "null") {
+              return "";
+            }
 
-    if ($data === false) {
-      echo "<p><b>Error:</b> unable to parse XML file.</p>";
+            if (preg_match("/^10\.\S+$/", $doi)) {
+              return "https://doi.org/" . $doi;
+            }
 
-      foreach (libxml_get_errors() as $error) {
-        echo "<p><em>" . html($error->message) . "</em></p>";
-      }
+            return "";
+          }
 
-      libxml_clear_errors();
-    } elseif (!isset($data->articles) || !isset($data->articles->article)) {
-      echo "<p><b>Error:</b> invalid XML structure.</p>";
-    } else {
-      foreach ($data->articles->article as $article) {
-        if (xml_article_has_citations($article)) {
-          $articles_with_citations[] = $article;
-        }
-      }
-    }
-  }
+          function print_doi($doi) {
+            $doi = trim((string) $doi);
+            $url = doi_url($doi);
 
-?>
+            if ($doi === "" || strtolower($doi) === "null") {
+              echo "No DOI";
+              return;
+            }
 
-<!-- --------------------------------------------- -->
-<!-- Self-counted citations -->
-<!-- --------------------------------------------- -->
-<div class="sec" id="self-counted-citations">
-  <div class="sec-title">Self-counted citations</div>
+            if ($url !== "") {
+              echo '<a href="' . html($url) . '" target="_blank" rel="noopener">' . html($doi) . '</a>';
+              return;
+            }
 
-  <?php if (file_exists($xml_path)): ?>
-    <p>
-      Last update: <?php echo date("F d Y H:i:s.", filemtime($xml_path)); ?>
-      <br>
-    </p>
-  <?php endif; ?>
+            echo html($doi);
+          }
 
-  <?php if (count($articles_with_citations) > 0): ?>
+          function xml_text($node, $field, $default = "") {
+            if (isset($node->{$field})) {
+              return trim((string) $node->{$field});
+            }
 
-    <table class="list">
-      <tbody>
+            return $default;
+          }
 
-        <?php foreach ($articles_with_citations as $article): ?>
+          function xml_article_has_citations($article) {
+            return (
+              isset($article->citations) &&
+              isset($article->citations->citation) &&
+              count($article->citations->citation) > 0
+            );
+          }
 
-          <!-- Cited article -->
-          <tr>
-            <td class="left">
-              <b>Cited article</b>
-            </td>
 
-            <td class="right">
-              <b><?php echo html(xml_text($article, "title", "Untitled")); ?></b>
+          /* ---------- Load XML ---------- */
+
+          $articles_with_citations = [];
+
+          if (!function_exists("simplexml_load_file")) {
+            echo "<p><b>Error:</b> SimpleXML is not available on this server.</p>";
+          } elseif (!file_exists($xml_path)) {
+            echo "<p><b>Error:</b> XML file not found.</p>";
+          } else {
+            libxml_use_internal_errors(true);
+
+            $data = simplexml_load_file($xml_path);
+
+            if ($data === false) {
+              echo "<p><b>Error:</b> unable to parse XML file.</p>";
+
+              foreach (libxml_get_errors() as $error) {
+                echo "<p><em>" . html($error->message) . "</em></p>";
+              }
+
+              libxml_clear_errors();
+            } elseif (!isset($data->articles) || !isset($data->articles->article)) {
+              echo "<p><b>Error:</b> invalid XML structure.</p>";
+            } else {
+              foreach ($data->articles->article as $article) {
+                if (xml_article_has_citations($article)) {
+                  $articles_with_citations[] = $article;
+                }
+              }
+            }
+          }
+
+        ?>
+
+        <!-- --------------------------------------------- -->
+        <!-- Self-counted citations -->
+        <!-- --------------------------------------------- -->
+        <div class="sec" id="self-counted-citations">
+          <div class="sec-title">Self-counted citations</div>
+
+          <?php if (file_exists($xml_path)): ?>
+            <p>
+              Last update: <?php echo date("F d Y H:i:s.", filemtime($xml_path)); ?>
               <br>
-              <?php echo html(xml_text($article, "authors")); ?>
-              <br>
-              DOI:
-              <?php print_doi(xml_text($article, "doi")); ?>
-            </td>
-          </tr>
+            </p>
+          <?php endif; ?>
 
-          <!-- Citing papers -->
-          <tr>
-            <td class="left">
-              <b>Citing papers</b>
-            </td>
+          <?php if (count($articles_with_citations) > 0): ?>
 
-            <td class="right">
-              <table class="list">
-                <tbody>
-                  <?php foreach ($article->citations->citation as $citation): ?>
-                    <tr>
-                      <td class="left">
+            <ol class="citations-list">
+
+              <?php foreach ($articles_with_citations as $article): ?>
+
+                <li class="cited-article">
+                  <div class="cited-article-main">
+                    <b><?php echo html(xml_text($article, "title", "Untitled")); ?></b>
+                    <br>
+                    <?php echo html(xml_text($article, "authors")); ?>
+                    <br>
+                    DOI:
+                    <?php print_doi(xml_text($article, "doi")); ?>
+                  </div>
+
+                  <ol class="citing-papers">
+                    <?php foreach ($article->citations->citation as $citation): ?>
+                      <li>
                         <b><?php echo html(xml_text($citation, "title", "Untitled")); ?></b>
-                      </td>
-
-                      <td class="right">
+                        <br>
                         <?php echo html(xml_text($citation, "authors")); ?>
                         <br>
                         DOI:
                         <?php print_doi(xml_text($citation, "doi")); ?>
-                      </td>
-                    </tr>
-                  <?php endforeach; ?>
-                </tbody>
-              </table>
-            </td>
-          </tr>
+                      </li>
+                    <?php endforeach; ?>
+                  </ol>
+                </li>
 
-        <?php endforeach; ?>
+              <?php endforeach; ?>
 
-      </tbody>
-    </table>
+            </ol>
 
-  <?php else: ?>
+          <?php else: ?>
 
-    <table class="list">
-      <tr>
-        <td class="left"><b>-</b></td>
-        <td class="right">No self-counted citations inserted.</td>
-      </tr>
-    </table>
+            <table class="list">
+              <tr>
+                <td class="left"><b>-</b></td>
+                <td class="right">No self-counted citations inserted.</td>
+              </tr>
+            </table>
 
-  <?php endif; ?>
-</div>
-
-
-
-
-
-        <!-- --------------------------------------------- -->
-        <!-- Footer -->
-        <!-- --------------------------------------------- -->
-        <footer>
-          <div id="content">
-            <div id="content-container">
-              <div id="footer">
-                <br>
-                <br>
-                <br>
-
-                <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
-
-                  <div style="margin-bottom: 0.8em;">
-                    <b>Disclaimer.</b>
-                    These data are provided only for administrative purposes.
-                    They should not be read as a mathematical, scientific, or human evaluation
-                    of the work listed elsewhere on this website.
-                    Bibliometric values may differ across databases, update schedules,
-                    author-profile mergers, indexing choices, and the general mood
-                    of the algorithmic bureaucracy involved.
-                  </div>
-
-                  <?php
-                    $files = array($csv_path, "index.php");
-                    $times = array();
-
-                    foreach ($files as $file) {
-                      if (file_exists($file)) {
-                        array_push($times, filemtime($file));
-                      }
-                    }
-
-                    if (count($times) > 0) {
-                      echo "Last update: " . date("F d Y H:i:s.", max($times));
-                    }
-                  ?>
-
-                  <br>
-
-                  Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
-                  &emsp; Italsing srl. &emsp; All Rights Reserved.
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+          <?php endif; ?>
+        </div>
       </div>
     </div>
+
+    <!-- --------------------------------------------- -->
+    <!-- Footer -->
+    <!-- --------------------------------------------- -->
+    <footer>
+      <div id="footer">
+        <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
+
+          <div style="margin-bottom: 0.8em;">
+            <b>Disclaimer.</b>
+            These data are provided only for administrative purposes.
+            They should not be read as a mathematical, scientific, or human evaluation
+            of the work listed elsewhere on this website.
+            Bibliometric values may differ across databases, update schedules,
+            author-profile mergers, indexing choices, and the general mood
+            of the algorithmic bureaucracy involved.
+          </div>
+
+          <?php
+            $files = array($xml_path ?? null, __FILE__);
+            $times = array();
+
+            foreach ($files as $file) {
+              if (!empty($file) && file_exists($file)) {
+                array_push($times, filemtime($file));
+              }
+            }
+
+            if (count($times) > 0) {
+              echo "Last update: " . date("F d Y H:i:s.", max($times));
+            }
+          ?>
+
+          <br>
+
+          Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
+          &emsp; Italsing srl. &emsp; All Rights Reserved.
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

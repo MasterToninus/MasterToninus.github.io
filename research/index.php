@@ -395,7 +395,7 @@
         Powered by <a href="http://www.monperrus.net/martin/bibtexbrowser/">bibtexbrowser</a><br>
 
         <?php
-          $val = max(filemtime("data/activities.csv"),filemtime("data/material.csv"),filemtime("index.php"),filemtime("stuff/index.php"));
+          $val = max(filemtime("../data/activities.csv"),filemtime("../data/material.csv"),filemtime("./index.php"),filemtime("../index.php"));
           echo "Last update: ".date("F d Y H:i:s.",$val); 
         ?>
         <br>

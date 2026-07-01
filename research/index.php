@@ -124,6 +124,20 @@
         </div>
 
         <!-- --------------------------------------------- -->
+        <!-- Bibliometrics -->
+        <!-- --------------------------------------------- -->
+        <div class="sec" id="bibliometrics">
+          <div class="sec-title" style="font-size: 0.95em;">Bibliometrics</div>
+            <p style="font-size: 0.9em; line-height: 1.45;">
+              If you are really interested in this kind of data, you can look at the dedicated
+              <a href="bibliometrics/" target="_self">
+                <i class="ai ai-open-access ai-fw"></i> page
+              </a>.
+            </p>
+        </div>
+
+
+        <!-- --------------------------------------------- -->
         <!-- PhP: Generate db from bib file                 -->
         <!-- --------------------------------------------- -->  
         <?php

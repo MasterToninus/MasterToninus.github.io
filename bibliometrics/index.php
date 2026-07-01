@@ -24,7 +24,24 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;display=swap" rel="stylesheet">
 
     <style>
-      /* Self-counted citations list */
+      /*
+       * Page-specific CSS rules.
+       *
+       * The general layout, colors, typography, and dark-mode overrides are
+       * inherited from ../src/style.css and ../src/darkmode.css. The rules
+       * below are intentionally local: they only adjust the citation list and
+       * the bibliometric indicators table on this page.
+       */
+
+      /*
+       * Self-counted citation list.
+       *
+       * The citation record is rendered as a nested ordered list rather than
+       * as a table: first-level entries are my cited articles, second-level
+       * entries are the papers citing them. The font is slightly smaller than
+       * the surrounding text so that long titles remain readable without
+       * dominating the page.
+       */
       .citations-list {
         font-size: 0.92em;
         line-height: 1.45em;
@@ -32,25 +49,40 @@
         padding-left: 20px;
       }
 
+      /* Add vertical separation between different cited articles. */
       .citations-list > li {
         margin-bottom: 1.2em;
       }
 
+      /* Keep a small gap between a cited article and its list of citations. */
       .cited-article-main {
         margin-bottom: 0.4em;
       }
 
+      /*
+       * Nested list of citing papers.
+       *
+       * This is slightly smaller than the first-level list, since these items
+       * are secondary information attached to the corresponding cited article.
+       */
       .citing-papers {
         font-size: 0.95em;
         margin: 0.5em 0 0 25px;
         padding-left: 18px;
       }
 
+      /* Add modest spacing between citing papers. */
       .citing-papers > li {
         margin-bottom: 0.6em;
       }
 
-      /* Bibliometric indicators table */
+      /*
+       * Bibliometric indicators table.
+       *
+       * The first column contains the names of the indicators and is therefore
+       * styled in italics. The remaining columns contain numerical values and
+       * are centered for easier comparison across databases.
+       */
       .bibliometrics-table td:first-child {
         font-style: italic;
       }
@@ -59,6 +91,13 @@
         text-align: center;
       }
 
+      /*
+       * Mobile adjustment for the nested citation lists.
+       *
+       * On small screens, reduce indentation so that long titles have more
+       * horizontal space. The bibliometric table itself is handled by the
+       * table-specific responsive rules in the external stylesheet, when used.
+       */
       @media screen and (max-width: 520px) {
         .citations-list,
         .citing-papers {
@@ -447,9 +486,8 @@
         <!-- Indicators Table -->
         <!-- --------------------------------------------- -->
         <div class="sec" id="indicators">
-          <!-- <div class="sec-title">Indicators</div> -->
-          <div class="sec-title">  </div>
-
+          <div class="sec-title">Indicators</div> 
+          
           <!--
             The wrapper below allows horizontal scrolling on small screens.
             This keeps the table layout intact on mobile devices instead of
@@ -459,7 +497,7 @@
             <table class="list bibliometrics-table">
               <tbody>
                 <tr>
-                  <td class="left"><b>Indicators</b></td>
+                  <td class="left"><b> </b></td>
                   <td class="right">
                     <a href="#self-counted-citations">
                       <i class="ai ai-user ai-fw"></i>

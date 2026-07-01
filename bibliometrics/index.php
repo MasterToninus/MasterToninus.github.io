@@ -629,7 +629,7 @@
               </tr>
 
               <tr>
-                <td class="left"><b>Number of citations</b></td>
+                <td class="left"><b>Citations</b></td>
                 <td class="right"><?php echo html($bibliometric_data["self-assessed"]["citations"]); ?></td>
                 <td class="right"><?php echo html($bibliometric_data["scopus"]["citations"]); ?></td>
                 <td class="right"><?php echo html($bibliometric_data["wos"]["citations"]); ?></td>
@@ -639,7 +639,7 @@
               <tr>
                 <td class="left">
                   <a href="https://en.wikipedia.org/wiki/H-index" target="_blank" rel="noopener">
-                    <b>h-index</b>
+                    <b>H-index</b>
                   </a>
                 </td>
                 <td class="right"><?php echo html($bibliometric_data["self-assessed"]["hindex"]); ?></td>

@@ -193,11 +193,13 @@
         <div class="sec">
           <div class="big-title shaded" id="publications">Publications</div> 
 
-           <p style="font-size: 0.9em; line-height: 1.45;">
-            <a href="../bibliometrics/" target="_self">
-              <i class="ai ai-open-data ai-fw"></i> Bibliometrics - dedicated page
-            </a>
-          </p>
+          <div class="sec-small">
+            <table class="center" style="width: 80%;text-align: center">
+             <tr>
+              <td>(<a href="../bibliometrics/" class="btn btn-default btn-lg"><i class="fa fa-gauge fa-fw"></i><span class="network-name"> Bibliometrics - dedicated page</span></a> )
+            </td>
+		        </table>            
+          </div>
 
           <table class="list">
           <?php

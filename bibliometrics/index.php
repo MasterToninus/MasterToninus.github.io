@@ -91,6 +91,13 @@
         text-align: center;
       }
 
+      .bibliometrics-warning {
+        color: #b00020;
+        font-size: 0.92em;
+        line-height: 1.45;
+        margin: 0.5em 0 1em 0;
+      }
+
       /*
        * Mobile adjustment for the nested citation lists.
        *
@@ -486,8 +493,13 @@
         <!-- Indicators Table -->
         <!-- --------------------------------------------- -->
         <div class="sec" id="indicators">
-          <div class="sec-title">Indicators</div> 
-          
+          <div class="sec-title">Indicators</div>
+            
+          <p class="bibliometrics-warning">
+            <b>Warning:</b> <em>Current state of this page is very tentative. Data are updated as of June 2026.</em>
+          </p>
+
+
           <!--
             The wrapper below allows horizontal scrolling on small screens.
             This keeps the table layout intact on mobile devices instead of
@@ -570,11 +582,6 @@
           but they still contribute to the self-assessed article count if they
           have a valid DOI.
         -->
-
-        <p>
-          Current state of this page is very tentative.
-          Data are updated as of June 2026.
-        </p>
 
         <!-- --------------------------------------------- -->
         <!-- Citation record -->

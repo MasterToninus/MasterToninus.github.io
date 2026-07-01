@@ -579,7 +579,14 @@
           <p class="bibliometrics-warning">
             <b>Warning:</b> <em>Current state of this page is very tentative. Data are updated as of June 2026.</em>
           </p>
-
+          <br>
+             
+          <p class="bibliometrics-warning">
+            <b>Web scraping test:</b>
+              <a href="./google-scholar-scraper.php" target="_blank" rel="noopener">Scholar</a>,
+              <a href="./scopus-scraper.php" target="_blank" rel="noopener">Scopus</a>,
+              <a href="./xml-citations-scraper.php" target="_blank" rel="noopener">XML</a>.
+            </p>          
 
           <!--
             The wrapper below allows horizontal scrolling on small screens.

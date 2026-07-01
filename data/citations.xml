@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<citations_data>
+  <description>Self-counted citations grouped by cited article.</description>
+  <articles>
+    <article>
+      <title>Multisymplectic actions of compact Lie groups on spheres</title>
+      <authors>A. M. Miti, L. Ryvkin</authors>
+      <doi>10.4310/JSG.2020.v18.n6.a6</doi>
+      <citations>
+        <citation>
+          <title>Hamiltonian dynamics and geometry on the two-plectic six-sphere</title>
+          <authors>M. Wagner, T. Wurzbacher</authors>
+          <doi>accepted</doi>
+          <indexed>
+            <wos>false</wos>
+            <scopus>false</scopus>
+            <scholar>true</scholar>
+          </indexed>
+        </citation>
+      </citations>
+    </article>
+    <article>
+      <title>Derivation of the HOMFLYPT knot polynomial via helicity and geometric quantization</title>
+      <authors>A. M. Miti, M. Spera</authors>
+      <doi>10.1007/s40574-020-00254-5</doi>
+      <citations/>
+    </article>
+    <article>
+      <title>A Hydrodynamical Homotopy Co-momentum Map And A Multisymplectic Interpretation Of Higher-order Linking Numbers</title>
+      <authors>A. M. Miti, M. Spera</authors>
+      <doi>10.1017/s1446788720000518</doi>
+      <citations/>
+    </article>
+    <article>
+      <title>Observables on multisymplectic manifolds and higher Courant algebroids</title>
+      <authors>A. M. Miti, M. Zambon</authors>
+      <doi>10.1142/S0219199725500063</doi>
+      <citations>
+        <citation>
+          <title>Infinitesimal symmetries of bundle gerbes and Courant algebroids</title>
+          <authors>D. Djounvouna, D. Krepski</authors>
+          <doi>10.1007/s10711-024-00897-0</doi>
+          <indexed>
+            <wos>false</wos>
+            <scopus>false</scopus>
+            <scholar>true</scholar>
+          </indexed>
+        </citation>
+        <citation>
+          <title>Compatible E-differential forms on Lie algebroids over (pre-) multisymplectic manifolds</title>
+          <authors>N. Ikeda</authors>
+          <doi>10.3842/SIGMA.2024.025</doi>
+          <indexed>
+            <wos>false</wos>
+            <scopus>false</scopus>
+            <scholar>true</scholar>
+          </indexed>
+        </citation>
+      </citations>
+    </article>
+    <article>
+      <title>Reduction of L(infty)-Algebras of Observables on Multisymplectic Manifolds</title>
+      <authors>C. Blacker, A. M. Miti, L. Ryvkin</authors>
+      <doi>10.3842/SIGMA.2024.061</doi>
+      <citations>
+        <citation>
+          <title>Covariant canonical formulations of classical field theories</title>
+          <authors>F. Gieres</authors>
+          <doi>10.21468/SciPostPhysLectNotes.77</doi>
+          <indexed>
+            <wos>false</wos>
+            <scopus>false</scopus>
+            <scholar>true</scholar>
+          </indexed>
+        </citation>
+        <citation>
+          <title>More Insights into Symmetries in Multisymplectic Field Theories</title>
+          <authors>A. Guerra IV, N. Román-Roy</authors>
+          <doi>10.3390/sym15020390</doi>
+          <indexed>
+            <wos>false</wos>
+            <scopus>false</scopus>
+            <scholar>true</scholar>
+          </indexed>
+        </citation>
+        <citation>
+          <title>Multisymplectic observable reduction using constraint triples</title>
+          <authors>A. M. Miti, L. Ryvkin</authors>
+          <doi>10.1016/j.difgeo.2025.102272</doi>
+          <indexed>
+            <wos>false</wos>
+            <scopus>false</scopus>
+            <scholar>true</scholar>
+          </indexed>
+        </citation>
+        <citation>
+          <title>Constraint vector bundles and reduction of Lie (bi-)algebroids</title>
+          <authors>M. Dippell, D. Kern</authors>
+          <doi>10.1016/j.difgeo.2025.102242</doi>
+          <indexed>
+            <wos>false</wos>
+            <scopus>false</scopus>
+            <scholar>true</scholar>
+          </indexed>
+        </citation>
+        <citation>
+          <title>Reduction and reconstruction of multisymplectic Lie systems</title>
+          <authors>J. de Lucas, X. Gràcia, X. Rivas, N. Román-Roy, S. Vilariño</authors>
+          <doi>10.1088/1751-8121/ac78ab</doi>
+          <indexed>
+            <wos>false</wos>
+            <scopus>false</scopus>
+            <scholar>true</scholar>
+          </indexed>
+        </citation>
+        <citation>
+          <title>A description of classical field equations using extensions of graded Poisson brackets</title>
+          <authors>M. de Leon, R. Izquierdo-Lopez</authors>
+          <doi>10.1142/S0219887826502439</doi>
+          <indexed>
+            <wos>false</wos>
+            <scopus>false</scopus>
+            <scholar>true</scholar>
+          </indexed>
+        </citation>
+        <citation>
+          <title>Reduction Of Poisson Manifolds With Hamiltonian Lie Algebroids</title>
+          <authors>Y. Hirota, N. Ikeda</authors>
+          <doi>10.1016/S0034-4877(25)00063-1</doi>
+          <indexed>
+            <wos>false</wos>
+            <scopus>true</scopus>
+            <scholar>false</scholar>
+          </indexed>
+        </citation>
+      </citations>
+    </article>
+    <article>
+      <title>Measurement-based uncomputation of quantum circuits for modular arithmetic</title>
+      <authors>A. Luongo, A. M. Miti, V. Narasimhachar, A. Sireesh</authors>
+      <doi>10.1109/DAC63849.2025.11132981</doi>
+      <arxiv>2407.20167</arxiv>
+      <citations/>
+    </article>
+    <article>
+      <title>Multisymplectic observable reduction using constraint triples</title>
+      <authors>A. M. Miti, L. Ryvkin</authors>
+      <doi>10.1016/j.difgeo.2025.102272</doi>
+      <citations/>
+    </article>
+    <article>
+      <title>L(infty)-morphisms between twisted Courant r-Lie algebras and untwisted Courant (r+1)-Lie algebroids</title>
+      <authors>A. M. Miti</authors>
+      <doi nil="true"/>
+      <status>Submitted to peer-review</status>
+      <citations/>
+    </article>
+  </articles>
+</citations_data>

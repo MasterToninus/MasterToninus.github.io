@@ -200,187 +200,206 @@
         </div>
 
 
-        <!--
-          =============================================================
-          * Self-counted citations from YAML
-          * -------------------------------------------------------------
-          * Reads a YAML file and prints only articles having a non-empty
-          * citations list. For each such article, it prints:
-          * - title
-          * - authors
-          * - linkable DOI, when available
-          * - the same data for each citing paper
-          *
-          * Requires the PHP YAML extension:
-          * https://www.php.net/manual/en/book.yaml.php
+<!--
+  =============================================================
+  * Self-counted citations from XML
+  * -------------------------------------------------------------
+  * Reads an XML file and prints only articles having a non-empty
+  * citations list. For each such article, it prints:
+  * - title
+  * - authors
+  * - linkable DOI, when available
+  * - the same data for each citing paper
+  *
+  * Requires SimpleXML, usually enabled by default in PHP.
+  * =============================================================
+-->
 
-          * ATTENzione: non posso installare l'estensione YAML su questo server, quindi non posso usare questa funzione.
-          * =============================================================
-        -->
+<p>
+  Current state of this page is very tentative.
+  Data are updated as of June 2026.
+</p>
 
-        <p>
-          Current state of this page is very tentative.
-          Data are updated as of June 2026.
-        </p>
-        <?php
+<?php
 
+  /* ---------- Configuration ---------- */
 
-          /* ---------- Configuration ---------- */
-
-          $yaml_path = __DIR__ . "../data/citations.yaml";
+  $xml_path = __DIR__ . "/../data/citations.xml";
 
 
+  /* ---------- Helpers ---------- */
 
-          /* ---------- Helpers ---------- */
+  function html($string) {
+    return htmlspecialchars((string) $string, ENT_QUOTES, "UTF-8");
+  }
 
-          function html($string) {
-            return htmlspecialchars((string) $string, ENT_QUOTES, "UTF-8");
-          }
+  function doi_url($doi) {
+    $doi = trim((string) $doi);
 
-          function doi_url($doi) {
-            $doi = trim((string) $doi);
+    if ($doi === "" || strtolower($doi) === "null") {
+      return "";
+    }
 
-            if ($doi === "" || strtolower($doi) === "null") {
-              return "";
-            }
+    if (preg_match("/^10\.\S+$/", $doi)) {
+      return "https://doi.org/" . $doi;
+    }
 
-            if (preg_match("/^10\.\S+$/", $doi)) {
-              return "https://doi.org/" . $doi;
-            }
+    return "";
+  }
 
-            return "";
-          }
+  function print_doi($doi) {
+    $doi = trim((string) $doi);
+    $url = doi_url($doi);
 
-          function print_doi($doi) {
-            $doi = trim((string) $doi);
-            $url = doi_url($doi);
+    if ($doi === "" || strtolower($doi) === "null") {
+      echo "No DOI";
+      return;
+    }
 
-            if ($doi === "" || strtolower($doi) === "null") {
-              echo "No DOI";
-              return;
-            }
+    if ($url !== "") {
+      echo '<a href="' . html($url) . '" target="_blank" rel="noopener">' . html($doi) . '</a>';
+      return;
+    }
 
-            if ($url !== "") {
-              echo '<a href="' . html($url) . '" target="_blank" rel="noopener">' . html($doi) . '</a>';
-              return;
-            }
+    echo html($doi);
+  }
 
-            echo html($doi);
-          }
+  function xml_text($node, $field, $default = "") {
+    if (isset($node->{$field})) {
+      return trim((string) $node->{$field});
+    }
 
-          function has_non_empty_citations($article) {
-            return (
-              isset($article["citations"]) &&
-              is_array($article["citations"]) &&
-              count($article["citations"]) > 0
-            );
-          }
+    return $default;
+  }
 
-
-          /* ---------- Load YAML ---------- */
-
-          if (!function_exists("yaml_parse_file")) {
-            echo "<p><b>Error:</b> the PHP YAML extension is not installed.</p>";
-            return;
-          }
-
-          if (!file_exists($yaml_path)) {
-            echo "<p><b>Error:</b> YAML file not found.</p>";
-            return;
-          }
-
-          $data = yaml_parse_file($yaml_path);
-
-          if (
-            !is_array($data) ||
-            !isset($data["articles"]) ||
-            !is_array($data["articles"])
-          ) {
-            echo "<p><b>Error:</b> invalid YAML structure.</p>";
-            return;
-          }
-
-          $articles_with_citations = array_filter($data["articles"], "has_non_empty_citations");
-        ?>
+  function xml_article_has_citations($article) {
+    return (
+      isset($article->citations) &&
+      isset($article->citations->citation) &&
+      count($article->citations->citation) > 0
+    );
+  }
 
 
-        <!-- --------------------------------------------- -->
-        <!-- Self-counted citations -->
-        <!-- --------------------------------------------- -->
-        <div class="sec" id="self-counted-citations">
-          <div class="sec-title">Self-counted citations</div>
-          <p>
-            Last update: <?php echo date("F d Y H:i:s.", filemtime($yaml_path)); ?>
-            <br>
-          </p>
+  /* ---------- Load XML ---------- */
 
-          <?php if (count($articles_with_citations) > 0): ?>
+  $articles_with_citations = [];
 
-            <table class="list">
-              <tbody>
+  if (!function_exists("simplexml_load_file")) {
+    echo "<p><b>Error:</b> SimpleXML is not available on this server.</p>";
+  } elseif (!file_exists($xml_path)) {
+    echo "<p><b>Error:</b> XML file not found.</p>";
+  } else {
+    libxml_use_internal_errors(true);
 
-                <?php foreach ($articles_with_citations as $article): ?>
+    $data = simplexml_load_file($xml_path);
 
-                  <!-- Cited article -->
-                  <tr>
-                    <td class="left">
-                      <b>Cited article</b>
-                    </td>
+    if ($data === false) {
+      echo "<p><b>Error:</b> unable to parse XML file.</p>";
 
-                    <td class="right">
-                      <b><?php echo html($article["title"] ?? "Untitled"); ?></b>
-                      <br>
-                      <?php echo html($article["authors"] ?? ""); ?>
-                      <br>
-                      DOI:
-                      <?php print_doi($article["doi"] ?? ""); ?>
-                    </td>
-                  </tr>
+      foreach (libxml_get_errors() as $error) {
+        echo "<p><em>" . html($error->message) . "</em></p>";
+      }
 
-                  <!-- Citing papers -->
-                  <tr>
-                    <td class="left">
-                      <b>Citing papers</b>
-                    </td>
+      libxml_clear_errors();
+    } elseif (!isset($data->articles) || !isset($data->articles->article)) {
+      echo "<p><b>Error:</b> invalid XML structure.</p>";
+    } else {
+      foreach ($data->articles->article as $article) {
+        if (xml_article_has_citations($article)) {
+          $articles_with_citations[] = $article;
+        }
+      }
+    }
+  }
 
-                    <td class="right">
-                      <table class="list">
-                        <tbody>
-                          <?php foreach ($article["citations"] as $citation): ?>
-                            <tr>
-                              <td class="left">
-                                <b><?php echo html($citation["title"] ?? "Untitled"); ?></b>
-                              </td>
+?>
 
-                              <td class="right">
-                                <?php echo html($citation["authors"] ?? ""); ?>
-                                <br>
-                                DOI:
-                                <?php print_doi($citation["doi"] ?? ""); ?>
-                              </td>
-                            </tr>
-                          <?php endforeach; ?>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
+<!-- --------------------------------------------- -->
+<!-- Self-counted citations -->
+<!-- --------------------------------------------- -->
+<div class="sec" id="self-counted-citations">
+  <div class="sec-title">Self-counted citations</div>
 
-                <?php endforeach; ?>
+  <?php if (file_exists($xml_path)): ?>
+    <p>
+      Last update: <?php echo date("F d Y H:i:s.", filemtime($xml_path)); ?>
+      <br>
+    </p>
+  <?php endif; ?>
 
-              </tbody>
-            </table>
+  <?php if (count($articles_with_citations) > 0): ?>
 
-          <?php else: ?>
+    <table class="list">
+      <tbody>
 
-            <table class="list">
-              <tr>
-                <td class="left"><b>-</b></td>
-                <td class="right">No self-counted citations inserted.</td>
-              </tr>
-            </table>
+        <?php foreach ($articles_with_citations as $article): ?>
 
-          <?php endif; ?>
-        </div>
+          <!-- Cited article -->
+          <tr>
+            <td class="left">
+              <b>Cited article</b>
+            </td>
+
+            <td class="right">
+              <b><?php echo html(xml_text($article, "title", "Untitled")); ?></b>
+              <br>
+              <?php echo html(xml_text($article, "authors")); ?>
+              <br>
+              DOI:
+              <?php print_doi(xml_text($article, "doi")); ?>
+            </td>
+          </tr>
+
+          <!-- Citing papers -->
+          <tr>
+            <td class="left">
+              <b>Citing papers</b>
+            </td>
+
+            <td class="right">
+              <table class="list">
+                <tbody>
+                  <?php foreach ($article->citations->citation as $citation): ?>
+                    <tr>
+                      <td class="left">
+                        <b><?php echo html(xml_text($citation, "title", "Untitled")); ?></b>
+                      </td>
+
+                      <td class="right">
+                        <?php echo html(xml_text($citation, "authors")); ?>
+                        <br>
+                        DOI:
+                        <?php print_doi(xml_text($citation, "doi")); ?>
+                      </td>
+                    </tr>
+                  <?php endforeach; ?>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+        <?php endforeach; ?>
+
+      </tbody>
+    </table>
+
+  <?php else: ?>
+
+    <table class="list">
+      <tr>
+        <td class="left"><b>-</b></td>
+        <td class="right">No self-counted citations inserted.</td>
+      </tr>
+    </table>
+
+  <?php endif; ?>
+</div>
+
+
+
+
+
         <!-- --------------------------------------------- -->
         <!-- Footer -->
         <!-- --------------------------------------------- -->

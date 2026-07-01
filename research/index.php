@@ -201,6 +201,7 @@
 		        </table>
             <br>            
           </div>
+          <br>
 
           <table class="list">
           <?php

@@ -4,6 +4,8 @@
       * scrape data from Scopus, WoS, and Google Scholar to automatically update the data using api call
       * self-assessment data computed from a local database of citations (xml file or mysql database provided by Aruba hosting)
       * add a "last update" timestamp to the page footer
+      * move style to a separate dedicated css file
+      * move php code to a separate dedicated php file
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -131,20 +133,41 @@
 
 
         <!-- --------------------------------------------- -->
-        <!-- PHP: XML data and bibliometric indicators -->
+        <!-- PHP: XML data loading, self-counted bibliometrics, and indicator data -->
         <!-- --------------------------------------------- -->
         <?php
           /* ---------- Configuration ---------- */
 
+          /*
+           * Absolute path to the XML file containing the citation data.
+           *
+           * __DIR__ is the directory of the current PHP file. The path below
+           * assumes the current page is stored in a subdirectory, while the
+           * XML file is stored in ../data/citations.xml relative to this page.
+           */
           $xml_path = __DIR__ . "/../data/citations.xml";
 
 
           /* ---------- Helpers ---------- */
 
+          /*
+           * Escape arbitrary text before printing it in HTML.
+           *
+           * This prevents malformed output and protects the page from accidental
+           * HTML injection if a title, author field, or DOI contains special
+           * characters such as <, >, &, or quotes.
+           */
           function html($string) {
             return htmlspecialchars((string) $string, ENT_QUOTES, "UTF-8");
           }
 
+          /*
+           * Convert a DOI string into a clickable DOI URL.
+           *
+           * Only strings matching the usual DOI prefix pattern "10...." are
+           * converted. Empty values, XML null values, and non-DOI status labels
+           * such as "accepted" are deliberately left unlinked.
+           */
           function doi_url($doi) {
             $doi = trim((string) $doi);
 
@@ -159,6 +182,13 @@
             return "";
           }
 
+          /*
+           * Print a DOI field.
+           *
+           * If the DOI is valid, it is rendered as a link to https://doi.org/...
+           * If the field is empty or explicitly null, it prints "No DOI".
+           * If the field contains a non-DOI note, it is printed as plain text.
+           */
           function print_doi($doi) {
             $doi = trim((string) $doi);
             $url = doi_url($doi);
@@ -176,6 +206,13 @@
             echo html($doi);
           }
 
+          /*
+           * Safely extract a textual child field from a SimpleXML node.
+           *
+           * Example: xml_text($article, "title") returns the text inside
+           * <title>...</title>. If the field is missing, the function returns
+           * the supplied default value instead of raising a notice.
+           */
           function xml_text($node, $field, $default = "") {
             if (isset($node->{$field})) {
               return trim((string) $node->{$field});
@@ -184,6 +221,17 @@
             return $default;
           }
 
+          /*
+           * Check whether an article has at least one nested citing paper.
+           *
+           * The expected XML shape is:
+           * <article>
+           *   ...
+           *   <citations>
+           *     <citation>...</citation>
+           *   </citations>
+           * </article>
+           */
           function xml_article_has_citations($article) {
             return (
               isset($article->citations) &&
@@ -192,19 +240,34 @@
             );
           }
 
+          /*
+           * Determine whether a DOI field looks like a genuine DOI.
+           *
+           * This is used to decide whether an entry should be included in the
+           * self-counted number of articles. Manuscripts without a DOI, or
+           * entries marked as submitted/accepted, are not counted as published
+           * DOI-indexable articles here.
+           */
           function xml_valid_doi($doi) {
             return preg_match("/^10\.\S+$/", trim((string) $doi)) === 1;
           }
 
+          /*
+           * Decide whether an article contributes to the self-assessed article
+           * count.
+           *
+           * Current convention: only entries with a valid DOI are counted. This
+           * keeps submitted manuscripts or placeholder records in the XML file
+           * without letting them affect the displayed bibliometric indicators.
+           */
           function xml_article_is_countable($article) {
-            /*
-             * Count only published/indexable articles, identified here by a
-             * genuine DOI. This excludes entries such as submitted manuscripts
-             * with <doi nil="true"/>.
-             */
             return xml_valid_doi(xml_text($article, "doi"));
           }
 
+          /*
+           * Count all published/indexable articles in the XML file according
+           * to xml_article_is_countable().
+           */
           function count_xml_articles($articles) {
             $count = 0;
 
@@ -217,6 +280,13 @@
             return $count;
           }
 
+          /*
+           * Count all self-recorded citations to countable articles.
+           *
+           * Citations to non-countable article entries are ignored for the
+           * numerical summary, although those entries can still remain in the
+           * XML file for documentation.
+           */
           function count_xml_citations($articles) {
             $count = 0;
 
@@ -229,20 +299,35 @@
             return $count;
           }
 
+          /*
+           * Compute the h-index from the citation lists stored in the XML file.
+           *
+           * Procedure:
+           * 1. Build the list of citation counts, one count for each countable
+           *    article.
+           * 2. Sort these counts in descending order.
+           * 3. The h-index is the largest integer h such that at least h papers
+           *    have at least h citations each.
+           */
           function calculate_xml_hindex($articles) {
+            // Collect the number of citations received by each countable article.
             $citation_counts = [];
 
             foreach ($articles as $article) {
+              // Ignore entries that should not contribute to bibliometric indicators.
               if (xml_article_is_countable($article)) {
                 $citation_counts[] = xml_article_has_citations($article)
-                  ? count($article->citations->citation)
-                  : 0;
+                ? count($article->citations->citation)
+                : 0;
               }
             }
 
+            // Sort citation counts in decreasing order.
             rsort($citation_counts, SORT_NUMERIC);
 
+            // Compute the largest h such that at least h articles have at least h citations.
             $hindex = 0;
+
             foreach ($citation_counts as $position => $citation_count) {
               $rank = $position + 1;
 
@@ -250,15 +335,19 @@
                 $hindex = $rank;
               } else {
                 break;
-              }
+              }         
             }
-
             return $hindex;
           }
 
 
           /* ---------- Load XML ---------- */
 
+          /*
+           * The following variables are initialized before attempting to read
+           * the XML file so that the rest of the page can still render even if
+           * the file is missing, malformed, or SimpleXML is unavailable.
+           */
           $articles = [];
           $articles_with_citations = [];
           $xml_error = "";
@@ -268,6 +357,11 @@
           } elseif (!file_exists($xml_path)) {
             $xml_error = "XML file not found.";
           } else {
+            /*
+             * Keep XML parsing errors internal. This avoids raw warnings being
+             * printed into the public page. A cleaner error message is stored
+             * in $xml_error and displayed later in the citations section.
+             */
             libxml_use_internal_errors(true);
 
             $data = simplexml_load_file($xml_path);
@@ -278,6 +372,11 @@
             } elseif (!isset($data->articles) || !isset($data->articles->article)) {
               $xml_error = "Invalid XML structure.";
             } else {
+              /*
+               * Store all article nodes in $articles for the numerical counts.
+               * Store only cited articles in $articles_with_citations for the
+               * visible self-counted citations list.
+               */
               foreach ($data->articles->article as $article) {
                 $articles[] = $article;
 
@@ -288,6 +387,11 @@
             }
           }
 
+          /*
+           * Compute the values shown in the Self-assessed column of the
+           * indicators table. These values are derived exclusively from the XML
+           * file, not from Scopus, Web of Science, or Google Scholar.
+           */
           $self_assessed_articles  = count_xml_articles($articles);
           $self_assessed_citations = count_xml_citations($articles);
           $self_assessed_hindex    = calculate_xml_hindex($articles);
@@ -295,8 +399,13 @@
 
           /* ---------- Bibliometric data ---------- */
           /*
-           * Self-assessed data are computed from citations.xml.
-           * Scopus, WoS, and Google Scholar values are still manually compiled.
+           * This array is the single source for the displayed indicators table.
+           *
+           * - The self-assessed column is computed from citations.xml above.
+           * - The Scopus, WoS, and Google Scholar columns remain manually
+           *   compiled because those platforms do not expose reliable public
+           *   HTML/API data for this lightweight static PHP page.
+           * - Each source also stores its profile URL, used in the table header.
            */
 
           $bibliometric_data = [
@@ -341,6 +450,11 @@
           <!-- <div class="sec-title">Indicators</div> -->
           <div class="sec-title">  </div>
 
+          <!--
+            The wrapper below allows horizontal scrolling on small screens.
+            This keeps the table layout intact on mobile devices instead of
+            forcing each cell to break into a vertical block.
+          -->
           <div class="table-scroll">
             <table class="list bibliometrics-table">
               <tbody>
@@ -412,9 +526,11 @@
         <!-- Self-counted citations from XML -->
         <!-- --------------------------------------------- -->
         <!--
-          Reads citations.xml and prints only articles having a non-empty
-          citations list. The same XML file is also used above to compute
-          the self-assessed number of articles, citations, and h-index.
+          The citations list below reuses the same XML data loaded above.
+          It prints only articles with a non-empty <citations> block.
+          Articles without recorded citations are omitted from the visible list,
+          but they still contribute to the self-assessed article count if they
+          have a valid DOI.
         -->
 
         <p>
@@ -423,24 +539,35 @@
         </p>
 
         <!-- --------------------------------------------- -->
-        <!-- Self-counted citations -->
+        <!-- Self-assessed citation record -->
         <!-- --------------------------------------------- -->
         <div class="sec" id="self-counted-citations">
-          <div class="sec-title">Self-counted citations</div>
+          <div class="big-title shaded" id="self-assessed-citation-record">Self-assessed citation record</div>
 
           <?php if ($xml_error !== ""): ?>
-            <p><b>Error:</b> <?php echo html($xml_error); ?></p>
+            <table class="list">
+              <tr>
+                <td class="left"><b>Error</b></td>
+                <td class="right"><?php echo html($xml_error); ?></td>
+              </tr>
+            </table>
           <?php endif; ?>
 
           <?php if (file_exists($xml_path)): ?>
-            <p>
-              Last update: <?php echo date("F d Y H:i:s.", filemtime($xml_path)); ?>
-              <br>
-            </p>
+            <table class="list">
+              <tr>
+                <td class="left"><b>Last update</b></td>
+                <td class="right"><?php echo date("F d Y H:i:s.", filemtime($xml_path)); ?></td>
+              </tr>
+            </table>
           <?php endif; ?>
 
           <?php if (count($articles_with_citations) > 0): ?>
 
+            <!--
+              Main numbered list: each item is one of my cited articles.
+              Nested numbered lists contain the papers citing that article.
+            -->
             <ol class="citations-list">
 
               <?php foreach ($articles_with_citations as $article): ?>
@@ -484,6 +611,21 @@
 
           <?php endif; ?>
         </div>
+
+        <!-- --------------------------------------------- -->
+        <!-- Disclaimer -->
+        <!-- --------------------------------------------- -->
+        <div class="sec" id="disclaimer">
+          <div style="font-size: xx-small; opacity: 0.75; line-height: 1.45; margin-top: 1.5em;">
+            <b>Disclaimer.</b>
+            These data are provided only for administrative purposes.
+            They should not be read as a mathematical, scientific, or human evaluation
+            of the work listed elsewhere on this website.
+            Bibliometric values may differ across databases, update schedules,
+            author-profile mergers, indexing choices, and the general mood
+            of the algorithmic bureaucracy involved.
+          </div>
+        </div>
       </div>
     </div>
 
@@ -494,17 +636,14 @@
       <div id="footer">
         <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
 
-          <div style="margin-bottom: 0.8em;">
-            <b>Disclaimer.</b>
-            These data are provided only for administrative purposes.
-            They should not be read as a mathematical, scientific, or human evaluation
-            of the work listed elsewhere on this website.
-            Bibliometric values may differ across databases, update schedules,
-            author-profile mergers, indexing choices, and the general mood
-            of the algorithmic bureaucracy involved.
-          </div>
-
           <?php
+            /*
+             * Footer timestamp.
+             *
+             * The footer reports the most recent modification time among the
+             * XML data file and the PHP page itself. This is separate from the
+             * citations-section timestamp, which reports only the XML file date.
+             */
             $files = array($xml_path ?? null, __FILE__);
             $times = array();
 
@@ -528,3 +667,4 @@
     </footer>
   </body>
 </html>
+

@@ -196,9 +196,10 @@
           <div class="sec-small">
             <table class="center" style="width: 80%;text-align: center">
              <tr>
-              <td>(<a href="../bibliometrics/" class="btn btn-default btn-lg"><i class="fa fa-gauge fa-fw"></i><span class="network-name"> Bibliometrics - dedicated page</span></a> )
+              <td>(<a href="../bibliometrics/" class="btn btn-default btn-lg"><i class="fa fa-tachometer fa-fw"></i><span class="network-name"> Bibliometrics - dedicated page</span></a> )
             </td>
-		        </table>            
+		        </table>
+            <br>            
           </div>
 
           <table class="list">

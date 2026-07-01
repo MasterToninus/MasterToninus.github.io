@@ -539,10 +539,10 @@
         </p>
 
         <!-- --------------------------------------------- -->
-        <!-- Self-assessed citation record -->
+        <!-- Citation record -->
         <!-- --------------------------------------------- -->
         <div class="sec" id="self-counted-citations">
-          <div class="big-title shaded" id="self-assessed-citation-record">Self-assessed citation record</div>
+          <div class="big-title shaded" id="self-assessed-citation-record">Citation record</div>
 
           <?php if ($xml_error !== ""): ?>
             <table class="list">
@@ -633,35 +633,40 @@
     <!-- Footer -->
     <!-- --------------------------------------------- -->
     <footer>
-      <div id="footer">
-        <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
-
-          <?php
-            /*
-             * Footer timestamp.
-             *
-             * The footer reports the most recent modification time among the
-             * XML data file and the PHP page itself. This is separate from the
-             * citations-section timestamp, which reports only the XML file date.
-             */
-            $files = array($xml_path ?? null, __FILE__);
-            $times = array();
-
-            foreach ($files as $file) {
-              if (!empty($file) && file_exists($file)) {
-                array_push($times, filemtime($file));
-              }
-            }
-
-            if (count($times) > 0) {
-              echo "Last update: " . date("F d Y H:i:s.", max($times));
-            }
-          ?>
-
+      <div id="content">
+        <div id="content-container">
           <br>
+          <br>
+          <br>
+          <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
 
-          Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
-          &emsp; Italsing srl. &emsp; All Rights Reserved.
+            <?php
+              /*
+               * Footer timestamp.
+               *
+               * The footer reports the most recent modification time among the
+               * XML data file and the PHP page itself. This is separate from the
+               * citations-section timestamp, which reports only the XML file date.
+               */
+              $files = array($xml_path ?? null, __FILE__);
+              $times = array();
+
+              foreach ($files as $file) {
+                if (!empty($file) && file_exists($file)) {
+                  array_push($times, filemtime($file));
+                }
+              }
+
+              if (count($times) > 0) {
+                echo "Last update: " . date("F d Y H:i:s.", max($times));
+              }
+            ?>
+
+            <br>
+
+            Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
+            &emsp; Italsing srl. &emsp; All Rights Reserved.
+          </div>
         </div>
       </div>
     </footer>

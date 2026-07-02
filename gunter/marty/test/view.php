@@ -1,42 +1,51 @@
 <?php
-$file = 'dati.csv';
+require_once __DIR__ . '/../../src/gunter.php';
 
-// Verifica che il file esista
-if (!file_exists($file)) {
-    die('Nessun dato disponibile.');
+$file = __DIR__ . '/dati.csv';
+$header = [];
+$rows = [];
+
+if (file_exists($file)) {
+    $rows = array_map('str_getcsv', file($file));
+    $header = array_shift($rows) ?: [];
 }
 
-// Leggi i dati del file
-$rows = array_map('str_getcsv', file($file));
-$header = array_shift($rows); // Rimuove l'intestazione
+gunter_head('Visualizza Dati', '../../');
+gunter_navbar('../../');
 ?>
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualizza Dati</title>
-</head>
-<body>
-    <h1>Elenco Dati Salvati</h1>
-    <table border="1" cellpadding="5" cellspacing="0">
-        <thead>
-            <tr>
-                <?php foreach ($header as $col): ?>
-                    <th><?= htmlspecialchars($col) ?></th>
-                <?php endforeach; ?>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($rows as $row): ?>
-                <tr>
-                    <?php foreach ($row as $cell): ?>
-                        <td><?= htmlspecialchars($cell) ?></td>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>Elenco Dati Salvati</h1>
+        <p>Visualizzazione del file CSV generato dal form.</p>
+    </div>
+
+    <?php if (empty($header)): ?>
+        <div class="alert alert-warning">Nessun dato disponibile.</div>
+    <?php else: ?>
+        <div class="table-responsive tall-row">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <?php foreach ($header as $col): ?>
+                            <th><?php echo gunter_h($col); ?></th>
+                        <?php endforeach; ?>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($rows as $row): ?>
+                        <tr>
+                            <?php foreach ($row as $cell): ?>
+                                <td><?php echo gunter_h($cell); ?></td>
+                            <?php endforeach; ?>
+                        </tr>
                     <?php endforeach; ?>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-    <a href="index.php">Torna al modulo</a>
-</body>
-</html>
+                </tbody>
+            </table>
+        </div>
+    <?php endif; ?>
+
+    <p><a class="btn btn-default" href="index.php">Torna al modulo</a></p>
+</div>
+
+<?php gunter_footer(); ?>

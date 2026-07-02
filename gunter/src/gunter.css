@@ -1,0 +1,71 @@
+/* Shared style overrides for the Gunter subsection. */
+
+body {
+    overflow-x: hidden;
+}
+
+.tall-row {
+    margin-top: 40px;
+}
+
+.jumbotron p,
+.jumbotron .lead {
+    font-size: 18px;
+}
+
+.site-card,
+.box {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.site-footer {
+    margin-top: 50px;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.site-footer p {
+    margin-bottom: 6px;
+}
+
+.img-responsive {
+    height: auto;
+    max-width: 100%;
+}
+
+.markdown-content img,
+.markdown-content video,
+.responsive-media {
+    height: auto;
+    max-width: 100%;
+}
+
+.table-responsive {
+    border: 0;
+}
+
+.navbar-brand .fa {
+    margin-right: 6px;
+}
+
+@media (max-width: 767px) {
+    .navbar-collapse .navbar-nav {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .navbar-nav .dropdown-menu > li > a {
+        white-space: normal;
+    }
+
+    .jumbotron h1 {
+        font-size: 34px;
+    }
+
+    .site-footer {
+        text-align: left;
+    }
+}

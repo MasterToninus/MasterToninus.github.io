@@ -1,32 +1,41 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marty -- Workspace</title>
-</head>
-<body>
-    <h1>Marty -- Workspace</h1>
-    <h3> Sottocartelle </h3>
-    <ul>
-        <?php
-        // Ottieni la directory corrente
-        $currentDir = __DIR__;
+<?php
+require_once __DIR__ . '/../src/gunter.php';
 
-        // Elenca tutti gli elementi nella directory
-        $elements = scandir($currentDir);
+$directories = [];
+foreach (scandir(__DIR__) as $element) {
+    $path = __DIR__ . DIRECTORY_SEPARATOR . $element;
+    if ($element !== '.' && $element !== '..' && is_dir($path)) {
+        $directories[] = $element;
+    }
+}
 
-        // Filtra solo le sottocartelle (esclude "." e "..")
-        foreach ($elements as $element) {
-            $path = $currentDir . DIRECTORY_SEPARATOR . $element;
+gunter_head('Marty -- Workspace', '../');
+gunter_navbar('../');
+?>
 
-            // Controlla che sia una directory e non un file
-            if ($element !== "." && $element !== ".." && is_dir($path)) {
-                // Crea un link alla directory
-                echo "<li><a href=\"$element\">$element</a></li>";
-            }
-        }
-        ?>
-    </ul>
-</body>
-</html>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Marty -- Workspace</h1>
+        <p>Spazio di test.</p>
+    </div>
+
+    <div class="row tall-row">
+        <div class="col-md-12">
+            <h2>Sottocartelle</h2>
+            <hr>
+            <?php if (empty($directories)): ?>
+                <p>Nessuna sottocartella disponibile.</p>
+            <?php else: ?>
+                <div class="list-group">
+                    <?php foreach ($directories as $directory): ?>
+                        <a class="list-group-item" href="<?php echo gunter_h($directory); ?>/">
+                            <?php echo gunter_h($directory); ?>
+                        </a>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+
+<?php gunter_footer(); ?>

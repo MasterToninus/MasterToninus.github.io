@@ -1,5 +1,17 @@
 <?php
 
+/*
+ * Markdown parser used by the Gunter subsection.
+ *
+ * This is the third-party Parsedown library. It is kept in src/ for now so
+ * pages such as facciata.php and nonno/index.php can render local Markdown
+ * files without requiring Composer or other server-side dependencies.
+ *
+ * Project-specific Markdown handling is centralized in src/gunter.php through
+ * gunter_render_markdown_file(). The code below is intentionally left as close
+ * as possible to the upstream library.
+ */
+
 #
 #
 # Parsedown

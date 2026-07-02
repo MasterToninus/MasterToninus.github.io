@@ -1,244 +1,123 @@
-<!DOCTYPE html>
-<html lang="en">
-<link rel="shortcut icon" href="../img/terminal.ico" type="image/x-icon">
-<link rel="icon" href="../img/terminal.ico" type="image/x-icon">
-<head>
-<title>C0mput3rs H1story</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../src/hacker.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;display=swap" rel="stylesheet">
-    <link href="http://fonts.cdnfonts.com/css/bitwise" rel="stylesheet">    
-    <!-- Font: revenge of the nerds -->
+<?php
+require_once __DIR__ . '/../src/gunter.php';
 
-    <style>
-    .tall-row {
-        margin-top: 40px;
-    }
-    .modal {
-        position: relative;
-        top: auto;
-        right: auto;
-        left: auto;
-        bottom: auto;
-        z-index: 1;
-        display: block;
-    }
-    </style>
-    <style>
-    .img-responsive {
-        max-width: 90%;
-        height: auto;
-        max-height: 90%;
-    }
-    .footer {
-        margin-top: 40px;
-    }
-    </style>
-</head>
+gunter_head('C0mput3rs H1story', '../');
+gunter_navbar('../', 'hardware');
 
-<body>
-    <!-- ================================================= -->
-    <!-- TITLE - NAVABAR -->
-    <!-- ================================================= -->
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="../">
-                    <i class="fa fa-1x fa-terminal"></i> 
-                    M4st3r-T0n1nus
-                </a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu<span class="caret"></span> </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="../eliminata.html">Eliminata</a></li>
-                            <li><a href="../h4x0rs.html">Template</a></li>
-                            <li><a href="../facciata.php">Protocollo Facciata</a></li>
-                            <li><a href="../meteo">Meteo</a></li>
-                            <li><a href="./">Hardware</a></li>
-                            <li><a href="../gallery/index.html#fototrappla">Photo Gallery</a></li>            
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="../../"><i class="fa fa-1x fa-home"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- ================================================= -->
-    <!-- Contents -->
-    <!-- ================================================= -->    
-    <div class="container">
-        <!-- ================================================= -->
-        <!-- JUMBOTRON -->
-        <!-- ================================================= -->  
-        <div class="jumbotron">
-            <h1>My Personal Computer History</h1>
-            note: <a href="https://pcpartpicker.com/user/Toninus/saved/TJ8gXL">pcpartpicker</a> automatically generate the html!
-        </div>
+$dataFile = __DIR__ . '/pc_data.json';
+$pcData = gunter_load_json($dataFile);
+$lastModified = file_exists($dataFile) ? date('F d, Y H:i:s', filemtime($dataFile)) : 'Unknown';
 
+function hardware_cost($value): int
+{
+    return is_numeric($value) ? (int) $value : 0;
+}
 
-        <!-- ================================================= -->
-        <!-- PHP! -->
-        <!-- ================================================= -->    
+function hardware_print_component_link(array $details, bool $strikethrough = false): void
+{
+    $model = gunter_h($details['model'] ?? 'Unknown model');
+    $url = gunter_h($details['url'] ?? '#');
+    $label = $strikethrough ? '<s>' . $model . '</s>' : $model;
+    echo '<a href="' . $url . '" target="_blank" rel="noopener">' . $label . '</a>';
+}
+?>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1>My Personal Computer History</h1>
+        <p>Note: <a href="https://pcpartpicker.com/user/Toninus/saved/TJ8gXL">pcpartpicker</a> automatically generates the HTML.</p>
+    </div>
+
+    <?php if (empty($pcData)): ?>
+        <div class="alert alert-warning">No PC data available. Check <code>pc_data.json</code>.</div>
+    <?php endif; ?>
+
+    <?php foreach ($pcData as $pc): ?>
         <?php
-        // Enable error reporting for debugging
-        ini_set('display_errors', 1);
-        ini_set('display_startup_errors', 1);
-        //error_reporting(EALL);
+        $pcTotalCost = 0;
+        $pcRevisionCosts = 0;
+        $components = $pc['components'] ?? [];
 
-        // Load the YAML file containing PC data
-        include '../src/Yaml.php';
-        $yaml = new Yaml();
-        $yamlFile = 'pc_data.yaml';
-        $yamlData = [];       
-
-
-
-
-        $lastModified = '';
-        $totalCost = 0;
-        $revisionCosts = 0;
-
-        if (file_exists($yamlFile)) {
-            $yamlData = $yaml->load($yamlFile);
-            $lastModified = date("F d, Y H:i:s", filemtime($yamlFile));
-        } else {
-            echo "<p>Error: YAML file not found.</p>";
-        }
-
-        // Check if the YAML data is not empty
-        if (!empty($yamlData)) {
-            foreach ($yamlData as $pc) {
-                $pcTotalCost = 0;
-                $pcRevisionCosts = 0;
-
-                // Calculate total cost and revision costs for each PC
-                foreach ($pc['components'] as $component => $details) {
-                    $pcTotalCost += $details['cost'];
-                    if (isset($details['revision'])) {
-                        $pcRevisionCosts += $details['revision']['cost'];
-                    }
-                }
-
-                echo "<div class='row tall-row'>";
-                echo "<div class='col-md-12'>";
-                echo "<h2 class='text-center'><a href='{$pc['url']}' target='_blank'>{$pc['name']}</a></h2>";
-                echo "<hr>";
-                echo "</div>";
-
-                // Image gallery for the PC
-                echo "<div class='col-md-6'>";
-
-                echo "<div class='box'>";
-                echo "<p><strong>Build Date:</strong> {$pc['build_date']}</p>";
-                echo "<p><strong>Total Cost:</strong> {$pcTotalCost}</p>";
-                echo "<p><strong>Revision Costs:</strong> {$pcRevisionCosts}</p>";
-                if (!empty($pc['notes'])) {
-                    foreach ($pc['notes'] as $note)
-                        echo "<p>{$note}</p>";
-                }
-                echo "</div>"; // Close box
-
-                // Image gallery for the PC
-                echo "<a href='{$pc['album']}' target='_blank'>";
-                echo "<img src='{$pc['image']}' alt='PC Image' class='img-responsive'>";
-                echo "</a>";
-                echo "</div>"; // Close image column
-
-                // Component table for the PC
-                echo "<div class='col-md-6'>";
-                echo "<div class='table-responsive'>"; // Add this line
-                echo "<table class='table table-striped'>";
-                echo "<thead><tr><th>Component</th><th>Model</th><th>Cost</th><th>Date</th></thead><tbody>";
-
-                foreach ($pc['components'] as $component => $details) {
-                    $revision = $details['revision'] ?? null;
-                    $addition = $details['addition'] ?? null;
-                    echo "<tr>";
-                    echo "<td>{$component}</td>";
-                    echo "<td>";
-                    if ($revision) {
-                        echo "<a href='{$details['url']}' target='_blank'><s>{$details['model']}</s></a>";
-                    } else {
-                        echo "<a href='{$details['url']}' target='_blank'>{$details['model']}</a>";
-                    }
-                    echo "</td>";
-                    echo "<td>{$details['cost']}</td>";
-                    echo "<td>";
-                    if ($revision) {
-                        echo "v";
-                    } else {
-                        echo "";
-                    }
-                    echo "</td>";
-                    echo "</tr>";
-                    if ($revision) {
-                        echo "<tr>";
-                        echo "<td></td>";
-                        echo "<td><a href='{$revision['url']}' target='_blank'>{$revision['model']}</a></td>";
-                        echo "<td>{$revision['cost']}</td>";
-                        echo "<td>{$revision['date']}</td>";
-                        echo "</tr>";
-                    }
-                    if ($addition) {
-                        echo "<tr>";
-                        echo "<td></td>";
-                        echo "<td><a href='{$addition['url']}' target='_blank'>{$addition['model']}</a></td>";
-                        echo "<td>{$addition['cost']}</td>";
-                        echo "<td>{$addition['date']}</td>";
-                        echo "</tr>";
-                    }
-                }
-
-                echo "</tbody></table>";
-                echo "</div>"; // Close table-responsive div
-                echo "</div>"; // Close component column
-                echo "<hr>";
-                echo "</div>"; // Close row
+        foreach ($components as $details) {
+            $pcTotalCost += hardware_cost($details['cost'] ?? null);
+            if (!empty($details['revision']) && is_array($details['revision'])) {
+                $pcRevisionCosts += hardware_cost($details['revision']['cost'] ?? null);
             }
-        } else {
-            echo "<p>No PC data available.</p>";
+            if (!empty($details['addition']) && is_array($details['addition'])) {
+                $pcRevisionCosts += hardware_cost($details['addition']['cost'] ?? null);
+            }
         }
         ?>
-    </div>
-    <!-- ================================================= -->
-    <!-- Footer -->
-    <!-- ================================================= -->
-    <footer class="text-center footer">
-        <p></p><p></p>
-        <p>&copy; <?php echo date('Y'); ?> My Personal Computer History</p>
-        <p>Last updated: <?php echo $lastModified ?: 'Unknown'; ?></p>
-        <p>Disclaimer: This page was generated using ChatGPT. Model version: GPT-4</p>
-        <p>Powered by <a href="//github.com/Bachittarjeet/Hacker-Bootstrap-Template/" role="button">Hacker-Bootstrap-Template</a>. &copy; 2019</p>
-    </footer>
+        <div class="row tall-row">
+            <div class="col-md-12">
+                <h2 class="text-center">
+                    <a href="<?php echo gunter_h($pc['url'] ?? '#'); ?>" target="_blank" rel="noopener">
+                        <?php echo gunter_h($pc['name'] ?? 'Unnamed PC'); ?>
+                    </a>
+                </h2>
+                <hr>
+            </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+            <div class="col-md-6">
+                <div class="box">
+                    <p><strong>Build Date:</strong> <?php echo gunter_h($pc['build_date'] ?? 'Unknown'); ?></p>
+                    <p><strong>Total Cost:</strong> <?php echo gunter_h($pcTotalCost); ?></p>
+                    <p><strong>Revision Costs:</strong> <?php echo gunter_h($pcRevisionCosts); ?></p>
+                    <?php foreach (($pc['notes'] ?? []) as $note): ?>
+                        <p><?php echo gunter_h($note); ?></p>
+                    <?php endforeach; ?>
+                </div>
 
-    <!-- Github stars script -->
-    <script>
-        $(document).ready(function(){
-            $.getJSON("https://api.github.com/repos/Bachittarjeet/Hacker-Bootstrap-Template/", function(data){
-                var stars = data['stargazers_count'];
-                $("#stars").text(stars + " stars");
-            });
-        });
-    </script>
-</body>
-</html>
+                <a href="<?php echo gunter_h($pc['album'] ?? '#'); ?>" target="_blank" rel="noopener">
+                    <img src="<?php echo gunter_h($pc['image'] ?? ''); ?>" alt="<?php echo gunter_h($pc['name'] ?? 'PC'); ?>" class="img-responsive">
+                </a>
+            </div>
 
+            <div class="col-md-6">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Model</th>
+                                <th>Cost</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($components as $component => $details): ?>
+                                <?php
+                                $revision = !empty($details['revision']) && is_array($details['revision']) ? $details['revision'] : null;
+                                $addition = !empty($details['addition']) && is_array($details['addition']) ? $details['addition'] : null;
+                                ?>
+                                <tr>
+                                    <td><?php echo gunter_h($component); ?></td>
+                                    <td><?php hardware_print_component_link($details, (bool) $revision); ?></td>
+                                    <td><?php echo gunter_h($details['cost'] ?? ''); ?></td>
+                                    <td><?php echo $revision ? 'v' : ''; ?></td>
+                                </tr>
+                                <?php foreach ([$revision, $addition] as $update): ?>
+                                    <?php if ($update): ?>
+                                        <tr>
+                                            <td></td>
+                                            <td><?php hardware_print_component_link($update); ?></td>
+                                            <td><?php echo gunter_h($update['cost'] ?? ''); ?></td>
+                                            <td><?php echo gunter_h($update['date'] ?? ''); ?></td>
+                                        </tr>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div>
 
+<?php
+ gunter_footer([
+    '&copy; ' . date('Y') . ' My Personal Computer History',
+    'Last updated: ' . gunter_h($lastModified),
+]);
+?>

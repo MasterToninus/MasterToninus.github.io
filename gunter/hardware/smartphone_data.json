@@ -1,0 +1,47 @@
+[
+  {
+    "id": "acer-liquid-e2-duo",
+    "period": "??? 2011",
+    "model": "Acer Liquid E2 Duo",
+    "estimated_price_eur": 200,
+    "price_label": "~200€",
+    "notes": "",
+    "target_eur_per_year": 100
+  },
+  {
+    "id": "motorola-moto-e",
+    "period": "July 2014",
+    "model": "Motorola Moto E",
+    "estimated_price_eur": 120,
+    "price_label": "~120€",
+    "notes": "",
+    "target_eur_per_year": 100
+  },
+  {
+    "id": "oneplus-3",
+    "period": "November 2015",
+    "model": "OnePlus 3",
+    "estimated_price_eur": 400,
+    "price_label": "~400€",
+    "notes": "regalo Giusy",
+    "target_eur_per_year": 120
+  },
+  {
+    "id": "oneplus-8",
+    "period": "May 2020",
+    "model": "OnePlus 8",
+    "estimated_price_eur": 600,
+    "price_label": "~600€",
+    "notes": "regalo Giusy",
+    "target_eur_per_year": 120
+  },
+  {
+    "id": "oneplus-16",
+    "period": "",
+    "model": "OnePlus 16",
+    "estimated_price_eur": null,
+    "price_label": "",
+    "notes": "placeholder / modello futuro da confermare",
+    "target_eur_per_year": 120
+  }
+]

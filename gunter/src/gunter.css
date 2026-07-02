@@ -69,3 +69,116 @@ body {
         text-align: left;
     }
 }
+
+
+/* Legacy content blocks normalized under the shared Gunter layout. */
+.sec {
+    margin-bottom: 28px;
+}
+
+.sec-title,
+.big-title {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+    font-size: 24px;
+    font-weight: bold;
+    margin: 30px 0 15px;
+    padding-bottom: 8px;
+}
+
+#introduction {
+    margin-bottom: 30px;
+}
+
+#introduction::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+#desc {
+    margin-bottom: 20px;
+}
+
+#photo img,
+.item {
+    height: auto;
+    max-width: 100%;
+}
+
+.item {
+    margin: 6px;
+    max-height: 220px;
+}
+
+.list {
+    width: 100%;
+}
+
+.list td {
+    padding: 8px;
+    vertical-align: top;
+}
+
+.list .left {
+    width: 25%;
+}
+
+.list .right {
+    width: 75%;
+}
+
+.modal.static-preview {
+    bottom: auto;
+    display: block;
+    left: auto;
+    position: relative;
+    right: auto;
+    top: auto;
+    z-index: 1;
+}
+
+.hardware-table th,
+.hardware-table td {
+    vertical-align: middle !important;
+}
+
+.hardware-table th:nth-child(3),
+.hardware-table th:nth-child(4),
+.hardware-table th:nth-child(5),
+.hardware-table td:nth-child(3),
+.hardware-table td:nth-child(4),
+.hardware-table td:nth-child(5) {
+    text-align: right;
+}
+
+@media (max-width: 767px) {
+    .hardware-table th:nth-child(3),
+    .hardware-table th:nth-child(4),
+    .hardware-table th:nth-child(5),
+    .hardware-table td:nth-child(3),
+    .hardware-table td:nth-child(4),
+    .hardware-table td:nth-child(5) {
+        text-align: left;
+    }
+}
+
+/* Mobile navbar fallback.
+   Bootstrap normally handles collapse and dropdown behaviour through jQuery.
+   These rules make the shared navbar usable also when the browser is narrow
+   and the menu state is toggled by the small vanilla-JS fallback in gunter.php. */
+@media (max-width: 767px) {
+    #gunter-navbar.in {
+        display: block !important;
+        overflow-y: visible;
+    }
+
+    #gunter-navbar .dropdown.open > .dropdown-menu {
+        display: block;
+    }
+
+    #gunter-navbar .dropdown-menu {
+        float: none;
+        position: static;
+        width: auto;
+    }
+}

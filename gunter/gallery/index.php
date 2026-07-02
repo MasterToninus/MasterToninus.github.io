@@ -1,72 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<link rel="shortcut icon" href="../../img/terminal.ico" type="image/x-icon">
-<link rel="icon" href="../../img/terminal.ico" type="image/x-icon">
+<?php
+require_once __DIR__ . '/../src/gunter.php';
 
-<head>
-    <title>34st3r-3ggs: G4LL3RY</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../src/hacker.css">
-    <link rel="stylesheet" href="../src/gunter.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;display=swap" rel="stylesheet">
-    <link href="http://fonts.cdnfonts.com/css/bitwise" rel="stylesheet">
+gunter_head('34st3r-3ggs: G4LL3RY', '../');
+gunter_navbar('../', 'gallery');
+?>
 
-    <style>
-        .tall-row {
-            margin-top: 40px;
-        }
-
-        .modal {
-            position: relative;
-            top: auto;
-            right: auto;
-            left: auto;
-            bottom: auto;
-            z-index: 1;
-            display: block;
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- ================================================= -->
+<!-- ================================================= -->
     <!-- TITLE - NAVABAR -->
     <!-- ================================================= -->
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gunter-navbar" aria-expanded="false" aria-controls="gunter-navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="../"><i class="fa fa-terminal"></i> M4st3r-T0n1nus</a>
-            </div>
-            <div id="gunter-navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="../eliminata.html">Eliminata</a></li>
-                            <li><a href="../h4x0rs.html">Template</a></li>
-                            <li><a href="../facciata.php">Protocollo Facciata</a></li>
-                            <li><a href="../meteo/">Meteo</a></li>
-                            <li><a href="../hardware/">Hardware</a></li>
-                            <li><a href="../nonno/">Foglie Sparse</a></li>
-                            <li class="active"><a href="./index.html#fototrappola">Photo Gallery</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="../../"><i class="fa fa-home"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    
 
 
     <!-- ================================================= -->
@@ -224,20 +166,5 @@
     <!-- ================================================= -->
     <!-- ??? -->
     <!-- ================================================= -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-    <!-- Github stars script -->
-    <script>
-        $(document).ready(function() {
-            $.getJSON("https://api.github.com/repos/Bachittarjeet/Hacker-Bootstrap-Template/", function(data) {
-                var stars = data['stargazers_count'];
-                $("#stars").text(stars + " stars");
-            });
-        });
-    </script>
-
-
-</body>
-
-</html>
+<?php gunter_footer(); ?>

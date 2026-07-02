@@ -22,7 +22,7 @@ gunter_navbar('./', 'home');
     <div class="row">
         <div class="col-lg-6">
             <div class="list-group">
-                <a href="./eliminata.html" class="list-group-item">
+                <a href="./eliminata.php" class="list-group-item">
                     <h4 class="list-group-item-heading">3l1m1n4t4</h4>
                     <p class="list-group-item-text">Sezioni eliminate dalla vecchia versione del sito.</p>
                 </a>
@@ -50,13 +50,13 @@ gunter_navbar('./', 'home');
                     <h4 class="list-group-item-heading">Centraline Meteo</h4>
                     <p class="list-group-item-text">Dati diretti dai miei sensori.</p>
                 </a>
-                <a href="./gallery/index.html#fototrappola" class="list-group-item">
+                <a href="./gallery/#fototrappola" class="list-group-item">
                     <h4 class="list-group-item-heading">Photo gallery</h4>
                     <p class="list-group-item-text">Raccolta foto varie.</p>
                 </a>
-                <a href="./h4x0rs.html" class="list-group-item">
+                <a href="./h4x0rs.php" class="list-group-item">
                     <h4 class="list-group-item-heading">Template</h4>
-                    <p class="list-group-item-text">Pagina di prova, h4x0rs.html.</p>
+                    <p class="list-group-item-text">Pagina di prova, h4x0rs.php.</p>
                 </a>
                 <a href="./familytree/" class="list-group-item">
                     <h4 class="list-group-item-heading">Family tree</h4>

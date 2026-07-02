@@ -1,77 +1,11 @@
-<!DOCTYPE html>
-<html>
+<?php
+require_once __DIR__ . '/src/gunter.php';
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+gunter_head('Hacker Bootstrap Theme', './');
+gunter_navbar('./', 'template');
+?>
 
-    <title>Hacker Bootstrap Theme</title>
-    <link href="../src/hacker.css" rel="stylesheet">
-    <link href="./src/gunter.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;display=swap" rel="stylesheet">
-    <link href="http://fonts.cdnfonts.com/css/bitwise" rel="stylesheet">
-
-    <style>
-        @import url('http://fonts.cdnfonts.com/css/bitwise');
-    </style>
-    <style>
-        .tall-row {
-            margin-top: 40px;
-        }
-
-        .modal {
-            position: relative;
-            top: auto;
-            right: auto;
-            left: auto;
-            bottom: auto;
-            z-index: 1;
-            display: block;
-        }
-    </style>
-</head>
-
-
-<body>
-
-    <a href="https://github.com/Bachittarjeet/Hacker-Bootstrap-Template/"><img style="position: absolute; top: 0; left: 0; border: 0;z-index:1001;" src="img/fork.png" alt="Fork me on GitHub"></a>
-
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gunter-navbar" aria-expanded="false" aria-controls="gunter-navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="./"><i class="fa fa-terminal"></i> M4st3r-T0n1nus</a>
-            </div>
-            <div id="gunter-navbar" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="./eliminata.html">Eliminata</a></li>
-                            <li class="active"><a href="./h4x0rs.html">Template</a></li>
-                            <li><a href="./facciata.php">Protocollo Facciata</a></li>
-                            <li><a href="./meteo/">Meteo</a></li>
-                            <li><a href="./hardware/">Hardware</a></li>
-                            <li><a href="./nonno/">Foglie Sparse</a></li>
-                            <li><a href="./gallery/index.html#fototrappola">Photo Gallery</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="../"><i class="fa fa-home"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <div class="container">
+<div class="container">
 
         <!-- Jumbotron -->
         <div class="jumbotron">
@@ -79,8 +13,8 @@
             <p>A Bootstrap theme for 31337 H4X0RS. Inspired by the classic green on black terminal style, this bootstrap theme will make your website 1337.</p>
             <p>To hack around with the source or contribute, check out the project on Github</p>
             <p>
-                <a class="btn btn-lg btn-primary" href="//github.com/Bachittarjeet/Hacker-Bootstrap-Template/" role="button">View on Github »</a>
-                <a class="btn btn-primary" href="//github.com/Bachittarjeet/Hacker-Bootstrap-Template/" id="stars"></a>
+                <a class="btn btn-lg btn-primary" href="https://github.com/Bachittarjeet/Hacker-Bootstrap-Template/" role="button">View on Github »</a>
+                <a class="btn btn-primary" href="https://github.com/Bachittarjeet/Hacker-Bootstrap-Template/" id="stars"></a>
             </p>
         </div>
 
@@ -656,7 +590,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="modal">
+                <div class="modal static-preview">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -684,19 +618,4 @@
 
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-    <!-- Github stars script -->
-    <script>
-        $(document).ready(function() {
-            $.getJSON("https://api.github.com/repos/Bachittarjeet/Hacker-Bootstrap-Template/", function(data) {
-                var stars = data['stargazers_count'];
-                $("#stars").text(stars + " stars");
-            });
-        });
-    </script>
-
-</body>
-
-</html>
+<?php gunter_footer(); ?>

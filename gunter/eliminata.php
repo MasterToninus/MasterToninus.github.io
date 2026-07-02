@@ -1,43 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<link rel="shortcut icon" href="../img/terminal.ico" type="image/x-icon">
-<link rel="icon" href="../img/terminal.ico" type="image/x-icon">
+<?php
+require_once __DIR__ . '/src/gunter.php';
 
-<head>
-    <title>Eliminata</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../src/style.css">
-<link rel="stylesheet" href="../src/darkmode.css"><!-- override darkmode-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;display=swap" rel="stylesheet">
-</head>
+gunter_head('Eliminata', './');
+gunter_navbar('./', 'eliminata');
+?>
 
-<body>
-    <header>
-        <div id="header-container">
-            <label for="nav"></label>
-            <input id="nav" type="checkbox"><a id="logo" href="">Eliminata </a>
-            <nav>
-                [
-                <a href="./"><i class="fa fa-2x fa-terminal"></i></a>
-                - - -
-                <a href="../"><i class="fa fa-2x fa-home"></i></a>]
-            </nav>
-        </div>
-    </header>
-
-
-
-    <!-- ================================================= -->
-    <!-- Contents -->
-    <!-- ================================================= -->
-    <div id="content">
-        <div id="content-container">
-
-
-            <!-- --------------------------------------------- -->
+<div class="container">
+<!-- --------------------------------------------- -->
             <!-- Introduction -->
             <!-- --------------------------------------------- -->
             <div id="introduction">
@@ -263,12 +232,6 @@
                     <img class="item" src="../img/algebraic.jpg" alt="Example image">
                 </div>
             </div>
+</div>
 
-
-
-        </div>
-    </div>
-    <footer></footer>
-</body>
-
-</html>
+<?php gunter_footer(); ?>

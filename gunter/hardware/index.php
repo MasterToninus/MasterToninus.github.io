@@ -26,6 +26,7 @@ function hardware_print_component_link(array $details, bool $strikethrough = fal
     <div class="jumbotron">
         <h1>My Personal Computer History</h1>
         <p>Note: <a href="https://pcpartpicker.com/user/Toninus/saved/TJ8gXL">pcpartpicker</a> automatically generates the HTML.</p>
+        <p><a href="smartphones.php">Smartphone history</a></p>
     </div>
 
     <?php if (empty($pcData)): ?>

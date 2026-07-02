@@ -1,36 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+<?php
+require_once __DIR__ . '/../src/gunter.php';
 
-<head>
-  <title>Wedding list – Giusy &amp; Tony</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../src/style.css">
-<link rel="stylesheet" href="../src/darkmode.css"><!-- override darkmode-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;display=swap" rel="stylesheet">
-</head>
+gunter_head('Wedding list - Giusy & Tony', '../');
+gunter_navbar('../', 'listanozze');
+?>
 
-<body>
-  <header>
-    <div id="header-container">
-      <label for="nav"></label>
-      <input id="nav" type="checkbox">
-      <a id="logo" href="#">Giusy &amp; Tony</a>
-      <nav style="float:right;">
-        <ul>
-          <li><a href="../"><i class="fa fa-home fa-fw"></i> Home</a></li>
-          <li><a href="./index.html" title="Versione italiana">🇮🇹</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <div id="content">
-    <div id="content-container">
-      <div id="subpage-title">
+<div class="container">
+<div id="subpage-title">
         <h1>Wedding list (sort of)</h1>
       </div>
 
@@ -147,22 +123,6 @@
           <strong>Giusy &amp; Tony</strong>
         </p>
       </div>
-    </div>
-  </div>
+</div>
 
-  <footer>
-    <div id="content">
-      <div id="content-container">
-        <div id="footer">
-          <br><br><br>
-          <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
-            Copyright &copy;2016<script>
-              new Date().getFullYear() > 2016 && document.write("-" + new Date().getFullYear());
-            </script>, &emsp; Italsing srl. &emsp; All Rights Reserved.
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+<?php gunter_footer(); ?>

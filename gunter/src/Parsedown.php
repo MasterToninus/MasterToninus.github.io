@@ -35,6 +35,8 @@ class Parsedown
 
     function text($text)
     {
+        $text = $this->stripInitialFrontMatter($text);
+
         $Elements = $this->textElements($text);
 
         # convert to markup
@@ -44,6 +46,45 @@ class Parsedown
         $markup = trim($markup, "\n");
 
         return $markup;
+    }
+
+    /**
+     * Remove a YAML-style front matter block when it is the very first block
+     * of the Markdown document.
+     *
+     * Some locally edited Markdown files start with metadata like:
+     *
+     * ---
+     * modified: 2026-07-02T12:43:08.289Z
+     * title: Link utili
+     * ---
+     *
+     * The site does not currently use this metadata, so Parsedown should ignore
+     * it instead of rendering it as a horizontal rule plus plain text. Only an
+     * initial block delimited by lines containing exactly --- is removed; later
+     * horizontal rules remain normal Markdown.
+     */
+    protected function stripInitialFrontMatter($text)
+    {
+        $text = str_replace(array("\r\n", "\r"), "\n", $text);
+
+        if (strpos($text, "---\n") !== 0) {
+            return $text;
+        }
+
+        $end = strpos($text, "\n---", 4);
+
+        if ($end === false) {
+            return $text;
+        }
+
+        $afterDelimiter = $end + 4;
+
+        if (isset($text[$afterDelimiter]) && $text[$afterDelimiter] !== "\n") {
+            return $text;
+        }
+
+        return ltrim(substr($text, $afterDelimiter), "\n");
     }
 
     protected function textElements($text)

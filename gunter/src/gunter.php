@@ -108,13 +108,17 @@ function gunter_navbar(string $basePath = './', string $active = ''): void
 {
     $siteRoot = $basePath . '../';
     $items = [
-        'eliminata' => ['Eliminata', 'eliminata.html'],
-        'template' => ['Template', 'h4x0rs.html'],
+        'eliminata' => ['Eliminata', 'eliminata.php'],
+        'template' => ['Template', 'h4x0rs.php'],
         'facciata' => ['Protocollo Facciata', 'facciata.php'],
         'meteo' => ['Meteo', 'meteo/'],
         'hardware' => ['Hardware', 'hardware/'],
+        'smartphones' => ['Smartphones', 'hardware/smartphones.php'],
         'nonno' => ['Foglie Sparse', 'nonno/'],
-        'gallery' => ['Photo Gallery', 'gallery/index.html#fototrappola'],
+        'gallery' => ['Photo Gallery', 'gallery/#fototrappola'],
+        'marty' => ['Marty', 'marty/'],
+        'diego' => ['Diego', 'diego/'],
+        'listanozze' => ['Lista Nozze', 'listanozze/'],
     ];
 
     echo '<nav class="navbar navbar-default navbar-static-top">' . PHP_EOL;
@@ -131,7 +135,7 @@ function gunter_navbar(string $basePath = './', string $active = ''): void
     echo '    <div id="gunter-navbar" class="navbar-collapse collapse">' . PHP_EOL;
     echo '      <ul class="nav navbar-nav navbar-right">' . PHP_EOL;
     echo '        <li class="dropdown">' . PHP_EOL;
-    echo '          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu <span class="caret"></span></a>' . PHP_EOL;
+    echo '          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>' . PHP_EOL;
     echo '          <ul class="dropdown-menu" role="menu">' . PHP_EOL;
 
     foreach ($items as $key => $item) {
@@ -165,6 +169,42 @@ function gunter_footer(array $extraLines = []): void
     echo '</footer>' . PHP_EOL;
     echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>' . PHP_EOL;
     echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>' . PHP_EOL;
+    echo '<script>' . PHP_EOL;
+    echo '(function () {' . PHP_EOL;
+    echo '  var navbar = document.getElementById("gunter-navbar");' . PHP_EOL;
+    echo '  var toggle = document.querySelector(".navbar-toggle[data-target=\"#gunter-navbar\"]");' . PHP_EOL;
+    echo '  var dropdown = document.querySelector("#gunter-navbar .dropdown");' . PHP_EOL;
+    echo '  var dropdownToggle = document.querySelector("#gunter-navbar .dropdown-toggle");' . PHP_EOL;
+    echo '' . PHP_EOL;
+    echo '  if (toggle && navbar) {' . PHP_EOL;
+    echo '    toggle.addEventListener("click", function () {' . PHP_EOL;
+    echo '      window.setTimeout(function () {' . PHP_EOL;
+    echo '        var isOpen = navbar.classList.contains("in");' . PHP_EOL;
+    echo '        if (typeof window.jQuery === "undefined") {' . PHP_EOL;
+    echo '          isOpen = !isOpen;' . PHP_EOL;
+    echo '          navbar.classList.toggle("in", isOpen);' . PHP_EOL;
+    echo '          toggle.classList.toggle("collapsed", !isOpen);' . PHP_EOL;
+    echo '        }' . PHP_EOL;
+    echo '        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");' . PHP_EOL;
+    echo '      }, 0);' . PHP_EOL;
+    echo '    });' . PHP_EOL;
+    echo '  }' . PHP_EOL;
+    echo '' . PHP_EOL;
+    echo '  if (dropdown && dropdownToggle) {' . PHP_EOL;
+    echo '    dropdownToggle.addEventListener("click", function (event) {' . PHP_EOL;
+    echo '      event.preventDefault();' . PHP_EOL;
+    echo '      window.setTimeout(function () {' . PHP_EOL;
+    echo '        var isOpen = dropdown.classList.contains("open");' . PHP_EOL;
+    echo '        if (typeof window.jQuery === "undefined") {' . PHP_EOL;
+    echo '          isOpen = !isOpen;' . PHP_EOL;
+    echo '          dropdown.classList.toggle("open", isOpen);' . PHP_EOL;
+    echo '        }' . PHP_EOL;
+    echo '        dropdownToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");' . PHP_EOL;
+    echo '      }, 0);' . PHP_EOL;
+    echo '    });' . PHP_EOL;
+    echo '  }' . PHP_EOL;
+    echo '})();' . PHP_EOL;
+    echo '</script>' . PHP_EOL;
     echo '</body>' . PHP_EOL;
     echo '</html>' . PHP_EOL;
 }

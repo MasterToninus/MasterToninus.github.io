@@ -1,31 +1,4 @@
-<?php
-  /* ======================================================
-   * Bibliometrics page setup
-   * ======================================================
-   * Reusable data-loading and counting logic is kept in helper.php.
-   * This file only defines paths, asks the helper to prepare the data,
-   * and renders the HTML template.
-   */
-
-  require_once __DIR__ . "/helper.php";
-
-  $citation_config_path = __DIR__ . "/citation-data.json";
-  $bibliometric_config_path = __DIR__ . "/bibliometric-data.json";
-
-  $page_data = prepare_bibliometrics_page_data(
-    $citation_config_path,
-    $bibliometric_config_path,
-    __FILE__,
-    __DIR__ . "/helper.php"
-  );
-
-  $articles_with_citations = $page_data["articles_with_citations"];
-  $bibliometric_data       = $page_data["bibliometric_data"];
-  $data_error              = $page_data["data_error"];
-  $last_citation_update    = $page_data["last_citation_update"];
-  $last_data_update        = $page_data["last_data_update"];
-  $footer_last_update      = $page_data["footer_last_update"];
-?><!-- WARNING -->
+<!-- WARNING -->
 <!-- This page has been generated in "vibe-coding" using ChatGPT Plus. -->
 <!DOCTYPE html>
 <html lang="en">
@@ -299,25 +272,15 @@
             <em> A manually curated list of bibliometric indicators.</em>
           </p>
 
-          <?php if ($data_error !== ""): ?>
-            <table class="list">
-              <tr>
-                <td class="left"><b>Error</b></td>
-                <td class="right"><?php echo html($data_error); ?></td>
-              </tr>
-            </table>
-          <?php endif; ?>
-
-          <?php if ($last_data_update !== null): ?>
-          <table class="list">
+          
+                    <table class="list">
             <tr>
               <td class="left"><b>Last data update</b></td>
-              <td class="right"><?php echo date("F d Y.", $last_data_update); ?></td>
+              <td class="right">July 02 2026.</td>
             </tr>
           </table>
           <br>
-          <?php endif; ?>
-
+          
           <!--
             The wrapper below allows horizontal scrolling on small screens.
             This keeps the table layout intact on mobile devices instead of
@@ -328,37 +291,71 @@
               <tbody>
                 <tr>
                   <td class="left"><b> </b></td>
-                  <?php foreach ($bibliometric_data as $source): ?>
-                    <?php
-                      $source_url = $source["url"] ?? "#";
-                      $source_icon = $source["icon"] ?? "";
-                      $source_label = $source["label"] ?? "";
-                      $source_is_external = preg_match("/^https?:\/\//", $source_url) === 1;
-                    ?>
-                    <td class="right">
-                      <a href="<?php echo html($source_url); ?>"<?php if ($source_is_external): ?> target="_blank" rel="noopener"<?php endif; ?>>
-                        <?php if ($source_icon !== ""): ?>
-                          <i class="<?php echo html($source_icon); ?>"></i>
-                        <?php endif; ?>
-                        <b><?php echo html($source_label); ?></b>
+                                                          <td class="right">
+                      <a href="#self-counted-citations">
+                                                  <i class="ai ai-open-data ai-fw"></i>
+                                                <b>Self-assessed</b>
                       </a>
                     </td>
-                  <?php endforeach; ?>
-                </tr>
+                                                          <td class="right">
+                      <a href="https://www.scopus.com/authid/detail.uri?authorId=57218509273" target="_blank" rel="noopener">
+                                                  <i class="ai ai-scopus ai-fw"></i>
+                                                <b>Scopus</b>
+                      </a>
+                    </td>
+                                                          <td class="right">
+                      <a href="https://www.webofscience.com/wos/author/record/JNS-8304-2023" target="_blank" rel="noopener">
+                                                  <i class="ai ai-clarivate ai-fw"></i>
+                                                <b>WoS</b>
+                      </a>
+                    </td>
+                                                          <td class="right">
+                      <a href="https://scholar.google.com/citations?user=DWKPuJYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+                                                  <i class="ai ai-google-scholar ai-fw"></i>
+                                                <b>GScholar</b>
+                      </a>
+                    </td>
+                                                          <td class="right">
+                      <a href="https://www.researchgate.net/profile/Antonio_Michele_Miti" target="_blank" rel="noopener">
+                                                  <i class="ai ai-researchgate ai-fw"></i>
+                                                <b>ResearchGate</b>
+                      </a>
+                    </td>
+                                                          <td class="right">
+                      <a href="https://zbmath.org/authors/miti.antonio-michele" target="_blank" rel="noopener">
+                                                  <i class="fa fa-square-o fa-fw"></i>
+                                                <b>zbMATH</b>
+                      </a>
+                    </td>
+                                                          <td class="right">
+                      <a href="https://mathscinet.ams.org/mathscinet/MRAuthorID/1435797" target="_blank" rel="noopener">
+                                                  <i class="fa fa-microchip fa-fw"></i>
+                                                <b>MathSciNet</b>
+                      </a>
+                    </td>
+                                  </tr>
 
                 <tr>
                   <td class="left"><b>Articles</b></td>
-                  <?php foreach ($bibliometric_data as $source): ?>
-                    <td class="right"><?php print_bibliometric_value($source["articles"] ?? null); ?></td>
-                  <?php endforeach; ?>
-                </tr>
+                                      <td class="right">7</td>
+                                      <td class="right">7</td>
+                                      <td class="right">7</td>
+                                      <td class="right">13</td>
+                                      <td class="right">7</td>
+                                      <td class="right">8</td>
+                                      <td class="right">6</td>
+                                  </tr>
 
                 <tr>
                   <td class="left"><b>Citations</b></td>
-                  <?php foreach ($bibliometric_data as $source): ?>
-                    <td class="right"><?php print_bibliometric_value($source["citations"] ?? null); ?></td>
-                  <?php endforeach; ?>
-                </tr>
+                                      <td class="right">12</td>
+                                      <td class="right">1</td>
+                                      <td class="right">1</td>
+                                      <td class="right">49</td>
+                                      <td class="right">42</td>
+                                      <td class="right">5</td>
+                                      <td class="right">3</td>
+                                  </tr>
 
                 <tr>
                   <td class="left">
@@ -366,10 +363,14 @@
                       <b>H-index</b>
                     </a>
                   </td>
-                  <?php foreach ($bibliometric_data as $source): ?>
-                    <td class="right"><?php print_bibliometric_value($source["hindex"] ?? null); ?></td>
-                  <?php endforeach; ?>
-                </tr>
+                                      <td class="right">2</td>
+                                      <td class="right">1</td>
+                                      <td class="right">1</td>
+                                      <td class="right">4</td>
+                                      <td class="right">4</td>
+                                      <td class="right">n/a</td>
+                                      <td class="right">n/a</td>
+                                  </tr>
               </tbody>
             </table>
           </div>
@@ -430,73 +431,162 @@
 
             
 
-          <?php if ($data_error !== ""): ?>
-            <table class="list">
-              <tr>
-                <td class="left"><b>Error</b></td>
-                <td class="right"><?php echo html($data_error); ?></td>
-              </tr>
-            </table>
-          <?php endif; ?>
-
-          <?php if ($last_citation_update !== null): ?>
-          <table class="list">
+          
+                    <table class="list">
             <tr>
               <td class="left"><b>Last citation update</b></td>
-              <td class="right"><?php echo date("F d Y.", $last_citation_update); ?></td>
+              <td class="right">July 02 2026.</td>
             </tr>
           </table>
-          <?php endif; ?>
-
-          <?php if (count($articles_with_citations) > 0): ?>
-
+          
+          
             <!--
               Main numbered list: each item is one of my cited articles.
               Nested numbered lists contain the papers citing that article.
             -->
             <ol class="citations-list">
 
-              <?php foreach ($articles_with_citations as $article): ?>
-
+              
                 <li class="cited-article">
                   <div class="cited-article-main">
-                    <b><?php echo html(data_text($article, "title", "Untitled")); ?></b>
+                    <b>Reduction of L(infty)-Algebras of Observables on Multisymplectic Manifolds</b>
                     <br>
-                    <?php echo html(data_text($article, "authors")); ?>
-                    <br>
+                    C. Blacker, A. M. Miti, L. Ryvkin                    <br>
                     DOI:
-                    <?php print_doi(data_text($article, "doi")); ?>
-                  </div>
+                    <a href="https://doi.org/10.3842/SIGMA.2024.061" target="_blank" rel="noopener">10.3842/SIGMA.2024.061</a>                  </div>
 
                   <ol class="citing-papers">
-                    <?php foreach ($article["citations"] as $citation): ?>
-                      <li>
-                        <b><?php echo html(data_text($citation, "title", "Untitled")); ?></b>
+                                          <li>
+                        <b>Covariant canonical formulations of classical field theories</b>
                         <br>
-                        <?php echo html(data_text($citation, "authors")); ?>
-                        <br>
+                        F. Gieres                        <br>
                         DOI:
-                        <?php print_doi(data_text($citation, "doi")); ?>
-                      </li>
-                    <?php endforeach; ?>
-                  </ol>
+                        <a href="https://doi.org/10.21468/SciPostPhysLectNotes.77" target="_blank" rel="noopener">10.21468/SciPostPhysLectNotes.77</a>                      </li>
+                                          <li>
+                        <b>More Insights into Symmetries in Multisymplectic Field Theories</b>
+                        <br>
+                        A. Guerra IV, N. Román-Roy                        <br>
+                        DOI:
+                        <a href="https://doi.org/10.3390/sym15020390" target="_blank" rel="noopener">10.3390/sym15020390</a>                      </li>
+                                          <li>
+                        <b>Multisymplectic observable reduction using constraint triples</b>
+                        <br>
+                        A. M. Miti, L. Ryvkin                        <br>
+                        DOI:
+                        <a href="https://doi.org/10.1016/j.difgeo.2025.102272" target="_blank" rel="noopener">10.1016/j.difgeo.2025.102272</a>                      </li>
+                                          <li>
+                        <b>Constraint vector bundles and reduction of Lie (bi-)algebroids</b>
+                        <br>
+                        M. Dippell, D. Kern                        <br>
+                        DOI:
+                        <a href="https://doi.org/10.1016/j.difgeo.2025.102242" target="_blank" rel="noopener">10.1016/j.difgeo.2025.102242</a>                      </li>
+                                          <li>
+                        <b>Reduction and reconstruction of multisymplectic Lie systems</b>
+                        <br>
+                        J. de Lucas, X. Gràcia, X. Rivas, N. Román-Roy, S. Vilariño                        <br>
+                        DOI:
+                        <a href="https://doi.org/10.1088/1751-8121/ac78ab" target="_blank" rel="noopener">10.1088/1751-8121/ac78ab</a>                      </li>
+                                          <li>
+                        <b>A description of classical field equations using extensions of graded Poisson brackets</b>
+                        <br>
+                        M. de Leon, R. Izquierdo-Lopez                        <br>
+                        DOI:
+                        <a href="https://doi.org/10.1142/S0219887826502439" target="_blank" rel="noopener">10.1142/S0219887826502439</a>                      </li>
+                                          <li>
+                        <b>Reduction Of Poisson Manifolds With Hamiltonian Lie Algebroids</b>
+                        <br>
+                        Y. Hirota, N. Ikeda                        <br>
+                        DOI:
+                        <a href="https://doi.org/10.1016/S0034-4877(25)00063-1" target="_blank" rel="noopener">10.1016/S0034-4877(25)00063-1</a>                      </li>
+                                      </ol>
                 </li>
 
-              <?php endforeach; ?>
+              
+                <li class="cited-article">
+                  <div class="cited-article-main">
+                    <b>Observables on multisymplectic manifolds and higher Courant algebroids</b>
+                    <br>
+                    A. M. Miti, M. Zambon                    <br>
+                    DOI:
+                    <a href="https://doi.org/10.1142/S0219199725500063" target="_blank" rel="noopener">10.1142/S0219199725500063</a>                  </div>
 
+                  <ol class="citing-papers">
+                                          <li>
+                        <b>Infinitesimal symmetries of bundle gerbes and Courant algebroids</b>
+                        <br>
+                        D. Djounvouna, D. Krepski                        <br>
+                        DOI:
+                        <a href="https://doi.org/10.1007/s10711-024-00897-0" target="_blank" rel="noopener">10.1007/s10711-024-00897-0</a>                      </li>
+                                          <li>
+                        <b>Compatible E-differential forms on Lie algebroids over (pre-)multisymplectic manifolds</b>
+                        <br>
+                        N. Ikeda                        <br>
+                        DOI:
+                        <a href="https://doi.org/10.3842/SIGMA.2024.025" target="_blank" rel="noopener">10.3842/SIGMA.2024.025</a>                      </li>
+                                      </ol>
+                </li>
+
+              
+                <li class="cited-article">
+                  <div class="cited-article-main">
+                    <b>Multisymplectic actions of compact Lie groups on spheres</b>
+                    <br>
+                    A. M. Miti, L. Ryvkin                    <br>
+                    DOI:
+                    <a href="https://doi.org/10.4310/JSG.2020.v18.n6.a6" target="_blank" rel="noopener">10.4310/JSG.2020.v18.n6.a6</a>                  </div>
+
+                  <ol class="citing-papers">
+                                          <li>
+                        <b>Hamiltonian dynamics and geometry on the two-plectic six-sphere</b>
+                        <br>
+                        M. Wagner, T. Wurzbacher                        <br>
+                        DOI:
+                        accepted                      </li>
+                                      </ol>
+                </li>
+
+              
+                <li class="cited-article">
+                  <div class="cited-article-main">
+                    <b>Derivation of the HOMFLYPT knot polynomial via helicity and geometric quantization</b>
+                    <br>
+                    A. M. Miti, M. Spera                    <br>
+                    DOI:
+                    <a href="https://doi.org/10.1007/s40574-020-00254-5" target="_blank" rel="noopener">10.1007/s40574-020-00254-5</a>                  </div>
+
+                  <ol class="citing-papers">
+                                          <li>
+                        <b>A hydrodynamical homotopy co-momentum map and a multisymplectic interpretation of higher-order linking numbers</b>
+                        <br>
+                        A. M. Miti, M. Spera                        <br>
+                        DOI:
+                        <a href="https://doi.org/10.1017/S1446788720000518" target="_blank" rel="noopener">10.1017/S1446788720000518</a>                      </li>
+                                      </ol>
+                </li>
+
+              
+                <li class="cited-article">
+                  <div class="cited-article-main">
+                    <b>Multisymplectic observable reduction using constraint triples</b>
+                    <br>
+                    A. M. Miti, L. Ryvkin                    <br>
+                    DOI:
+                    <a href="https://doi.org/10.1016/j.difgeo.2025.102272" target="_blank" rel="noopener">10.1016/j.difgeo.2025.102272</a>                  </div>
+
+                  <ol class="citing-papers">
+                                          <li>
+                        <b>Reduction of L∞-algebras of observables on multisymplectic manifolds</b>
+                        <br>
+                        C. Blacker, A. M. Miti, L. Ryvkin                        <br>
+                        DOI:
+                        <a href="https://doi.org/10.3842/SIGMA.2024.061" target="_blank" rel="noopener">10.3842/SIGMA.2024.061</a>                      </li>
+                                      </ol>
+                </li>
+
+              
             </ol>
 
-          <?php else: ?>
-
-            <table class="list">
-              <tr>
-                <td class="left"><b>-</b></td>
-                <td class="right">No self-counted citations inserted.</td>
-              </tr>
-            </table>
-
-          <?php endif; ?>
-        </div>
+                  </div>
 
         <!-- --------------------------------------------- -->
         <!-- Disclaimer -->
@@ -521,12 +611,7 @@
       <br>
       <br>
       <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
-        <?php
-          if ($footer_last_update !== null) {
-            echo "Last update: " . date("F d Y H:i:s.", $footer_last_update);
-          }
-        ?>
-        <br>
+        Last update: July 02 2026 13:17:04.        <br>
 
         Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
         &emsp; Italsing srl. &emsp; All Rights Reserved.

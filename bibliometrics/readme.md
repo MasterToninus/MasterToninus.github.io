@@ -1,81 +1,150 @@
 ---
-modified: 2026-07-02T10:15:00.000Z
+modified: 2026-07-02T13:20:43.297Z
 title: Bibliometrics
 ---
 
 # Bibliometrics
 
-## TODO - content
+This folder contains the bibliometric page of the website.
+
+The page is intentionally simple: the bibliometric values are checked by hand, stored in editable data files, and rendered by `index.php`.
+
+----
+
+
+
+-----
+
+## Files
+
+- `index.php`
+  - renders the bibliometrics page;
+  - defines the paths to the JSON data files;
+  - includes `helper.php`;
+  - displays the external bibliometric indicators and the local citation record.
+
+- `helper.php`
+  - loads and validates the JSON data files;
+  - prepares the citation array used by the page;
+  - prepares the bibliometric indicator array used by the page;
+  - computes the self-assessed article count, citation count, and h-index;
+  - prepares update timestamps for the rendered page.
+
+- `citation-data.json`
+  - contains the local self-assessed citation database;
+  - is used by `helper.php` to compute the self-assessed indicators.
+
+- `bibliometric-data.json`
+  - contains the manually checked external bibliometric indicators.
+
+## Why JSON
+
+The data files are currently written in JSON.
+
+JSON is used because PHP can read it natively through `json_decode()`. This has three practical advantages:
+
+- the data files are not executable PHP code;
+- no external parser is needed;
+- the page remains portable on shared web hosting.
+
+This is particularly useful on Aruba hosting, where installing or enabling the standard PHP YAML extension is not straightforward. Using JSON avoids that dependency entirely.
+
+The current structure is:
+
+```text
+bibliometrics/
+  index.php
+  helper.php
+  citation-data.json
+  bibliometric-data.json
+```
+
+## Notes on the data-file format
+
+The current JSON format is the result of a few intermediate attempts.
+
+At first, I tried to store the data in YAML files. YAML is quite readable and easy to edit by hand, but I was not able to install or enable the corresponding PHP library on my web hosting service.
+
+I then converted the data back to XML. This avoided the YAML dependency problem, but the resulting files were not very readable and were inconvenient to modify manually.
+
+After that, I tried to store the data in PHP files returning arrays. This was slightly more readable than XML and easy to load from `index.php`, but it had the drawback that the data files were still executable PHP code.
+
+For this reason, I finally moved the data to JSON. JSON is stricter and less pleasant to edit than YAML, but it is supported natively by PHP, does not require external libraries, and keeps the data separated from executable code.
+
+## JSON editing notes
+
+JSON is stricter than YAML, so the data files should respect these rules:
+
+- strings must use double quotes;
+- keys must use double quotes;
+- booleans are written as `true` or `false`;
+- missing values are written as `null`;
+- trailing commas are not allowed.
+
+Example:
+
+```json
+{
+  "articles": [
+    {
+      "title": "Example article",
+      "authors": "A. Author",
+      "doi": "10.0000/example",
+      "citations": []
+    }
+  ]
+}
+```
+
+## Data-loading logic
+
+Most reusable PHP logic has been moved out of `index.php` and into `helper.php`.
+
+The helper now handles:
+
+- loading `citation-data.json`;
+- loading `bibliometric-data.json`;
+- validating the expected array structures;
+- preparing the array of external bibliometric indicators;
+- preparing the array of self-recorded citations;
+- counting self-assessed articles;
+- counting self-assessed citations;
+- computing the self-assessed h-index;
+- sorting the visible citation record;
+- preparing the update timestamps used by the page.
+
+The initial PHP block in `index.php` is intentionally short. It only sets the data-file paths, includes `helper.php`, calls `prepare_bibliometrics_page_data()`, and assigns the variables used by the HTML template.
+
+## Counting convention
+
+The self-assessed indicators follow a conservative convention:
+
+- a publication is counted only if it has a valid publisher DOI;
+- citations are counted only for countable publications;
+- arXiv DOIs are excluded;
+- ResearchGate DOIs are excluded;
+- the h-index is computed from the resulting local citation counts.
+
+The working assumption is that DOI-bearing articles, after these exclusions, have passed peer review.
+
+## Known limitations
+
+- The external indicators are still manually curated.
+- The page does not automatically query Scopus, WoS, Google Scholar, ResearchGate, zbMATH, or MathSciNet.
+- JSON is less pleasant to edit by hand than YAML because it does not allow comments and requires strict punctuation.
+- Syntax errors in JSON are reported by `json_last_error_msg()` inside `helper.php`.
+
+## TODO
 
 - [x] Explain how the independent self-assessment is computed.
-  - It is meant to mimic the conservative counting style of Scopus.
-  - A publication or citation is counted only when it has an associated DOI.
-  - arXiv DOIs and ResearchGate DOIs are discarded.
-  - The working assumption is that DOI-bearing articles, after these exclusions, have passed peer review.
-
 - [x] Explain the known discrepancies among databases.
-  - Scopus and WoS do not seem to count citations to a preprint once the corresponding final paper has appeared, even when the arXiv page correctly points to the final published version.
-  - Google Scholar also tracks theses, reports, presentations, posters, and other documents found on the web; for this reason its numbers are usually more generous.
-  - ResearchGate similarly tracks material uploaded to the platform or scraped by its systems.
-  - zbMATH and MathSciNet need a more careful explanation after I understand better how their counting works.
-
 - [x] Add a note that only Scopus and WoS are relevant for the Italian ASN habilitation process.
-
 - [x] Add a link or reference to the email exchange with Scopus, where they confirmed that they do not correct this kind of counting anymore.
-  - Possible contextual comment: this policy may indirectly discourage the use of arXiv preprints, but this should be phrased carefully.
-
 - [x] Explain why the external data are not automatically web-scraped.
-  - Some databases do not expose a convenient public API.
-  - Some databases have anti-bot systems or access restrictions.
-  - For transparency, the external values are therefore manually checked and manually inserted.
-
-## TODO - technical
-
-- [x] Move manually entered external bibliometric data to a separate configuration file.
-  - Current file: `bibliometric-data.php`.
-  - The file contains only the external bibliometric indicators.
-  - The file uses a PHP array instead of XML because it is more readable and easier to edit by hand at this stage.
-  - Please remember that this setup is maintained by a beginner, so simplicity is preferred over technical elegance.
-
-- [x] Move the self-assessed citation database from `citations.xml` to a PHP configuration file.
-  - Current file: `citation-data.php`.
-  - Current status: `index.php` no longer reads `citations.xml`.
-  - The citation records are separated from the external bibliometric indicators.
-
-- [x] Keep local citation data and external bibliometric data in two separate PHP files.
-  - Local citation database: `citation-data.php`.
-  - External bibliometric indicators: `bibliometric-data.php`.
-  - `index.php` loads both files and computes the self-assessed indicators from `citation-data.php`.
-
-- [x] Add configurable support for ResearchGate, zbMATH, and MathSciNet.
-  - Current status: profile URLs are configured.
-  - Missing numerical values are displayed as `n/a`.
-
+- [x] Keep support for ResearchGate, zbMATH, and MathSciNet.
 - [ ] Add support for automatic web scraping or API-based retrieval of bibliometric data, where possible.
-  - [ ] Scopus
-  - [ ] Google Scholar
-  - [ ] WoS
-  - [ ] ResearchGate
-  - [ ] zbMATH
-  - [ ] MathSciNet
-
-- [ ] Add a visible timestamp for the external bibliometric data.
-  - The timestamp should make clear when the manually entered values were last checked.
-  - This is important because the data are not continuously updated.
-
 - [ ] Consider moving page-specific CSS to a separate stylesheet.
-
-- [ ] Consider moving the remaining page-specific PHP logic to a dedicated helper file.
-  - Current remaining logic: computing the self-assessed article count, citation count, h-index, and ordered citation list from the PHP data array.
-
-## Notes
-
-The page currently separates the two kinds of data into two PHP files:
-
-- `citation-data.php` contains the self-assessed citation data and is used by `index.php` to compute the local article count, citation count, h-index, and ordered citation list;
-- `bibliometric-data.php` contains the manually inserted external bibliometric indicators.
-
-The old `citations.xml` file is no longer needed by `index.php`.
+- [x] Move reusable PHP helpers to a dedicated `helper.php` file.
 
 ## Layout note
 

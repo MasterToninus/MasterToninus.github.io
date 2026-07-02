@@ -1,6 +1,11 @@
+---
+modified: 2026-07-02T12:43:08.289Z
+title: Link utili
+---
+
 # Link utili
 
-Cascione dei link potenzialmente utili. 
+archivio dei link potenzialmente utili. 
 Metterli nella homepage sembrava un po' troppo _"vecchia scuola"_.
 
 * [Fondi Indam - Partecipazione Scuole](https://www.altamatematica.it/gnsaga/attivita/partecipazione-a-convegni-scuole-e-workshop-missioni/)

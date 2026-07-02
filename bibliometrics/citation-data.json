@@ -1,0 +1,177 @@
+{
+    "description": "Self-counted citations grouped by cited article.",
+    "articles": [
+        {
+            "title": "Multisymplectic actions of compact Lie groups on spheres",
+            "authors": "A. M. Miti, L. Ryvkin",
+            "doi": "10.4310/JSG.2020.v18.n6.a6",
+            "citations": [
+                {
+                    "title": "Hamiltonian dynamics and geometry on the two-plectic six-sphere",
+                    "authors": "M. Wagner, T. Wurzbacher",
+                    "doi": "accepted",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": false,
+                        "scholar": true
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Derivation of the HOMFLYPT knot polynomial via helicity and geometric quantization",
+            "authors": "A. M. Miti, M. Spera",
+            "doi": "10.1007/s40574-020-00254-5",
+            "citations": [
+                {
+                    "title": "A hydrodynamical homotopy co-momentum map and a multisymplectic interpretation of higher-order linking numbers",
+                    "authors": "A. M. Miti, M. Spera",
+                    "doi": "10.1017/S1446788720000518",
+                    "indexed": {
+                        "zbmath": true
+                    }
+                }
+            ]
+        },
+        {
+            "title": "A Hydrodynamical Homotopy Co-momentum Map And A Multisymplectic Interpretation Of Higher-order Linking Numbers",
+            "authors": "A. M. Miti, M. Spera",
+            "doi": "10.1017/s1446788720000518",
+            "citations": []
+        },
+        {
+            "title": "Observables on multisymplectic manifolds and higher Courant algebroids",
+            "authors": "A. M. Miti, M. Zambon",
+            "doi": "10.1142/S0219199725500063",
+            "citations": [
+                {
+                    "title": "Infinitesimal symmetries of bundle gerbes and Courant algebroids",
+                    "authors": "D. Djounvouna, D. Krepski",
+                    "doi": "10.1007/s10711-024-00897-0",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": false,
+                        "scholar": true
+                    }
+                },
+                {
+                    "title": "Compatible E-differential forms on Lie algebroids over (pre-)multisymplectic manifolds",
+                    "authors": "N. Ikeda",
+                    "doi": "10.3842/SIGMA.2024.025",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": false,
+                        "scholar": true,
+                        "zbmath": true
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Reduction of L(infty)-Algebras of Observables on Multisymplectic Manifolds",
+            "authors": "C. Blacker, A. M. Miti, L. Ryvkin",
+            "doi": "10.3842/SIGMA.2024.061",
+            "citations": [
+                {
+                    "title": "Covariant canonical formulations of classical field theories",
+                    "authors": "F. Gieres",
+                    "doi": "10.21468/SciPostPhysLectNotes.77",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": false,
+                        "scholar": true
+                    }
+                },
+                {
+                    "title": "More Insights into Symmetries in Multisymplectic Field Theories",
+                    "authors": "A. Guerra IV, N. Román-Roy",
+                    "doi": "10.3390/sym15020390",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": false,
+                        "scholar": true
+                    }
+                },
+                {
+                    "title": "Multisymplectic observable reduction using constraint triples",
+                    "authors": "A. M. Miti, L. Ryvkin",
+                    "doi": "10.1016/j.difgeo.2025.102272",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": false,
+                        "scholar": true
+                    }
+                },
+                {
+                    "title": "Constraint vector bundles and reduction of Lie (bi-)algebroids",
+                    "authors": "M. Dippell, D. Kern",
+                    "doi": "10.1016/j.difgeo.2025.102242",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": false,
+                        "scholar": true
+                    }
+                },
+                {
+                    "title": "Reduction and reconstruction of multisymplectic Lie systems",
+                    "authors": "J. de Lucas, X. Gràcia, X. Rivas, N. Román-Roy, S. Vilariño",
+                    "doi": "10.1088/1751-8121/ac78ab",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": false,
+                        "scholar": true
+                    }
+                },
+                {
+                    "title": "A description of classical field equations using extensions of graded Poisson brackets",
+                    "authors": "M. de Leon, R. Izquierdo-Lopez",
+                    "doi": "10.1142/S0219887826502439",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": false,
+                        "scholar": true
+                    }
+                },
+                {
+                    "title": "Reduction Of Poisson Manifolds With Hamiltonian Lie Algebroids",
+                    "authors": "Y. Hirota, N. Ikeda",
+                    "doi": "10.1016/S0034-4877(25)00063-1",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": true,
+                        "scholar": false
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Measurement-based uncomputation of quantum circuits for modular arithmetic",
+            "authors": "A. Luongo, A. M. Miti, V. Narasimhachar, A. Sireesh",
+            "doi": "10.1109/DAC63849.2025.11132981",
+            "arxiv": "2407.20167",
+            "citations": []
+        },
+        {
+            "title": "Multisymplectic observable reduction using constraint triples",
+            "authors": "A. M. Miti, L. Ryvkin",
+            "doi": "10.1016/j.difgeo.2025.102272",
+            "citations": [
+                {
+                    "title": "Reduction of L∞-algebras of observables on multisymplectic manifolds",
+                    "authors": "C. Blacker, A. M. Miti, L. Ryvkin",
+                    "doi": "10.3842/SIGMA.2024.061",
+                    "indexed": {
+                        "zbmath": true
+                    }
+                }
+            ]
+        },
+        {
+            "title": "L(infty)-morphisms between twisted Courant r-Lie algebras and untwisted Courant (r+1)-Lie algebroids",
+            "authors": "A. M. Miti",
+            "doi": null,
+            "status": "Submitted to peer-review",
+            "citations": []
+        }
+    ]
+}

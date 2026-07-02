@@ -1,12 +1,5 @@
 <!-- WARNING -->
-<!-- This page has been generated in "wibe-coding" using chatgpt Plus (...) -->
-<!-- TODO :
-      * scrape data from Scopus, WoS, and Google Scholar to automatically update the data using api call
-      * self-assessment data computed from a local database of citations (xml file or mysql database provided by Aruba hosting)
-      * add a "last update" timestamp to the page footer
-      * move style to a separate dedicated css file
-      * move php code to a separate dedicated php file
--->
+<!-- This page has been generated in "vibe-coding" using ChatGPT Plus. -->
 <!DOCTYPE html>
 <html lang="en">
   <!-- -->
@@ -123,7 +116,7 @@
        */
       .bibliometrics-table {
         width: 100%;
-        min-width: 660px;
+        min-width: 960px;
         border-collapse: collapse;
         table-layout: auto;
       }
@@ -174,7 +167,7 @@
 
         .bibliometrics-table {
           width: max-content;
-          min-width: 660px;
+          min-width: 960px;
           font-size: 0.9em;
         }
 
@@ -316,7 +309,17 @@
            * If the field is empty or explicitly null, it prints "No DOI".
            * If the field contains a non-DOI note, it is printed as plain text.
            */
+          function print_bibliometric_value($value) {
+            if ($value === null || $value === "") {
+              echo "n/a";
+              return;
+            }
+
+            echo html($value);
+          }
+
           function print_doi($doi) {
+
             $doi = trim((string) $doi);
             $url = doi_url($doi);
 
@@ -524,50 +527,43 @@
           $self_assessed_hindex    = calculate_xml_hindex($articles);
 
 
-          /* ---------- Bibliometric data ---------- */
+          /* ---------- External bibliometric data ---------- */
+
+          /*
+           * Manual bibliometric values for external databases are loaded from a
+           * separate configuration file. This keeps index.php responsible for
+           * rendering and for the self-assessed XML computation only.
+           */
+          $bibliometric_config_path = __DIR__ . "/bibliometric-data.php";
+          $external_bibliometric_data = [];
+
+          if (file_exists($bibliometric_config_path)) {
+            $loaded_bibliometric_data = require $bibliometric_config_path;
+
+            if (is_array($loaded_bibliometric_data)) {
+              $external_bibliometric_data = $loaded_bibliometric_data;
+            }
+          }
+
           /*
            * This array is the single source for the displayed indicators table.
            *
            * - The self-assessed column is computed from citations.xml above.
-           * - The Scopus, WoS, and Google Scholar columns remain manually
-           *   compiled because those platforms do not expose reliable public
-           *   HTML/API data for this lightweight static PHP page.
-           * - Each source also stores its profile URL, used in the table header.
+           * - The external profiles are loaded from bibliometric-data.php.
            */
-
-          $bibliometric_data = [
-            'self-assessed' => [
-              'label'     => 'Self-assessed',
-              'articles'  => $self_assessed_articles,
-              'citations' => $self_assessed_citations,
-              'hindex'    => $self_assessed_hindex,
-              'url'       => '#self-counted-citations',
+          $bibliometric_data = array_merge(
+            [
+              'self-assessed' => [
+                'label'     => 'Self-assessed',
+                'articles'  => $self_assessed_articles,
+                'citations' => $self_assessed_citations,
+                'hindex'    => $self_assessed_hindex,
+                'url'       => '#self-counted-citations',
+                'icon'      => 'ai ai-open-data ai-fw',
+              ],
             ],
-
-            'scopus' => [
-              'label'     => 'Scopus',
-              'articles'  => 7,
-              'citations' => 1,
-              'hindex'    => 1,
-              'url'       => 'https://www.scopus.com/authid/detail.uri?authorId=57218509273',
-            ],
-
-            'wos' => [
-              'label'     => 'WoS',
-              'articles'  => 7,
-              'citations' => 1,
-              'hindex'    => 1,
-              'url'       => 'https://www.webofscience.com/wos/author/record/JNS-8304-2023',
-            ],
-
-            'gscholar' => [
-              'label'     => 'GScholar',
-              'articles'  => 7,
-              'citations' => 41,
-              'hindex'    => 4,
-              'url'       => 'https://scholar.google.com/citations?user=DWKPuJYAAAAJ&amp;hl=en',
-            ],
-          ];
+            $external_bibliometric_data
+          );
         ?>
 
         <!-- --------------------------------------------- -->
@@ -598,62 +594,48 @@
               <tbody>
                 <tr>
                   <td class="left"><b> </b></td>
-                  <td class="right">
-                    <a href="#self-counted-citations">
-                      <i class="ai ai-open-data ai-fw"></i>
-                      <b>Self-assessed</b>
+                  <?php foreach ($bibliometric_data as $source): ?>
+                    <?php
+                      $source_url = $source["url"] ?? "#";
+                      $source_icon = $source["icon"] ?? "";
+                      $source_label = $source["label"] ?? "";
+                      $source_is_external = preg_match("/^https?:\/\//", $source_url) === 1;
+                    ?>
+                    <td class="right">
+                      <a href="<?php echo html($source_url); ?>"<?php if ($source_is_external): ?> target="_blank" rel="noopener"<?php endif; ?>>
+                        <?php if ($source_icon !== ""): ?>
+                          <i class="<?php echo html($source_icon); ?>"></i>
+                        <?php endif; ?>
+                        <b><?php echo html($source_label); ?></b>
+                      </a>
+                    </td>
+                  <?php endforeach; ?>
+                </tr>
+
+                <tr>
+                  <td class="left"><b>Articles</b></td>
+                  <?php foreach ($bibliometric_data as $source): ?>
+                    <td class="right"><?php print_bibliometric_value($source["articles"] ?? null); ?></td>
+                  <?php endforeach; ?>
+                </tr>
+
+                <tr>
+                  <td class="left"><b>Citations</b></td>
+                  <?php foreach ($bibliometric_data as $source): ?>
+                    <td class="right"><?php print_bibliometric_value($source["citations"] ?? null); ?></td>
+                  <?php endforeach; ?>
+                </tr>
+
+                <tr>
+                  <td class="left">
+                    <a href="https://en.wikipedia.org/wiki/H-index" target="_blank" rel="noopener">
+                      <b>H-index</b>
                     </a>
                   </td>
-
-                  <td class="right">
-                  <a href="https://www.scopus.com/authid/detail.uri?authorId=57218509273" target="_blank" rel="noopener">
-                    <i class="ai ai-scopus ai-fw"></i>
-                    <b>Scopus</b>
-                  </a>
-                </td>
-
-                <td class="right">
-                  <a href="https://www.webofscience.com/wos/author/record/JNS-8304-2023" target="_blank" rel="noopener">
-                    <i class="ai ai-clarivate ai-fw"></i>
-                    <b>WoS</b>
-                  </a>
-                </td>
-
-                <td class="right">
-                  <a href="https://scholar.google.com/citations?user=DWKPuJYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
-                    <i class="ai ai-google-scholar ai-fw"></i>
-                    <b>GScholar</b>
-                  </a>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="left"><b>Articles</b></td>
-                <td class="right"><?php echo html($bibliometric_data["self-assessed"]["articles"]); ?></td>
-                <td class="right"><?php echo html($bibliometric_data["scopus"]["articles"]); ?></td>
-                <td class="right"><?php echo html($bibliometric_data["wos"]["articles"]); ?></td>
-                <td class="right"><?php echo html($bibliometric_data["gscholar"]["articles"]); ?></td>
-              </tr>
-
-              <tr>
-                <td class="left"><b>Citations</b></td>
-                <td class="right"><?php echo html($bibliometric_data["self-assessed"]["citations"]); ?></td>
-                <td class="right"><?php echo html($bibliometric_data["scopus"]["citations"]); ?></td>
-                <td class="right"><?php echo html($bibliometric_data["wos"]["citations"]); ?></td>
-                <td class="right"><?php echo html($bibliometric_data["gscholar"]["citations"]); ?></td>
-              </tr>
-
-              <tr>
-                <td class="left">
-                  <a href="https://en.wikipedia.org/wiki/H-index" target="_blank" rel="noopener">
-                    <b>H-index</b>
-                  </a>
-                </td>
-                <td class="right"><?php echo html($bibliometric_data["self-assessed"]["hindex"]); ?></td>
-                <td class="right"><?php echo html($bibliometric_data["scopus"]["hindex"]); ?></td>
-                <td class="right"><?php echo html($bibliometric_data["wos"]["hindex"]); ?></td>
-                <td class="right"><?php echo html($bibliometric_data["gscholar"]["hindex"]); ?></td>
-              </tr>
+                  <?php foreach ($bibliometric_data as $source): ?>
+                    <td class="right"><?php print_bibliometric_value($source["hindex"] ?? null); ?></td>
+                  <?php endforeach; ?>
+                </tr>
               </tbody>
             </table>
           </div>

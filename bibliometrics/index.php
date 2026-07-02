@@ -231,7 +231,11 @@
         <div id="introduction">
           <div id="desc">
             <p class="lead">
-              I do not particularly believe in bibliometric indicators, nor in the comforting idea that the value of a mathematical argument can be compressed into a small table of numbers. Nevertheless, the Italian ministerial system has decided that these numbers matter for the national scientific qualification, so here they are, duly collected and displayed. Apparently, it is not enough to keep up with the philosophy of publish-or-perish: one must also take care of the accounting produced by private entities.
+              I do not particularly believe in bibliometric indicators, nor in the comforting idea that the value of a mathematical argument can be compressed into a small table of numbers. <br>
+
+              Nevertheless, the Italian ministerial system (ASN) has decided that these numbers matter for the national scientific qualification, so here they are, duly collected and displayed. <br> 
+
+              Apparently, it is not enough to keep up with the philosophy of publish-or-perish; one must also <em>attend to all the bibliometrics that the private entities on which the system relies fail to account for</em>.
             </p>
           </div>
           <div id="photo">
@@ -246,7 +250,7 @@
           <div class="sec-title">Links</div>
           <ul>
             <li>
-              To know more about the Italian National Scientific Habilitation, see the official ministerial portal:
+              To know more about the Italian National Scientific Habilitation, see :
               <a href="https://abilitazione.mur.gov.it/public/index.php" target="_blank" rel="noopener noreferrer">Abilitazione Scientifica Nazionale</a>.
             </li>
             <li>
@@ -613,6 +617,7 @@
               <td class="right"><?php echo date("F d Y.", $last_data_update); ?></td>
             </tr>
           </table>
+          <br>
           <?php endif; ?>
 
           <!--
@@ -677,31 +682,23 @@
 
             <ul>
               <li>
-                <b>ASN relevance:</b> for the Italian National Scientific Habilitation, the relevant databases are Scopus and Web of Science. The other sources are displayed only for context.
+                <b>About the discrepancies in these numbers:</b>
+                Scopus and WoS do not count citations to an arXiv preprint after the final paper has appeared, even when the arXiv page correctly links to the published version. 
+                On the other hand, Scholar and ResearchGate also count preprints, theses, presentations, and many other web-scraped documents as publications, both as valid publications and citations.
               </li>
               <li>
-                <b>Preprint citations:</b> Scopus and WoS do not seem to count citations to an arXiv preprint after the final paper has appeared, even when arXiv links to the published version.
+                <b>ASN relevance:</b> or the Italian National Scientific Habilitation, the relevant databases are Scopus and Web of Science. Notably, Scopus refuses to correct this missing citation count on their side (see <a href="./scopus-email-exchange.txt" target="_blank" rel="noopener">Scopus support message</a>). The other sources are displayed only for context.
               </li>
               <li>
-                <b>Broader sources:</b> Google Scholar also tracks theses, reports, presentations, posters, and other web documents; ResearchGate similarly includes uploaded or automatically detected material.
+                <b>Why manually curate the data:</b>
+                Most databases lack a convenient public API or use access restrictions and anti-bot systems. Values are therefore checked by hand and inserted in <code>bibliometric-data.php</code>
               </li>
               <li>
-                <b>Pending clarification:</b> I still need to understand more carefully how zbMATH and MathSciNet compute citation indicators.
-              </li>
-              <li>
-                <b>Scopus support:</b> an anonymized plain-text copy of the relevant exchange is available here:
-                <a href="./scopus-email-exchange.txt" target="_blank" rel="noopener">Scopus support email exchange</a>.
-              </li>
-              <li>
-                <b>Manual data:</b> external indicators are not web-scraped. Some databases lack a convenient public API, or use access restrictions and anti-bot systems. Values are therefore checked by hand and inserted in <code>bibliometric-data.php</code>.
+                <b>Web scraping test:</b>: 
+                  <a href="./google-scholar-scraper.php" target="_blank" rel="noopener">Scholar</a>,
+                  <a href="./scopus-scraper.php" target="_blank" rel="noopener">Scopus</a>.
               </li>
             </ul>
-
-            <p class="bibliometrics-warning">
-              <b>Web scraping test:</b>
-                <a href="./google-scholar-scraper.php" target="_blank" rel="noopener">Scholar</a>,
-                <a href="./scopus-scraper.php" target="_blank" rel="noopener">Scopus</a>.
-            </p>    
           </div>
 
         <!-- --------------------------------------------- -->
@@ -724,12 +721,12 @@
           <div class="sec-title">How do I assess my own citations?</div>
 
           <ul>
-              <li>The self-assessed column is computed from <code>citation-data.php</code>.</li>
-              <li>The convention is conservative and is meant to mimic Scopus as far as possible.</li>
-              <li>Articles and citations are counted only when they have a DOI.</li>
-              <li>arXiv DOIs and ResearchGate DOIs are discarded.</li>
-              <li>The working assumption is that the remaining DOI-bearing articles have passed peer review.</li>
-              <li>The article count, citation count, and h-index are computed automatically from the local citation database.</li>
+              <li>  
+                Articles and citations are counted only if they have a DOI, excluding those that are attributed by arXiv and ResearchGate. The working assumption is that the remaining DOI-bearing articles have passed peer review.
+            </li>
+              <li>
+                The self-assessed indices are automatically calculated using a local citation database, which is manually curated by merging data from all sources listed in the indicators table above.
+              </li>
             </ul>    
 
 

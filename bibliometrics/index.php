@@ -91,6 +91,12 @@
         margin: 0.5em 0 1em 0;
       }
 
+      .bibliometrics-note {
+        font-size: 0.95em;
+        line-height: 1.45;
+        margin: 0.5em 0 1em 0;
+      }
+
 
       /*
        * Responsive wrapper for the indicators table.
@@ -237,7 +243,7 @@
         <!-- Links -->
         <!-- --------------------------------------------- -->        
         <div class="sec">
-          <div class="sec-title"></div>
+          <div class="sec-title">Links</div>
           <ul>
             <li>
               To know more about the Italian National Scientific Habilitation, see the official ministerial portal:
@@ -581,12 +587,12 @@
         <!-- --------------------------------------------- -->
         <!-- Indicators Table -->
         <!-- --------------------------------------------- -->
-        <div class="big-title shaded" id="indicators">Indicators</div>
-            
+        <div class="sec" id="indicators">
+          <div class="big-title shaded">Indicators</div>
+
           <p class="bibliometrics-warning">
             <b>Warning:</b> <em>Current state of this page is very tentative. Data are updated as of June 2026.</em>
           </p>
-          <br>
 
           <!--
             The wrapper below allows horizontal scrolling on small screens.
@@ -643,8 +649,9 @@
               </tbody>
             </table>
           </div>
+        </div>
 
-          <div class="sec" id="issues">
+        <div class="sec" id="issues">
             <div class="sec-title">Known issues</div>
 
             <ul>
@@ -676,11 +683,6 @@
             </p>    
           </div>
 
-
-
-        </div>
-
-
         <!-- --------------------------------------------- -->
         <!-- Self-counted citations from PHP data -->
         <!-- --------------------------------------------- -->
@@ -698,11 +700,9 @@
         <div class="sec" id="self-counted-citations">
           <div class="big-title shaded" id="self-assessed-citation-record">Citation record</div>
 
-            <p class="bibliometrics-warning">
-              <b>How do I assess my own citations?</b>
-            </p>
+          <div class="sec-title">How do I assess my own citations?</div>
 
-            <ul>
+          <ul>
               <li>The self-assessed column is computed from <code>citation-data.php</code>.</li>
               <li>The convention is conservative and is meant to mimic Scopus as far as possible.</li>
               <li>Articles and citations are counted only when they have a DOI.</li>
@@ -808,50 +808,47 @@
             of the algorithmic bureaucracy involved.
           </div>
         </div>
-      </div>
-    </div>
 
     <!-- --------------------------------------------- -->
     <!-- Footer -->
     <!-- --------------------------------------------- -->
     <footer>
-      <div id="content">
-        <div id="content-container">
-          <br>
-          <br>
-          <br>
-          <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
+      <br>
+      <br>
+      <br>
+      <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
+        <?php
+          /*
+           * Footer timestamp.
+           *
+           * The footer reports the most recent modification time among the
+           * PHP data file and the PHP page itself. This is separate from the
+           * citations-section timestamp, which reports only the data file date.
+           */
+          $files = array($bibliometric_config_path ?? null, __FILE__);
+          $times = array();
 
-            <?php
-              /*
-               * Footer timestamp.
-               *
-               * The footer reports the most recent modification time among the
-               * PHP data file and the PHP page itself. This is separate from the
-               * citations-section timestamp, which reports only the Data file date.
-               */
-              $files = array($bibliometric_config_path ?? null, __FILE__);
-              $times = array();
+          foreach ($files as $file) {
+            if (!empty($file) && file_exists($file)) {
+              array_push($times, filemtime($file));
+            }
+          }
 
-              foreach ($files as $file) {
-                if (!empty($file) && file_exists($file)) {
-                  array_push($times, filemtime($file));
-                }
-              }
+          if (count($times) > 0) {
+            echo "Last update: " . date("F d Y H:i:s.", max($times));
+          }
+        ?>
+        <br>
 
-              if (count($times) > 0) {
-                echo "Last update: " . date("F d Y H:i:s.", max($times));
-              }
-            ?>
-
-            <br>
-
-            Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
-            &emsp; Italsing srl. &emsp; All Rights Reserved.
-          </div>
-        </div>
+        Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
+        &emsp; Italsing srl. &emsp; All Rights Reserved.
       </div>
     </footer>
+
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
 

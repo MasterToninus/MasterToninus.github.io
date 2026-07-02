@@ -1,5 +1,5 @@
 ---
-modified: 2026-07-02T10:05:00.000Z
+modified: 2026-07-02T10:15:00.000Z
 title: Bibliometrics
 ---
 
@@ -76,3 +76,7 @@ The page currently separates the two kinds of data into two PHP files:
 - `bibliometric-data.php` contains the manually inserted external bibliometric indicators.
 
 The old `citations.xml` file is no longer needed by `index.php`.
+
+## Layout note
+
+- [x] Layout harmonized with the rest of the website: sections use the same `sec`, `sec-title`, `big-title shaded`, `list`, `content`, `content-container`, and footer structure visible in the research page example.

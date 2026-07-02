@@ -1,5 +1,5 @@
 ---
-modified: 2026-07-02T09:05:00.000Z
+modified: 2026-07-02T09:25:00.000Z
 title: Bibliometrics
 ---
 
@@ -33,8 +33,19 @@ title: Bibliometrics
 
 - [x] Move manually entered external bibliometric data to a separate configuration file.
   - Current file: `bibliometric-data.php`.
+  - The file contains only the external bibliometric indicators.
   - The file uses a PHP array instead of XML because it is more readable and easier to edit by hand at this stage.
   - Please remember that this setup is maintained by a beginner, so simplicity is preferred over technical elegance.
+
+- [x] Move the self-assessed citation database from `citations.xml` to a PHP configuration file.
+  - Current file: `citation-data.php`.
+  - Current status: `index.php` no longer reads `citations.xml`.
+  - The citation records are separated from the external bibliometric indicators.
+
+- [x] Keep local citation data and external bibliometric data in two separate PHP files.
+  - Local citation database: `citation-data.php`.
+  - External bibliometric indicators: `bibliometric-data.php`.
+  - `index.php` loads both files and computes the self-assessed indicators from `citation-data.php`.
 
 - [x] Add configurable support for ResearchGate, zbMATH, and MathSciNet.
   - Current status: profile URLs are configured.
@@ -55,10 +66,13 @@ title: Bibliometrics
 - [ ] Consider moving page-specific CSS to a separate stylesheet.
 
 - [ ] Consider moving the remaining page-specific PHP logic to a dedicated helper file.
+  - Current remaining logic: computing the self-assessed article count, citation count, h-index, and ordered citation list from the PHP data array.
 
 ## Notes
 
-The page currently separates two kinds of data:
+The page currently separates the two kinds of data into two PHP files:
 
-- self-assessed bibliometric data, computed from the local citation database;
-- external bibliometric data, manually inserted in `bibliometric-data.php`.
+- `citation-data.php` contains the self-assessed citation data and is used by `index.php` to compute the local article count, citation count, h-index, and ordered citation list;
+- `bibliometric-data.php` contains the manually inserted external bibliometric indicators.
+
+The old `citations.xml` file is no longer needed by `index.php`.

@@ -1,18 +1,15 @@
 <?php
 /*
- * Manual bibliometric indicators for external databases.
+ * External bibliometric data for the Bibliometrics page.
  *
- * This file is intentionally separated from index.php so that the displayed
- * external values can be updated without touching the page rendering logic.
- *
- * The data are stored in a PHP array rather than in XML because, at this stage,
- * I find this format more readable and easier to edit by hand. Please keep in
- * mind that I am still a beginner with this setup, so clarity and simplicity are
- * preferred over more elaborate configuration formats.
+ * This file contains manually checked external bibliometric indicators.
+ * It is intentionally separated from index.php and from the local self-assessed citation database.
+ * 
+ * The data are stored in a PHP array because the values are manually checked and manually inserted.
  */
 
 return [
-  'scopus' => [
+  'scopus'       => [
     'label'     => 'Scopus',
     'articles'  => 7,
     'citations' => 1,
@@ -20,8 +17,7 @@ return [
     'url'       => 'https://www.scopus.com/authid/detail.uri?authorId=57218509273',
     'icon'      => 'ai ai-scopus ai-fw',
   ],
-
-  'wos' => [
+  'wos'          => [
     'label'     => 'WoS',
     'articles'  => 7,
     'citations' => 1,
@@ -29,8 +25,7 @@ return [
     'url'       => 'https://www.webofscience.com/wos/author/record/JNS-8304-2023',
     'icon'      => 'ai ai-clarivate ai-fw',
   ],
-
-  'gscholar' => [
+  'gscholar'     => [
     'label'     => 'GScholar',
     'articles'  => 13,
     'citations' => 49,
@@ -38,7 +33,6 @@ return [
     'url'       => 'https://scholar.google.com/citations?user=DWKPuJYAAAAJ&hl=en',
     'icon'      => 'ai ai-google-scholar ai-fw',
   ],
-
   'researchgate' => [
     'label'     => 'ResearchGate',
     'articles'  => 7,
@@ -47,22 +41,20 @@ return [
     'url'       => 'https://www.researchgate.net/profile/Antonio_Michele_Miti',
     'icon'      => 'ai ai-researchgate ai-fw',
   ],
-
-  'zbmath' => [
+  'zbmath'       => [
     'label'     => 'zbMATH',
     'articles'  => 8,
     'citations' => 5,
     'hindex'    => null,
     'url'       => 'https://zbmath.org/authors/miti.antonio-michele',
-    'icon'      => 'ai ai-zbmath ai-fw',
+    'icon'      => 'fa fa-square-o fa-fw',
   ],
-
-  'mathscinet' => [
+  'mathscinet'   => [
     'label'     => 'MathSciNet',
     'articles'  => 6,
     'citations' => 3,
     'hindex'    => null,
     'url'       => 'https://mathscinet.ams.org/mathscinet/MRAuthorID/1435797',
-    'icon'      => 'ai ai-mathscinet ai-fw',
+    'icon'      => 'fa fa-microchip fa-fw',
   ],
 ];

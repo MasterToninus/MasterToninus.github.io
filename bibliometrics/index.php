@@ -581,19 +581,12 @@
         <!-- --------------------------------------------- -->
         <!-- Indicators Table -->
         <!-- --------------------------------------------- -->
-        <div class="sec" id="indicators">
-          <div class="sec-title">Indicators</div>
+        <div class="big-title shaded" id="indicators">Indicators</div>
             
           <p class="bibliometrics-warning">
             <b>Warning:</b> <em>Current state of this page is very tentative. Data are updated as of June 2026.</em>
           </p>
           <br>
-             
-          <p class="bibliometrics-warning">
-            <b>Web scraping test:</b>
-              <a href="./google-scholar-scraper.php" target="_blank" rel="noopener">Scholar</a>,
-              <a href="./scopus-scraper.php" target="_blank" rel="noopener">Scopus</a>.
-            </p>          
 
           <!--
             The wrapper below allows horizontal scrolling on small screens.
@@ -650,6 +643,41 @@
               </tbody>
             </table>
           </div>
+
+          <div class="sec" id="issues">
+            <div class="sec-title">Known issues</div>
+
+            <ul>
+              <li>
+                <b>ASN relevance:</b> for the Italian National Scientific Habilitation, the relevant databases are Scopus and Web of Science. The other sources are displayed only for context.
+              </li>
+              <li>
+                <b>Preprint citations:</b> Scopus and WoS do not seem to count citations to an arXiv preprint after the final paper has appeared, even when arXiv links to the published version.
+              </li>
+              <li>
+                <b>Broader sources:</b> Google Scholar also tracks theses, reports, presentations, posters, and other web documents; ResearchGate similarly includes uploaded or automatically detected material.
+              </li>
+              <li>
+                <b>Pending clarification:</b> I still need to understand more carefully how zbMATH and MathSciNet compute citation indicators.
+              </li>
+              <li>
+                <b>Scopus support:</b> an anonymized plain-text copy of the relevant exchange is available here:
+                <a href="./scopus-email-exchange.txt" target="_blank" rel="noopener">Scopus support email exchange</a>.
+              </li>
+              <li>
+                <b>Manual data:</b> external indicators are not web-scraped. Some databases lack a convenient public API, or use access restrictions and anti-bot systems. Values are therefore checked by hand and inserted in <code>bibliometric-data.php</code>.
+              </li>
+            </ul>
+
+            <p class="bibliometrics-warning">
+              <b>Web scraping test:</b>
+                <a href="./google-scholar-scraper.php" target="_blank" rel="noopener">Scholar</a>,
+                <a href="./scopus-scraper.php" target="_blank" rel="noopener">Scopus</a>.
+            </p>    
+          </div>
+
+
+
         </div>
 
 
@@ -669,6 +697,21 @@
         <!-- --------------------------------------------- -->
         <div class="sec" id="self-counted-citations">
           <div class="big-title shaded" id="self-assessed-citation-record">Citation record</div>
+
+            <p class="bibliometrics-warning">
+              <b>How do I assess my own citations?</b>
+            </p>
+
+            <ul>
+              <li>The self-assessed column is computed from <code>citation-data.php</code>.</li>
+              <li>The convention is conservative and is meant to mimic Scopus as far as possible.</li>
+              <li>Articles and citations are counted only when they have a DOI.</li>
+              <li>arXiv DOIs and ResearchGate DOIs are discarded.</li>
+              <li>The working assumption is that the remaining DOI-bearing articles have passed peer review.</li>
+              <li>The article count, citation count, and h-index are computed automatically from the local citation database.</li>
+            </ul>    
+
+
 
           <?php if ($data_error !== ""): ?>
             <table class="list">

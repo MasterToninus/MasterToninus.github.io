@@ -591,8 +591,29 @@
           <div class="big-title shaded">Indicators</div>
 
           <p class="bibliometrics-warning">
-            <b>Warning:</b> <em>Current state of this page is very tentative. Data are updated as of June 2026.</em>
+            <em> A manually curated list of bibliometric indicators.</em>
           </p>
+
+          <?php if ($data_error !== ""): ?>
+            <table class="list">
+              <tr>
+                <td class="left"><b>Error</b></td>
+                <td class="right"><?php echo html($data_error); ?></td>
+              </tr>
+            </table>
+          <?php endif; ?>
+
+          <?php if (file_exists($bibliometric_config_path)): ?>
+          <?php
+            $last_data_update = filemtime($bibliometric_config_path);
+          ?>
+          <table class="list">
+            <tr>
+              <td class="left"><b>Last data update</b></td>
+              <td class="right"><?php echo date("F d Y.", $last_data_update); ?></td>
+            </tr>
+          </table>
+          <?php endif; ?>
 
           <!--
             The wrapper below allows horizontal scrolling on small screens.
@@ -712,6 +733,7 @@
             </ul>    
 
 
+            
 
           <?php if ($data_error !== ""): ?>
             <table class="list">
@@ -722,26 +744,16 @@
             </table>
           <?php endif; ?>
 
-          <?php if (file_exists($citation_config_path) || file_exists($bibliometric_config_path)): ?>
-            <?php
-              $data_file_timestamps = [];
-
-              if (file_exists($citation_config_path)) {
-                $data_file_timestamps[] = filemtime($citation_config_path);
-              }
-
-              if (file_exists($bibliometric_config_path)) {
-                $data_file_timestamps[] = filemtime($bibliometric_config_path);
-              }
-
-              $last_data_update = max($data_file_timestamps);
-            ?>
-            <table class="list">
-              <tr>
-                <td class="left"><b>Last data update</b></td>
-                <td class="right"><?php echo date("F d Y H:i:s.", $last_data_update); ?></td>
-              </tr>
-            </table>
+          <?php if (file_exists($citation_config_path)): ?>
+          <?php
+            $last_citation_update = filemtime($citation_config_path);
+          ?>
+          <table class="list">
+            <tr>
+              <td class="left"><b>Last citation update</b></td>
+              <td class="right"><?php echo date("F d Y.", $last_citation_update); ?></td>
+            </tr>
+          </table>
           <?php endif; ?>
 
           <?php if (count($articles_with_citations) > 0): ?>

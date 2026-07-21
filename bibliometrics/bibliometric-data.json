@@ -2,7 +2,7 @@
     "scopus": {
         "label": "Scopus",
         "articles": 7,
-        "citations": 1,
+        "citations": 2,
         "hindex": 1,
         "url": "https://www.scopus.com/authid/detail.uri?authorId=57218509273",
         "icon": "ai ai-scopus ai-fw"
@@ -18,7 +18,7 @@
     "gscholar": {
         "label": "GScholar",
         "articles": 13,
-        "citations": 49,
+        "citations": 52,
         "hindex": 4,
         "url": "https://scholar.google.com/citations?user=DWKPuJYAAAAJ&hl=en",
         "icon": "ai ai-google-scholar ai-fw"
@@ -26,7 +26,7 @@
     "researchgate": {
         "label": "ResearchGate",
         "articles": 7,
-        "citations": 42,
+        "citations": 46,
         "hindex": 4,
         "url": "https://www.researchgate.net/profile/Antonio_Michele_Miti",
         "icon": "ai ai-researchgate ai-fw"

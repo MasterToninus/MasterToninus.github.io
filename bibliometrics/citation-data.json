@@ -149,7 +149,78 @@
             "authors": "A. Luongo, A. M. Miti, V. Narasimhachar, A. Sireesh",
             "doi": "10.1109/DAC63849.2025.11132981",
             "arxiv": "2407.20167",
-            "citations": []
+            "citations": [
+                {
+                    "title": "A comprehensive study of quantum arithmetic circuits",
+                    "authors": "S. Wang, X. Li, W. J. B. Lee, S. Deb, E. Lim, A. Chattopadhyay",
+                    "doi": "10.1098/rsta.2023.0392",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": false,
+                        "scholar": true
+                    }
+                },
+                {
+                    "title": "Optimization by decoded quantum interferometry",
+                    "authors": "S. P. Jordan, N. Shutty, M. Wootters, A. Zalcman, A. Schmidhuber, R. King, S. V. Isakov, T. Khattar, R. Babbush",
+                    "doi": "10.1038/s41586-025-09527-5",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": false,
+                        "scholar": true
+                    }
+                },
+                {
+                    "title": "Optimized quantum algorithms for simulating the Schwinger effect",
+                    "authors": "A. Kan, J. Lemieux, O. Okrut, B. Şahinoğlu",
+                    "doi": "10.1103/ps29-tshk",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": false,
+                        "scholar": true
+                    }
+                },
+                {
+                    "title": "Optimizing windowed arithmetic for quantum attacks against elliptic curve cryptography",
+                    "authors": "A. Luongo, V. Narasimhachar, A. Sireesh",
+                    "doi": "10.1109/DAC63849.2025.11132436",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": false,
+                        "scholar": true
+                    }
+                },
+                {
+                    "title": "Method and Algorithm for Interbase Conversion of Rademacher Binary Codes into Christensen Residue Codes",
+                    "authors": "Y. Nikolaychuk, I. Pitukh, V. Hryha, Y. Bezgachnyuk",
+                    "doi": "10.1007/s10559-026-00860-9",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": false,
+                        "scholar": true
+                    }
+                },
+                {
+                    "title": "Algorithmic Foundations of Modular Arithmetic for Determining Sample Mathematical Expectation",
+                    "authors": "I. Pitukh",
+                    "doi": "10.1007/s10559-026-00841-y",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": false,
+                        "scholar": true
+                    }
+                },
+                {
+                    "title": "Quantum Carry-Save Modular Addition with Optimized Depth and Resource Utilization",
+                    "authors": "S. Wang, E. Lim, X. Li, J. Feng, A. Chattopadhyay",
+                    "doi": "10.1007/978-3-032-09575-6_2",
+                    "indexed": {
+                        "wos": false,
+                        "scopus": false,
+                        "scholar": true
+                    }
+                }
+            ]
         },
         {
             "title": "Multisymplectic observable reduction using constraint triples",

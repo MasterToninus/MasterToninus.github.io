@@ -33,10 +33,21 @@ Sottosezione non accademica del sito `antoniomiti.it`.
 - `src/gunter.css`: stile condiviso locale.
 - `src/Parsedown.php`: parser Markdown.
 
-## TODO
+# TODO
 
 - [ ] Libro nonno navigabile.
 - [ ] Archivio albero genealogico.
   - Si possono esportare i file GEDCOM da MyHeritage: [link](https://www.myheritage.it/help-center?a=Come-posso-scaricare-(esportare)-un-file-GEDCOM-del-mio-albero-genealogico-dal-mio-sito-di-famiglia---id--bPSFTnHBQNauRgs6JzqGiA&srsltid=AfmBOoqm3TVy_HMFztVtv_2s435XKzAOl1Z0pxmsGXiMAVnHqMdVXkpL).
 - [x] Pagina hardware relativa agli smartphone.
 - [ ] Pagina hardware relativa ai portatili.
+
+## Todo Family
+- Libro di nonno
+- foto di nonno
+- sito di Diana
+- visualizzatore family tree
+
+
+## IOT
+- connettere arduino opla su mysql di aruba
+- 

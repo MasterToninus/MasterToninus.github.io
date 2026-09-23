@@ -224,6 +224,16 @@
         <div class="big-title shaded" id="News">News</div>
           <table class="list">
 
+          <tr>
+            <td class="left"><b>September 2026</b></td>
+            <td class="right">
+              <em>      Talk on
+              <a href="https://arxiv.org/abs/2602.14702"><em>L∞-morphisms between twisted Courant r-Lie algebras and untwisted Courant (r+1)-Lie algebroids</em></a> @
+              <a href="https://ncatlab.org/nlab/show/Center+for+Quantum+and+Topological+Systems#MitiSep2026">
+                Center for Quantum and Topological Systems, NYU Abu Dhabi
+            </a> (online).
+            </td>
+          </tr>          
           
           <tr>
             <td class="left"><b>March 2026</b></td>

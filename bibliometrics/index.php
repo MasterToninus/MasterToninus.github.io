@@ -83,14 +83,52 @@
             <p class="lead">
               I do not particularly believe in bibliometric indicators, nor in the comforting idea that the value of a mathematical argument can be compressed into a small table of numbers. <br>
 
-              Nevertheless, the Italian ministerial system (ASN) has decided that these numbers matter for the national scientific qualification, so here they are, duly collected and displayed. <br> 
+              Nevertheless, the Italian National Scientific Habilitation (ASN) uses bibliometric thresholds in my disciplinary area, so here are the numbers, duly collected and displayed. <br>
 
-              Apparently, it is not enough to keep up with the philosophy of publish-or-perish; one must also <em>attend to all the bibliometrics that the private entities on which the system relies fail to account for</em>.
+              Apparently, publish or perish is not quite enough: one must also <em>keep track of the citations that commercial databases manage to overlook</em>.
             </p>
           </div>
           <div id="photo">
             <img src="../img/pop-ai-slop.png" alt="Publish-or-perish Bibliometrics">
           </div>
+        </div>
+
+        <!-- --------------------------------------------- -->
+        <!-- Responsible research assessment -->
+        <!-- --------------------------------------------- -->
+        <div class="sec" id="responsible-assessment">
+          <div class="big-title shaded">Responsible research assessment</div>
+
+          <p>
+            Mathematical research should be assessed primarily through its content:
+            correctness, originality, depth, and significance, judged by informed peers.
+            Publication counts and citation statistics can supply contextual information,
+            but cannot replace a qualitative assessment of the mathematics itself.
+          </p>
+
+          <p>I endorse the principles set out in the following documents:</p>
+          <ul>
+            <li>
+              <b>IMU&ndash;ICIAM&ndash;IMS (2008),</b>
+              <a href="https://www.mathunion.org/fileadmin/IMU/Report/CitationStatistics.pdf"
+                 target="_blank" rel="noopener noreferrer"><em>Citation Statistics</em></a>.
+              The report documents the limits and frequent misuse of citation-based
+              indicators, including journal impact factors and the h-index.
+            </li>
+            <li>
+              <b>European Mathematical Society (2025),</b>
+              <a href="https://euromathsoc.org/code-of-practice"
+                 target="_blank" rel="noopener noreferrer"><em>Code of Practice for Mathematical Publication</em></a>.
+              The code sets out standards for research integrity, accurate attribution,
+              responsible authorship, and the avoidance of citation manipulation.
+            </li>
+          </ul>
+
+          <p class="bibliometrics-warning">
+            <em>Accordingly, the figures below are provided for transparency and
+            administrative use, not as a ranking of researchers or a measure of
+            the scientific merit of their work.</em>
+          </p>
         </div>
 
         <!-- --------------------------------------------- -->
@@ -100,12 +138,12 @@
           <div class="sec-title">Links</div>
           <ul>
             <li>
-              To know more about the Italian National Scientific Habilitation, see :
+              For information on the Italian National Scientific Habilitation, see:
               <a href="https://abilitazione.mur.gov.it/public/index.php" target="_blank" rel="noopener noreferrer">Abilitazione Scientifica Nazionale</a>.
             </li>
             <li>
-              If you believe that Science is a <b>collaborative effort</b> rather than a <b>competitive</b> one, you may start to consider opposing all of this.
-              See:
+              If you consider science a <b>collaborative effort</b> rather than a <b>competitive</b> one,
+              you may also be interested in:
               <a href="https://www.slow-science.com/" target="_blank" rel="noopener noreferrer">The Slow Science Manifesto</a>.
             </li>
           </ul>
@@ -119,7 +157,8 @@
           <div class="big-title shaded">Indicators</div>
 
           <p class="bibliometrics-warning">
-            <em> A manually curated list of bibliometric indicators.</em>
+            <em>A manually curated snapshot of bibliometric databases.
+            Sources differ in coverage and update schedules; their figures are not directly comparable.</em>
           </p>
 
           <?php if ($data_error !== ""): ?>
@@ -156,6 +195,10 @@
                       $source_url = $source["url"] ?? "#";
                       $source_icon = $source["icon"] ?? "";
                       $source_label = $source["label"] ?? "";
+                      // Rename the displayed label without changing the data file.
+                      if (strcasecmp(trim((string) $source_label), "Self-assessed") === 0) {
+                        $source_label = "Local record";
+                      }
                       $source_is_external = preg_match("/^https?:\/\//", $source_url) === 1;
                     ?>
                     <td class="right">
@@ -199,28 +242,39 @@
         </div>
 
         <div class="sec" id="issues">
-            <div class="sec-title">Known issues</div>
+          <div class="sec-title">Known issues and data coverage</div>
 
-            <ul>
-              <li>
-                <b>About the discrepancies in these numbers:</b>
-                Scopus and WoS do not count citations to an arXiv preprint after the final paper has appeared, even when the arXiv page correctly links to the published version. 
-                On the other hand, Scholar and ResearchGate also count preprints, theses, presentations, and many other web-scraped documents as publications, both as valid publications and citations.
-              </li>
-              <li>
-                <b>ASN relevance:</b> or the Italian National Scientific Habilitation, the relevant databases are Scopus and Web of Science. Notably, Scopus refuses to correct this missing citation count on their side (see <a href="./scopus-email-exchange.txt" target="_blank" rel="noopener">Scopus support message</a>). The other sources are displayed only for context.
-              </li>
-              <li>
-                <b>Why manually curate the data:</b>
-                Most databases lack a convenient public API or use access restrictions and anti-bot systems. Values are therefore checked by hand and inserted in <code>bibliometric-data.json</code>
-              </li>
-              <li>
-                <b>Web scraping test:</b>: 
-                  <a href="./google-scholar-scraper.php" target="_blank" rel="noopener">Scholar</a>,
-                  <a href="./scopus-scraper.php" target="_blank" rel="noopener">Scopus</a>.
-              </li>
-            </ul>
-          </div>
+          <ul>
+            <li>
+              <b>Coverage and discrepancies:</b>
+              Database records do not always consolidate citations to an arXiv preprint
+              with those to its published version. In some cases, citations visible for a
+              preprint are absent from the corresponding Scopus or Web of Science record.
+              Google Scholar and ResearchGate may also include theses, presentations,
+              preprints, and other documents outside the scope of those databases.
+            </li>
+            <li>
+              <b>ASN relevance:</b>
+              Scopus and Web of Science are relevant to the bibliometric ASN procedures.
+              The figures above are personal records, <em>not official ASN indicators</em>
+              or a calculation of eligibility thresholds. For an example of the indexing
+              issue, see the
+              <a href="./scopus-email-exchange.txt" target="_blank" rel="noopener noreferrer">Scopus support correspondence</a>.
+            </li>
+            <li>
+              <b>Manual updates:</b>
+              Data are checked by hand and stored in <code>bibliometric-data.json</code>.
+              Public APIs are limited or restricted for several of these services;
+              transcription errors and incomplete coverage remain possible.
+            </li>
+            <li>
+              <b>Experimental scraping:</b>
+              Test scripts for
+              <a href="./google-scholar-scraper.php" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+              and <a href="./scopus-scraper.php" target="_blank" rel="noopener noreferrer">Scopus</a>.
+            </li>
+          </ul>
+        </div>
 
         <!-- --------------------------------------------- -->
         <!-- Self-counted citations from JSON data -->
@@ -239,19 +293,24 @@
         <div class="sec" id="self-counted-citations">
           <div class="big-title shaded" id="self-assessed-citation-record">Citation record</div>
 
-          <div class="sec-title">How do I assess my own citations?</div>
+          <div class="sec-title">How is the local citation record compiled?</div>
 
           <ul>
-              <li>  
-                Articles and citations are counted only if they have a DOI, excluding those that are attributed by arXiv and ResearchGate. The working assumption is that the remaining DOI-bearing articles have passed peer review.
+            <li>
+              <b>Method:</b>
+              The local counts are calculated from <code>citation-data.json</code>,
+              a manually maintained record assembled by checking the sources above.
+              DOI availability is used as a practical counting filter, not as proof
+              that an item has undergone peer review. Some references without a DOI
+              may still appear in the descriptive list below.
             </li>
-              <li>
-                The self-assessed indices are automatically calculated using a local citation database, which is manually curated by merging data from all sources listed in the indicators table above.
-              </li>
-            </ul>    
-
-
-            
+            <li>
+              <b>Limitations:</b>
+              The record may be incomplete, and some citing papers are co-authored
+              by me or by co-authors of the cited work. Citation counts do not
+              indicate whether a reference is substantive, favourable, or incidental.
+            </li>
+          </ul>
 
           <?php if ($data_error !== ""): ?>
             <table class="list">
@@ -327,12 +386,11 @@
         <div class="sec" id="disclaimer">
           <div style="font-size: xx-small; opacity: 0.75; line-height: 1.45; margin-top: 1.5em;">
             <b>Disclaimer.</b>
-            These data are provided only for administrative purposes.
-            They should not be read as a mathematical, scientific, or human evaluation
-            of the work listed elsewhere on this website.
-            Bibliometric values may differ across databases, update schedules,
-            author-profile mergers, indexing choices, and the general mood
-            of the algorithmic bureaucracy involved.
+            These records are provided for transparency and administrative reference only,
+            and do not constitute an official ASN calculation or an assessment of scientific merit.
+            Values depend on database coverage, indexing practices, author disambiguation,
+            and update schedules. For the mathematical content, see the
+            <a href="../research/">Research</a> page.
           </div>
         </div>
 

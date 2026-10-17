@@ -94,7 +94,7 @@
         </div>
 
         <!-- --------------------------------------------- -->
-        <!-- Responsible research assessment -->
+        <!-- Responsible assessment -->
         <!-- --------------------------------------------- -->
         <div class="sec" id="responsible-assessment">
           <div class="big-title shaded">Responsible research assessment</div>

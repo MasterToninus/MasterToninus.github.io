@@ -219,6 +219,22 @@
                         "scopus": false,
                         "scholar": true
                     }
+                },
+                {
+                    "title": "Quantum Uncomputation of Clean and Dirty Ancilla Qubits",
+                    "authors": "C. Liu, L. Zhou, B. Meng",
+                    "doi": "10.1145/3839528",
+                    "url": "https://2026.splashcon.org/track/oopsla-2026",
+                    "status": "Accepted",
+                    "year": 2026
+                },
+                {
+                    "title": "Method and Software-Information Model for Converting Rademacher Multi-Digit Decimal Numbers into Residue Codes in the Chrestenson Basis",
+                    "authors": "Y. Nikolaychuk, I. Pitukh, V. Hryha, Y. Bezgachnyuk",
+                    "doi": "10.1007/s10559-026-00923-x",
+                    "url": "https://link.springer.com/article/10.1007/s10559-026-00923-x",
+                    "status": "Published",
+                    "year": 2026
                 }
             ]
         },
@@ -243,6 +259,25 @@
             "doi": null,
             "status": "Submitted to peer-review",
             "citations": []
+        },
+        {
+            "title": "Homotopy comomentum maps in multisymplectic geometry",
+            "authors": "A. M. Miti",
+            "doi": null,
+            "arxiv": "2105.05645",
+            "url": "https://arxiv.org/abs/2105.05645",
+            "type": "Doctoral thesis",
+            "year": 2021,
+            "citations": [
+                {
+                    "title": "Actions of Lie 2-algebras and comomentum maps",
+                    "authors": "P. Bonneau, V. Chloup, A. Gammella-Mathieu, T. Wurzbacher",
+                    "doi": "10.1007/s11005-026-02154-9",
+                    "url": "https://link.springer.com/article/10.1007/s11005-026-02154-9",
+                    "status": "Published",
+                    "year": 2026
+                }
+            ]
         }
     ]
 }

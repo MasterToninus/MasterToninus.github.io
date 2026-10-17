@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="280" viewBox="0 0 240 280" role="img" aria-labelledby="title">
+  <title id="title">Illustration placeholder</title>
+  <rect x="1" y="1" width="238" height="278" rx="38" fill="#1d1d1d" stroke="#777" stroke-dasharray="6 6"/>
+  <path d="M75 155l32-36 24 25 17-18 24 29H75z" fill="none" stroke="#888" stroke-width="2"/>
+  <circle cx="149" cy="100" r="10" fill="none" stroke="#888" stroke-width="2"/>
+  <text x="120" y="194" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#bbb">Image placeholder</text>
+</svg>

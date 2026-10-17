@@ -160,11 +160,17 @@ function gunter_footer(array $extraLines = []): void
 {
     echo '<footer class="site-footer">' . PHP_EOL;
     echo '  <div class="container">' . PHP_EOL;
+    $scriptPath = str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? '/gunter/index.php');
+    $gunterPosition = strpos($scriptPath, '/gunter/');
+    $sitePrefix = $gunterPosition === false ? '' : substr($scriptPath, 0, $gunterPosition);
+    echo '    <p class="site-footer-credits">' . PHP_EOL;
+    echo '      <span>Powered by <a href="https://github.com/Bachittarjeet/Hacker-Bootstrap-Template/" role="button">Hacker-Bootstrap-Template</a>. &copy; 2019</span>' . PHP_EOL;
+    echo '      <span>Markdown rendered with <a href="https://github.com/erusev/parsedown" role="button">Parsedown</a>.</span>' . PHP_EOL;
+    echo '      <a class="site-footer-ai" href="' . gunter_h($sitePrefix . '/AI/') . '">Ai Disclosure</a>' . PHP_EOL;
+    echo '    </p>' . PHP_EOL;
     foreach ($extraLines as $line) {
         echo '    <p>' . $line . '</p>' . PHP_EOL;
     }
-    echo '    <p>Powered by <a href="https://github.com/Bachittarjeet/Hacker-Bootstrap-Template/" role="button">Hacker-Bootstrap-Template</a>. &copy; 2019</p>' . PHP_EOL;
-    echo '    <p>Markdown rendered with <a href="https://github.com/erusev/parsedown" role="button">Parsedown</a>.</p>' . PHP_EOL;
     echo '  </div>' . PHP_EOL;
     echo '</footer>' . PHP_EOL;
     echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>' . PHP_EOL;

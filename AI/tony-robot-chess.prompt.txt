@@ -1,0 +1,16 @@
+Tool: OpenAI built-in image generation in Codex
+Reference: img/profilePic/Tony-Feb23_v1.jpg (identity reference for Tony)
+
+INITIAL GENERATION PROMPT
+
+Use case: illustration-story.
+Asset type: a finished illustration for the introductory section of Tony's personal academic website, AI declaration.
+Input image: the attached local photograph is an identity reference for Tony ONLY; do not reproduce its background or photographic style.
+Create a new landscape 4:3 cartoon illustration. Side-on view of two seated players facing one another across a small table with an unmistakable chessboard and chess pieces: Tony on the LEFT facing right, a friendly mechanical robot on the RIGHT facing left. Caricature Tony recognizably from the photo: tousled dark hair, black rectangular eyeglasses, short dark beard and moustache, olive-green hoodie; adult man, thoughtful amused expression. The robot has a chunky computer monitor for its head, with a dark screen displaying a green Bash terminal, no human face or cartoon eyes on the screen. Angle the monitor just enough that the terminal remains clearly visible while the robot faces Tony. Terminal text, exactly: "bash" on the first line and "$ _" on the next line.
+Both players share ONE large white cartoon thought bubble above them, connected with a separate trail of small thought circles to EACH player's head. Inside this single shared bubble is ONE huge black question mark "?". Their poses suggest they are pondering their chess game together.
+Style: emulate the visual style of Dexter's Laboratory: bold thick black outlines, angular geometric silhouettes, exaggerated heads and compact bodies, crisp flat cel colors, clean graphic shapes, expressive cartoon posing. Original characters representing Tony and the robot. Plain uncluttered background and minimal floor shadow. Keep all characters, chessboard and the entire thought bubble inside the frame, with breathing room. Readable at small website size. No logos, watermarks, extra characters, additional bubbles, or text other than the question mark and Bash terminal.
+
+EXPRESSION REVISION PROMPT
+
+Edit the supplied cartoon illustration. Change ONLY Tony's facial expression and gaze (the human seated on the LEFT). Tony should look DOWN and to his right at the chess pieces on the board, not at the robot and not toward the viewer. Give him a clearly questioning, puzzled, inquisitive expression: one eyebrow raised, the other slightly furrowed, eyes visibly directed at the board, and a small uncertain pursed mouth instead of the current confident smile. Keep his chin resting on his hand. Preserve his recognizable messy dark hair, rectangular black eyeglasses, beard and green hoodie.
+Keep everything else unchanged: the robot on the right with a screen head showing the green bash terminal, the chessboard and pieces, the shared single thought bubble containing the large question mark and two trails of thought circles, poses, composition, colors, background, 4:3 aspect ratio, and cartoon style inspired by Dexter's Laboratory. Do not add any new text or elements.

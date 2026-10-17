@@ -397,13 +397,13 @@
     <!-- --------------------------------------------- -->
     <!-- Footer -->
     <!-- --------------------------------------------- -->
-    <footer class="academic-footer">
-      <div class="academic-footer-row">
-        <div class="poweredby academic-footer-meta">
-          <div class="academic-footer-credits">
-            <a class="academic-footer-ai" href="../AI/">Ai Disclosure</a>
-          </div>
-<?php
+    <footer>
+      <br>
+      <br>
+      <br>
+      <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
+              <a href="../AI/" style="font-size:inherit;white-space:nowrap;">Ai Disclosure</a><br>
+        <?php
           if ($footer_last_update !== null) {
             echo "Last update: " . date("F d Y H:i:s.", $footer_last_update);
           }
@@ -412,7 +412,6 @@
 
         Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
         &emsp; Italsing srl. &emsp; All Rights Reserved.
-        </div>
       </div>
     </footer>
 

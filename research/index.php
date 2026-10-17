@@ -391,14 +391,15 @@
     <!-- --------------------------------------------- -->
     <!-- Footer -->
     <!-- --------------------------------------------- -->          
-    <footer class="academic-footer">
-      <div class="academic-footer-row">
-        <div class="poweredby academic-footer-meta">
-          <div class="academic-footer-credits">
-            <span>Powered by <a href="http://www.monperrus.net/martin/bibtexbrowser/">bibtexbrowser</a></span><span aria-hidden="true">&middot;</span>
-            <a class="academic-footer-ai" href="../AI/">Ai Disclosure</a>
-          </div>
-<?php
+    <footer>
+      <br>
+      <br>
+      <br>
+      <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
+        <!-- If you like bibtexbrowser, thanks to keep the link :-) -->
+        Powered by <a href="http://www.monperrus.net/martin/bibtexbrowser/">bibtexbrowser</a> &middot; <a href="../AI/" style="font-size:inherit;white-space:nowrap;">Ai Disclosure</a><br>
+
+        <?php
           $val = max(filemtime("../data/activities.csv"),filemtime("../data/material.csv"),filemtime("./index.php"),filemtime("../index.php"));
           echo "Last update: ".date("F d Y H:i:s.",$val); 
         ?>
@@ -406,8 +407,8 @@
 
         Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
         &emsp; Italsing srl. &emsp;  All Rights Reserved.
-        </div>
       </div>
+
     </footer>
   </body>
 </html>

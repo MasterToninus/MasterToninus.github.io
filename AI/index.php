@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AI Use Disclosure | Antonio Michele Miti</title>
+    <title>Ai-policy</title>
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../src/style.css">
     <link rel="stylesheet" href="../src/darkmode.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&amp;display=swap" rel="stylesheet">
@@ -158,16 +159,22 @@ for the proposal.</code></pre></details>
 
       </div>
     </main>
-    <footer class="academic-footer">
-      <div class="academic-footer-row">
-        <div class="poweredby academic-footer-meta">
-          <div class="academic-footer-credits">
-            <a class="academic-footer-ai" href="./">Ai Disclosure</a>
+    <footer>
+      <div id="content">
+        <div id="content-container">
+          <div id="footer">
+            <br>
+            <br>
+            <br>
+            <div style="text-align:right;font-size: xx-small;opacity: 0.6;" class="poweredby">
+              <a href="./" style="font-size:inherit;white-space:nowrap;">Ai Disclosure</a><br>
+              <?php echo "Last update: ".date("F d Y H:i:s.", filemtime(__FILE__)); ?>
+              <br>
+
+              Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
+              &emsp; Italsing srl. &emsp;  All Rights Reserved.
+            </div>
           </div>
-          <?php echo "Last update: ".date("F d Y H:i:s.", filemtime(__FILE__)); ?>
-          <br>
-          Copyright &copy;2016<script>new Date().getFullYear()>2016&&document.write("-"+new Date().getFullYear());</script>,
-          &emsp; Italsing srl. &emsp; All Rights Reserved.
         </div>
       </div>
     </footer>

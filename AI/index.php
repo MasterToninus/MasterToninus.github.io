@@ -61,6 +61,7 @@
             <li><strong>Everything here is tentative.</strong> These policies will evolve through experimentation, reflection, and discussion.</li>
             <li><strong>The attention economy.</strong> Attention has become a commodity alongside gold, money, oil, and data. I often find AI-generated text verbose but thin on meaning, wasting the attention it asks of readers. (The current style of this page suffers from the same problem.)</li>
             <li>This page and its illustration were created through interactive prompting in Codex (app version 26.1013.40934), using OpenAI's image generation tool and my portrait for the illustration.</li>
+            <li><strong>Further reading.</strong> See my <a href="https://app.notion.com/p/toninus/AI-in-mathematics-Human-curated-reading-list-3fe7791f93688126804fc0d64c0ddebb?source=copy_link">AI in mathematics: human-curated reading list</a>.</li>
           </ol>
         </section>
 

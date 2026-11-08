@@ -7,7 +7,7 @@ Sottosezione non accademica del sito `antoniomiti.it`.
 - Layout PHP uniformato tramite `src/gunter.php`.
 - Stili locali accentrati in `src/gunter.css`.
 - Navbar condivisa fra tutte le pagine PHP della sottosezione.
-- Navbar aggiornata per funzionare correttamente anche su mobile: collapse Bootstrap, dropdown interno e piccolo fallback JavaScript nativo se Bootstrap o jQuery non vengono caricati.
+- Navbar mobile e desktop gestita da `src/gunter-nav.js`, condiviso anche con Malia e indipendente da jQuery e Bootstrap. Le librerie restano disponibili per gli altri componenti delle pagine.
 - Dati hardware riconvertiti da YAML a JSON: `hardware/pc_data.json`.
 - Aggiunta sottopagina smartphone con dati JSON dedicati: `hardware/smartphone_data.json`.
 - Lettura dati hardware aggiornata a `json_decode`, senza librerie esterne.
@@ -31,6 +31,7 @@ Sottosezione non accademica del sito `antoniomiti.it`.
 - `nonno/index.php`: rendering dei capitoli Markdown in `nonno/Capitoli`.
 - `meteo/index.php`: dashboard meteo.
 - `src/gunter.php`: helper condivisi.
+- `src/gunter-nav.js`: apertura e chiusura del menu, stato accessibile e gestione della tastiera.
 - `src/gunter.css`: stile condiviso locale.
 - `src/Parsedown.php`: parser Markdown.
 

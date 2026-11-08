@@ -162,10 +162,7 @@ body {
     }
 }
 
-/* Mobile navbar fallback.
-   Bootstrap normally handles collapse and dropdown behaviour through jQuery.
-   These rules make the shared navbar usable also when the browser is narrow
-   and the menu state is toggled by the small vanilla-JS fallback in gunter.php. */
+/* Mobile navigation layout controlled by the local gunter-nav.js script. */
 @media (max-width: 767px) {
     #gunter-navbar.in {
         display: block !important;

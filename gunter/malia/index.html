@@ -19,7 +19,7 @@
 <nav class="navbar navbar-default navbar-static-top">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gunter-navbar" aria-expanded="false" aria-controls="gunter-navbar">
+      <button type="button" class="navbar-toggle collapsed" aria-expanded="false" aria-controls="gunter-navbar">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -30,8 +30,8 @@
     <div id="gunter-navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
+          <a href="#" class="dropdown-toggle" role="button" aria-controls="gunter-sections" aria-expanded="false">Menu <span class="caret"></span></a>
+          <ul class="dropdown-menu" id="gunter-sections">
             <li><a href="../eliminata.php">Eliminata</a></li>
             <li><a href="../h4x0rs.php">Template</a></li>
             <li><a href="../facciata.php">Protocollo Facciata</a></li>
@@ -81,43 +81,8 @@
     <p>Markdown rendered with <a href="https://github.com/erusev/parsedown" role="button">Parsedown</a>.</p>
   </div>
 </footer>
+<script src="../src/gunter-nav.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script>
-(function () {
-  var navbar = document.getElementById("gunter-navbar");
-  var toggle = document.querySelector(".navbar-toggle[data-target=\"#gunter-navbar\"]");
-  var dropdown = document.querySelector("#gunter-navbar .dropdown");
-  var dropdownToggle = document.querySelector("#gunter-navbar .dropdown-toggle");
-
-  if (toggle && navbar) {
-    toggle.addEventListener("click", function () {
-      window.setTimeout(function () {
-        var isOpen = navbar.classList.contains("in");
-        if (typeof window.jQuery === "undefined") {
-          isOpen = !isOpen;
-          navbar.classList.toggle("in", isOpen);
-          toggle.classList.toggle("collapsed", !isOpen);
-        }
-        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      }, 0);
-    });
-  }
-
-  if (dropdown && dropdownToggle) {
-    dropdownToggle.addEventListener("click", function (event) {
-      event.preventDefault();
-      window.setTimeout(function () {
-        var isOpen = dropdown.classList.contains("open");
-        if (typeof window.jQuery === "undefined") {
-          isOpen = !isOpen;
-          dropdown.classList.toggle("open", isOpen);
-        }
-        dropdownToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      }, 0);
-    });
-  }
-})();
-</script>
 </body>
 </html>

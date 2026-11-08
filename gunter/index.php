@@ -67,16 +67,16 @@ gunter_navbar('./', 'home');
                     <p class="list-group-item-text">Installato tramite servizio Aruba.</p>
                 </a>
                 <a href="./malia/" class="list-group-item">
-                    <h4 class="list-group-item-heading">Malia &mdash; Marta Velia</h4>
+                    <h4 class="list-group-item-heading">Malia</h4>
                     <p class="list-group-item-text">Uno spazio dedicato a Marta Velia.</p>
                 </a>
                 <a href="./marty/" class="list-group-item">
-                    <h4 class="list-group-item-heading">Marty -- Workspace</h4>
-                    <p class="list-group-item-text">Spazio di test per Marty.</p>
+                    <h4 class="list-group-item-heading">Marty</h4>
+                    <p class="list-group-item-text">Uno spazio dedicato a Marty.</p>
                 </a>
                 <a href="./diego/" class="list-group-item">
-                    <h4 class="list-group-item-heading">Diego -- Workspace</h4>
-                    <p class="list-group-item-text">Spazio di test per Diego.</p>
+                    <h4 class="list-group-item-heading">Diego</h4>
+                    <p class="list-group-item-text">Uno spazio dedicato a Diego.</p>
                 </a>
                 <a href="./listanozze/" class="list-group-item">
                     <h4 class="list-group-item-heading">Lista Nozze</h4>

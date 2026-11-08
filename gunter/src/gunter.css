@@ -182,3 +182,46 @@ body {
         width: auto;
     }
 }
+
+/* Malia introduction and family avatar. */
+.malia-hero {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.malia-hero-copy {
+    flex: 1;
+    min-width: 0;
+}
+
+.malia-hero-copy > :first-child {
+    margin-top: 0;
+}
+
+.malia-hero-copy > :last-child {
+    margin-bottom: 0;
+}
+
+.malia-avatar {
+    display: block;
+    flex: 0 0 auto;
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+}
+
+@media (max-width: 767px) {
+    .malia-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .malia-avatar {
+        align-self: center;
+        width: 180px;
+    }
+}

@@ -17,6 +17,7 @@ Sottosezione non accademica del sito `antoniomiti.it`.
 ## File principali
 
 - `index.php`: pagina indice della sottosezione.
+- `malia/index.html`: indice temporaneo dedicato a Marta Velia; aggiornare i link quando si aggiungono sottocartelle.
 - `facciata.php`: rendering Markdown di `vetrine.md` e `todo-facciata.md`.
 - `eliminata.php`: archivio delle sezioni eliminate.
 - `h4x0rs.php`: pagina template Hacker Bootstrap.

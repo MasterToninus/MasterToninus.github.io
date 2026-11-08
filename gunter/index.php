@@ -66,6 +66,10 @@ gunter_navbar('./', 'home');
                     <h4 class="list-group-item-heading">Servizio pastebin</h4>
                     <p class="list-group-item-text">Installato tramite servizio Aruba.</p>
                 </a>
+                <a href="./malia/" class="list-group-item">
+                    <h4 class="list-group-item-heading">Malia &mdash; Marta Velia</h4>
+                    <p class="list-group-item-text">Uno spazio dedicato a Marta Velia.</p>
+                </a>
                 <a href="./marty/" class="list-group-item">
                     <h4 class="list-group-item-heading">Marty -- Workspace</h4>
                     <p class="list-group-item-text">Spazio di test per Marty.</p>

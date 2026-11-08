@@ -116,6 +116,7 @@ function gunter_navbar(string $basePath = './', string $active = ''): void
         'smartphones' => ['Smartphones', 'hardware/smartphones.php'],
         'nonno' => ['Foglie Sparse', 'nonno/'],
         'gallery' => ['Photo Gallery', 'gallery/#fototrappola'],
+        'malia' => ['Malia', 'malia/'],
         'marty' => ['Marty', 'marty/'],
         'diego' => ['Diego', 'diego/'],
         'listanozze' => ['Lista Nozze', 'listanozze/'],
